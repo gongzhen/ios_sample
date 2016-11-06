@@ -7,6 +7,7 @@
 //
 
 #import "PhotoCommentViewController.h"
+#import "ZoomedPhotoViewController.h"
 
 @interface PhotoCommentViewController ()
 
@@ -35,6 +36,8 @@
         scrollView.clearsContextBeforeDrawing = YES;
         scrollView.clipsToBounds = YES;
         scrollView.autoresizesSubviews = YES;
+        scrollView.backgroundColor = [UIColor whiteColor];
+        
         scrollView.contentSize = CGSizeMake([UIScreen mainScreen].bounds.size.width, [UIScreen mainScreen].bounds.size.height);
         _scrollView = scrollView;
     }
@@ -47,6 +50,7 @@
     if (_imageView == nil) {
         UIImageView *imageView = [[UIImageView alloc] initWithFrame: CGRectZero];
         imageView.contentMode = UIViewContentModeScaleAspectFit;
+        imageView.userInteractionEnabled = YES;
         imageView.clipsToBounds = YES;
         _imageView = imageView;
     }
@@ -62,11 +66,21 @@
     
     if (_photoName) {
         self.imageView.image = [UIImage imageNamed: _photoName];
+        UITapGestureRecognizer *tapGestureRecognizer = [[UITapGestureRecognizer alloc] initWithTarget:self action: @selector(openZoomingController:)];
+        tapGestureRecognizer.numberOfTapsRequired = 1;
+        [self.imageView addGestureRecognizer: tapGestureRecognizer];
     }
+}
+
+-(void)openZoomingController:(UITapGestureRecognizer *)tap {
+    ZoomedPhotoViewController *zoomedPhotoViewController = [[ZoomedPhotoViewController alloc] init];
+    zoomedPhotoViewController.photoName = _photoName;
+    [self.navigationController pushViewController: zoomedPhotoViewController animated:YES];
 }
 
 -(void)setupScrollView {
 
+//    testing purpose.
 //    UIScrollView *scrollView = [[UIScrollView alloc] init];
 //    UIImageView *imageView = [[UIImageView alloc] init];
 //    imageView.image = [UIImage imageNamed: _photoName];
@@ -88,10 +102,10 @@
     [self.view addSubview: self.scrollView];
     self.scrollView.translatesAutoresizingMaskIntoConstraints = NO;
     self.imageView.translatesAutoresizingMaskIntoConstraints = NO;
-    self.imageView.contentMode = UIViewContentModeScaleAspectFit;
+    
     // scrollview width
     [self.view addConstraint: [NSLayoutConstraint constraintWithItem:self.scrollView attribute:NSLayoutAttributeWidth relatedBy: NSLayoutRelationEqual toItem:nil attribute: NSLayoutAttributeNotAnAttribute multiplier: 1.f constant: self.view.bounds.size.width]];
-//    [self.view addConstraint: [NSLayoutConstraint constraintWithItem:self.scrollView attribute:NSLayoutAttributeHeight relatedBy:NSLayoutRelationEqual toItem:nil attribute:NSLayoutAttributeNotAnAttribute multiplier:1.f constant:300.f]];
+
     //scrollview top
     [self.view addConstraint: [NSLayoutConstraint constraintWithItem:self.scrollView attribute: NSLayoutAttributeTop relatedBy:NSLayoutRelationEqual toItem:self.topLayoutGuide attribute:NSLayoutAttributeBottom multiplier:1.f constant:0.f]];
     //scrollview bottom

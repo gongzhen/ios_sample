@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		063E61291DCB812900BAA50E /* ZoomedPhotoViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 063E61281DCB812900BAA50E /* ZoomedPhotoViewController.m */; };
 		0643023B1DC43AF5008D5702 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 0643023A1DC43AF5008D5702 /* main.m */; };
 		0643023E1DC43AF5008D5702 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 0643023D1DC43AF5008D5702 /* AppDelegate.m */; };
 		064302461DC43AF5008D5702 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 064302451DC43AF5008D5702 /* Assets.xcassets */; };
@@ -39,6 +40,8 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		063E61271DCB812900BAA50E /* ZoomedPhotoViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ZoomedPhotoViewController.h; sourceTree = "<group>"; };
+		063E61281DCB812900BAA50E /* ZoomedPhotoViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ZoomedPhotoViewController.m; sourceTree = "<group>"; };
 		064302361DC43AF5008D5702 /* PhotoScrollObjC.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = PhotoScrollObjC.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		0643023A1DC43AF5008D5702 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
 		0643023C1DC43AF5008D5702 /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
@@ -129,6 +132,8 @@
 				064302981DC6EC4A008D5702 /* ManagePageViewController.m */,
 				0643029A1DC6F58B008D5702 /* PhotoCommentViewController.h */,
 				0643029B1DC6F58B008D5702 /* PhotoCommentViewController.m */,
+				063E61271DCB812900BAA50E /* ZoomedPhotoViewController.h */,
+				063E61281DCB812900BAA50E /* ZoomedPhotoViewController.m */,
 				064302451DC43AF5008D5702 /* Assets.xcassets */,
 				064302471DC43AF5008D5702 /* LaunchScreen.storyboard */,
 				0643024A1DC43AF5008D5702 /* Info.plist */,
@@ -299,6 +304,7 @@
 				0643029C1DC6F58B008D5702 /* PhotoCommentViewController.m in Sources */,
 				064302741DC4AACC008D5702 /* PhotoCell.m in Sources */,
 				0643026E1DC45E32008D5702 /* CollectionViewController.m in Sources */,
+				063E61291DCB812900BAA50E /* ZoomedPhotoViewController.m in Sources */,
 				0643023E1DC43AF5008D5702 /* AppDelegate.m in Sources */,
 				0643023B1DC43AF5008D5702 /* main.m in Sources */,
 			);
@@ -433,7 +439,7 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
-				GCC_PREFIX_HEADER = /Users/gongzhen/Projects/ios/raywenderlich/UIScrollViewProject/PhotoScrollObjC/PhotoScrollObjC/PrefixHeader.pch;
+				GCC_PREFIX_HEADER = /Users/gongzhen/Projects/ios/github_gz/ios_sample/uikit/uiscroll/PhotoScrollObjC/PhotoScrollObjC/PrefixHeader.pch;
 				INFOPLIST_FILE = PhotoScrollObjC/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.gongzhen.ObjCApp.PhotoScrollObjC;
@@ -445,7 +451,7 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
-				GCC_PREFIX_HEADER = /Users/gongzhen/Projects/ios/raywenderlich/UIScrollViewProject/PhotoScrollObjC/PhotoScrollObjC/PrefixHeader.pch;
+				GCC_PREFIX_HEADER = /Users/gongzhen/Projects/ios/github_gz/ios_sample/uikit/uiscroll/PhotoScrollObjC/PhotoScrollObjC/PrefixHeader.pch;
 				INFOPLIST_FILE = PhotoScrollObjC/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.gongzhen.ObjCApp.PhotoScrollObjC;

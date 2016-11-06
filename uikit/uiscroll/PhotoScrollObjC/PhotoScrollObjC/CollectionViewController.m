@@ -48,10 +48,8 @@
 #pragma mark life cycle.
 -(void)viewDidLoad {
     [super viewDidLoad];
-    
     _thumbnaiSize = 70;
     _sectionInsets = UIEdgeInsetsMake(10, 5.0, 10, 5.0);
-    
     [self setupPhotosDataSource];
     [self setupNavigationItem];
     [self setupCollectionView];
