@@ -7,7 +7,11 @@
 //
 
 #import <Foundation/Foundation.h>
+#import <UIKit/UIKit.h>
 
 @interface GZEasyTableRow : NSObject
+
+@property (nonatomic, strong) id model;
+@property (nonatomic, assign) CGFloat cellHeight;
 
 @end

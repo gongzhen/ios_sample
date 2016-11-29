@@ -7,7 +7,21 @@
 //
 
 #import <Foundation/Foundation.h>
+#import <UIKit/UIKit.h>
+#import "GZNode.h"
 
-@interface GZEasyTableSection : NSObject
+@interface GZEasyTableSection : GZNode
+
+@property (nonatomic, strong) id model;
+@property (nonatomic, copy) NSString *identifier;
+
+- (NSInteger)numberOfRows;
+
+// GZEasyTableSection initializer
+- (instancetype)initWithModel:(id)model attributes:(NSDictionary *)attributes;
+
+//
+- (void)setCellHeight:(CGFloat)cellHeight atRow:(NSInteger)row;
+- (CGFloat)cellHeightAtRow:(NSInteger)row;
 
 @end

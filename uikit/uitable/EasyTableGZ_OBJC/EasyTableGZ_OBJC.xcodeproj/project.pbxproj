@@ -69,6 +69,7 @@
 		063E624E1DE10FC300BAA50E /* GZEasyTableRow.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = GZEasyTableRow.m; sourceTree = "<group>"; };
 		063E62501DE10FFF00BAA50E /* GZEasyTableSection.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GZEasyTableSection.h; sourceTree = "<group>"; };
 		063E62511DE10FFF00BAA50E /* GZEasyTableSection.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = GZEasyTableSection.m; sourceTree = "<group>"; };
+		063E62531DE2602100BAA50E /* EasyTablePrefixHeader.pch */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = EasyTablePrefixHeader.pch; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -139,6 +140,7 @@
 			isa = PBXGroup;
 			children = (
 				063E620E1DE0E19400BAA50E /* main.m */,
+				063E62531DE2602100BAA50E /* EasyTablePrefixHeader.pch */,
 			);
 			name = "Supporting Files";
 			sourceTree = "<group>";
@@ -170,10 +172,10 @@
 				063E62511DE10FFF00BAA50E /* GZEasyTableSection.m */,
 				063E624D1DE10FC300BAA50E /* GZEasyTableRow.h */,
 				063E624E1DE10FC300BAA50E /* GZEasyTableRow.m */,
-				063E62441DE10CF200BAA50E /* UITableView+GZEasyTable.h */,
-				063E62451DE10CF200BAA50E /* UITableView+GZEasyTable.m */,
 				063E624A1DE10DB900BAA50E /* GZNode.h */,
 				063E624B1DE10DB900BAA50E /* GZNode.m */,
+				063E62441DE10CF200BAA50E /* UITableView+GZEasyTable.h */,
+				063E62451DE10CF200BAA50E /* UITableView+GZEasyTable.m */,
 			);
 			path = Classes;
 			sourceTree = "<group>";
@@ -457,6 +459,8 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = /Users/gongzhen/Projects/ios/github_gz/ios_sample/uikit/uitable/EasyTableGZ_OBJC/EasyTableGZ_OBJC/EasyTablePrefixHeader.pch;
 				INFOPLIST_FILE = EasyTableGZ_OBJC/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = "com.gongzhen.ObjCApp.EasyTableGZ-OBJC";
@@ -468,6 +472,8 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = /Users/gongzhen/Projects/ios/github_gz/ios_sample/uikit/uitable/EasyTableGZ_OBJC/EasyTableGZ_OBJC/EasyTablePrefixHeader.pch;
 				INFOPLIST_FILE = EasyTableGZ_OBJC/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = "com.gongzhen.ObjCApp.EasyTableGZ-OBJC";

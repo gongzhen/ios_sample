@@ -10,4 +10,12 @@
 
 @implementation GZEasyTableRow
 
+- (instancetype)initWithModel:(id)model {
+    self = [super init];
+    if (self) {
+        self.model = model;
+    }
+    return self;
+}
+
 @end

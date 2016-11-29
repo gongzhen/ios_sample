@@ -10,4 +10,9 @@
 
 @interface GZNode : NSObject
 
+@property (nonatomic, strong) GZNode *parent;
+@property (nonatomic, strong) NSArray *children;
+
+- (void)addChild:(GZNode *)node;
+- (GZNode *)childAtIndex:(NSUInteger)index;
 @end
