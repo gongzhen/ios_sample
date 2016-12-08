@@ -21,11 +21,18 @@
     return [NSString stringWithFormat:@"section: %ld row: %ld", (long)indexPath.section, (long)indexPath.row];
 }
 
+- (UIImage *)imageDownloadFromUrl:(NSString *)url {
+    NSData *imageData = [NSData dataWithContentsOfURL:[NSURL URLWithString:url]];
+    UIImage *image = [[UIImage alloc] initWithData:imageData];
+    return image;
+}
+
 @end
 
 @interface TestCell : UITableViewCell
 
 @property (nonatomic, strong) UITextField *textField;
+@property (nonatomic, strong) UIImageView *textImageView;
 
 @end
 
@@ -35,14 +42,25 @@
     self = [super initWithStyle:style reuseIdentifier:reuseIdentifier];
     if (self) {
         [self.contentView addSubview:self.textField];
+        [self.contentView addSubview:self.textImageView];
     }
     return self;
 }
 
+- (UIImageView *)textImageView {
+    if (_textImageView == nil) {
+        _textImageView = [[UIImageView alloc] initWithFrame:CGRectMake(160, 0, 210, self.contentView.frame.size.height)];
+        [_textImageView setBackgroundColor:[UIColor redColor]];
+        [_textImageView setContentMode:UIViewContentModeScaleAspectFit];
+    }
+    return _textImageView;
+}
+
 - (UITextField *)textField {
     if (_textField == nil) {
-        _textField = [[UITextField alloc] initWithFrame:CGRectMake(0, 0, self.contentView.frame.size.width, self.contentView.frame.size.height)];
+        _textField = [[UITextField alloc] initWithFrame:CGRectMake(0, 0, 150, self.contentView.frame.size.height)];
         [_textField setBackgroundColor:[UIColor blueColor]];
+        [_textField setUserInteractionEnabled:NO];
     }
     return _textField;
 }
@@ -56,10 +74,12 @@
 
 @interface ViewController () {
     GlitchModel *_model;
+    NSArray *_urlList;
 }
 
 @property(nonatomic, strong) UIView *topView;
 @property(nonatomic, strong) UITableView *tableView;
+@property(nonatomic, strong) UIView *bottomView;
 
 @end
 
@@ -86,9 +106,18 @@
     return _topView;
 }
 
+-(UIView *)bottomView {
+    if (_bottomView == nil) {
+        _bottomView = [[UIView alloc] initWithFrame:CGRectZero];
+        [_bottomView setBackgroundColor: [UIColor greenColor]];
+        [_bottomView setTranslatesAutoresizingMaskIntoConstraints: NO];
+    }
+    return _bottomView;
+}
 
 - (void)viewDidLoad {
     [super viewDidLoad];
+    _urlList = @[@"http://i.imgur.com/UvqEgCv.png", @"http://i.imgur.com/dZ5wRtb.png", @"http://i.imgur.com/tPzTg7A.jpg"];
     _model = [[GlitchModel alloc] init];
     [self setLayoutConstraint];
     [self.tableView registerClass:[TestCell class] forCellReuseIdentifier:@"testcell1"];
@@ -131,10 +160,16 @@
 
 - (void)configureCell:(UITableViewCell *)cell atIndexPath:(NSIndexPath *)indexPath {
     if ([cell isKindOfClass:[TestCell class]] == YES) {
-        dispatch_async(dispatch_get_global_queue(DISPATCH_QUEUE_PRIORITY_DEFAULT, 0), ^{
+        dispatch_queue_t queue = dispatch_get_global_queue(DISPATCH_QUEUE_PRIORITY_DEFAULT, 0);
+        dispatch_async(queue, ^{
             NSString *fieldText = [_model textForIndexPath:indexPath];
+            NSUInteger randomIndex = arc4random() % [_urlList count];
+            
+            UIImage *image = [_model imageDownloadFromUrl: [_urlList objectAtIndex:randomIndex]];
             dispatch_async(dispatch_get_main_queue(), ^{
                 ((TestCell *)cell).textField.text = fieldText;
+                ((TestCell *)cell).textImageView.image = image;
+                [cell setNeedsLayout];
            });
         });
     }
@@ -157,6 +192,7 @@
 - (void)setLayoutConstraint {
     [self.view addSubview:self.topView];
     [self.view addSubview:self.tableView];
+    [self.view addSubview:self.bottomView];
     
     // Do any additional setup after loading the view, typically from a nib.
     
@@ -193,8 +229,39 @@
                                                                 toItem:nil
                                                              attribute:NSLayoutAttributeNotAnAttribute
                                                             multiplier:1.0
-                                                              constant:150.f]];
-    
+                                                              constant:50.f]];
+    // bottomView height
+    [self.bottomView addConstraint:[NSLayoutConstraint constraintWithItem:self.bottomView
+                                                                attribute:NSLayoutAttributeHeight
+                                                                relatedBy:NSLayoutRelationEqual
+                                                                   toItem:nil
+                                                                attribute:NSLayoutAttributeNotAnAttribute
+                                                               multiplier:1.0
+                                                                 constant:50]];
+    // bottomView leading
+    [self.view addConstraint:[NSLayoutConstraint constraintWithItem:self.bottomView
+                                                          attribute:NSLayoutAttributeLeading
+                                                          relatedBy:NSLayoutRelationEqual
+                                                             toItem:self.view
+                                                          attribute:NSLayoutAttributeLeading
+                                                         multiplier:1.0
+                                                           constant:0.f]];
+    // bottomView trailing
+    [self.view addConstraint:[NSLayoutConstraint constraintWithItem:self.bottomView
+                                                          attribute:NSLayoutAttributeTrailing
+                                                          relatedBy:NSLayoutRelationEqual
+                                                             toItem:self.view
+                                                          attribute:NSLayoutAttributeTrailing
+                                                         multiplier:1.0
+                                                           constant:0.f]];
+    // bottomView bottom
+    [self.view addConstraint: [NSLayoutConstraint constraintWithItem:self.bottomView
+                                                           attribute:NSLayoutAttributeBottom
+                                                           relatedBy:NSLayoutRelationEqual
+                                                              toItem:self.view
+                                                           attribute:NSLayoutAttributeBottom
+                                                          multiplier:1.0
+                                                            constant:0.f]];
     // tableView top
     [self.view addConstraint:[NSLayoutConstraint constraintWithItem:self.topView
                                                           attribute:NSLayoutAttributeBottom
@@ -220,13 +287,19 @@
                                                          multiplier:1.0
                                                            constant:0]];
     // tableView bottom
-    [self.view addConstraint:[NSLayoutConstraint constraintWithItem:self.tableView
-                                                          attribute:NSLayoutAttributeBottom
+    [self.view addConstraint:[NSLayoutConstraint constraintWithItem:self.bottomView
+                                                          attribute:NSLayoutAttributeTop
                                                           relatedBy:NSLayoutRelationEqual
-                                                             toItem:self.view
+                                                             toItem:self.tableView
                                                           attribute:NSLayoutAttributeBottom
                                                          multiplier:1.0
                                                            constant:0]];
+    
+
+    
+    
+    
+    
 }
 
 @end

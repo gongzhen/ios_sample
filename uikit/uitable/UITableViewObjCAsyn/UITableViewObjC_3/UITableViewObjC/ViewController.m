@@ -21,6 +21,12 @@
     return [NSString stringWithFormat:@"section: %ld row: %ld", (long)indexPath.section, (long)indexPath.row];
 }
 
+- (UIImage *)imageDownloadFromUrl:(NSString *)url {
+    NSData *imageData = [NSData dataWithContentsOfURL:[NSURL URLWithString:url]];
+    UIImage *image = [[UIImage alloc] initWithData:imageData];
+    return image;
+}
+
 @end
 
 @interface SerialOperationQueue: NSOperationQueue
@@ -42,6 +48,7 @@
 @interface TestCell : UITableViewCell
 
 @property (nonatomic, strong) UITextField *textField;
+@property (nonatomic, strong) UIImageView *textImageView;
 @property (nonatomic, strong) SerialOperationQueue *queue;
 
 @end
@@ -52,6 +59,7 @@
     self = [super initWithStyle:style reuseIdentifier:reuseIdentifier];
     if (self) {
         [self.contentView addSubview:self.textField];
+        [self.contentView addSubview:self.textImageView];
         self.queue = [[SerialOperationQueue alloc] init];
     }
     return self;
@@ -59,11 +67,20 @@
 
 - (UITextField *)textField {
     if (_textField == nil) {
-        _textField = [[UITextField alloc] initWithFrame:CGRectMake(0, 0, self.contentView.frame.size.width, self.contentView.frame.size.height)];
+        _textField = [[UITextField alloc] initWithFrame:CGRectMake(0, 0, 150, self.contentView.frame.size.height)];
         [_textField setBackgroundColor:[UIColor blueColor]];
-        [_textField setTextColor:[UIColor redColor]];
+        [_textField setUserInteractionEnabled:NO];
     }
     return _textField;
+}
+
+- (UIImageView *)textImageView {
+    if (_textImageView == nil) {
+        _textImageView = [[UIImageView alloc] initWithFrame:CGRectMake(160, 0, 210, self.contentView.frame.size.height)];
+        [_textImageView setBackgroundColor:[UIColor redColor]];
+        [_textImageView setContentMode:UIViewContentModeScaleAspectFit];
+    }
+    return _textImageView;
 }
 
 - (void)prepareForReuse {
@@ -75,6 +92,7 @@
 
 @interface ViewController () {
     GlitchModel *_model;
+    NSArray *_urlList;
 }
 
 @property(nonatomic, strong) UIView *topView;
@@ -109,6 +127,7 @@
 - (void)viewDidLoad {
     [super viewDidLoad];
     _model = [[GlitchModel alloc] init];
+    _urlList = [NSArray arrayWithObjects:@"http://i.imgur.com/UvqEgCv.png", @"http://i.imgur.com/dZ5wRtb.png", @"http://i.imgur.com/tPzTg7A.jpg", nil];
 //
 //    http://stackoverflow.com/questions/8113268/how-to-cancel-nsblockoperation
 //    NSOperationQueue *queue = [[NSOperationQueue alloc] init];
@@ -170,11 +189,16 @@
         __weak NSBlockOperation * weakOperation = operation;
         [operation addExecutionBlock:^{
             NSString *text = [_model textForIndexPath:indexPath];
-            dispatch_sync(dispatch_get_main_queue(), ^{
+            
+            NSUInteger randomIndex = arc4random() % [_urlList count];
+            UIImage *image = [_model imageDownloadFromUrl:[_urlList objectAtIndex:randomIndex]];
+            dispatch_queue_t queue = dispatch_get_main_queue();
+            dispatch_async(queue, ^{
                 if ([weakOperation isCancelled] == YES) {
                     return;
                 }
                 ((TestCell *)cell).textField.text = text;
+                ((TestCell *)cell).textImageView.image = image;
             });
         }];
         
