@@ -7,6 +7,7 @@
 //
 
 #import "SecondViewController.h"
+#import "UITableView+GZEasyTable.h"
 
 @interface Test2Cell : UITableViewCell
 
@@ -89,15 +90,21 @@
         [_tableView setTranslatesAutoresizingMaskIntoConstraints: NO];
         Test2Cell *cell = [[Test2Cell alloc] initWithStyle:UITableViewCellStyleDefault reuseIdentifier:nil];
         // registerAutolayoutCell
-        // [_tableView registAutolayoutCell:cell forAutomaticCalculationHeightIdentifier:@"cell"];
+        [_tableView registAutolayoutCell:cell forAutomaticCalculationHeightIdentifier:@"cell"];
     }
     return _tableView;
 }
 
+#pragma mark - lifeCycle
+
 - (void)viewDidLoad {
     [super viewDidLoad];
     // Do any additional setup after loading the view.
+    [self setLayoutConstraint];
     [self initializeDataSource];
+}
+
+- (void)setLayoutConstraint {
     [self.view addSubview:self.tableView];
     [self.view addConstraint:[NSLayoutConstraint constraintWithItem:self.tableView
                                                           attribute:NSLayoutAttributeTop
@@ -127,12 +134,11 @@
                                                           attribute:NSLayoutAttributeBottom
                                                          multiplier:1.0
                                                            constant:0]];
-    
-    
 }
 
 - (void)initializeDataSource {
-
+    [self.tableView.tableModel addRowsWithModels:@[@"a", @"aaaaaaaaaaaa"] inSection:0];
+    [self.tableView.tableModel addRowsWithModels:@[@"aa", @"aaaaaaaaaaaa"] inSection:1];
 }
 
 - (void)didReceiveMemoryWarning {
@@ -140,4 +146,53 @@
     // Dispose of any resources that can be recreated.
 }
 
+#pragma mark - tableView datasource
+
+- (NSInteger)numberOfSectionsInTableView:(UITableView *)tableView {
+    return [_tableView.tableModel numberOfSections];
+}
+
+- (NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section {
+    return [_tableView.tableModel numberOfRowsInSection:section];
+}
+
+- (CGFloat)tableView:(UITableView *)tableView heightForRowAtIndexPath:(NSIndexPath *)indexPath {
+    CGFloat height = [_tableView intrinsicHeightAtIndexPath:indexPath
+                                              forIdentifier:@"cell"
+                                            configCellBlock:^(Test2Cell *cell, NSString *model) {
+                                            }];
+    return height;
+}
+
+- (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath {
+    static NSString *identifier = @"cellIdentifier";
+    Test2Cell *cell = [tableView dequeueReusableCellWithIdentifier:identifier];
+    if (cell == nil) {
+        cell = [[Test2Cell alloc] initWithStyle:UITableViewCellStyleDefault reuseIdentifier:identifier];
+    }
+    NSString *text = [tableView.tableModel modelAtIndexPath:indexPath];
+    cell.sizeLabel.text = text;
+    [cell setNeedsLayout];
+    
+    return cell;
+}
+
+- (void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath {
+    [tableView deselectRowAtIndexPath:indexPath animated:YES];
+}
+
+- (CGFloat)tableView:(UITableView *)tableView heightForHeaderInSection:(NSInteger)section {
+    return 30;
+}
+
+- (NSString *)tableView:(UITableView *)tableView titleForHeaderInSection:(NSInteger)section {    
+    return @"哈哈";
+}
+
+
+
 @end
+
+
+
+

@@ -20,27 +20,31 @@ const char GZEasyTableCellKey;
 // http://stackoverflow.com/questions/8733104/objective-c-property-instance-variable-in-category
 - (GZEasyTableModel *)tableModel {
     GZEasyTableModel *model = objc_getAssociatedObject(self, &GZEasyTableModelKey);
-    // DLog(@"modelKey: %s|", &GZEasyTableModelKey);
+    
     if (model == nil) {
         model = [[GZEasyTableModel alloc] init];
+        // self is the source object for the association that will point to the other object.
+        // key is the key for the association that can be any void pointer with constant memory address.
+        // model is the object that you want to store or associate with the source object.
+        // policy is a constant defining the type of reference.
         objc_setAssociatedObject(self, &GZEasyTableModelKey, model, OBJC_ASSOCIATION_RETAIN_NONATOMIC);
     }
     return model;
 }
 
 - (void)registAutolayoutCell:(UITableViewCell *)cell forAutomaticCalculationHeightIdentifier:(NSString *)identifier {
-    DLog(@"cell %@", cell);
     if (cell == nil || identifier == nil) {
         return;
     }
     
     NSMutableDictionary *cellsDict = objc_getAssociatedObject(self, &GZEasyTableCellKey);
-    DLog(@"GZEasyTableCellKey %s", &GZEasyTableCellKey);
+    
     if (!cellsDict) {
         cellsDict = [[NSMutableDictionary alloc] init];
         objc_setAssociatedObject(self, &GZEasyTableCellKey, cellsDict, OBJC_ASSOCIATION_RETAIN_NONATOMIC);
     }
     [cellsDict setObject:cell forKey:identifier];
+    DLog(@"cellDict :%@", cellsDict);
 }
 
 - (CGFloat)intrinsicHeightAtIndexPath:(NSIndexPath *)indexPath
@@ -49,33 +53,32 @@ const char GZEasyTableCellKey;
     id model = [self.tableModel modelAtIndexPath: indexPath];
     
     CGFloat cellHeight = [self.tableModel cellHeightAtIndexPath:indexPath];
-    DLog(@"cellHeight: %fd", cellHeight);
+    // DLog(@"cellHeight: %fd", cellHeight);
     if (cellHeight > 0) {
         return cellHeight;
     }
     
     NSMutableDictionary *cellsDict = objc_getAssociatedObject(self, &GZEasyTableCellKey);
-    DLog(@"GZEasyTableCellKey:%s|", &GZEasyTableCellKey);
 
     UITableViewCell *cell = [cellsDict objectForKey:identifier];
     NSAssert(cell != nil, @"registAutolayoutCell:forAutomaticCalculationHeightIdentifier: must be called");
     
     if (configBlock) {
-        DLog(@"configBlock %@", configBlock);
         configBlock(cell, model);
     }
     
     [cell setNeedsUpdateConstraints];
     [cell updateConstraintsIfNeeded];
-    cell.bounds = CGRectMake(0.f, 0.f, CGRectGetWidth(self.bounds), CGRectGetHeight(self.bounds));
-    DLog(@"cell.bounds:%@", NSStringFromCGRect(cell.bounds));
+    
+    cell.bounds = CGRectMake(0.f, 0.f, CGRectGetWidth(self.bounds), CGRectGetHeight(cell.bounds));
+
     [cell setNeedsLayout];
     [cell layoutIfNeeded];
-    
+    DLog(@"%@", NSStringFromCGSize([cell.contentView systemLayoutSizeFittingSize:UILayoutFittingCompressedSize]));
     CGFloat height = [cell.contentView systemLayoutSizeFittingSize:UILayoutFittingCompressedSize].height;
-    
+
     height += 1.0f;
-    DLog(@"height: %fd", height);
+    
     [self.tableModel setCellHeight:height atIndexPath:indexPath];
     
     return height;

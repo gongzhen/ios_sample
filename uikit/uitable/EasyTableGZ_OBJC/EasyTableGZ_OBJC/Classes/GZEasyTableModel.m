@@ -25,19 +25,46 @@
         for (id model in sectionModels) {
             NSDictionary *attributes = nil;
             if (setterBlock) {
-                DLog(@"setterBlock %@", setterBlock);
+            
                 setterBlock(model);
             }
             // table section initializer with model and attributes
-            DLog(@"model: %@", model);
+            
             GZEasyTableSection *section = [[GZEasyTableSection alloc] initWithModel:model attributes:attributes];
             // GZNode addChild: ssection
             [self addChild:section];
             
         }
-        DLog(@"children section count: %lu", (unsigned long)self.children.count);
+        
     }
 }
+
+- (void)addRowsWithModels:(NSArray *)rowModels inSection:(NSInteger)section {
+    [self addRowsWithModels:rowModels attributeSetter:nil insection:section];
+}
+
+- (void)addRowsWithModels:(NSArray *)rowModels attributeSetter:(NSDictionary *(^)(id))setterBlock insection:(NSInteger)section {
+    if (rowModels.count) {
+        for (id model in rowModels) {
+            NSDictionary *attributes = nil;
+            if (setterBlock) {
+                setterBlock(model);
+            }
+            [self addRowWithModel:model attributes:attributes inSection:section];
+        }
+    }
+}
+
+- (void)addRowWithModel:(id)model attributes:(NSDictionary *)attributes inSection:(NSInteger)section {
+    GZEasyTableSection *sectionModel = [self sectionAtIndex:section];
+    if (!sectionModel) {
+        sectionModel = [[GZEasyTableSection alloc] initWithModel:nil];
+        [self insertChild:sectionModel atIndex:section];
+    }
+    GZEasyTableRow *row = [[GZEasyTableRow alloc] initWithModel:model attributes:attributes];
+    [sectionModel addRow:row];
+}
+
 
 - (NSInteger)numberOfSections {
     return self.children.count;
@@ -71,10 +98,9 @@
 
 - (id)modelAtIndexPath:(NSIndexPath *)indexPath {
     GZEasyTableSection *section = (GZEasyTableSection *)[self childAtIndex:indexPath.section];
-    DLog(@"section %@", section);
+
     if (section) {
         GZEasyTableRow *row = (GZEasyTableRow *)[section childAtIndex:indexPath.row];
-        DLog(@"row: %@", row);
         if (row) {
             return row.model;
         } else {

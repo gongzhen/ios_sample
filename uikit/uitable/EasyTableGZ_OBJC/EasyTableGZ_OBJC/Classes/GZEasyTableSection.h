@@ -9,6 +9,8 @@
 #import <Foundation/Foundation.h>
 #import <UIKit/UIKit.h>
 #import "GZNode.h"
+#import "GZEasyTableRow.h"
+
 
 @interface GZEasyTableSection : GZNode
 
@@ -18,10 +20,13 @@
 - (NSInteger)numberOfRows;
 
 // GZEasyTableSection initializer
+- (instancetype)initWithModel:(id)model;
 - (instancetype)initWithModel:(id)model attributes:(NSDictionary *)attributes;
 
 //
 - (void)setCellHeight:(CGFloat)cellHeight atRow:(NSInteger)row;
 - (CGFloat)cellHeightAtRow:(NSInteger)row;
 
+
+- (void)addRow:(GZEasyTableRow *)row;
 @end

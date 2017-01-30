@@ -37,5 +37,16 @@
     return children.count > index ? [children objectAtIndex:index] : nil;
 }
 
+- (void)insertChild:(GZNode *)node atIndex:(NSUInteger)index {
+    if (node && index <= _children.count) {
+        node.parent = self;
+        @synchronized (self) {
+            if (!_children) {
+                _children = [[NSMutableArray alloc] init];
+            }
+            [_children insertObject:node atIndex:index];
+        }
+    }
+}
 
 @end

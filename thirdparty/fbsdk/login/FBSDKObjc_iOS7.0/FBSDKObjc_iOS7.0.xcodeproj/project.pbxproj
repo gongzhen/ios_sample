@@ -1,0 +1,722 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 46;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		064740B11E0C2688007FD578 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 064740B01E0C2688007FD578 /* main.m */; };
+		064740B41E0C2688007FD578 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 064740B31E0C2688007FD578 /* AppDelegate.m */; };
+		064740BA1E0C2688007FD578 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 064740B81E0C2688007FD578 /* Main.storyboard */; };
+		064740BC1E0C2688007FD578 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 064740BB1E0C2688007FD578 /* Assets.xcassets */; };
+		064740BF1E0C2688007FD578 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 064740BD1E0C2688007FD578 /* LaunchScreen.storyboard */; };
+		064740CA1E0C2689007FD578 /* FBSDKObjc_iOS7_0Tests.m in Sources */ = {isa = PBXBuildFile; fileRef = 064740C91E0C2689007FD578 /* FBSDKObjc_iOS7_0Tests.m */; };
+		064740D51E0C2689007FD578 /* FBSDKObjc_iOS7_0UITests.m in Sources */ = {isa = PBXBuildFile; fileRef = 064740D41E0C2689007FD578 /* FBSDKObjc_iOS7_0UITests.m */; };
+		064741181E0C271A007FD578 /* Bolts.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 064740E31E0C271A007FD578 /* Bolts.framework */; };
+		064741191E0C271A007FD578 /* FBSDKCoreKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 064740E41E0C271A007FD578 /* FBSDKCoreKit.framework */; };
+		0647411A1E0C271A007FD578 /* FBSDKLoginKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 064740E51E0C271A007FD578 /* FBSDKLoginKit.framework */; };
+		0647411B1E0C271A007FD578 /* FBSDKShareKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 064740E61E0C271A007FD578 /* FBSDKShareKit.framework */; };
+		0647411C1E0C271A007FD578 /* _FBColorComponentCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 064740E91E0C271A007FD578 /* _FBColorComponentCell.m */; };
+		0647411D1E0C271A007FD578 /* _FBColorUtils.m in Sources */ = {isa = PBXBuildFile; fileRef = 064740EB1E0C271A007FD578 /* _FBColorUtils.m */; };
+		0647411E1E0C271A007FD578 /* _FBColorWheelCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 064740ED1E0C271A007FD578 /* _FBColorWheelCell.m */; };
+		0647411F1E0C271A007FD578 /* _FBKeyboardManager.m in Sources */ = {isa = PBXBuildFile; fileRef = 064740EF1E0C271A007FD578 /* _FBKeyboardManager.m */; };
+		064741201E0C271A007FD578 /* _FBSliderView.m in Sources */ = {isa = PBXBuildFile; fileRef = 064740F11E0C271A007FD578 /* _FBSliderView.m */; };
+		064741211E0C271A007FD578 /* _FBTweakArrayViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 064740F31E0C271A007FD578 /* _FBTweakArrayViewController.m */; };
+		064741221E0C271A007FD578 /* _FBTweakBindObserver.m in Sources */ = {isa = PBXBuildFile; fileRef = 064740F51E0C271A007FD578 /* _FBTweakBindObserver.m */; };
+		064741231E0C271A007FD578 /* _FBTweakCategoryViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 064740F71E0C271A007FD578 /* _FBTweakCategoryViewController.m */; };
+		064741241E0C271A007FD578 /* _FBTweakCollectionViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 064740F91E0C271A007FD578 /* _FBTweakCollectionViewController.m */; };
+		064741251E0C271A007FD578 /* _FBTweakColorViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 064740FB1E0C271A007FD578 /* _FBTweakColorViewController.m */; };
+		064741261E0C271A007FD578 /* _FBTweakColorViewControllerHexDataSource.m in Sources */ = {isa = PBXBuildFile; fileRef = 064740FE1E0C271A007FD578 /* _FBTweakColorViewControllerHexDataSource.m */; };
+		064741271E0C271A007FD578 /* _FBTweakColorViewControllerHSBDataSource.m in Sources */ = {isa = PBXBuildFile; fileRef = 064741001E0C271A007FD578 /* _FBTweakColorViewControllerHSBDataSource.m */; };
+		064741281E0C271A007FD578 /* _FBTweakColorViewControllerRGBDataSource.m in Sources */ = {isa = PBXBuildFile; fileRef = 064741021E0C271A007FD578 /* _FBTweakColorViewControllerRGBDataSource.m */; };
+		064741291E0C271A007FD578 /* _FBTweakDictionaryViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 064741041E0C271A007FD578 /* _FBTweakDictionaryViewController.m */; };
+		0647412A1E0C271A007FD578 /* _FBTweakTableViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 064741061E0C271A007FD578 /* _FBTweakTableViewCell.m */; };
+		0647412B1E0C271A007FD578 /* FBTweak.m in Sources */ = {isa = PBXBuildFile; fileRef = 064741091E0C271A007FD578 /* FBTweak.m */; };
+		0647412C1E0C271A007FD578 /* FBTweakCategory.m in Sources */ = {isa = PBXBuildFile; fileRef = 0647410B1E0C271A007FD578 /* FBTweakCategory.m */; };
+		0647412D1E0C271A007FD578 /* FBTweakCollection.m in Sources */ = {isa = PBXBuildFile; fileRef = 0647410D1E0C271A007FD578 /* FBTweakCollection.m */; };
+		0647412E1E0C271A007FD578 /* FBTweakInline.m in Sources */ = {isa = PBXBuildFile; fileRef = 064741101E0C271A007FD578 /* FBTweakInline.m */; };
+		0647412F1E0C271A007FD578 /* FBTweakShakeWindow.m in Sources */ = {isa = PBXBuildFile; fileRef = 064741131E0C271A007FD578 /* FBTweakShakeWindow.m */; };
+		064741301E0C271A007FD578 /* FBTweakStore.m in Sources */ = {isa = PBXBuildFile; fileRef = 064741151E0C271A007FD578 /* FBTweakStore.m */; };
+		064741311E0C271A007FD578 /* FBTweakViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 064741171E0C271A007FD578 /* FBTweakViewController.m */; };
+		0647413F1E0C28A9007FD578 /* LoginViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 0647413E1E0C28A9007FD578 /* LoginViewController.m */; };
+		064741421E0C28C4007FD578 /* MainViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 064741411E0C28C4007FD578 /* MainViewController.m */; };
+		064741451E0C2AAB007FD578 /* Default-568h@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 064741441E0C2AAB007FD578 /* Default-568h@2x.png */; };
+		0647419A1E0C597D007FD578 /* AlertControllerUtility.m in Sources */ = {isa = PBXBuildFile; fileRef = 064741991E0C597D007FD578 /* AlertControllerUtility.m */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		064740C61E0C2689007FD578 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 064740A41E0C2688007FD578 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 064740AB1E0C2688007FD578;
+			remoteInfo = FBSDKObjc_iOS7.0;
+		};
+		064740D11E0C2689007FD578 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 064740A41E0C2688007FD578 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 064740AB1E0C2688007FD578;
+			remoteInfo = FBSDKObjc_iOS7.0;
+		};
+/* End PBXContainerItemProxy section */
+
+/* Begin PBXFileReference section */
+		064740AC1E0C2688007FD578 /* FBSDKObjc_iOS7.0.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = FBSDKObjc_iOS7.0.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		064740B01E0C2688007FD578 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; name = main.m; path = ../main.m; sourceTree = "<group>"; };
+		064740B21E0C2688007FD578 /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
+		064740B31E0C2688007FD578 /* AppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
+		064740B91E0C2688007FD578 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
+		064740BB1E0C2688007FD578 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		064740BE1E0C2688007FD578 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
+		064740C51E0C2689007FD578 /* FBSDKObjc_iOS7.0Tests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = FBSDKObjc_iOS7.0Tests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		064740C91E0C2689007FD578 /* FBSDKObjc_iOS7_0Tests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = FBSDKObjc_iOS7_0Tests.m; sourceTree = "<group>"; };
+		064740CB1E0C2689007FD578 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		064740D01E0C2689007FD578 /* FBSDKObjc_iOS7.0UITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = FBSDKObjc_iOS7.0UITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		064740D41E0C2689007FD578 /* FBSDKObjc_iOS7_0UITests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = FBSDKObjc_iOS7_0UITests.m; sourceTree = "<group>"; };
+		064740D61E0C2689007FD578 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		064740E31E0C271A007FD578 /* Bolts.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = Bolts.framework; sourceTree = "<group>"; };
+		064740E41E0C271A007FD578 /* FBSDKCoreKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = FBSDKCoreKit.framework; sourceTree = "<group>"; };
+		064740E51E0C271A007FD578 /* FBSDKLoginKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = FBSDKLoginKit.framework; sourceTree = "<group>"; };
+		064740E61E0C271A007FD578 /* FBSDKShareKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = FBSDKShareKit.framework; sourceTree = "<group>"; };
+		064740E81E0C271A007FD578 /* _FBColorComponentCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = _FBColorComponentCell.h; sourceTree = "<group>"; };
+		064740E91E0C271A007FD578 /* _FBColorComponentCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = _FBColorComponentCell.m; sourceTree = "<group>"; };
+		064740EA1E0C271A007FD578 /* _FBColorUtils.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = _FBColorUtils.h; sourceTree = "<group>"; };
+		064740EB1E0C271A007FD578 /* _FBColorUtils.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = _FBColorUtils.m; sourceTree = "<group>"; };
+		064740EC1E0C271A007FD578 /* _FBColorWheelCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = _FBColorWheelCell.h; sourceTree = "<group>"; };
+		064740ED1E0C271A007FD578 /* _FBColorWheelCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = _FBColorWheelCell.m; sourceTree = "<group>"; };
+		064740EE1E0C271A007FD578 /* _FBKeyboardManager.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = _FBKeyboardManager.h; sourceTree = "<group>"; };
+		064740EF1E0C271A007FD578 /* _FBKeyboardManager.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = _FBKeyboardManager.m; sourceTree = "<group>"; };
+		064740F01E0C271A007FD578 /* _FBSliderView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = _FBSliderView.h; sourceTree = "<group>"; };
+		064740F11E0C271A007FD578 /* _FBSliderView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = _FBSliderView.m; sourceTree = "<group>"; };
+		064740F21E0C271A007FD578 /* _FBTweakArrayViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = _FBTweakArrayViewController.h; sourceTree = "<group>"; };
+		064740F31E0C271A007FD578 /* _FBTweakArrayViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = _FBTweakArrayViewController.m; sourceTree = "<group>"; };
+		064740F41E0C271A007FD578 /* _FBTweakBindObserver.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = _FBTweakBindObserver.h; sourceTree = "<group>"; };
+		064740F51E0C271A007FD578 /* _FBTweakBindObserver.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = _FBTweakBindObserver.m; sourceTree = "<group>"; };
+		064740F61E0C271A007FD578 /* _FBTweakCategoryViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = _FBTweakCategoryViewController.h; sourceTree = "<group>"; };
+		064740F71E0C271A007FD578 /* _FBTweakCategoryViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = _FBTweakCategoryViewController.m; sourceTree = "<group>"; };
+		064740F81E0C271A007FD578 /* _FBTweakCollectionViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = _FBTweakCollectionViewController.h; sourceTree = "<group>"; };
+		064740F91E0C271A007FD578 /* _FBTweakCollectionViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = _FBTweakCollectionViewController.m; sourceTree = "<group>"; };
+		064740FA1E0C271A007FD578 /* _FBTweakColorViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = _FBTweakColorViewController.h; sourceTree = "<group>"; };
+		064740FB1E0C271A007FD578 /* _FBTweakColorViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = _FBTweakColorViewController.m; sourceTree = "<group>"; };
+		064740FC1E0C271A007FD578 /* _FBTweakColorViewControllerDataSource.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = _FBTweakColorViewControllerDataSource.h; sourceTree = "<group>"; };
+		064740FD1E0C271A007FD578 /* _FBTweakColorViewControllerHexDataSource.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = _FBTweakColorViewControllerHexDataSource.h; sourceTree = "<group>"; };
+		064740FE1E0C271A007FD578 /* _FBTweakColorViewControllerHexDataSource.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = _FBTweakColorViewControllerHexDataSource.m; sourceTree = "<group>"; };
+		064740FF1E0C271A007FD578 /* _FBTweakColorViewControllerHSBDataSource.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = _FBTweakColorViewControllerHSBDataSource.h; sourceTree = "<group>"; };
+		064741001E0C271A007FD578 /* _FBTweakColorViewControllerHSBDataSource.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = _FBTweakColorViewControllerHSBDataSource.m; sourceTree = "<group>"; };
+		064741011E0C271A007FD578 /* _FBTweakColorViewControllerRGBDataSource.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = _FBTweakColorViewControllerRGBDataSource.h; sourceTree = "<group>"; };
+		064741021E0C271A007FD578 /* _FBTweakColorViewControllerRGBDataSource.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = _FBTweakColorViewControllerRGBDataSource.m; sourceTree = "<group>"; };
+		064741031E0C271A007FD578 /* _FBTweakDictionaryViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = _FBTweakDictionaryViewController.h; sourceTree = "<group>"; };
+		064741041E0C271A007FD578 /* _FBTweakDictionaryViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = _FBTweakDictionaryViewController.m; sourceTree = "<group>"; };
+		064741051E0C271A007FD578 /* _FBTweakTableViewCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = _FBTweakTableViewCell.h; sourceTree = "<group>"; };
+		064741061E0C271A007FD578 /* _FBTweakTableViewCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = _FBTweakTableViewCell.m; sourceTree = "<group>"; };
+		064741071E0C271A007FD578 /* FBTweak-Prefix.pch */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "FBTweak-Prefix.pch"; sourceTree = "<group>"; };
+		064741081E0C271A007FD578 /* FBTweak.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FBTweak.h; sourceTree = "<group>"; };
+		064741091E0C271A007FD578 /* FBTweak.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = FBTweak.m; sourceTree = "<group>"; };
+		0647410A1E0C271A007FD578 /* FBTweakCategory.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FBTweakCategory.h; sourceTree = "<group>"; };
+		0647410B1E0C271A007FD578 /* FBTweakCategory.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = FBTweakCategory.m; sourceTree = "<group>"; };
+		0647410C1E0C271A007FD578 /* FBTweakCollection.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FBTweakCollection.h; sourceTree = "<group>"; };
+		0647410D1E0C271A007FD578 /* FBTweakCollection.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = FBTweakCollection.m; sourceTree = "<group>"; };
+		0647410E1E0C271A007FD578 /* FBTweakEnabled.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FBTweakEnabled.h; sourceTree = "<group>"; };
+		0647410F1E0C271A007FD578 /* FBTweakInline.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FBTweakInline.h; sourceTree = "<group>"; };
+		064741101E0C271A007FD578 /* FBTweakInline.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = FBTweakInline.m; sourceTree = "<group>"; };
+		064741111E0C271A007FD578 /* FBTweakInlineInternal.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FBTweakInlineInternal.h; sourceTree = "<group>"; };
+		064741121E0C271A007FD578 /* FBTweakShakeWindow.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FBTweakShakeWindow.h; sourceTree = "<group>"; };
+		064741131E0C271A007FD578 /* FBTweakShakeWindow.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = FBTweakShakeWindow.m; sourceTree = "<group>"; };
+		064741141E0C271A007FD578 /* FBTweakStore.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FBTweakStore.h; sourceTree = "<group>"; };
+		064741151E0C271A007FD578 /* FBTweakStore.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = FBTweakStore.m; sourceTree = "<group>"; };
+		064741161E0C271A007FD578 /* FBTweakViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FBTweakViewController.h; sourceTree = "<group>"; };
+		064741171E0C271A007FD578 /* FBTweakViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = FBTweakViewController.m; sourceTree = "<group>"; };
+		0647413D1E0C28A9007FD578 /* LoginViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LoginViewController.h; sourceTree = "<group>"; };
+		0647413E1E0C28A9007FD578 /* LoginViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LoginViewController.m; sourceTree = "<group>"; };
+		064741401E0C28C4007FD578 /* MainViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MainViewController.h; sourceTree = "<group>"; };
+		064741411E0C28C4007FD578 /* MainViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MainViewController.m; sourceTree = "<group>"; };
+		064741431E0C2938007FD578 /* PrefixHeader.pch */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = PrefixHeader.pch; sourceTree = "<group>"; };
+		064741441E0C2AAB007FD578 /* Default-568h@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = "Default-568h@2x.png"; path = "../Default-568h@2x.png"; sourceTree = "<group>"; };
+		064741461E0C2DA6007FD578 /* Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		064741981E0C597D007FD578 /* AlertControllerUtility.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AlertControllerUtility.h; sourceTree = "<group>"; };
+		064741991E0C597D007FD578 /* AlertControllerUtility.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AlertControllerUtility.m; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		064740A91E0C2688007FD578 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				0647411B1E0C271A007FD578 /* FBSDKShareKit.framework in Frameworks */,
+				064741181E0C271A007FD578 /* Bolts.framework in Frameworks */,
+				064741191E0C271A007FD578 /* FBSDKCoreKit.framework in Frameworks */,
+				0647411A1E0C271A007FD578 /* FBSDKLoginKit.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		064740C21E0C2689007FD578 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		064740CD1E0C2689007FD578 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		064740A31E0C2688007FD578 = {
+			isa = PBXGroup;
+			children = (
+				064740AE1E0C2688007FD578 /* FBSDKObjc_iOS7.0 */,
+				064740C81E0C2689007FD578 /* FBSDKObjc_iOS7.0Tests */,
+				064740D31E0C2689007FD578 /* FBSDKObjc_iOS7.0UITests */,
+				064740AD1E0C2688007FD578 /* Products */,
+			);
+			sourceTree = "<group>";
+		};
+		064740AD1E0C2688007FD578 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				064740AC1E0C2688007FD578 /* FBSDKObjc_iOS7.0.app */,
+				064740C51E0C2689007FD578 /* FBSDKObjc_iOS7.0Tests.xctest */,
+				064740D01E0C2689007FD578 /* FBSDKObjc_iOS7.0UITests.xctest */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		064740AE1E0C2688007FD578 /* FBSDKObjc_iOS7.0 */ = {
+			isa = PBXGroup;
+			children = (
+				0647413A1E0C286C007FD578 /* Supporting Files */,
+				064740E21E0C26E2007FD578 /* Frameworks */,
+				064740B21E0C2688007FD578 /* AppDelegate.h */,
+				064740B31E0C2688007FD578 /* AppDelegate.m */,
+				064741461E0C2DA6007FD578 /* Info.plist */,
+				0647413D1E0C28A9007FD578 /* LoginViewController.h */,
+				0647413E1E0C28A9007FD578 /* LoginViewController.m */,
+				064741981E0C597D007FD578 /* AlertControllerUtility.h */,
+				064741991E0C597D007FD578 /* AlertControllerUtility.m */,
+				064741401E0C28C4007FD578 /* MainViewController.h */,
+				064741411E0C28C4007FD578 /* MainViewController.m */,
+				064740B81E0C2688007FD578 /* Main.storyboard */,
+				064740BB1E0C2688007FD578 /* Assets.xcassets */,
+				064741441E0C2AAB007FD578 /* Default-568h@2x.png */,
+				064740BD1E0C2688007FD578 /* LaunchScreen.storyboard */,
+			);
+			path = FBSDKObjc_iOS7.0;
+			sourceTree = "<group>";
+		};
+		064740C81E0C2689007FD578 /* FBSDKObjc_iOS7.0Tests */ = {
+			isa = PBXGroup;
+			children = (
+				064740C91E0C2689007FD578 /* FBSDKObjc_iOS7_0Tests.m */,
+				064740CB1E0C2689007FD578 /* Info.plist */,
+			);
+			path = FBSDKObjc_iOS7.0Tests;
+			sourceTree = "<group>";
+		};
+		064740D31E0C2689007FD578 /* FBSDKObjc_iOS7.0UITests */ = {
+			isa = PBXGroup;
+			children = (
+				064740D41E0C2689007FD578 /* FBSDKObjc_iOS7_0UITests.m */,
+				064740D61E0C2689007FD578 /* Info.plist */,
+			);
+			path = FBSDKObjc_iOS7.0UITests;
+			sourceTree = "<group>";
+		};
+		064740E21E0C26E2007FD578 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				064740E31E0C271A007FD578 /* Bolts.framework */,
+				064740E41E0C271A007FD578 /* FBSDKCoreKit.framework */,
+				064740E51E0C271A007FD578 /* FBSDKLoginKit.framework */,
+				064740E61E0C271A007FD578 /* FBSDKShareKit.framework */,
+				064740E71E0C271A007FD578 /* FBTweak */,
+			);
+			path = Frameworks;
+			sourceTree = "<group>";
+		};
+		064740E71E0C271A007FD578 /* FBTweak */ = {
+			isa = PBXGroup;
+			children = (
+				064740E81E0C271A007FD578 /* _FBColorComponentCell.h */,
+				064740E91E0C271A007FD578 /* _FBColorComponentCell.m */,
+				064740EA1E0C271A007FD578 /* _FBColorUtils.h */,
+				064740EB1E0C271A007FD578 /* _FBColorUtils.m */,
+				064740EC1E0C271A007FD578 /* _FBColorWheelCell.h */,
+				064740ED1E0C271A007FD578 /* _FBColorWheelCell.m */,
+				064740EE1E0C271A007FD578 /* _FBKeyboardManager.h */,
+				064740EF1E0C271A007FD578 /* _FBKeyboardManager.m */,
+				064740F01E0C271A007FD578 /* _FBSliderView.h */,
+				064740F11E0C271A007FD578 /* _FBSliderView.m */,
+				064740F21E0C271A007FD578 /* _FBTweakArrayViewController.h */,
+				064740F31E0C271A007FD578 /* _FBTweakArrayViewController.m */,
+				064740F41E0C271A007FD578 /* _FBTweakBindObserver.h */,
+				064740F51E0C271A007FD578 /* _FBTweakBindObserver.m */,
+				064740F61E0C271A007FD578 /* _FBTweakCategoryViewController.h */,
+				064740F71E0C271A007FD578 /* _FBTweakCategoryViewController.m */,
+				064740F81E0C271A007FD578 /* _FBTweakCollectionViewController.h */,
+				064740F91E0C271A007FD578 /* _FBTweakCollectionViewController.m */,
+				064740FA1E0C271A007FD578 /* _FBTweakColorViewController.h */,
+				064740FB1E0C271A007FD578 /* _FBTweakColorViewController.m */,
+				064740FC1E0C271A007FD578 /* _FBTweakColorViewControllerDataSource.h */,
+				064740FD1E0C271A007FD578 /* _FBTweakColorViewControllerHexDataSource.h */,
+				064740FE1E0C271A007FD578 /* _FBTweakColorViewControllerHexDataSource.m */,
+				064740FF1E0C271A007FD578 /* _FBTweakColorViewControllerHSBDataSource.h */,
+				064741001E0C271A007FD578 /* _FBTweakColorViewControllerHSBDataSource.m */,
+				064741011E0C271A007FD578 /* _FBTweakColorViewControllerRGBDataSource.h */,
+				064741021E0C271A007FD578 /* _FBTweakColorViewControllerRGBDataSource.m */,
+				064741031E0C271A007FD578 /* _FBTweakDictionaryViewController.h */,
+				064741041E0C271A007FD578 /* _FBTweakDictionaryViewController.m */,
+				064741051E0C271A007FD578 /* _FBTweakTableViewCell.h */,
+				064741061E0C271A007FD578 /* _FBTweakTableViewCell.m */,
+				064741071E0C271A007FD578 /* FBTweak-Prefix.pch */,
+				064741081E0C271A007FD578 /* FBTweak.h */,
+				064741091E0C271A007FD578 /* FBTweak.m */,
+				0647410A1E0C271A007FD578 /* FBTweakCategory.h */,
+				0647410B1E0C271A007FD578 /* FBTweakCategory.m */,
+				0647410C1E0C271A007FD578 /* FBTweakCollection.h */,
+				0647410D1E0C271A007FD578 /* FBTweakCollection.m */,
+				0647410E1E0C271A007FD578 /* FBTweakEnabled.h */,
+				0647410F1E0C271A007FD578 /* FBTweakInline.h */,
+				064741101E0C271A007FD578 /* FBTweakInline.m */,
+				064741111E0C271A007FD578 /* FBTweakInlineInternal.h */,
+				064741121E0C271A007FD578 /* FBTweakShakeWindow.h */,
+				064741131E0C271A007FD578 /* FBTweakShakeWindow.m */,
+				064741141E0C271A007FD578 /* FBTweakStore.h */,
+				064741151E0C271A007FD578 /* FBTweakStore.m */,
+				064741161E0C271A007FD578 /* FBTweakViewController.h */,
+				064741171E0C271A007FD578 /* FBTweakViewController.m */,
+			);
+			path = FBTweak;
+			sourceTree = "<group>";
+		};
+		0647413A1E0C286C007FD578 /* Supporting Files */ = {
+			isa = PBXGroup;
+			children = (
+				064740B01E0C2688007FD578 /* main.m */,
+				064741431E0C2938007FD578 /* PrefixHeader.pch */,
+			);
+			name = "Supporting Files";
+			path = "FBSDKObjc_iOS7.0/Supporting Files";
+			sourceTree = SOURCE_ROOT;
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		064740AB1E0C2688007FD578 /* FBSDKObjc_iOS7.0 */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 064740D91E0C2689007FD578 /* Build configuration list for PBXNativeTarget "FBSDKObjc_iOS7.0" */;
+			buildPhases = (
+				064740A81E0C2688007FD578 /* Sources */,
+				064740A91E0C2688007FD578 /* Frameworks */,
+				064740AA1E0C2688007FD578 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = FBSDKObjc_iOS7.0;
+			productName = FBSDKObjc_iOS7.0;
+			productReference = 064740AC1E0C2688007FD578 /* FBSDKObjc_iOS7.0.app */;
+			productType = "com.apple.product-type.application";
+		};
+		064740C41E0C2689007FD578 /* FBSDKObjc_iOS7.0Tests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 064740DC1E0C2689007FD578 /* Build configuration list for PBXNativeTarget "FBSDKObjc_iOS7.0Tests" */;
+			buildPhases = (
+				064740C11E0C2689007FD578 /* Sources */,
+				064740C21E0C2689007FD578 /* Frameworks */,
+				064740C31E0C2689007FD578 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				064740C71E0C2689007FD578 /* PBXTargetDependency */,
+			);
+			name = FBSDKObjc_iOS7.0Tests;
+			productName = FBSDKObjc_iOS7.0Tests;
+			productReference = 064740C51E0C2689007FD578 /* FBSDKObjc_iOS7.0Tests.xctest */;
+			productType = "com.apple.product-type.bundle.unit-test";
+		};
+		064740CF1E0C2689007FD578 /* FBSDKObjc_iOS7.0UITests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 064740DF1E0C2689007FD578 /* Build configuration list for PBXNativeTarget "FBSDKObjc_iOS7.0UITests" */;
+			buildPhases = (
+				064740CC1E0C2689007FD578 /* Sources */,
+				064740CD1E0C2689007FD578 /* Frameworks */,
+				064740CE1E0C2689007FD578 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				064740D21E0C2689007FD578 /* PBXTargetDependency */,
+			);
+			name = FBSDKObjc_iOS7.0UITests;
+			productName = FBSDKObjc_iOS7.0UITests;
+			productReference = 064740D01E0C2689007FD578 /* FBSDKObjc_iOS7.0UITests.xctest */;
+			productType = "com.apple.product-type.bundle.ui-testing";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		064740A41E0C2688007FD578 /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				LastUpgradeCheck = 0730;
+				ORGANIZATIONNAME = gongzhen;
+				TargetAttributes = {
+					064740AB1E0C2688007FD578 = {
+						CreatedOnToolsVersion = 7.3.1;
+					};
+					064740C41E0C2689007FD578 = {
+						CreatedOnToolsVersion = 7.3.1;
+						TestTargetID = 064740AB1E0C2688007FD578;
+					};
+					064740CF1E0C2689007FD578 = {
+						CreatedOnToolsVersion = 7.3.1;
+						TestTargetID = 064740AB1E0C2688007FD578;
+					};
+				};
+			};
+			buildConfigurationList = 064740A71E0C2688007FD578 /* Build configuration list for PBXProject "FBSDKObjc_iOS7.0" */;
+			compatibilityVersion = "Xcode 3.2";
+			developmentRegion = English;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+				Base,
+			);
+			mainGroup = 064740A31E0C2688007FD578;
+			productRefGroup = 064740AD1E0C2688007FD578 /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				064740AB1E0C2688007FD578 /* FBSDKObjc_iOS7.0 */,
+				064740C41E0C2689007FD578 /* FBSDKObjc_iOS7.0Tests */,
+				064740CF1E0C2689007FD578 /* FBSDKObjc_iOS7.0UITests */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		064740AA1E0C2688007FD578 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				064740BF1E0C2688007FD578 /* LaunchScreen.storyboard in Resources */,
+				064740BC1E0C2688007FD578 /* Assets.xcassets in Resources */,
+				064741451E0C2AAB007FD578 /* Default-568h@2x.png in Resources */,
+				064740BA1E0C2688007FD578 /* Main.storyboard in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		064740C31E0C2689007FD578 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		064740CE1E0C2689007FD578 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		064740A81E0C2688007FD578 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				064741231E0C271A007FD578 /* _FBTweakCategoryViewController.m in Sources */,
+				064741251E0C271A007FD578 /* _FBTweakColorViewController.m in Sources */,
+				0647413F1E0C28A9007FD578 /* LoginViewController.m in Sources */,
+				064741301E0C271A007FD578 /* FBTweakStore.m in Sources */,
+				064741211E0C271A007FD578 /* _FBTweakArrayViewController.m in Sources */,
+				064741221E0C271A007FD578 /* _FBTweakBindObserver.m in Sources */,
+				064741291E0C271A007FD578 /* _FBTweakDictionaryViewController.m in Sources */,
+				0647412C1E0C271A007FD578 /* FBTweakCategory.m in Sources */,
+				0647411E1E0C271A007FD578 /* _FBColorWheelCell.m in Sources */,
+				0647412F1E0C271A007FD578 /* FBTweakShakeWindow.m in Sources */,
+				0647412B1E0C271A007FD578 /* FBTweak.m in Sources */,
+				0647412E1E0C271A007FD578 /* FBTweakInline.m in Sources */,
+				064741261E0C271A007FD578 /* _FBTweakColorViewControllerHexDataSource.m in Sources */,
+				0647411D1E0C271A007FD578 /* _FBColorUtils.m in Sources */,
+				0647412D1E0C271A007FD578 /* FBTweakCollection.m in Sources */,
+				064740B41E0C2688007FD578 /* AppDelegate.m in Sources */,
+				064741241E0C271A007FD578 /* _FBTweakCollectionViewController.m in Sources */,
+				064741421E0C28C4007FD578 /* MainViewController.m in Sources */,
+				0647411F1E0C271A007FD578 /* _FBKeyboardManager.m in Sources */,
+				0647419A1E0C597D007FD578 /* AlertControllerUtility.m in Sources */,
+				064740B11E0C2688007FD578 /* main.m in Sources */,
+				064741281E0C271A007FD578 /* _FBTweakColorViewControllerRGBDataSource.m in Sources */,
+				0647412A1E0C271A007FD578 /* _FBTweakTableViewCell.m in Sources */,
+				064741271E0C271A007FD578 /* _FBTweakColorViewControllerHSBDataSource.m in Sources */,
+				0647411C1E0C271A007FD578 /* _FBColorComponentCell.m in Sources */,
+				064741201E0C271A007FD578 /* _FBSliderView.m in Sources */,
+				064741311E0C271A007FD578 /* FBTweakViewController.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		064740C11E0C2689007FD578 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				064740CA1E0C2689007FD578 /* FBSDKObjc_iOS7_0Tests.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		064740CC1E0C2689007FD578 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				064740D51E0C2689007FD578 /* FBSDKObjc_iOS7_0UITests.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		064740C71E0C2689007FD578 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 064740AB1E0C2688007FD578 /* FBSDKObjc_iOS7.0 */;
+			targetProxy = 064740C61E0C2689007FD578 /* PBXContainerItemProxy */;
+		};
+		064740D21E0C2689007FD578 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 064740AB1E0C2688007FD578 /* FBSDKObjc_iOS7.0 */;
+			targetProxy = 064740D11E0C2689007FD578 /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
+
+/* Begin PBXVariantGroup section */
+		064740B81E0C2688007FD578 /* Main.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				064740B91E0C2688007FD578 /* Base */,
+			);
+			name = Main.storyboard;
+			sourceTree = "<group>";
+		};
+		064740BD1E0C2688007FD578 /* LaunchScreen.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				064740BE1E0C2688007FD578 /* Base */,
+			);
+			name = LaunchScreen.storyboard;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
+
+/* Begin XCBuildConfiguration section */
+		064740D71E0C2689007FD578 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 9.1;
+				MTL_ENABLE_DEBUG_INFO = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = iphoneos;
+			};
+			name = Debug;
+		};
+		064740D81E0C2689007FD578 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 9.1;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				SDKROOT = iphoneos;
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		064740DA1E0C2689007FD578 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(PROJECT_DIR)/FBSDKObjc_iOS7.0/Frameworks",
+				);
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = "/Users/gongzhen/Projects/ios/github_gz/ios_sample/thirdparty/fbsdk/login/FBSDKObjc_iOS7.0/FBSDKObjc_iOS7.0/Supporting Files/PrefixHeader.pch";
+				INFOPLIST_FILE = FBSDKObjc_iOS7.0/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = "com.gongzhen.ObjCApp.FBSDKObjc-iOS7-0";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+			};
+			name = Debug;
+		};
+		064740DB1E0C2689007FD578 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(PROJECT_DIR)/FBSDKObjc_iOS7.0/Frameworks",
+				);
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = "/Users/gongzhen/Projects/ios/github_gz/ios_sample/thirdparty/fbsdk/login/FBSDKObjc_iOS7.0/FBSDKObjc_iOS7.0/Supporting Files/PrefixHeader.pch";
+				INFOPLIST_FILE = FBSDKObjc_iOS7.0/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = "com.gongzhen.ObjCApp.FBSDKObjc-iOS7-0";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+			};
+			name = Release;
+		};
+		064740DD1E0C2689007FD578 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				INFOPLIST_FILE = FBSDKObjc_iOS7.0Tests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = "com.gongzhen.ObjCApp.FBSDKObjc-iOS7-0Tests";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/FBSDKObjc_iOS7.0.app/FBSDKObjc_iOS7.0";
+			};
+			name = Debug;
+		};
+		064740DE1E0C2689007FD578 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				INFOPLIST_FILE = FBSDKObjc_iOS7.0Tests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = "com.gongzhen.ObjCApp.FBSDKObjc-iOS7-0Tests";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/FBSDKObjc_iOS7.0.app/FBSDKObjc_iOS7.0";
+			};
+			name = Release;
+		};
+		064740E01E0C2689007FD578 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				INFOPLIST_FILE = FBSDKObjc_iOS7.0UITests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = "com.gongzhen.ObjCApp.FBSDKObjc-iOS7-0UITests";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TEST_TARGET_NAME = FBSDKObjc_iOS7.0;
+			};
+			name = Debug;
+		};
+		064740E11E0C2689007FD578 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				INFOPLIST_FILE = FBSDKObjc_iOS7.0UITests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = "com.gongzhen.ObjCApp.FBSDKObjc-iOS7-0UITests";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TEST_TARGET_NAME = FBSDKObjc_iOS7.0;
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		064740A71E0C2688007FD578 /* Build configuration list for PBXProject "FBSDKObjc_iOS7.0" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				064740D71E0C2689007FD578 /* Debug */,
+				064740D81E0C2689007FD578 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		064740D91E0C2689007FD578 /* Build configuration list for PBXNativeTarget "FBSDKObjc_iOS7.0" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				064740DA1E0C2689007FD578 /* Debug */,
+				064740DB1E0C2689007FD578 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+		};
+		064740DC1E0C2689007FD578 /* Build configuration list for PBXNativeTarget "FBSDKObjc_iOS7.0Tests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				064740DD1E0C2689007FD578 /* Debug */,
+				064740DE1E0C2689007FD578 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+		};
+		064740DF1E0C2689007FD578 /* Build configuration list for PBXNativeTarget "FBSDKObjc_iOS7.0UITests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				064740E01E0C2689007FD578 /* Debug */,
+				064740E11E0C2689007FD578 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = 064740A41E0C2688007FD578 /* Project object */;
+}

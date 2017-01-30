@@ -15,4 +15,6 @@
 
 - (void)addChild:(GZNode *)node;
 - (GZNode *)childAtIndex:(NSUInteger)index;
+
+- (void)insertChild:(GZNode *)node atIndex:(NSUInteger)index;
 @end

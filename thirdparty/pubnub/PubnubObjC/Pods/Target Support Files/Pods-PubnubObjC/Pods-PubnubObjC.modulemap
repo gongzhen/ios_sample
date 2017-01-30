@@ -1,0 +1,6 @@
+framework module Pods_PubnubObjC {
+  umbrella header "Pods-PubnubObjC-umbrella.h"
+
+  export *
+  module * { export * }
+}

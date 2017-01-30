@@ -1,0 +1,23 @@
+//
+//  CaknowGZPrefixHeader.pch
+//  CaknowGZ
+//
+//  Created by gongzhen on 1/23/17.
+//  Copyright © 2017 gongzhen. All rights reserved.
+//
+
+#ifndef CaknowGZPrefixHeader_pch
+#define CaknowGZPrefixHeader_pch
+
+// Include any system framework and library headers here that should be included in all compilation units.
+// You will also need to set the Prefix Header build setting of one or more of your targets to reference this file.
+#import "Masonry.h"
+#import <Google/SignIn.h>
+#import <FBSDKCoreKit/FBSDKCoreKit.h>
+#import <FBSDKLoginKit/FBSDKLoginKit.h>
+#import <FBSDKShareKit/FBSDKSharing.h>
+#import "ImageResourceConstants.h"
+
+#define DLog(fmt, ...) NSLog((@"%s [Line %d] " fmt), __PRETTY_FUNCTION__, __LINE__, ##__VA_ARGS__);
+
+#endif /* CaknowGZPrefixHeader_pch */

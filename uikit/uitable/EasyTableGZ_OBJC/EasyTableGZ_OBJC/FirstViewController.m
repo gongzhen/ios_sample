@@ -21,7 +21,7 @@
 -(UILabel *)sizeLabel {
     if (_sizeLabel == nil) {
         _sizeLabel = [[UILabel alloc] init];
-        [_sizeLabel setBackgroundColor:[UIColor redColor]];
+        [_sizeLabel setBackgroundColor:[UIColor whiteColor]];
         _sizeLabel.numberOfLines = 0;
     }
     return _sizeLabel;
@@ -67,6 +67,10 @@
         
         trailingConstraint.priority = 998;
         [self.contentView addConstraint: trailingConstraint];
+        
+        [self.sizeLabel setContentCompressionResistancePriority:UILayoutPriorityRequired forAxis:UILayoutConstraintAxisVertical];
+        self.sizeLabel.preferredMaxLayoutWidth = [[UIScreen mainScreen] bounds].size
+        .width - 36;
     }
     return self;
 }
@@ -84,6 +88,7 @@
 @implementation FirstViewController
 
 #pragma mark - lazy loading tableView
+
 -(UITableView *)tableView {
     if (_tableView == nil) {
         _tableView = [[UITableView alloc] initWithFrame:CGRectZero style:UITableViewStylePlain];
@@ -184,7 +189,9 @@
 #pragma mark - lifeCycle
 
 - (void)initializeDataSource {
-    _dataSource= @[@"aa",
+    _dataSource= @[
+                   @"aa",
+                   @"baaaaaaaaaaaaaaaaaaaaaaaab",                   @"caaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaac",
 //                   @"aaaaaaaaaaaaaaaaaaaaaaaa",
 //                   @"aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa",
 //                   @"aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa",

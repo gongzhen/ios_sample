@@ -6,12 +6,15 @@
 //  Copyright © 2016 gongzhen. All rights reserved.
 //
 
-#import <Foundation/Foundation.h>
+#import "GZNode.h"
 #import <UIKit/UIKit.h>
 
-@interface GZEasyTableRow : NSObject
+@interface GZEasyTableRow : GZNode
 
 @property (nonatomic, strong) id model;
 @property (nonatomic, assign) CGFloat cellHeight;
+
+- (instancetype)initWithModel:(id)model;
+- (instancetype)initWithModel:(id)model attributes:(NSDictionary *)attributes;
 
 @end

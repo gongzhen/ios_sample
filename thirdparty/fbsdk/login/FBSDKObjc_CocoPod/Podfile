@@ -1,0 +1,8 @@
+platform :ios, '7.1.2'
+
+
+target 'FBSDKObjc_CocoPod' do
+  pod 'FBSDKCoreKit'
+  pod 'FBSDKLoginKit'
+  pod 'FBSDKShareKit'
+end

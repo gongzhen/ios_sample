@@ -1,0 +1,660 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 46;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		0647447E1E2073C3007FD578 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 0647447D1E2073C3007FD578 /* main.m */; };
+		064744811E2073C3007FD578 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 064744801E2073C3007FD578 /* AppDelegate.m */; };
+		064744891E2073C3007FD578 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 064744881E2073C3007FD578 /* Assets.xcassets */; };
+		0647448C1E2073C3007FD578 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 0647448A1E2073C3007FD578 /* LaunchScreen.storyboard */; };
+		064744971E2073C4007FD578 /* PushNotificationWenderCastTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 064744961E2073C4007FD578 /* PushNotificationWenderCastTests.m */; };
+		064744A21E2073C4007FD578 /* PushNotificationWenderCastUITests.m in Sources */ = {isa = PBXBuildFile; fileRef = 064744A11E2073C4007FD578 /* PushNotificationWenderCastUITests.m */; };
+		064744B11E207818007FD578 /* PodcastFeedTableViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 064744B01E207818007FD578 /* PodcastFeedTableViewController.m */; };
+		064744B51E207851007FD578 /* NewsFeedTableViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 064744B41E207851007FD578 /* NewsFeedTableViewController.m */; };
+		064744B91E207C79007FD578 /* PodcastStore.m in Sources */ = {isa = PBXBuildFile; fileRef = 064744B81E207C79007FD578 /* PodcastStore.m */; };
+		064744BD1E20801B007FD578 /* UIView+AutoLayoutHelper.m in Sources */ = {isa = PBXBuildFile; fileRef = 064744BC1E20801B007FD578 /* UIView+AutoLayoutHelper.m */; };
+		064744C41E2089FA007FD578 /* PersistanceManager.m in Sources */ = {isa = PBXBuildFile; fileRef = 064744C31E2089FA007FD578 /* PersistanceManager.m */; };
+		064744CE1E20DECD007FD578 /* PodcastFeedLoader.m in Sources */ = {isa = PBXBuildFile; fileRef = 064744CD1E20DECD007FD578 /* PodcastFeedLoader.m */; };
+		064744D61E2161E8007FD578 /* PodcastItemCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 064744D51E2161E8007FD578 /* PodcastItemCell.m */; };
+		064744DA1E21628C007FD578 /* PodcastItem.m in Sources */ = {isa = PBXBuildFile; fileRef = 064744D91E21628C007FD578 /* PodcastItem.m */; };
+		064744E01E21A093007FD578 /* DateParser.m in Sources */ = {isa = PBXBuildFile; fileRef = 064744DF1E21A093007FD578 /* DateParser.m */; };
+		064744E61E22BD08007FD578 /* XMLReader.m in Sources */ = {isa = PBXBuildFile; fileRef = 064744E51E22BD08007FD578 /* XMLReader.m */; };
+		064744ED1E22CCD7007FD578 /* SWXMLHash.swift in Sources */ = {isa = PBXBuildFile; fileRef = 064744EC1E22CCD7007FD578 /* SWXMLHash.swift */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		064744931E2073C4007FD578 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 064744711E2073C3007FD578 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 064744781E2073C3007FD578;
+			remoteInfo = PushNotificationWenderCast;
+		};
+		0647449E1E2073C4007FD578 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 064744711E2073C3007FD578 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 064744781E2073C3007FD578;
+			remoteInfo = PushNotificationWenderCast;
+		};
+/* End PBXContainerItemProxy section */
+
+/* Begin PBXFileReference section */
+		064744791E2073C3007FD578 /* PushNotificationWenderCast.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = PushNotificationWenderCast.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		0647447D1E2073C3007FD578 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
+		0647447F1E2073C3007FD578 /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
+		064744801E2073C3007FD578 /* AppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
+		064744881E2073C3007FD578 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		0647448B1E2073C3007FD578 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
+		0647448D1E2073C3007FD578 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		064744921E2073C4007FD578 /* PushNotificationWenderCastTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = PushNotificationWenderCastTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		064744961E2073C4007FD578 /* PushNotificationWenderCastTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = PushNotificationWenderCastTests.m; sourceTree = "<group>"; };
+		064744981E2073C4007FD578 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		0647449D1E2073C4007FD578 /* PushNotificationWenderCastUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = PushNotificationWenderCastUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		064744A11E2073C4007FD578 /* PushNotificationWenderCastUITests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = PushNotificationWenderCastUITests.m; sourceTree = "<group>"; };
+		064744A31E2073C4007FD578 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		064744AF1E207818007FD578 /* PodcastFeedTableViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PodcastFeedTableViewController.h; sourceTree = "<group>"; };
+		064744B01E207818007FD578 /* PodcastFeedTableViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PodcastFeedTableViewController.m; sourceTree = "<group>"; };
+		064744B31E207851007FD578 /* NewsFeedTableViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = NewsFeedTableViewController.h; sourceTree = "<group>"; };
+		064744B41E207851007FD578 /* NewsFeedTableViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = NewsFeedTableViewController.m; sourceTree = "<group>"; };
+		064744B71E207C79007FD578 /* PodcastStore.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PodcastStore.h; sourceTree = "<group>"; };
+		064744B81E207C79007FD578 /* PodcastStore.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PodcastStore.m; sourceTree = "<group>"; };
+		064744BB1E20801B007FD578 /* UIView+AutoLayoutHelper.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIView+AutoLayoutHelper.h"; sourceTree = "<group>"; };
+		064744BC1E20801B007FD578 /* UIView+AutoLayoutHelper.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIView+AutoLayoutHelper.m"; sourceTree = "<group>"; };
+		064744C21E2089FA007FD578 /* PersistanceManager.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PersistanceManager.h; sourceTree = "<group>"; };
+		064744C31E2089FA007FD578 /* PersistanceManager.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PersistanceManager.m; sourceTree = "<group>"; };
+		064744CC1E20DECD007FD578 /* PodcastFeedLoader.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PodcastFeedLoader.h; sourceTree = "<group>"; };
+		064744CD1E20DECD007FD578 /* PodcastFeedLoader.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PodcastFeedLoader.m; sourceTree = "<group>"; };
+		064744D21E214CEF007FD578 /* PrefixHeader.pch */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = PrefixHeader.pch; sourceTree = "<group>"; };
+		064744D41E2161E8007FD578 /* PodcastItemCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PodcastItemCell.h; sourceTree = "<group>"; };
+		064744D51E2161E8007FD578 /* PodcastItemCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PodcastItemCell.m; sourceTree = "<group>"; };
+		064744D81E21628C007FD578 /* PodcastItem.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PodcastItem.h; sourceTree = "<group>"; };
+		064744D91E21628C007FD578 /* PodcastItem.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PodcastItem.m; sourceTree = "<group>"; };
+		064744DE1E21A093007FD578 /* DateParser.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DateParser.h; sourceTree = "<group>"; };
+		064744DF1E21A093007FD578 /* DateParser.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DateParser.m; sourceTree = "<group>"; };
+		064744E41E22BD08007FD578 /* XMLReader.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = XMLReader.h; sourceTree = "<group>"; };
+		064744E51E22BD08007FD578 /* XMLReader.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = XMLReader.m; sourceTree = "<group>"; };
+		064744EC1E22CCD7007FD578 /* SWXMLHash.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SWXMLHash.swift; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		064744761E2073C3007FD578 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		0647448F1E2073C4007FD578 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		0647449A1E2073C4007FD578 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		064744701E2073C3007FD578 = {
+			isa = PBXGroup;
+			children = (
+				0647447B1E2073C3007FD578 /* PushNotificationWenderCast */,
+				064744951E2073C4007FD578 /* PushNotificationWenderCastTests */,
+				064744A01E2073C4007FD578 /* PushNotificationWenderCastUITests */,
+				0647447A1E2073C3007FD578 /* Products */,
+			);
+			sourceTree = "<group>";
+		};
+		0647447A1E2073C3007FD578 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				064744791E2073C3007FD578 /* PushNotificationWenderCast.app */,
+				064744921E2073C4007FD578 /* PushNotificationWenderCastTests.xctest */,
+				0647449D1E2073C4007FD578 /* PushNotificationWenderCastUITests.xctest */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		0647447B1E2073C3007FD578 /* PushNotificationWenderCast */ = {
+			isa = PBXGroup;
+			children = (
+				064744D71E216271007FD578 /* Models */,
+				064744D31E2161D3007FD578 /* Views */,
+				064744C01E208787007FD578 /* Extension */,
+				064744BF1E208110007FD578 /* Resources */,
+				064744BA1E208000007FD578 /* Category */,
+				064744B61E207C5B007FD578 /* Helpers */,
+				0647447F1E2073C3007FD578 /* AppDelegate.h */,
+				064744801E2073C3007FD578 /* AppDelegate.m */,
+				064744B21E207821007FD578 /* View Controllers */,
+				0647447C1E2073C3007FD578 /* Supporting Files */,
+			);
+			path = PushNotificationWenderCast;
+			sourceTree = "<group>";
+		};
+		0647447C1E2073C3007FD578 /* Supporting Files */ = {
+			isa = PBXGroup;
+			children = (
+				0647447D1E2073C3007FD578 /* main.m */,
+				064744D21E214CEF007FD578 /* PrefixHeader.pch */,
+			);
+			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+		064744951E2073C4007FD578 /* PushNotificationWenderCastTests */ = {
+			isa = PBXGroup;
+			children = (
+				064744961E2073C4007FD578 /* PushNotificationWenderCastTests.m */,
+				064744981E2073C4007FD578 /* Info.plist */,
+			);
+			path = PushNotificationWenderCastTests;
+			sourceTree = "<group>";
+		};
+		064744A01E2073C4007FD578 /* PushNotificationWenderCastUITests */ = {
+			isa = PBXGroup;
+			children = (
+				064744A11E2073C4007FD578 /* PushNotificationWenderCastUITests.m */,
+				064744A31E2073C4007FD578 /* Info.plist */,
+			);
+			path = PushNotificationWenderCastUITests;
+			sourceTree = "<group>";
+		};
+		064744B21E207821007FD578 /* View Controllers */ = {
+			isa = PBXGroup;
+			children = (
+				064744AF1E207818007FD578 /* PodcastFeedTableViewController.h */,
+				064744B01E207818007FD578 /* PodcastFeedTableViewController.m */,
+				064744B31E207851007FD578 /* NewsFeedTableViewController.h */,
+				064744B41E207851007FD578 /* NewsFeedTableViewController.m */,
+			);
+			name = "View Controllers";
+			sourceTree = "<group>";
+		};
+		064744B61E207C5B007FD578 /* Helpers */ = {
+			isa = PBXGroup;
+			children = (
+				064744E31E22BCF0007FD578 /* XMLReader */,
+				064744E21E21BA3A007FD578 /* SWXMLHash */,
+				064744B71E207C79007FD578 /* PodcastStore.h */,
+				064744B81E207C79007FD578 /* PodcastStore.m */,
+				064744C21E2089FA007FD578 /* PersistanceManager.h */,
+				064744C31E2089FA007FD578 /* PersistanceManager.m */,
+				064744CC1E20DECD007FD578 /* PodcastFeedLoader.h */,
+				064744CD1E20DECD007FD578 /* PodcastFeedLoader.m */,
+				064744DE1E21A093007FD578 /* DateParser.h */,
+				064744DF1E21A093007FD578 /* DateParser.m */,
+			);
+			name = Helpers;
+			sourceTree = "<group>";
+		};
+		064744BA1E208000007FD578 /* Category */ = {
+			isa = PBXGroup;
+			children = (
+				064744BB1E20801B007FD578 /* UIView+AutoLayoutHelper.h */,
+				064744BC1E20801B007FD578 /* UIView+AutoLayoutHelper.m */,
+			);
+			name = Category;
+			sourceTree = "<group>";
+		};
+		064744BF1E208110007FD578 /* Resources */ = {
+			isa = PBXGroup;
+			children = (
+				064744881E2073C3007FD578 /* Assets.xcassets */,
+				0647448A1E2073C3007FD578 /* LaunchScreen.storyboard */,
+				0647448D1E2073C3007FD578 /* Info.plist */,
+			);
+			name = Resources;
+			sourceTree = "<group>";
+		};
+		064744C01E208787007FD578 /* Extension */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			name = Extension;
+			sourceTree = "<group>";
+		};
+		064744D31E2161D3007FD578 /* Views */ = {
+			isa = PBXGroup;
+			children = (
+				064744D41E2161E8007FD578 /* PodcastItemCell.h */,
+				064744D51E2161E8007FD578 /* PodcastItemCell.m */,
+			);
+			name = Views;
+			sourceTree = "<group>";
+		};
+		064744D71E216271007FD578 /* Models */ = {
+			isa = PBXGroup;
+			children = (
+				064744D81E21628C007FD578 /* PodcastItem.h */,
+				064744D91E21628C007FD578 /* PodcastItem.m */,
+			);
+			name = Models;
+			sourceTree = "<group>";
+		};
+		064744E21E21BA3A007FD578 /* SWXMLHash */ = {
+			isa = PBXGroup;
+			children = (
+				064744EC1E22CCD7007FD578 /* SWXMLHash.swift */,
+			);
+			name = SWXMLHash;
+			sourceTree = "<group>";
+		};
+		064744E31E22BCF0007FD578 /* XMLReader */ = {
+			isa = PBXGroup;
+			children = (
+				064744E41E22BD08007FD578 /* XMLReader.h */,
+				064744E51E22BD08007FD578 /* XMLReader.m */,
+			);
+			name = XMLReader;
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		064744781E2073C3007FD578 /* PushNotificationWenderCast */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 064744A61E2073C4007FD578 /* Build configuration list for PBXNativeTarget "PushNotificationWenderCast" */;
+			buildPhases = (
+				064744751E2073C3007FD578 /* Sources */,
+				064744761E2073C3007FD578 /* Frameworks */,
+				064744771E2073C3007FD578 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = PushNotificationWenderCast;
+			productName = PushNotificationWenderCast;
+			productReference = 064744791E2073C3007FD578 /* PushNotificationWenderCast.app */;
+			productType = "com.apple.product-type.application";
+		};
+		064744911E2073C4007FD578 /* PushNotificationWenderCastTests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 064744A91E2073C4007FD578 /* Build configuration list for PBXNativeTarget "PushNotificationWenderCastTests" */;
+			buildPhases = (
+				0647448E1E2073C4007FD578 /* Sources */,
+				0647448F1E2073C4007FD578 /* Frameworks */,
+				064744901E2073C4007FD578 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				064744941E2073C4007FD578 /* PBXTargetDependency */,
+			);
+			name = PushNotificationWenderCastTests;
+			productName = PushNotificationWenderCastTests;
+			productReference = 064744921E2073C4007FD578 /* PushNotificationWenderCastTests.xctest */;
+			productType = "com.apple.product-type.bundle.unit-test";
+		};
+		0647449C1E2073C4007FD578 /* PushNotificationWenderCastUITests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 064744AC1E2073C4007FD578 /* Build configuration list for PBXNativeTarget "PushNotificationWenderCastUITests" */;
+			buildPhases = (
+				064744991E2073C4007FD578 /* Sources */,
+				0647449A1E2073C4007FD578 /* Frameworks */,
+				0647449B1E2073C4007FD578 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				0647449F1E2073C4007FD578 /* PBXTargetDependency */,
+			);
+			name = PushNotificationWenderCastUITests;
+			productName = PushNotificationWenderCastUITests;
+			productReference = 0647449D1E2073C4007FD578 /* PushNotificationWenderCastUITests.xctest */;
+			productType = "com.apple.product-type.bundle.ui-testing";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		064744711E2073C3007FD578 /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				LastUpgradeCheck = 0730;
+				ORGANIZATIONNAME = gongzhen;
+				TargetAttributes = {
+					064744781E2073C3007FD578 = {
+						CreatedOnToolsVersion = 7.3.1;
+						DevelopmentTeam = G66RX9MATK;
+						SystemCapabilities = {
+							com.apple.Push = {
+								enabled = 1;
+							};
+						};
+					};
+					064744911E2073C4007FD578 = {
+						CreatedOnToolsVersion = 7.3.1;
+						TestTargetID = 064744781E2073C3007FD578;
+					};
+					0647449C1E2073C4007FD578 = {
+						CreatedOnToolsVersion = 7.3.1;
+						TestTargetID = 064744781E2073C3007FD578;
+					};
+				};
+			};
+			buildConfigurationList = 064744741E2073C3007FD578 /* Build configuration list for PBXProject "PushNotificationWenderCast" */;
+			compatibilityVersion = "Xcode 3.2";
+			developmentRegion = English;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+				Base,
+			);
+			mainGroup = 064744701E2073C3007FD578;
+			productRefGroup = 0647447A1E2073C3007FD578 /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				064744781E2073C3007FD578 /* PushNotificationWenderCast */,
+				064744911E2073C4007FD578 /* PushNotificationWenderCastTests */,
+				0647449C1E2073C4007FD578 /* PushNotificationWenderCastUITests */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		064744771E2073C3007FD578 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				0647448C1E2073C3007FD578 /* LaunchScreen.storyboard in Resources */,
+				064744891E2073C3007FD578 /* Assets.xcassets in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		064744901E2073C4007FD578 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		0647449B1E2073C4007FD578 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		064744751E2073C3007FD578 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				064744B51E207851007FD578 /* NewsFeedTableViewController.m in Sources */,
+				064744811E2073C3007FD578 /* AppDelegate.m in Sources */,
+				064744C41E2089FA007FD578 /* PersistanceManager.m in Sources */,
+				0647447E1E2073C3007FD578 /* main.m in Sources */,
+				064744B11E207818007FD578 /* PodcastFeedTableViewController.m in Sources */,
+				064744ED1E22CCD7007FD578 /* SWXMLHash.swift in Sources */,
+				064744D61E2161E8007FD578 /* PodcastItemCell.m in Sources */,
+				064744E01E21A093007FD578 /* DateParser.m in Sources */,
+				064744DA1E21628C007FD578 /* PodcastItem.m in Sources */,
+				064744E61E22BD08007FD578 /* XMLReader.m in Sources */,
+				064744B91E207C79007FD578 /* PodcastStore.m in Sources */,
+				064744BD1E20801B007FD578 /* UIView+AutoLayoutHelper.m in Sources */,
+				064744CE1E20DECD007FD578 /* PodcastFeedLoader.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		0647448E1E2073C4007FD578 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				064744971E2073C4007FD578 /* PushNotificationWenderCastTests.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		064744991E2073C4007FD578 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				064744A21E2073C4007FD578 /* PushNotificationWenderCastUITests.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		064744941E2073C4007FD578 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 064744781E2073C3007FD578 /* PushNotificationWenderCast */;
+			targetProxy = 064744931E2073C4007FD578 /* PBXContainerItemProxy */;
+		};
+		0647449F1E2073C4007FD578 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 064744781E2073C3007FD578 /* PushNotificationWenderCast */;
+			targetProxy = 0647449E1E2073C4007FD578 /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
+
+/* Begin PBXVariantGroup section */
+		0647448A1E2073C3007FD578 /* LaunchScreen.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				0647448B1E2073C3007FD578 /* Base */,
+			);
+			name = LaunchScreen.storyboard;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
+
+/* Begin XCBuildConfiguration section */
+		064744A41E2073C4007FD578 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 9.3;
+				MTL_ENABLE_DEBUG_INFO = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = iphoneos;
+			};
+			name = Debug;
+		};
+		064744A51E2073C4007FD578 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 9.3;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				SDKROOT = iphoneos;
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		064744A71E2073C4007FD578 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CLANG_ENABLE_MODULES = YES;
+				DEFINES_MODULE = YES;
+				EMBEDDED_CONTENT_CONTAINS_SWIFT = YES;
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = /Users/gongzhen/Projects/ios/github_gz/ios_sample/pushnotification/PushNotificationWenderCast/PushNotificationWenderCast/PrefixHeader.pch;
+				INFOPLIST_FILE = PushNotificationWenderCast/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = com.gongzhen.ObjCApp.PushNotificationWenderCast;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_INSTALL_OBJC_HEADER = NO;
+				SWIFT_OBJC_BRIDGING_HEADER = "";
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+			};
+			name = Debug;
+		};
+		064744A81E2073C4007FD578 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CLANG_ENABLE_MODULES = YES;
+				DEFINES_MODULE = YES;
+				EMBEDDED_CONTENT_CONTAINS_SWIFT = YES;
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = /Users/gongzhen/Projects/ios/github_gz/ios_sample/pushnotification/PushNotificationWenderCast/PushNotificationWenderCast/PrefixHeader.pch;
+				INFOPLIST_FILE = PushNotificationWenderCast/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = com.gongzhen.ObjCApp.PushNotificationWenderCast;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_INSTALL_OBJC_HEADER = NO;
+				SWIFT_OBJC_BRIDGING_HEADER = "";
+			};
+			name = Release;
+		};
+		064744AA1E2073C4007FD578 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				INFOPLIST_FILE = PushNotificationWenderCastTests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = com.gongzhen.ObjCApp.PushNotificationWenderCastTests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/PushNotificationWenderCast.app/PushNotificationWenderCast";
+			};
+			name = Debug;
+		};
+		064744AB1E2073C4007FD578 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				INFOPLIST_FILE = PushNotificationWenderCastTests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = com.gongzhen.ObjCApp.PushNotificationWenderCastTests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/PushNotificationWenderCast.app/PushNotificationWenderCast";
+			};
+			name = Release;
+		};
+		064744AD1E2073C4007FD578 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				INFOPLIST_FILE = PushNotificationWenderCastUITests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = com.gongzhen.ObjCApp.PushNotificationWenderCastUITests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TEST_TARGET_NAME = PushNotificationWenderCast;
+			};
+			name = Debug;
+		};
+		064744AE1E2073C4007FD578 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				INFOPLIST_FILE = PushNotificationWenderCastUITests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = com.gongzhen.ObjCApp.PushNotificationWenderCastUITests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TEST_TARGET_NAME = PushNotificationWenderCast;
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		064744741E2073C3007FD578 /* Build configuration list for PBXProject "PushNotificationWenderCast" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				064744A41E2073C4007FD578 /* Debug */,
+				064744A51E2073C4007FD578 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		064744A61E2073C4007FD578 /* Build configuration list for PBXNativeTarget "PushNotificationWenderCast" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				064744A71E2073C4007FD578 /* Debug */,
+				064744A81E2073C4007FD578 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+		};
+		064744A91E2073C4007FD578 /* Build configuration list for PBXNativeTarget "PushNotificationWenderCastTests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				064744AA1E2073C4007FD578 /* Debug */,
+				064744AB1E2073C4007FD578 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+		};
+		064744AC1E2073C4007FD578 /* Build configuration list for PBXNativeTarget "PushNotificationWenderCastUITests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				064744AD1E2073C4007FD578 /* Debug */,
+				064744AE1E2073C4007FD578 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = 064744711E2073C3007FD578 /* Project object */;
+}

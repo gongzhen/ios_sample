@@ -18,6 +18,14 @@
 
 @implementation GZEasyTableSection
 
+- (instancetype)initWithModel:(id)model {
+    self = [super init];
+    if (self) {
+        self.model = model;
+    }
+    return self;
+}
+
 -(instancetype)initWithModel:(id)model attributes:(NSDictionary *)attributes {
     self = [super init];
     if (self) {
@@ -39,12 +47,11 @@
 
 - (void)setNumberOfRows:(NSInteger)numberOfRows {
     _numberOfRows = numberOfRows;
-    NSLog(@"setNumberOFRows: %ld", (long)_numberOfRows);
 }
 
 - (NSInteger)numberOfRows {
     NSUInteger count = self.children.count;
-    DLog(@"numberOfRows: %lu", (unsigned long)count);
+    
     if (count > 0) {
         return count;
     } else if (_numberOfRows > 0) {
@@ -55,12 +62,14 @@
 }
 
 - (CGFloat)cellHeightAtRow:(NSInteger)row {
+    
     GZEasyTableRow *rowObject = (GZEasyTableRow *)[self childAtIndex:row];
-    DLog(@"rowObject:%@", rowObject);
+    
     if (rowObject) {
         return rowObject.cellHeight;
     } else {
         NSNumber *rowHeight = [_rowHeightDict objectForKey:@(row)];
+        
         if (rowHeight) {
             return rowHeight.floatValue;
         } else {
@@ -71,7 +80,7 @@
 
 - (void)setCellHeight:(CGFloat)cellHeight atRow:(NSInteger)row {
     GZEasyTableRow *rowObj = (GZEasyTableRow *)[self childAtIndex:row];
-    DLog(@"cellHeight: %ff", cellHeight);
+    DLog(@"%fd", cellHeight);
     if (rowObj) {
         rowObj.cellHeight = cellHeight;
     } else {
@@ -80,6 +89,10 @@
         }
         [_rowHeightDict setObject:@(cellHeight) forKey:@(row)];
     }
+}
+
+- (void)addRow:(GZEasyTableRow *)row {
+    [self addChild:row];
 }
 
 @end

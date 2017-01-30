@@ -27,7 +27,10 @@
 
 - (void)setCellHeight:(CGFloat)cellHeight atIndexPath:(NSIndexPath *)indexPath;
 - (CGFloat)cellHeightAtIndexPath:(NSIndexPath *)indexPath;
-
 - (id)modelAtIndexPath:(NSIndexPath *)indexPath;
+
+
+- (void)addRowsWithModels:(NSArray *)rowModels attributeSetter:(NSDictionary *(^)(id model))setterBlock insection:(NSInteger)section;
+- (void)addRowsWithModels:(NSArray *)rowModels inSection:(NSInteger)section;
 
 @end

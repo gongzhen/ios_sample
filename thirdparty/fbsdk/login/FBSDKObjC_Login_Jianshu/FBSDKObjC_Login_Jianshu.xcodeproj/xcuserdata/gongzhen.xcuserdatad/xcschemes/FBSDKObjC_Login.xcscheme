@@ -1,0 +1,111 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Scheme
+   LastUpgradeVersion = "0730"
+   version = "1.3">
+   <BuildAction
+      parallelizeBuildables = "YES"
+      buildImplicitDependencies = "YES">
+      <BuildActionEntries>
+         <BuildActionEntry
+            buildForTesting = "YES"
+            buildForRunning = "YES"
+            buildForProfiling = "YES"
+            buildForArchiving = "YES"
+            buildForAnalyzing = "YES">
+            <BuildableReference
+               BuildableIdentifier = "primary"
+               BlueprintIdentifier = "065F6D251DF9F2BE004041EC"
+               BuildableName = "FBSDKObjC_Login_Jianshu.app"
+               BlueprintName = "FBSDKObjC_Login_Jianshu"
+               ReferencedContainer = "container:FBSDKObjC_Login_Jianshu.xcodeproj">
+            </BuildableReference>
+         </BuildActionEntry>
+      </BuildActionEntries>
+   </BuildAction>
+   <TestAction
+      buildConfiguration = "Debug"
+      selectedDebuggerIdentifier = "Xcode.DebuggerFoundation.Debugger.LLDB"
+      selectedLauncherIdentifier = "Xcode.DebuggerFoundation.Launcher.LLDB"
+      shouldUseLaunchSchemeArgsEnv = "YES">
+      <Testables>
+         <TestableReference
+            skipped = "NO">
+            <BuildableReference
+               BuildableIdentifier = "primary"
+               BlueprintIdentifier = "065F6D3E1DF9F2BE004041EC"
+               BuildableName = "FBSDKObjC_Login_Jianshu.xctest"
+               BlueprintName = "FBSDKObjC_Login_JianshuTests"
+               ReferencedContainer = "container:FBSDKObjC_Login_Jianshu.xcodeproj">
+            </BuildableReference>
+         </TestableReference>
+         <TestableReference
+            skipped = "NO">
+            <BuildableReference
+               BuildableIdentifier = "primary"
+               BlueprintIdentifier = "065F6D491DF9F2BF004041EC"
+               BuildableName = "FBSDKObjC_Login_Jianshu.xctest"
+               BlueprintName = "FBSDKObjC_Login_JianshuUITests"
+               ReferencedContainer = "container:FBSDKObjC_Login_Jianshu.xcodeproj">
+            </BuildableReference>
+         </TestableReference>
+      </Testables>
+      <MacroExpansion>
+         <BuildableReference
+            BuildableIdentifier = "primary"
+            BlueprintIdentifier = "065F6D251DF9F2BE004041EC"
+            BuildableName = "FBSDKObjC_Login_Jianshu.app"
+            BlueprintName = "FBSDKObjC_Login_Jianshu"
+            ReferencedContainer = "container:FBSDKObjC_Login_Jianshu.xcodeproj">
+         </BuildableReference>
+      </MacroExpansion>
+      <AdditionalOptions>
+      </AdditionalOptions>
+   </TestAction>
+   <LaunchAction
+      buildConfiguration = "Debug"
+      selectedDebuggerIdentifier = "Xcode.DebuggerFoundation.Debugger.LLDB"
+      selectedLauncherIdentifier = "Xcode.DebuggerFoundation.Launcher.LLDB"
+      launchStyle = "0"
+      useCustomWorkingDirectory = "NO"
+      ignoresPersistentStateOnLaunch = "NO"
+      debugDocumentVersioning = "YES"
+      debugServiceExtension = "internal"
+      allowLocationSimulation = "YES">
+      <BuildableProductRunnable
+         runnableDebuggingMode = "0">
+         <BuildableReference
+            BuildableIdentifier = "primary"
+            BlueprintIdentifier = "065F6D251DF9F2BE004041EC"
+            BuildableName = "FBSDKObjC_Login_Jianshu.app"
+            BlueprintName = "FBSDKObjC_Login_Jianshu"
+            ReferencedContainer = "container:FBSDKObjC_Login_Jianshu.xcodeproj">
+         </BuildableReference>
+      </BuildableProductRunnable>
+      <AdditionalOptions>
+      </AdditionalOptions>
+   </LaunchAction>
+   <ProfileAction
+      buildConfiguration = "Release"
+      shouldUseLaunchSchemeArgsEnv = "YES"
+      savedToolIdentifier = ""
+      useCustomWorkingDirectory = "NO"
+      debugDocumentVersioning = "YES">
+      <BuildableProductRunnable
+         runnableDebuggingMode = "0">
+         <BuildableReference
+            BuildableIdentifier = "primary"
+            BlueprintIdentifier = "065F6D251DF9F2BE004041EC"
+            BuildableName = "FBSDKObjC_Login_Jianshu.app"
+            BlueprintName = "FBSDKObjC_Login_Jianshu"
+            ReferencedContainer = "container:FBSDKObjC_Login_Jianshu.xcodeproj">
+         </BuildableReference>
+      </BuildableProductRunnable>
+   </ProfileAction>
+   <AnalyzeAction
+      buildConfiguration = "Debug">
+   </AnalyzeAction>
+   <ArchiveAction
+      buildConfiguration = "Release"
+      revealArchiveInOrganizer = "YES">
+   </ArchiveAction>
+</Scheme>

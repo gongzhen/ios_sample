@@ -7,6 +7,7 @@
 //
 
 #import "ViewController.h"
+#import "UIView+AutoLayoutHelper.h"
 
 #pragma mark - TestCell
 
@@ -43,13 +44,33 @@
     if (self) {
         [self.contentView addSubview:self.textField];
         [self.contentView addSubview:self.textImageView];
+        [self setupCellConstraint];
     }
     return self;
 }
 
+- (void)layoutSubviews {
+    DLog(@"%@", NSStringFromCGSize(self.textImageView.frame.size));
+    self.textImageView.layer.cornerRadius = self.textImageView.frame.size.width / 2;
+    self.textImageView.layer.masksToBounds = YES;
+}
+
+- (void)setupCellConstraint {
+    [self.textImageView addTopConstraintToView:self.textImageView.superview relation:NSLayoutRelationEqual constant:0.f];
+    [self.textImageView addBottomConstraintToView:self.textImageView.superview relation:NSLayoutRelationEqual constant:0.f];
+    [self.textImageView addLeftConstraintToView:self.textField attribute:NSLayoutAttributeRight relation:NSLayoutRelationEqual constant:0.f];
+    [self.textImageView addTrailingConstraintToView:self.textImageView.superview relation:NSLayoutRelationEqual constant:0.f];
+    
+    [self.textField addTopConstraintToView:self.textField.superview relation:NSLayoutRelationEqual constant:0.f];
+    [self.textField addLeftConstraintToView:self.textField.superview relation:NSLayoutRelationEqual constant:0.f];
+    [self.textField addBottomConstraintToView:self.textField.superview relation:NSLayoutRelationEqual constant:0.f];
+    [self.textField addWidthConstraintWithRelation:NSLayoutRelationEqual constant:200.f];
+}
+
 - (UIImageView *)textImageView {
     if (_textImageView == nil) {
-        _textImageView = [[UIImageView alloc] initWithFrame:CGRectMake(160, 0, 210, self.contentView.frame.size.height)];
+        _textImageView = [[UIImageView alloc] init];
+        [_textImageView setTranslatesAutoresizingMaskIntoConstraints:NO];
         [_textImageView setBackgroundColor:[UIColor redColor]];
         [_textImageView setContentMode:UIViewContentModeScaleAspectFit];
     }
@@ -58,7 +79,8 @@
 
 - (UITextField *)textField {
     if (_textField == nil) {
-        _textField = [[UITextField alloc] initWithFrame:CGRectMake(0, 0, 150, self.contentView.frame.size.height)];
+        _textField = [[UITextField alloc] init];
+        [_textField setTranslatesAutoresizingMaskIntoConstraints:NO];
         [_textField setBackgroundColor:[UIColor blueColor]];
         [_textField setUserInteractionEnabled:NO];
     }
@@ -137,6 +159,11 @@
     return 2;
 }
 
+- (CGFloat)tableView:(UITableView *)tableView heightForRowAtIndexPath:(NSIndexPath *)indexPath {
+    return 48.f;
+}
+
+
 - (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath {
     UITableViewCell *cell = nil;
     switch (indexPath.section) {
@@ -145,12 +172,14 @@
             if (cell == nil) {
                 cell = [[TestCell alloc] initWithStyle:UITableViewCellStyleDefault reuseIdentifier:@"testcell"];
             }
+            [self configureCell:cell atIndexPath:indexPath];
             break;
         case 1:
             cell = [tableView dequeueReusableCellWithIdentifier:@"testcell"];
             if (cell == nil) {
                 cell = [[TestCell alloc] initWithStyle:UITableViewCellStyleDefault reuseIdentifier:@"testcell"];
             }
+            [self configureCell:cell atIndexPath:indexPath];
             break;
         default:
             break;
@@ -166,6 +195,7 @@
             NSUInteger randomIndex = arc4random() % [_urlList count];
             
             UIImage *image = [_model imageDownloadFromUrl: [_urlList objectAtIndex:randomIndex]];
+            
             dispatch_async(dispatch_get_main_queue(), ^{
                 ((TestCell *)cell).textField.text = fieldText;
                 ((TestCell *)cell).textImageView.image = image;
@@ -175,19 +205,18 @@
     }
 }
 
-- (void)tableView:(UITableView *)tableView willDisplayCell:(UITableViewCell *)cell forRowAtIndexPath:(NSIndexPath *)indexPath {
-    switch (indexPath.section) {
-        case 0:
-            [self configureCell:cell atIndexPath:indexPath];
-            break;
-        case 1:
-            [self configureCell:cell atIndexPath:indexPath];
-            break;
-        default:
-            break;
-    }
-    
-}
+//- (void)tableView:(UITableView *)tableView willDisplayCell:(UITableViewCell *)cell forRowAtIndexPath:(NSIndexPath *)indexPath {
+//    switch (indexPath.section) {
+//        case 0:
+//            [self configureCell:cell atIndexPath:indexPath];
+//            break;
+//        case 1:
+//            [self configureCell:cell atIndexPath:indexPath];
+//            break;
+//        default:
+//            break;
+//    }
+//}
 
 - (void)setLayoutConstraint {
     [self.view addSubview:self.topView];

@@ -1,0 +1,519 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 46;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		064744FC1E236FFA007FD578 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 064744FB1E236FFA007FD578 /* main.m */; };
+		064744FF1E236FFA007FD578 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 064744FE1E236FFA007FD578 /* AppDelegate.m */; };
+		064745021E236FFA007FD578 /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 064745011E236FFA007FD578 /* ViewController.m */; };
+		064745051E236FFA007FD578 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 064745031E236FFA007FD578 /* Main.storyboard */; };
+		064745071E236FFA007FD578 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 064745061E236FFA007FD578 /* Assets.xcassets */; };
+		0647450A1E236FFA007FD578 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 064745081E236FFA007FD578 /* LaunchScreen.storyboard */; };
+		064745151E236FFA007FD578 /* SDWebImageGZTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 064745141E236FFA007FD578 /* SDWebImageGZTests.m */; };
+		064745201E236FFA007FD578 /* SDWebImageGZUITests.m in Sources */ = {isa = PBXBuildFile; fileRef = 0647451F1E236FFA007FD578 /* SDWebImageGZUITests.m */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		064745111E236FFA007FD578 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 064744EF1E236FF9007FD578 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 064744F61E236FFA007FD578;
+			remoteInfo = SDWebImageGZ;
+		};
+		0647451C1E236FFA007FD578 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 064744EF1E236FF9007FD578 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 064744F61E236FFA007FD578;
+			remoteInfo = SDWebImageGZ;
+		};
+/* End PBXContainerItemProxy section */
+
+/* Begin PBXFileReference section */
+		064744F71E236FFA007FD578 /* SDWebImageGZ.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = SDWebImageGZ.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		064744FB1E236FFA007FD578 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
+		064744FD1E236FFA007FD578 /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
+		064744FE1E236FFA007FD578 /* AppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
+		064745001E236FFA007FD578 /* ViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ViewController.h; sourceTree = "<group>"; };
+		064745011E236FFA007FD578 /* ViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ViewController.m; sourceTree = "<group>"; };
+		064745041E236FFA007FD578 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
+		064745061E236FFA007FD578 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		064745091E236FFA007FD578 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
+		0647450B1E236FFA007FD578 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		064745101E236FFA007FD578 /* SDWebImageGZTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = SDWebImageGZTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		064745141E236FFA007FD578 /* SDWebImageGZTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = SDWebImageGZTests.m; sourceTree = "<group>"; };
+		064745161E236FFA007FD578 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		0647451B1E236FFA007FD578 /* SDWebImageGZUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = SDWebImageGZUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		0647451F1E236FFA007FD578 /* SDWebImageGZUITests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = SDWebImageGZUITests.m; sourceTree = "<group>"; };
+		064745211E236FFA007FD578 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		064744F41E236FFA007FD578 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		0647450D1E236FFA007FD578 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		064745181E236FFA007FD578 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		064744EE1E236FF9007FD578 = {
+			isa = PBXGroup;
+			children = (
+				064744F91E236FFA007FD578 /* SDWebImageGZ */,
+				064745131E236FFA007FD578 /* SDWebImageGZTests */,
+				0647451E1E236FFA007FD578 /* SDWebImageGZUITests */,
+				064744F81E236FFA007FD578 /* Products */,
+			);
+			sourceTree = "<group>";
+		};
+		064744F81E236FFA007FD578 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				064744F71E236FFA007FD578 /* SDWebImageGZ.app */,
+				064745101E236FFA007FD578 /* SDWebImageGZTests.xctest */,
+				0647451B1E236FFA007FD578 /* SDWebImageGZUITests.xctest */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		064744F91E236FFA007FD578 /* SDWebImageGZ */ = {
+			isa = PBXGroup;
+			children = (
+				064744FD1E236FFA007FD578 /* AppDelegate.h */,
+				064744FE1E236FFA007FD578 /* AppDelegate.m */,
+				064745001E236FFA007FD578 /* ViewController.h */,
+				064745011E236FFA007FD578 /* ViewController.m */,
+				064745031E236FFA007FD578 /* Main.storyboard */,
+				064745061E236FFA007FD578 /* Assets.xcassets */,
+				064745081E236FFA007FD578 /* LaunchScreen.storyboard */,
+				0647450B1E236FFA007FD578 /* Info.plist */,
+				064744FA1E236FFA007FD578 /* Supporting Files */,
+			);
+			path = SDWebImageGZ;
+			sourceTree = "<group>";
+		};
+		064744FA1E236FFA007FD578 /* Supporting Files */ = {
+			isa = PBXGroup;
+			children = (
+				064744FB1E236FFA007FD578 /* main.m */,
+			);
+			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+		064745131E236FFA007FD578 /* SDWebImageGZTests */ = {
+			isa = PBXGroup;
+			children = (
+				064745141E236FFA007FD578 /* SDWebImageGZTests.m */,
+				064745161E236FFA007FD578 /* Info.plist */,
+			);
+			path = SDWebImageGZTests;
+			sourceTree = "<group>";
+		};
+		0647451E1E236FFA007FD578 /* SDWebImageGZUITests */ = {
+			isa = PBXGroup;
+			children = (
+				0647451F1E236FFA007FD578 /* SDWebImageGZUITests.m */,
+				064745211E236FFA007FD578 /* Info.plist */,
+			);
+			path = SDWebImageGZUITests;
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		064744F61E236FFA007FD578 /* SDWebImageGZ */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 064745241E236FFA007FD578 /* Build configuration list for PBXNativeTarget "SDWebImageGZ" */;
+			buildPhases = (
+				064744F31E236FFA007FD578 /* Sources */,
+				064744F41E236FFA007FD578 /* Frameworks */,
+				064744F51E236FFA007FD578 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = SDWebImageGZ;
+			productName = SDWebImageGZ;
+			productReference = 064744F71E236FFA007FD578 /* SDWebImageGZ.app */;
+			productType = "com.apple.product-type.application";
+		};
+		0647450F1E236FFA007FD578 /* SDWebImageGZTests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 064745271E236FFA007FD578 /* Build configuration list for PBXNativeTarget "SDWebImageGZTests" */;
+			buildPhases = (
+				0647450C1E236FFA007FD578 /* Sources */,
+				0647450D1E236FFA007FD578 /* Frameworks */,
+				0647450E1E236FFA007FD578 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				064745121E236FFA007FD578 /* PBXTargetDependency */,
+			);
+			name = SDWebImageGZTests;
+			productName = SDWebImageGZTests;
+			productReference = 064745101E236FFA007FD578 /* SDWebImageGZTests.xctest */;
+			productType = "com.apple.product-type.bundle.unit-test";
+		};
+		0647451A1E236FFA007FD578 /* SDWebImageGZUITests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 0647452A1E236FFA007FD578 /* Build configuration list for PBXNativeTarget "SDWebImageGZUITests" */;
+			buildPhases = (
+				064745171E236FFA007FD578 /* Sources */,
+				064745181E236FFA007FD578 /* Frameworks */,
+				064745191E236FFA007FD578 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				0647451D1E236FFA007FD578 /* PBXTargetDependency */,
+			);
+			name = SDWebImageGZUITests;
+			productName = SDWebImageGZUITests;
+			productReference = 0647451B1E236FFA007FD578 /* SDWebImageGZUITests.xctest */;
+			productType = "com.apple.product-type.bundle.ui-testing";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		064744EF1E236FF9007FD578 /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				LastUpgradeCheck = 0730;
+				ORGANIZATIONNAME = gongzhen;
+				TargetAttributes = {
+					064744F61E236FFA007FD578 = {
+						CreatedOnToolsVersion = 7.3.1;
+					};
+					0647450F1E236FFA007FD578 = {
+						CreatedOnToolsVersion = 7.3.1;
+						TestTargetID = 064744F61E236FFA007FD578;
+					};
+					0647451A1E236FFA007FD578 = {
+						CreatedOnToolsVersion = 7.3.1;
+						TestTargetID = 064744F61E236FFA007FD578;
+					};
+				};
+			};
+			buildConfigurationList = 064744F21E236FF9007FD578 /* Build configuration list for PBXProject "SDWebImageGZ" */;
+			compatibilityVersion = "Xcode 3.2";
+			developmentRegion = English;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+				Base,
+			);
+			mainGroup = 064744EE1E236FF9007FD578;
+			productRefGroup = 064744F81E236FFA007FD578 /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				064744F61E236FFA007FD578 /* SDWebImageGZ */,
+				0647450F1E236FFA007FD578 /* SDWebImageGZTests */,
+				0647451A1E236FFA007FD578 /* SDWebImageGZUITests */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		064744F51E236FFA007FD578 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				0647450A1E236FFA007FD578 /* LaunchScreen.storyboard in Resources */,
+				064745071E236FFA007FD578 /* Assets.xcassets in Resources */,
+				064745051E236FFA007FD578 /* Main.storyboard in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		0647450E1E236FFA007FD578 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		064745191E236FFA007FD578 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		064744F31E236FFA007FD578 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				064745021E236FFA007FD578 /* ViewController.m in Sources */,
+				064744FF1E236FFA007FD578 /* AppDelegate.m in Sources */,
+				064744FC1E236FFA007FD578 /* main.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		0647450C1E236FFA007FD578 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				064745151E236FFA007FD578 /* SDWebImageGZTests.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		064745171E236FFA007FD578 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				064745201E236FFA007FD578 /* SDWebImageGZUITests.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		064745121E236FFA007FD578 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 064744F61E236FFA007FD578 /* SDWebImageGZ */;
+			targetProxy = 064745111E236FFA007FD578 /* PBXContainerItemProxy */;
+		};
+		0647451D1E236FFA007FD578 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 064744F61E236FFA007FD578 /* SDWebImageGZ */;
+			targetProxy = 0647451C1E236FFA007FD578 /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
+
+/* Begin PBXVariantGroup section */
+		064745031E236FFA007FD578 /* Main.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				064745041E236FFA007FD578 /* Base */,
+			);
+			name = Main.storyboard;
+			sourceTree = "<group>";
+		};
+		064745081E236FFA007FD578 /* LaunchScreen.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				064745091E236FFA007FD578 /* Base */,
+			);
+			name = LaunchScreen.storyboard;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
+
+/* Begin XCBuildConfiguration section */
+		064745221E236FFA007FD578 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 9.3;
+				MTL_ENABLE_DEBUG_INFO = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = iphoneos;
+			};
+			name = Debug;
+		};
+		064745231E236FFA007FD578 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 9.3;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				SDKROOT = iphoneos;
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		064745251E236FFA007FD578 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				INFOPLIST_FILE = SDWebImageGZ/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = com.gongzhen.ObjCApp.SDWebImageGZ;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+			};
+			name = Debug;
+		};
+		064745261E236FFA007FD578 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				INFOPLIST_FILE = SDWebImageGZ/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = com.gongzhen.ObjCApp.SDWebImageGZ;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+			};
+			name = Release;
+		};
+		064745281E236FFA007FD578 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				INFOPLIST_FILE = SDWebImageGZTests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = com.gongzhen.ObjCApp.SDWebImageGZTests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/SDWebImageGZ.app/SDWebImageGZ";
+			};
+			name = Debug;
+		};
+		064745291E236FFA007FD578 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				INFOPLIST_FILE = SDWebImageGZTests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = com.gongzhen.ObjCApp.SDWebImageGZTests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/SDWebImageGZ.app/SDWebImageGZ";
+			};
+			name = Release;
+		};
+		0647452B1E236FFA007FD578 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				INFOPLIST_FILE = SDWebImageGZUITests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = com.gongzhen.ObjCApp.SDWebImageGZUITests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TEST_TARGET_NAME = SDWebImageGZ;
+			};
+			name = Debug;
+		};
+		0647452C1E236FFA007FD578 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				INFOPLIST_FILE = SDWebImageGZUITests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = com.gongzhen.ObjCApp.SDWebImageGZUITests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TEST_TARGET_NAME = SDWebImageGZ;
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		064744F21E236FF9007FD578 /* Build configuration list for PBXProject "SDWebImageGZ" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				064745221E236FFA007FD578 /* Debug */,
+				064745231E236FFA007FD578 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		064745241E236FFA007FD578 /* Build configuration list for PBXNativeTarget "SDWebImageGZ" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				064745251E236FFA007FD578 /* Debug */,
+				064745261E236FFA007FD578 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+		};
+		064745271E236FFA007FD578 /* Build configuration list for PBXNativeTarget "SDWebImageGZTests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				064745281E236FFA007FD578 /* Debug */,
+				064745291E236FFA007FD578 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+		};
+		0647452A1E236FFA007FD578 /* Build configuration list for PBXNativeTarget "SDWebImageGZUITests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				0647452B1E236FFA007FD578 /* Debug */,
+				0647452C1E236FFA007FD578 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = 064744EF1E236FF9007FD578 /* Project object */;
+}

@@ -33,7 +33,9 @@
     // Do any additional setup after loading the view.
     
     [self setupPhotos];
-    self.pageViewController = [[UIPageViewController alloc] initWithTransitionStyle:UIPageViewControllerTransitionStyleScroll navigationOrientation:UIPageViewControllerNavigationOrientationHorizontal options:nil];
+    self.pageViewController = [[UIPageViewController alloc] initWithTransitionStyle:UIPageViewControllerTransitionStyleScroll
+                                                              navigationOrientation:UIPageViewControllerNavigationOrientationHorizontal
+                                                                            options:nil];
     self.pageViewController.dataSource = self;
     self.pageViewController.delegate = self;
     [[self.pageViewController view] setFrame:self.view.bounds];
