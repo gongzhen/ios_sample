@@ -236,6 +236,10 @@
 		0679643F1E3AB6780025C178 /* ImageResourceConstants.m in Sources */ = {isa = PBXBuildFile; fileRef = 0679643E1E3AB6780025C178 /* ImageResourceConstants.m */; };
 		067964421E3B197D0025C178 /* GuidePageGetStartViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 067964411E3B197D0025C178 /* GuidePageGetStartViewController.m */; };
 		067964591E3E51E80025C178 /* SignMainViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 067964581E3E51E80025C178 /* SignMainViewController.m */; };
+		0679645C1E3EC8720025C178 /* GuidePageZeroViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 0679645B1E3EC8720025C178 /* GuidePageZeroViewController.m */; };
+		0679645F1E3EC8840025C178 /* GuidePageTwoViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 0679645E1E3EC8840025C178 /* GuidePageTwoViewController.m */; };
+		067964621E3EC8950025C178 /* GuidePageOneViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 067964611E3EC8950025C178 /* GuidePageOneViewController.m */; };
+		067964651E3EC8A80025C178 /* GuidePageThreeViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 067964641E3EC8A80025C178 /* GuidePageThreeViewController.m */; };
 		199B052EEE2211C5DD1C7BBD /* libPods-CaknowGZUITests.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 9CAB39BEBBE413F94DBD0469 /* libPods-CaknowGZUITests.a */; };
 		4060389442EB5E0A457D051B /* libPods-CaknowGZ.a in Frameworks */ = {isa = PBXBuildFile; fileRef = AB1FF9C67F78EB5C7763ABA8 /* libPods-CaknowGZ.a */; };
 		86D2B743FCCE264079FA3D31 /* libPods-CaknowGZTests.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 805EEAACACA6ED6D04E47136 /* libPods-CaknowGZTests.a */; };
@@ -502,6 +506,14 @@
 		067964411E3B197D0025C178 /* GuidePageGetStartViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = GuidePageGetStartViewController.m; sourceTree = "<group>"; };
 		067964571E3E51E80025C178 /* SignMainViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SignMainViewController.h; sourceTree = "<group>"; };
 		067964581E3E51E80025C178 /* SignMainViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SignMainViewController.m; sourceTree = "<group>"; };
+		0679645A1E3EC8720025C178 /* GuidePageZeroViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GuidePageZeroViewController.h; sourceTree = "<group>"; };
+		0679645B1E3EC8720025C178 /* GuidePageZeroViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = GuidePageZeroViewController.m; sourceTree = "<group>"; };
+		0679645D1E3EC8840025C178 /* GuidePageTwoViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GuidePageTwoViewController.h; sourceTree = "<group>"; };
+		0679645E1E3EC8840025C178 /* GuidePageTwoViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = GuidePageTwoViewController.m; sourceTree = "<group>"; };
+		067964601E3EC8950025C178 /* GuidePageOneViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GuidePageOneViewController.h; sourceTree = "<group>"; };
+		067964611E3EC8950025C178 /* GuidePageOneViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = GuidePageOneViewController.m; sourceTree = "<group>"; };
+		067964631E3EC8A80025C178 /* GuidePageThreeViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GuidePageThreeViewController.h; sourceTree = "<group>"; };
+		067964641E3EC8A80025C178 /* GuidePageThreeViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = GuidePageThreeViewController.m; sourceTree = "<group>"; };
 		17756D619C0FE16BB58E956E /* Pods-CaknowGZUITests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-CaknowGZUITests.release.xcconfig"; path = "Pods/Target Support Files/Pods-CaknowGZUITests/Pods-CaknowGZUITests.release.xcconfig"; sourceTree = "<group>"; };
 		69F076128568B0353FE7213F /* Pods-CaknowGZTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-CaknowGZTests.release.xcconfig"; path = "Pods/Target Support Files/Pods-CaknowGZTests/Pods-CaknowGZTests.release.xcconfig"; sourceTree = "<group>"; };
 		7EE4CF1E8F93C68FCC742121 /* Pods-CaknowGZTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-CaknowGZTests.debug.xcconfig"; path = "Pods/Target Support Files/Pods-CaknowGZTests/Pods-CaknowGZTests.debug.xcconfig"; sourceTree = "<group>"; };
@@ -642,6 +654,14 @@
 				065F5CF11E35E25800283910 /* GuideViewController.m */,
 				0679641B1E375EAC0025C178 /* GuidePageViewController.h */,
 				0679641C1E375EAC0025C178 /* GuidePageViewController.m */,
+				0679645A1E3EC8720025C178 /* GuidePageZeroViewController.h */,
+				0679645B1E3EC8720025C178 /* GuidePageZeroViewController.m */,
+				067964601E3EC8950025C178 /* GuidePageOneViewController.h */,
+				067964611E3EC8950025C178 /* GuidePageOneViewController.m */,
+				0679645D1E3EC8840025C178 /* GuidePageTwoViewController.h */,
+				0679645E1E3EC8840025C178 /* GuidePageTwoViewController.m */,
+				067964631E3EC8A80025C178 /* GuidePageThreeViewController.h */,
+				067964641E3EC8A80025C178 /* GuidePageThreeViewController.m */,
 				067964401E3B197D0025C178 /* GuidePageGetStartViewController.h */,
 				067964411E3B197D0025C178 /* GuidePageGetStartViewController.m */,
 			);
@@ -1416,11 +1436,15 @@
 				067964591E3E51E80025C178 /* SignMainViewController.m in Sources */,
 				065F5B021E35CD0B00283910 /* AppDelegate.m in Sources */,
 				065F5CF21E35E25800283910 /* GuideViewController.m in Sources */,
+				067964651E3EC8A80025C178 /* GuidePageThreeViewController.m in Sources */,
+				067964621E3EC8950025C178 /* GuidePageOneViewController.m in Sources */,
 				0679641D1E375EAC0025C178 /* GuidePageViewController.m in Sources */,
+				0679645C1E3EC8720025C178 /* GuidePageZeroViewController.m in Sources */,
 				067964421E3B197D0025C178 /* GuidePageGetStartViewController.m in Sources */,
 				065F5AFF1E35CD0B00283910 /* main.m in Sources */,
 				065F5CEF1E35E20500283910 /* LaunchViewController.m in Sources */,
 				0679643F1E3AB6780025C178 /* ImageResourceConstants.m in Sources */,
+				0679645F1E3EC8840025C178 /* GuidePageTwoViewController.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -1493,7 +1517,7 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 9.3;
+				IPHONEOS_DEPLOYMENT_TARGET = 9.1;
 				MTL_ENABLE_DEBUG_INFO = YES;
 				ONLY_ACTIVE_ARCH = YES;
 				SDKROOT = iphoneos;
@@ -1531,7 +1555,7 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 9.3;
+				IPHONEOS_DEPLOYMENT_TARGET = 9.1;
 				MTL_ENABLE_DEBUG_INFO = NO;
 				SDKROOT = iphoneos;
 				VALIDATE_PRODUCT = YES;
@@ -1547,6 +1571,7 @@
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = /Users/gongzhen/Projects/ios/github_gz/ios_sample/CaknowGZ/CaknowGZ/CaknowGZPrefixHeader.pch;
 				INFOPLIST_FILE = CaknowGZ/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 9.1;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.gongzhen.ObjCApp.CaknowGZ;
 				PRODUCT_NAME = "$(TARGET_NAME)";
@@ -1562,6 +1587,7 @@
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = /Users/gongzhen/Projects/ios/github_gz/ios_sample/CaknowGZ/CaknowGZ/CaknowGZPrefixHeader.pch;
 				INFOPLIST_FILE = CaknowGZ/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 9.1;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.gongzhen.ObjCApp.CaknowGZ;
 				PRODUCT_NAME = "$(TARGET_NAME)";

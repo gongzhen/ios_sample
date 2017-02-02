@@ -13,6 +13,7 @@ int main(int argc, const char * argv[]) {
         // insert code here...
         NSString* methodName = @"consumer/payment/:provider/cards/:id";
         NSMutableString *url = [NSMutableString new];
+        NSMutableString *methodString = [NSMutableString new];
         
         NSDictionary *params = @{@"id": @"card_19gdv0I1HaTXKarVwGFXDHCa", @"provider": @"stripe"};
         
@@ -24,6 +25,7 @@ int main(int argc, const char * argv[]) {
             foundRange = [methodName rangeOfString:@"/:" options:NSCaseInsensitiveSearch range:searchRange];
             if (foundRange.location != NSNotFound) {
                 [url appendString:[methodName substringWithRange:NSMakeRange(searchRange.location, (foundRange.location - searchRange.location + 1))]];
+                
                 NSUInteger startIndex = foundRange.location + 2;
                 NSRange restStringRange = NSMakeRange(startIndex, methodName.length - startIndex);
                 endSlash = [methodName rangeOfString:@"/" options:NSCaseInsensitiveSearch range:restStringRange];
@@ -32,10 +34,12 @@ int main(int argc, const char * argv[]) {
                     if ([params objectForKey:key]) {
                         DLog(@"%@", key);
                         [url appendString:[params objectForKey:key]];
+                        [methodString appendString:[methodName substringWithRange:NSMakeRange(searchRange.location, (foundRange.location - searchRange.location))]];
                     }
                     break;
                 } else {
                     NSString *key = [methodName substringWithRange:NSMakeRange(startIndex, endSlash.location - startIndex)];
+                    [methodString appendString:[methodName substringWithRange:NSMakeRange(searchRange.location, (foundRange.location + 1 - searchRange.location))]];
                     if ([params objectForKey:key]) {
                         DLog(@"%@", key);
                         [url appendString:[params objectForKey:key]];
@@ -54,6 +58,7 @@ int main(int argc, const char * argv[]) {
         NSRegularExpression *regex = [NSRegularExpression regularExpressionWithPattern:@"/:" options:NSRegularExpressionCaseInsensitive error:&error];
         methodName = [regex stringByReplacingMatchesInString:methodName options:0 range:NSMakeRange(0, methodName.length) withTemplate:@"/"];
         DLog(@"%@", methodName);
+        DLog(@"%@", methodString);
     }
     return 0;
 }

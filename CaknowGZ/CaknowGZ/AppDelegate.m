@@ -67,4 +67,17 @@
                                                        annotation:annotation];
 }
 
+#pragma mark - Push notification
+
+- (void)application:(UIApplication *)application didRegisterForRemoteNotificationsWithDeviceToken:(NSData *)deviceToken {
+    NSString *deviceTokenString = deviceToken.description;
+    deviceTokenString = [deviceTokenString stringByReplacingOccurrencesOfString:@"<" withString:@""];
+    deviceTokenString = [deviceTokenString stringByReplacingOccurrencesOfString:@">" withString:@""];
+    deviceTokenString = [deviceTokenString stringByReplacingOccurrencesOfString:@" " withString:@""];
+    [[NSUserDefaults standardUserDefaults] setObject:deviceTokenString
+                                              forKey:kUserDefaultsPushNotificationsDeviceToken];
+    [[NSUserDefaults standardUserDefaults] synchronize];
+    
+}
+
 @end
