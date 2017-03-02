@@ -33,7 +33,7 @@
     if (_getStartButton == nil) {
         _getStartButton = [[UIButton alloc] init];
         [_getStartButton setBackgroundImage:[UIImage imageNamed:kColorButtonRed] forState:UIControlStateNormal];
-        [_getStartButton addTarget:self.backgroundImageView action:@selector(getStartButtonClicked:) forControlEvents:UIControlEventTouchUpInside];
+        [_getStartButton addTarget:self action:@selector(getStartButtonClicked:) forControlEvents:UIControlEventTouchUpInside];
     }
     return _getStartButton;
 }
@@ -59,9 +59,9 @@
     [super viewDidLoad];
     // Do any additional setup after loading the view.
     [self.view addSubview:self.backgroundImageView];
-    [self.backgroundImageView addSubview:self.headerLabel];
-    [self.backgroundImageView addSubview:self.getStartButton];
-    [self.backgroundImageView addSubview:self.emergencyCallButton];
+    [self.view addSubview:self.headerLabel];
+    [self.view addSubview:self.getStartButton];
+    [self.view addSubview:self.emergencyCallButton];
     __weak typeof(self) weakSelf = self;
     
     [self.backgroundImageView mas_makeConstraints:^(MASConstraintMaker *make) {
@@ -73,16 +73,16 @@
 
     [self.headerLabel mas_makeConstraints:^(MASConstraintMaker *make) {
         make.height.mas_equalTo(60.f);
-        make.left.equalTo(weakSelf.backgroundImageView.mas_left).with.offset(10.f);
-        make.right.equalTo(weakSelf.backgroundImageView.mas_right).with.offset(-10.f);
-        make.top.equalTo(weakSelf.backgroundImageView.mas_top).with.offset(100.f);
+        make.left.equalTo(weakSelf.view.mas_left).with.offset(10.f);
+        make.right.equalTo(weakSelf.view.mas_right).with.offset(-10.f);
+        make.top.equalTo(weakSelf.view.mas_top).with.offset(100.f);
     }];
     
     [self.getStartButton mas_makeConstraints:^(MASConstraintMaker *make) {
         make.width.mas_equalTo(260.f);
         make.height.mas_equalTo(44.f);
-        make.centerX.equalTo(weakSelf.backgroundImageView.mas_centerX).with.offset(0.f);
-        make.centerY.equalTo(weakSelf.backgroundImageView.mas_centerY).with.offset(self.view.bounds.size.height * 1 / 4);
+        make.centerX.equalTo(weakSelf.view.mas_centerX).with.offset(0.f);
+        make.centerY.equalTo(weakSelf.view.mas_centerY).with.offset(self.view.bounds.size.height * 1 / 4);
     }];
     
     [self.emergencyCallButton mas_makeConstraints:^(MASConstraintMaker *make) {

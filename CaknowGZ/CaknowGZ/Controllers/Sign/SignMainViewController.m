@@ -7,6 +7,7 @@
 //
 
 #import "SignMainViewController.h"
+#import "SignInViewController.h"
 
 @interface SignMainViewController () <FBSDKLoginButtonDelegate>
 {
@@ -37,7 +38,12 @@
 - (UIButton *)loginButton {
     if (_loginButton == nil) {
         _loginButton = [[UIButton alloc] init];
-        [_loginButton setBackgroundImage:[UIImage imageNamed:kBgLogin] forState:UIControlStateNormal];
+        [_loginButton setTitle:@"Login in" forState:UIControlStateNormal];
+        [_loginButton setBackgroundColor:[UIColor clearColor]];
+        [_loginButton setTitleColor:[UIColor blackColor] forState:UIControlStateNormal];
+        [[_loginButton layer] setBorderWidth:2.f];
+        [[_loginButton layer] setBorderColor:[UIColor lightGrayColor].CGColor];
+        [_loginButton addTarget:self action:@selector(signInButtonClicked:) forControlEvents:UIControlEventTouchUpInside];
     }
     return _loginButton;
 }
@@ -46,17 +52,10 @@
     if (_signUpButton == nil) {
         _signUpButton = [[UIButton alloc] init];
         [_signUpButton setBackgroundImage:[UIImage imageNamed:kColorButtonBlue] forState:UIControlStateNormal];
+        [_signUpButton setTitle:@"Sign up with email" forState:UIControlStateNormal];
     }
     return _signUpButton;
 }
-
-//- (UIButton *)signInFacebookButton {
-//    
-//}
-//
-//- (UIButton *)signInGoogleButton {
-//    
-//}
 
 #pragma mark - life cycle
 
@@ -102,13 +101,21 @@
 }
 
 - (void)loginButtonDidLogOut:(FBSDKLoginButton *)loginButton {
-
+    
 }
 
 #pragma mark - private methods
 
 - (BOOL)isUserLoggedIn {
     return [FBSDKAccessToken currentAccessToken] != nil;
+}
+
+- (void)signInButtonClicked:(UIButton *)sender {
+    SignInViewController *signInViewController = [[SignInViewController alloc] init];
+    UINavigationController *signInNavigationController = [[UINavigationController alloc] initWithRootViewController:signInViewController];
+    [self presentViewController:signInNavigationController animated:YES completion:^{
+        
+    }];
 }
 
 - (void) setupConstraints {

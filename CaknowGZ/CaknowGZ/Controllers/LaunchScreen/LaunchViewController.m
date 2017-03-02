@@ -8,6 +8,7 @@
 
 #import "LaunchViewController.h"
 #import "GuideViewController.h"
+#import "SignMainViewController.h"
 
 @interface LaunchViewController ()
 
@@ -39,9 +40,13 @@
         make.right.equalTo(weakSelf.view.mas_right).with.offset(0.f);
     }];
     
-    GuideViewController *guideViewController = [[GuideViewController alloc] init];
+    SignMainViewController *signMainViewController = [[SignMainViewController alloc] init];
     self.navigationController.navigationBarHidden = YES;
-    [self.navigationController pushViewController:guideViewController animated:YES];
+    [self.navigationController pushViewController:signMainViewController animated:YES];
+
+//        GuideViewController *guideViewController = [[GuideViewController alloc] init];
+//        self.navigationController.navigationBarHidden = YES;
+//        [self.navigationController pushViewController:guideViewController animated:YES];
 }
 
 - (void)didReceiveMemoryWarning {

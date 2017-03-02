@@ -11,11 +11,13 @@
 int main(int argc, const char * argv[]) {
     @autoreleasepool {
         // insert code here...
-        NSString* methodName = @"consumer/payment/:provider/cards/:id";
+//        NSString* methodName = @"consumer/payment/:provider/cards/:id";
+        NSString* methodName = @"affiliate/serviceRequests/:id/complete";
         NSMutableString *url = [NSMutableString new];
         NSMutableString *methodString = [NSMutableString new];
         
-        NSDictionary *params = @{@"id": @"card_19gdv0I1HaTXKarVwGFXDHCa", @"provider": @"stripe"};
+//        NSDictionary *params = @{@"id": @"card_19gdv0I1HaTXKarVwGFXDHCa", @"provider": @"stripe"};
+        NSDictionary *params = @{@"id": @"VwGFXDHCa",};
         
         NSRange searchRange = NSMakeRange(0, methodName.length);
         NSRange foundRange;
@@ -49,16 +51,18 @@ int main(int argc, const char * argv[]) {
                     searchRange.location = endSlash.location + 1;
                 }
             } else {
+                [url appendString:[methodName substringFromIndex:searchRange.location]];
+                [methodString appendString:[methodName substringFromIndex:searchRange.location]];
                 break;
             }
         }
         
-        DLog(@"%@", url);
+        DLog(@"url:%@", url);
         NSError *error = nil;
         NSRegularExpression *regex = [NSRegularExpression regularExpressionWithPattern:@"/:" options:NSRegularExpressionCaseInsensitive error:&error];
         methodName = [regex stringByReplacingMatchesInString:methodName options:0 range:NSMakeRange(0, methodName.length) withTemplate:@"/"];
-        DLog(@"%@", methodName);
-        DLog(@"%@", methodString);
+        DLog(@"methodName:%@", methodName);
+        DLog(@"methodString:%@", methodString);
     }
     return 0;
 }

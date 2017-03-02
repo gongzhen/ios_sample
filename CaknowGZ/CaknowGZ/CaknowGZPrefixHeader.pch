@@ -14,6 +14,8 @@
 
 #define kUserDefaultsPushNotificationsDeviceToken @"PushNotificationsDeviceToken"
 
+#import "HttpRequestManager.h"
+
 #import "Masonry.h"
 #import <Google/SignIn.h>
 #import <FBSDKCoreKit/FBSDKCoreKit.h>
