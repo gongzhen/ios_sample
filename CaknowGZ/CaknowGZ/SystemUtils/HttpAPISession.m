@@ -7,6 +7,7 @@
 //
 
 #import "HttpAPISession.h"
+#import "BaseEntity.h"
 
 NSString *const kServerURL = @"https://dev.caknow.com/";
 
@@ -56,14 +57,41 @@ NSString *const kServerURL = @"https://dev.caknow.com/";
         if (error) {
             
         } else {
+            NSDictionary *parsedData = [NSJSONSerialization JSONObjectWithData:data
+                                                                       options:NSJSONReadingMutableContainers error:nil];
             
-//            NSString *parsedData = [[NSString alloc] initWithData:data encoding:NSUTF8StringEncoding];
-            NSDictionary *parsedData = [NSJSONSerialization JSONObjectWithData:data options:NSJSONReadingMutableContainers error:nil];
+            
+            
             success(parsedData);
+            
         }
     }];
     [task resume];
     return task;
+}
+
+- (id)convertJSONToEntity:(id)jsonObject methodName:(NSString *)methodName statusCode:(long)statusCode {
+    id result;
+
+    if ([jsonObject isKindOfClass:[NSDictionary class]]) {
+        NSDictionary* jsonResult = [jsonObject objectForKey:@"payload"];
+        if(!jsonObject) {
+            return jsonObject;
+        }
+        
+        if ([jsonObject isKindOfClass:[NSDictionary class]]) {
+            Class objectClass = NSClassFromString(methodName);
+            id resultEntity = [[objectClass alloc] init];
+            if ([resultEntity isKindOfClass:BaseEntity.class]) {
+                
+            }
+            
+        }
+        
+    
+    }
+    
+    return result;
 }
 
 @end

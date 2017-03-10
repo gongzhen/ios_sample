@@ -7,6 +7,7 @@
 //
 
 #import "SignInViewController.h"
+#import "GarageViewController.h"
 
 @interface SignInViewController ()
 
@@ -58,9 +59,14 @@
 - (UITextField *)emailTextField {
     if (_emailTextField == nil) {
         _emailTextField = [[UITextField alloc] init];
-        [_emailTextField setPlaceholder:@"Email"];
+        [_emailTextField setPlaceholder:@"Email Address"];
+        _emailTextField.delegate = self;
+        [_emailTextField setAutocorrectionType:UITextAutocorrectionTypeNo];
+        [_emailTextField setAutocapitalizationType:UITextAutocapitalizationTypeNone];
+        [_emailTextField setClearButtonMode:UITextFieldViewModeWhileEditing];
         [_emailTextField setTextColor:[UIColor blackColor]];
         [_emailTextField setUserInteractionEnabled:YES];
+        [_emailTextField setKeyboardType:UIKeyboardTypeEmailAddress];
     }
     return _emailTextField;
 }
@@ -87,9 +93,18 @@
 - (UITextField *)passwordTextField {
     if (_passwordTextField == nil) {
         _passwordTextField = [[UITextField alloc] init];
+        _passwordTextField.delegate = self;
         [_passwordTextField setPlaceholder:@"Password"];
         [_passwordTextField setUserInteractionEnabled:YES];
         [_passwordTextField setOpaque:YES];
+        _passwordTextField.keyboardType = UIKeyboardTypeDefault;
+        [_passwordTextField setAutocapitalizationType:UITextAutocapitalizationTypeNone];
+        [_passwordTextField setAutocorrectionType:UITextAutocorrectionTypeNo];
+        [_passwordTextField setSpellCheckingType:UITextSpellCheckingTypeNo];
+        [_passwordTextField setTextAlignment:NSTextAlignmentLeft];
+        [_passwordTextField setClearButtonMode:UITextFieldViewModeWhileEditing];
+        [_passwordTextField setReturnKeyType:UIReturnKeyGo];
+        [_passwordTextField setSecureTextEntry:YES];
     }
     return _passwordTextField;
 }
@@ -140,7 +155,6 @@
 - (void)viewDidLoad {
     [super viewDidLoad];
     // Do any additional setup after loading the view.
-
     [self setupViewConstraint];
     
 }
@@ -157,15 +171,37 @@
     
     _signInButton.enabled = NO;
     NSMutableDictionary *parameters = [[NSMutableDictionary alloc] initWithDictionary:@{@"email": [_emailTextField.text lowercaseString], @"password": _passwordTextField.text}];
-//    NSDictionary *parameters = @{@"email": @"chris@caknow.com", @"password": @"123456"};
+
     DLog(@"%@", parameters);
     [[HttpRequestManager sharedInstance] create:@"consumer"
                                      parameters:parameters
                                         success:^(id resultObj) {
                                             DLog(@"%@", resultObj);
+                                            
+                                            GarageViewController *garageViewController = [[GarageViewController alloc] init];
+                                            // UINavigationController *garageNV = [[UINavigationController alloc] initWithRootViewController:garageViewController];
+                                            [self presentViewController:garageViewController animated:YES completion:nil];
+                                            
                                         } failure:^(NSError *error) {
                                             
                                         }];
+}
+
+#pragma mark - UITextField delegate
+
+-(BOOL)textFieldShouldBeginEditing:(UITextField *)textField {
+    return YES;
+}
+
+-(void)textFieldDidBeginEditing:(UITextField *)textField {
+
+}
+
+-(BOOL)textFieldShouldReturn:(UITextField *)textField {
+    if (_passwordTextField == textField ) {
+        [self signInButtonClicked:_signInButton];
+    }
+    return YES;
 }
 
 #pragma mark - helper method
