@@ -12,4 +12,11 @@
 
 + (NSString *)capitalizeFirstLetter:(NSString *)string;
 
++ (Boolean)isArrayClass:(id)classObject;
+
++ (Boolean)isDictionaryClass:(id)classObject;
+
++ (Boolean)isBaseClass:(id)classObject;
+
+
 @end

@@ -8,6 +8,7 @@
 
 #import "HttpAPISession.h"
 #import "BaseEntity.h"
+#import "SystemUtils.h"
 
 NSString *const kServerURL = @"https://dev.caknow.com/";
 
@@ -36,7 +37,6 @@ NSString *const kServerURL = @"https://dev.caknow.com/";
         [request setHTTPBody:[NSJSONSerialization dataWithJSONObject:parameters options:NSJSONWritingPrettyPrinted error:nil]];
     }
     
-    
     NSMutableString *httpMethodName = [NSMutableString new];
     
     switch (type) {
@@ -54,16 +54,15 @@ NSString *const kServerURL = @"https://dev.caknow.com/";
     [request setValue:@"application/json" forHTTPHeaderField:@"Content-Type"];
     
     NSURLSessionDataTask *task = [_session dataTaskWithRequest:request completionHandler:^(NSData * _Nullable data, NSURLResponse * _Nullable response, NSError * _Nullable error) {
+        NSInteger statusCode = [(NSHTTPURLResponse *)response statusCode];
+        NSString *fullMethodName = [self getFullMethodNameByHttpMethod:httpMethodName method:methodName];
         if (error) {
             
         } else {
             NSDictionary *parsedData = [NSJSONSerialization JSONObjectWithData:data
                                                                        options:NSJSONReadingMutableContainers error:nil];
-            
-            
-            
-            success(parsedData);
-            
+            id result = [self convertJSONToEntity:parsedData methodName:fullMethodName statusCode:statusCode];
+            success(result);
         }
     }];
     [task resume];
@@ -72,26 +71,57 @@ NSString *const kServerURL = @"https://dev.caknow.com/";
 
 - (id)convertJSONToEntity:(id)jsonObject methodName:(NSString *)methodName statusCode:(long)statusCode {
     id result;
-
-    if ([jsonObject isKindOfClass:[NSDictionary class]]) {
+    if ([SystemUtils isDictionaryClass:jsonObject]) {
         NSDictionary* jsonResult = [jsonObject objectForKey:@"payload"];
-        if(!jsonObject) {
-            return jsonObject;
+        if(!jsonResult) {
+            return jsonResult;
         }
         
-        if ([jsonObject isKindOfClass:[NSDictionary class]]) {
-            Class objectClass = NSClassFromString(methodName);
+        if ([SystemUtils isDictionaryClass:jsonResult]) {
+            Class objectClass = NSClassFromString([self convertMethodName:methodName]); DLog(@"%@", methodName);
             id resultEntity = [[objectClass alloc] init];
-            if ([resultEntity isKindOfClass:BaseEntity.class]) {
-                
+            if ([SystemUtils isBaseClass:resultEntity]) {
+                [resultEntity performSelector:@selector(setAttributes:) withObject:jsonResult];
+            }
+            if(resultEntity) {
+                result = resultEntity;
+            } else {
+                result = jsonObject;
             }
             
+        } else {
+            // handle error
         }
-        
-    
+    }
+    return result;
+}
+
+- (NSString *)convertMethodName:(NSString *)methodName {
+    NSArray *components = [methodName componentsSeparatedByString:@"_"];
+    NSString *resultString = @"";
+    for (int i = 0; i < components.count; i++) {
+        NSString *component = [components objectAtIndex:i];
+        resultString = [resultString stringByAppendingString:[SystemUtils capitalizeFirstLetter:component]];
     }
     
-    return result;
+    components = [resultString componentsSeparatedByString:@"-"];
+    resultString = @"";
+    for (int i = 0; i < components.count; i++) {
+        NSString *component = [components objectAtIndex:i];
+        resultString = [resultString stringByAppendingString:[SystemUtils capitalizeFirstLetter:component]];
+    }
+    components = [resultString componentsSeparatedByString:@"/"];
+    resultString = @"";
+    for (int i = 0; i < components.count; i++) {
+        NSString *component = [components objectAtIndex:i];
+        resultString = [resultString stringByAppendingString:[SystemUtils capitalizeFirstLetter:component]];
+    }
+    resultString = [NSString stringWithFormat:@"%@Entity", resultString];
+    return resultString;
+}
+
+- (NSString *)getFullMethodNameByHttpMethod:(NSString *)httpMethod method:(NSString *)method {
+    return [NSString stringWithFormat:@"%@%@", httpMethod, [SystemUtils capitalizeFirstLetter:method]];
 }
 
 @end

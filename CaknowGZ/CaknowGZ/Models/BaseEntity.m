@@ -28,8 +28,8 @@
         if ([self respondsToSelector:NSSelectorFromString(key)]) {
             id value = [dictionary objectForKey:key];
             
-            if ([self isDictionaryClass:value]) {
-                NSString *className = [self constructClassNameFromMethod:methodName key:[SystemUtils capitalizeFirstLetter:key]];
+            if ([SystemUtils isDictionaryClass:value]) {
+                NSString *className = [self constructClassNameFromMethod:methodName key:[SystemUtils capitalizeFirstLetter:key]];DLog(@"%@", className);
                 Class objectClass = NSClassFromString(className);
                 if (!objectClass) {
                     return;
@@ -39,18 +39,17 @@
                     [valueEntity performSelector:@selector(setAttributes:) withObject:value];
                 }
                 [self setValue:valueEntity forKey:key];
-            } else if ([self isArrayClass:value]) {
+            } else if ([SystemUtils isArrayClass:value]) {
                 NSMutableArray *valueArray = [NSMutableArray array];
                 NSString *className = [self constructClassNameFromMethod:methodName key:[SystemUtils capitalizeFirstLetter:[key stringByReplacingOccurrencesOfString:@"_" withString:@""]]];
                 Class objectClass = NSClassFromString(className);
                 if(!objectClass) {
                     valueArray = value;
-                    
                 } else {
                     for (id listMember in value) {
-                        if ([self isDictionaryClass:listMember]) {
+                        if ([SystemUtils isDictionaryClass:listMember]) {
                             id resultEntity = [[objectClass alloc] init];
-                            if ([self isBaseClass:resultEntity]) {
+                            if ([SystemUtils isBaseClass:resultEntity]) {
                                 [resultEntity performSelector:@selector(setAttributes:) withObject:listMember];
                             }
                             [valueArray addObject:resultEntity];
@@ -91,18 +90,6 @@
                                        
 - (NSString *)constructClassNameFromMethod:(NSString *)methodName key:(NSString *)key {
     return [NSString stringWithFormat:@"%@%@Entity", methodName, key];
-}
-
-- (Boolean)isArrayClass:(id)classObject {
-    return [classObject isKindOfClass:[NSArray class]];
-}
-
-- (Boolean)isDictionaryClass:(id)classObject {
-    return [classObject isKindOfClass:[NSDictionary class]];
-}
-
-- (Boolean)isBaseClass:(id)classObject {
-    return [classObject isKindOfClass:[BaseEntity class]];
 }
 
 @end

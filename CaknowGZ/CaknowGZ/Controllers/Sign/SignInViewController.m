@@ -8,8 +8,9 @@
 
 #import "SignInViewController.h"
 #import "GarageViewController.h"
+#import "PostConsumerEntity.h"
 
-@interface SignInViewController ()
+@interface SignInViewController () //<UIViewControllerTransitioningDelegate, UIViewControllerAnimatedTransitioning>
 
 @property (strong, nonatomic) UILabel *sloganLabel;
 @property (strong, nonatomic) UIView *emailView;
@@ -176,12 +177,29 @@
     [[HttpRequestManager sharedInstance] create:@"consumer"
                                      parameters:parameters
                                         success:^(id resultObj) {
-                                            DLog(@"%@", resultObj);
-                                            
+                                            PostConsumerEntity *postConsumerEntity = resultObj;
+                                            DLog(@"%@", postConsumerEntity);
                                             GarageViewController *garageViewController = [[GarageViewController alloc] init];
-                                            // UINavigationController *garageNV = [[UINavigationController alloc] initWithRootViewController:garageViewController];
-                                            [self presentViewController:garageViewController animated:YES completion:nil];
+                                            if (!garageViewController) {
+                                                return;
+                                            }
+                                            UINavigationController *navigator = self.navigationController;
+                                            if (!navigator) {
+                                                return;
+                                            }
                                             
+                                            [[NSOperationQueue mainQueue] addOperationWithBlock:^{
+                                                UINavigationController *nav = (UINavigationController *)self.presentingViewController;
+                                                [self dismissViewControllerAnimated:YES completion:^{
+                                                    // http://stackoverflow.com/questions/22816628/modal-view-controller-dismiss-and-pop-back-to-view-controller
+                                                    // [nav pushViewController:garageViewController animated:YES];
+                                                    [nav presentViewController:garageViewController animated:YES completion:nil];
+                                                }];
+                                                // window does not work.
+                                                // UIWindow *window = [[[UIApplication sharedApplication] delegate] window];
+                                                // window.rootViewController = garageViewController;
+
+                                            }];
                                         } failure:^(NSError *error) {
                                             
                                         }];
@@ -204,7 +222,21 @@
     return YES;
 }
 
+#pragma mark -  UIViewControllerTransitioningDelegate
+
+//- (nullable id <UIViewControllerAnimatedTransitioning>)animationControllerForDismissedController:(UIViewController *)dismissed {
+//    
+//}
+//
+//- (nullable id <UIViewControllerInteractiveTransitioning>)interactionControllerForDismissal:(id<UIViewControllerAnimatedTransitioning>)animator {
+//    
+//}
+
+
+
+
 #pragma mark - helper method
+
 -(void)setupViewConstraint {
     [self.view addSubview:self.backgroundImageView];
     [self.view addSubview:self.sloganLabel];
