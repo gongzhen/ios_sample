@@ -9,8 +9,9 @@
 #import "SignInViewController.h"
 #import "GarageViewController.h"
 #import "PostConsumerEntity.h"
+#import "DismissAnimator.h"
 
-@interface SignInViewController () //<UIViewControllerTransitioningDelegate, UIViewControllerAnimatedTransitioning>
+@interface SignInViewController () <UIViewControllerTransitioningDelegate>
 
 @property (strong, nonatomic) UILabel *sloganLabel;
 @property (strong, nonatomic) UIView *emailView;
@@ -23,6 +24,8 @@
 @property (strong, nonatomic) UIButton *forgetPasswordButton;
 @property (strong, nonatomic) UIImageView *backgroundImageView;
 @property (strong, nonatomic) UIImageView *forgetPasswordWarningImage;
+
+@property (strong, nonatomic)DismissAnimator *animator;
 
 @end
 
@@ -157,6 +160,8 @@
     [super viewDidLoad];
     // Do any additional setup after loading the view.
     [self setupViewConstraint];
+    self.transitioningDelegate = self;
+    self.animator = [DismissAnimator new];
     
 }
 
@@ -180,6 +185,10 @@
                                             PostConsumerEntity *postConsumerEntity = resultObj;
                                             DLog(@"%@", postConsumerEntity);
                                             GarageViewController *garageViewController = [[GarageViewController alloc] init];
+                                            garageViewController.transitioningDelegate= self;
+                                            [garageViewController setModalPresentationStyle:UIModalPresentationCustom];
+                                            [garageViewController setModalTransitionStyle:UIModalTransitionStyleCrossDissolve];
+                                            
                                             if (!garageViewController) {
                                                 return;
                                             }
@@ -189,16 +198,10 @@
                                             }
                                             
                                             [[NSOperationQueue mainQueue] addOperationWithBlock:^{
-                                                UINavigationController *nav = (UINavigationController *)self.presentingViewController;
+                                                UINavigationController *nv = (UINavigationController *)self.presentingViewController;
                                                 [self dismissViewControllerAnimated:YES completion:^{
-                                                    // http://stackoverflow.com/questions/22816628/modal-view-controller-dismiss-and-pop-back-to-view-controller
-                                                    // [nav pushViewController:garageViewController animated:YES];
-                                                    [nav presentViewController:garageViewController animated:YES completion:nil];
+                                                    [nv presentViewController:garageViewController animated:YES completion:nil];
                                                 }];
-                                                // window does not work.
-                                                // UIWindow *window = [[[UIApplication sharedApplication] delegate] window];
-                                                // window.rootViewController = garageViewController;
-
                                             }];
                                         } failure:^(NSError *error) {
                                             
@@ -224,16 +227,13 @@
 
 #pragma mark -  UIViewControllerTransitioningDelegate
 
-//- (nullable id <UIViewControllerAnimatedTransitioning>)animationControllerForDismissedController:(UIViewController *)dismissed {
-//    
-//}
-//
+- (nullable id <UIViewControllerAnimatedTransitioning>)animationControllerForDismissedController:(UIViewController *)dismissed {
+    return self.animator;
+}
+
 //- (nullable id <UIViewControllerInteractiveTransitioning>)interactionControllerForDismissal:(id<UIViewControllerAnimatedTransitioning>)animator {
 //    
 //}
-
-
-
 
 #pragma mark - helper method
 

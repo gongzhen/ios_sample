@@ -8,6 +8,8 @@
 
 /* Begin PBXBuildFile section */
 		064FB18C1E73026A0030C639 /* PostConsumerEntity.m in Sources */ = {isa = PBXBuildFile; fileRef = 064FB18B1E73026A0030C639 /* PostConsumerEntity.m */; };
+		064FB1911E746F350030C639 /* DismissAnimator.m in Sources */ = {isa = PBXBuildFile; fileRef = 064FB1901E746F350030C639 /* DismissAnimator.m */; };
+		064FB1941E7477D30030C639 /* Interactor.m in Sources */ = {isa = PBXBuildFile; fileRef = 064FB1931E7477D30030C639 /* Interactor.m */; };
 		065F5AFF1E35CD0B00283910 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 065F5AFE1E35CD0B00283910 /* main.m */; };
 		065F5B021E35CD0B00283910 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 065F5B011E35CD0B00283910 /* AppDelegate.m */; };
 		065F5B181E35CD0C00283910 /* CaknowGZTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 065F5B171E35CD0C00283910 /* CaknowGZTests.m */; };
@@ -269,6 +271,10 @@
 /* Begin PBXFileReference section */
 		064FB18A1E73026A0030C639 /* PostConsumerEntity.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PostConsumerEntity.h; sourceTree = "<group>"; };
 		064FB18B1E73026A0030C639 /* PostConsumerEntity.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PostConsumerEntity.m; sourceTree = "<group>"; };
+		064FB18F1E746F350030C639 /* DismissAnimator.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DismissAnimator.h; sourceTree = "<group>"; };
+		064FB1901E746F350030C639 /* DismissAnimator.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DismissAnimator.m; sourceTree = "<group>"; };
+		064FB1921E7477D30030C639 /* Interactor.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Interactor.h; sourceTree = "<group>"; };
+		064FB1931E7477D30030C639 /* Interactor.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Interactor.m; sourceTree = "<group>"; };
 		065F5AFA1E35CD0B00283910 /* CaknowGZ.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = CaknowGZ.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		065F5AFE1E35CD0B00283910 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
 		065F5B001E35CD0B00283910 /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
@@ -665,6 +671,10 @@
 				06D8DCD31E46BF8D0066547A /* HttpRequestManager.m */,
 				06D8DCD51E47FB270066547A /* HttpAPISession.h */,
 				06D8DCD61E47FB270066547A /* HttpAPISession.m */,
+				064FB18F1E746F350030C639 /* DismissAnimator.h */,
+				064FB1901E746F350030C639 /* DismissAnimator.m */,
+				064FB1921E7477D30030C639 /* Interactor.h */,
+				064FB1931E7477D30030C639 /* Interactor.m */,
 			);
 			path = SystemUtils;
 			sourceTree = "<group>";
@@ -1462,6 +1472,8 @@
 				067964421E3B197D0025C178 /* GuidePageGetStartViewController.m in Sources */,
 				06D8DCD41E46BF8D0066547A /* HttpRequestManager.m in Sources */,
 				066D20F71E7221EF007B7833 /* BaseEntity.m in Sources */,
+				064FB1911E746F350030C639 /* DismissAnimator.m in Sources */,
+				064FB1941E7477D30030C639 /* Interactor.m in Sources */,
 				066D20F41E711C0D007B7833 /* CKUIKit.m in Sources */,
 				066D20F11E70DD79007B7833 /* GarageViewController.m in Sources */,
 				065F5AFF1E35CD0B00283910 /* main.m in Sources */,
