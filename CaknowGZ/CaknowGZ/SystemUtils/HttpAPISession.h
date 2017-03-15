@@ -22,6 +22,8 @@ typedef NS_ENUM(NSUInteger, HttpRequestType) {
     NSString *_token;
 }
 
+- (void)setToken:(NSString *)accessToken;
+
 - (instancetype)initWithAPIKey:(NSString *)apiKey token:(NSString *)token;
 
 

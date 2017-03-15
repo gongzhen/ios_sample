@@ -24,6 +24,10 @@ NSString *const kServerURL = @"https://dev.caknow.com/";
     return self;
 }
 
+- (void)setToken:(NSString *)accessToken {
+    _token = accessToken;
+}
+
 - (NSURLSessionDataTask *)request:(NSString *)methodName
                              type:(HttpRequestType)type
                        parameters:(id)parameters
@@ -50,7 +54,7 @@ NSString *const kServerURL = @"https://dev.caknow.com/";
     }
     
     [request setValue:_apiKey forHTTPHeaderField:@"x-api-key"];
-    [request setValue:_token forHTTPHeaderField:@"x-access-token"];
+    [request setValue:_token forHTTPHeaderField:@"x-access-token"];DLog(@"%@", _token);
     [request setValue:@"application/json" forHTTPHeaderField:@"Content-Type"];
     
     NSURLSessionDataTask *task = [_session dataTaskWithRequest:request completionHandler:^(NSData * _Nullable data, NSURLResponse * _Nullable response, NSError * _Nullable error) {

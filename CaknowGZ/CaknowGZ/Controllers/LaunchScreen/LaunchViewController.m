@@ -9,6 +9,7 @@
 #import "LaunchViewController.h"
 #import "GuideViewController.h"
 #import "SignMainViewController.h"
+#import "GarageViewController.h"
 
 @interface LaunchViewController ()
 
@@ -39,6 +40,14 @@
         make.bottom.equalTo(weakSelf.view.mas_bottom).with.offset(0.f);
         make.right.equalTo(weakSelf.view.mas_right).with.offset(0.f);
     }];
+    // test code from SigninViewController start
+//    GarageViewController *garageViewController = [[GarageViewController alloc] init];
+//    if (!garageViewController) {
+//        return;
+//    }
+//    self.navigationController.navigationBarHidden = YES;
+//    [self.navigationController pushViewController:garageViewController animated:YES];
+    // test code from SigninViewController end
     
     SignMainViewController *signMainViewController = [[SignMainViewController alloc] init];
     self.navigationController.navigationBarHidden = YES;

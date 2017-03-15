@@ -15,6 +15,7 @@
 #define kUserDefaultsPushNotificationsDeviceToken @"PushNotificationsDeviceToken"
 
 #import "HttpRequestManager.h"
+#import "CaknowClient.h"
 
 #import "Masonry.h"
 #import <Google/SignIn.h>

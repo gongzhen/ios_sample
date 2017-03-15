@@ -168,41 +168,29 @@
 #pragma mark - button action
 
 - (void)signInButtonClicked:(UIButton *)sender {
-    
-    
     _signInButton.enabled = NO;
-    NSMutableDictionary *parameters = [[NSMutableDictionary alloc] initWithDictionary:@{@"email": [_emailTextField.text lowercaseString], @"password": _passwordTextField.text}];
-
-    DLog(@"%@", parameters);
-    [[HttpRequestManager sharedInstance] create:@"consumer"
-                                     parameters:parameters
-                                        success:^(id resultObj) {
-                                            PostConsumerEntity *postConsumerEntity = resultObj;
-                                            DLog(@"%@", postConsumerEntity);
-                                            GarageViewController *garageViewController = [[GarageViewController alloc] init];
-                                            if (!garageViewController) {
-                                                return;
-                                            }
-                                            UINavigationController *navigator = self.navigationController;
-                                            if (!navigator) {
-                                                return;
-                                            }
-                                            
-                                            [[NSOperationQueue mainQueue] addOperationWithBlock:^{
-                                                UINavigationController *nav = (UINavigationController *)self.presentingViewController;
-                                                [self dismissViewControllerAnimated:YES completion:^{
-                                                    // http://stackoverflow.com/questions/22816628/modal-view-controller-dismiss-and-pop-back-to-view-controller
-                                                    // [nav pushViewController:garageViewController animated:YES];
-                                                    [nav presentViewController:garageViewController animated:YES completion:nil];
-                                                }];
-                                                // window does not work.
-                                                // UIWindow *window = [[[UIApplication sharedApplication] delegate] window];
-                                                // window.rootViewController = garageViewController;
-
-                                            }];
-                                        } failure:^(NSError *error) {
-                                            
-                                        }];
+    [[CaknowClient sharedInstance] loginWithUsername:_emailTextField.text
+                                            password:_passwordTextField.text
+                                          completion:^(Boolean verified, NSError *error) {
+        if (error) {
+            DLog(@"%@", error);
+        } else if (!verified) {
+            DLog(@"verified is false: %d", verified);
+        } else {
+            DLog(@"verified is true: %d", verified);
+            // go to garageviewcontroller
+            GarageViewController *garageViewController = [[GarageViewController alloc] init];
+            if (!garageViewController) {
+                return;
+            }
+            [[NSOperationQueue mainQueue] addOperationWithBlock:^{
+                UINavigationController *nav = (UINavigationController *)self.presentingViewController;
+                [self dismissViewControllerAnimated:YES completion:^{
+                    [nav presentViewController:garageViewController animated:YES completion:nil];
+                }];
+            }];
+        }
+    }];
 }
 
 #pragma mark - UITextField delegate
@@ -231,9 +219,6 @@
 //- (nullable id <UIViewControllerInteractiveTransitioning>)interactionControllerForDismissal:(id<UIViewControllerAnimatedTransitioning>)animator {
 //    
 //}
-
-
-
 
 #pragma mark - helper method
 

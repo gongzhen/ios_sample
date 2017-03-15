@@ -10,7 +10,6 @@
 
 NSString *const CAKNOWAPIKEY = @"KZ0aDZYBWXWS/IHxtzfEFM8jPC8GB+S+vZc22HsSnHA=";
 
-
 @implementation HttpRequestManager
 
 + (HttpRequestManager *)sharedInstance {
@@ -18,7 +17,6 @@ NSString *const CAKNOWAPIKEY = @"KZ0aDZYBWXWS/IHxtzfEFM8jPC8GB+S+vZc22HsSnHA=";
     static dispatch_once_t onceToken;
     dispatch_once(&onceToken, ^{
         _sharedInstance = [[self alloc] init];
-        
     });
     return _sharedInstance;
 }
@@ -30,6 +28,10 @@ NSString *const CAKNOWAPIKEY = @"KZ0aDZYBWXWS/IHxtzfEFM8jPC8GB+S+vZc22HsSnHA=";
         _session = [[HttpAPISession alloc] initWithAPIKey:_apiKey token:_token];
     }
     return self;
+}
+
+- (void)setAccessToken:(NSString *)accessToken {
+    [_session setToken:accessToken];
 }
 
 - (NSURLSessionDataTask *)create:(NSString *)methodName
@@ -54,5 +56,26 @@ NSString *const CAKNOWAPIKEY = @"KZ0aDZYBWXWS/IHxtzfEFM8jPC8GB+S+vZc22HsSnHA=";
                  }];
 }
 
+- (NSURLSessionDataTask *)read:(NSString *)methodName
+                    parameters:(id)parameters
+                       success:(void(^)(id))success {
+    return [self read:methodName parameters:parameters success:success failure:^(NSError *error) {
+        
+    }];
+}
+
+- (NSURLSessionDataTask *)read:(NSString *)methodName
+                    parameters:(id)parameters
+                       success:(void(^)(id))success
+                       failure:(void(^)(NSError *error))failure {
+    return [_session request:methodName
+                        type:HttpRequestTypeGET
+                  parameters:parameters
+                     success:^(id result) {
+                         success(result);
+                     } failure:^(NSError *error) {
+                         failure(error);
+                     }];
+}
 
 @end

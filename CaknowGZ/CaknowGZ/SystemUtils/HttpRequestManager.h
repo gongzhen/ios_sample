@@ -20,6 +20,8 @@
 
 + (HttpRequestManager *)sharedInstance;
 
+- (void)setAccessToken:(NSString *)accessToken;
+
 - (NSURLSessionDataTask *)create:(NSString *)methodName
                       parameters:(id)parameters
                          success:(void (^)(id))success;
@@ -28,6 +30,18 @@
                       parameters:(id)parameters
                          success:(void (^)(id))success
                          failure:(void (^)(NSError *error))failure;
+
+- (NSURLSessionDataTask *)read:(NSString *)methodName
+                    parameters:(id)parameters
+                       success:(void(^)(id))success;
+
+- (NSURLSessionDataTask *)read:(NSString *)methodName
+                    parameters:(id)parameters
+                       success:(void(^)(id))success
+                       failure:(void(^)(NSError *error))failure;
+
+
+
 
 
 @end
