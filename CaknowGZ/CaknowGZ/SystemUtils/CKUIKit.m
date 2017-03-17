@@ -27,6 +27,18 @@
     return button;
 }
 
++ (UIButton *)generateCustomButtonWithTitle:(NSString *)title
+                                 titleColor:(UIColor *)titleColor
+                            backgroundImage:(UIImage *)image{
+    UIButton *button = [UIButton buttonWithType:UIButtonTypeCustom];
+    [button setTranslatesAutoresizingMaskIntoConstraints:NO];
+    [button setTitle:title forState:UIControlStateNormal];
+    [button setTitleColor:titleColor forState:UIControlStateNormal];
+    [button setBackgroundImage:image forState:UIControlStateNormal];
+    return button;
+}
+
+
 + (UIButton *)generateNormalButtonWithTitle:(NSString *)title
                                  titleColor:(UIColor *)titleColor
                             backgroundImage:(UIImage *)image{

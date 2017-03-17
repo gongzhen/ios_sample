@@ -32,7 +32,7 @@
 - (void)viewDidLoad {
     [super viewDidLoad];
     [self.view addSubview:self.backgroundImageView];
-    
+    [[CaknowClient sharedInstance] removeAccessToken];
     __weak typeof(self) weakSelf = self;
     [self.backgroundImageView mas_makeConstraints:^(MASConstraintMaker *make) {
         make.top.equalTo(weakSelf.view.mas_top).with.offset(0.f);

@@ -21,3 +21,8 @@ extern NSString *const kBackgroundSignUp;
 extern NSString *const kIconWarning;
 extern NSString *const kIconEmail;
 extern NSString *const kIconPassword;
+extern NSString *const kBackgroundMain;
+extern NSString *const kColorBlue;
+extern NSString *const kColorMain;
+extern NSString *const kButtonNavigationBackWhite;
+extern NSString *const kButtonNavigationShutRight;

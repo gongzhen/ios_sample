@@ -10,7 +10,7 @@
 #import "BaseEntity.h"
 #import "SystemUtils.h"
 
-NSString *const kServerURL = @"https://dev.caknow.com/";
+NSString *const kServerURL = @"https://staging.caknow.com/";
 
 @implementation HttpAPISession
 
@@ -49,6 +49,11 @@ NSString *const kServerURL = @"https://dev.caknow.com/";
             [request setHTTPMethod:@"POST"];
         }
             break;
+        case HttpRequestTypeGET: {
+            [httpMethodName setString:@"Get"];
+            [request setHTTPMethod:@"GET"];
+        }
+            break;
         default:
             break;
     }
@@ -81,7 +86,7 @@ NSString *const kServerURL = @"https://dev.caknow.com/";
             return jsonResult;
         }
         
-        if ([SystemUtils isDictionaryClass:jsonResult]) {
+            if ([SystemUtils isDictionaryClass:jsonResult]) {
             Class objectClass = NSClassFromString([self convertMethodName:methodName]); DLog(@"%@", methodName);
             id resultEntity = [[objectClass alloc] init];
             if ([SystemUtils isBaseClass:resultEntity]) {

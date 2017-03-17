@@ -8,15 +8,23 @@
 
 #import "GarageViewController.h"
 #import "GetConsumerVehiclesEntity.h"
+#import "GarageCell.h"
+#import "CKUIKit.h"
+
 
 const static int NUMBEROFCOLUMNS = 2;
 
 @interface GarageViewController () {
-    NSMutableArray *_vehicles;
+//    NSMutableArray *_vehiclesDatasource;
 }
 
 @property (strong, nonatomic) UICollectionView* collectionView;
 @property (strong, nonatomic) UICollectionViewFlowLayout* flowLayout;
+@property (nonatomic, strong) UIImageView *bgImageView;
+
+// About NSMutable - String / Dictionary
+// http://stackoverflow.com/questions/4995254/nsmutablestring-as-retain-copy
+@property (retain, nonatomic) NSMutableArray *vehiclesDatasource;
 
 @end
 
@@ -24,13 +32,22 @@ const static int NUMBEROFCOLUMNS = 2;
 
 #pragma mark - lazy load collectionView
 
+- (UIImageView *)bgImageView {
+    if (_bgImageView == nil) {
+        _bgImageView = [CKUIKit generateImageViewWithBackgroundColor:[UIColor whiteColor]];
+        _bgImageView.image = [UIImage imageNamed:kBackgroundMain];
+        _bgImageView.contentMode = UIViewContentModeScaleAspectFill;
+    }
+    return _bgImageView;
+}
+
 - (UICollectionView *)collectionView {
     if (_collectionView == nil) {
         _collectionView = [[UICollectionView alloc] initWithFrame:self.view.bounds collectionViewLayout:self.flowLayout];
-        [_collectionView setBackgroundColor:[UIColor whiteColor]];
+        [_collectionView setBackgroundColor:[UIColor clearColor]];
         _collectionView.dataSource = self;
         _collectionView.delegate = self;
-        [_collectionView registerClass:[UICollectionViewCell class] forCellWithReuseIdentifier:@"cell"];
+        [_collectionView registerClass:[GarageCell class] forCellWithReuseIdentifier:@"GarageCell"];
     }
     return _collectionView;
 }
@@ -46,16 +63,11 @@ const static int NUMBEROFCOLUMNS = 2;
 
 - (void)viewDidLoad {
     [super viewDidLoad];
-    // Do any additional setup after loading the view.
-    [self.view setBackgroundColor:[UIColor whiteColor]];
+    DLog(@"%@", self.navigationController);
+    [self.view addSubview:self.bgImageView];
     [self.view addSubview:self.collectionView];
+    [self.view setBackgroundColor:[UIColor whiteColor]];
     [self setupLayoutConstraint];
-}
-
-- (void)viewWillAppear:(BOOL)animated {
-    [super viewWillAppear:animated];
-    [self.navigationController.navigationBar setBackgroundImage:[UIImage imageNamed:@"color_blue"]
-                                                  forBarMetrics:UIBarMetricsDefault];
 }
 
 - (void)viewDidAppear:(BOOL)animated {
@@ -70,12 +82,12 @@ const static int NUMBEROFCOLUMNS = 2;
 #pragma mark - UICollectionViewDataSource method
 
 - (NSInteger)collectionView:(UICollectionView *)collectionView numberOfItemsInSection:(NSInteger)section {
-    return 10;
+    return _vehiclesDatasource.count;
 }
 
 - (UICollectionViewCell *)collectionView:(UICollectionView *)collectionView cellForItemAtIndexPath:(NSIndexPath *)indexPath {
-    UICollectionViewCell *cell = [collectionView dequeueReusableCellWithReuseIdentifier:@"cell" forIndexPath:indexPath];
-    [cell setBackgroundColor:[UIColor blueColor]];
+    GarageCell *cell = [collectionView dequeueReusableCellWithReuseIdentifier:@"GarageCell" forIndexPath:indexPath];
+    cell.vehicleEntity = [_vehiclesDatasource objectAtIndex:indexPath.row];
     return cell;
 }
 
@@ -133,7 +145,11 @@ const static int NUMBEROFCOLUMNS = 2;
                                       success:^(id resultObj) {
                                           GetConsumerVehiclesEntity *consumerVehiclesEntity = resultObj;
                                           DLog(@"%@", resultObj);
-                                          DLog(@"%@", consumerVehiclesEntity);
+                                          dispatch_async(dispatch_get_main_queue(), ^{
+                                              _vehiclesDatasource = consumerVehiclesEntity.vehicles;
+
+                                              [_collectionView reloadData];
+                                          });
                                       } failure:^(NSError *error) {
                                           DLog(@"%@", error);
                                       }];

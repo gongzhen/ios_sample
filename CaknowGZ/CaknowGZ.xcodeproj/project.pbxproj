@@ -10,6 +10,10 @@
 		064FB18C1E73026A0030C639 /* PostConsumerEntity.m in Sources */ = {isa = PBXBuildFile; fileRef = 064FB18B1E73026A0030C639 /* PostConsumerEntity.m */; };
 		064FB19B1E78AAD80030C639 /* GetConsumerVehiclesEntity.m in Sources */ = {isa = PBXBuildFile; fileRef = 064FB19A1E78AAD80030C639 /* GetConsumerVehiclesEntity.m */; };
 		064FB19E1E78B6B60030C639 /* CaknowClient.m in Sources */ = {isa = PBXBuildFile; fileRef = 064FB19D1E78B6B60030C639 /* CaknowClient.m */; };
+		064FB1A21E7926040030C639 /* GarageCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 064FB1A11E7926040030C639 /* GarageCell.m */; };
+		064FB1A51E79266F0030C639 /* GetConsumerVehiclesVehiclesEntity.m in Sources */ = {isa = PBXBuildFile; fileRef = 064FB1A41E79266F0030C639 /* GetConsumerVehiclesVehiclesEntity.m */; };
+		064FB1A81E792EAC0030C639 /* UIColor+Hex.m in Sources */ = {isa = PBXBuildFile; fileRef = 064FB1A71E792EAC0030C639 /* UIColor+Hex.m */; };
+		064FB1AC1E79F02D0030C639 /* UIImageView+WebCache.m in Sources */ = {isa = PBXBuildFile; fileRef = 064FB1AB1E79F02D0030C639 /* UIImageView+WebCache.m */; };
 		065F5AFF1E35CD0B00283910 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 065F5AFE1E35CD0B00283910 /* main.m */; };
 		065F5B021E35CD0B00283910 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 065F5B011E35CD0B00283910 /* AppDelegate.m */; };
 		065F5B181E35CD0C00283910 /* CaknowGZTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 065F5B171E35CD0C00283910 /* CaknowGZTests.m */; };
@@ -275,6 +279,14 @@
 		064FB19A1E78AAD80030C639 /* GetConsumerVehiclesEntity.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = GetConsumerVehiclesEntity.m; sourceTree = "<group>"; };
 		064FB19C1E78B6B60030C639 /* CaknowClient.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CaknowClient.h; sourceTree = "<group>"; };
 		064FB19D1E78B6B60030C639 /* CaknowClient.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CaknowClient.m; sourceTree = "<group>"; };
+		064FB1A01E7926040030C639 /* GarageCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GarageCell.h; sourceTree = "<group>"; };
+		064FB1A11E7926040030C639 /* GarageCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = GarageCell.m; sourceTree = "<group>"; };
+		064FB1A31E79266F0030C639 /* GetConsumerVehiclesVehiclesEntity.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GetConsumerVehiclesVehiclesEntity.h; sourceTree = "<group>"; };
+		064FB1A41E79266F0030C639 /* GetConsumerVehiclesVehiclesEntity.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = GetConsumerVehiclesVehiclesEntity.m; sourceTree = "<group>"; };
+		064FB1A61E792EAC0030C639 /* UIColor+Hex.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIColor+Hex.h"; sourceTree = "<group>"; };
+		064FB1A71E792EAC0030C639 /* UIColor+Hex.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIColor+Hex.m"; sourceTree = "<group>"; };
+		064FB1AA1E79F02D0030C639 /* UIImageView+WebCache.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIImageView+WebCache.h"; sourceTree = "<group>"; };
+		064FB1AB1E79F02D0030C639 /* UIImageView+WebCache.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIImageView+WebCache.m"; sourceTree = "<group>"; };
 		065F5AFA1E35CD0B00283910 /* CaknowGZ.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = CaknowGZ.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		065F5AFE1E35CD0B00283910 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
 		065F5B001E35CD0B00283910 /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
@@ -571,6 +583,24 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		064FB19F1E7925E20030C639 /* CustomViews */ = {
+			isa = PBXGroup;
+			children = (
+				064FB1A01E7926040030C639 /* GarageCell.h */,
+				064FB1A11E7926040030C639 /* GarageCell.m */,
+			);
+			path = CustomViews;
+			sourceTree = "<group>";
+		};
+		064FB1A91E79F0090030C639 /* Categories */ = {
+			isa = PBXGroup;
+			children = (
+				064FB1AA1E79F02D0030C639 /* UIImageView+WebCache.h */,
+				064FB1AB1E79F02D0030C639 /* UIImageView+WebCache.m */,
+			);
+			path = Categories;
+			sourceTree = "<group>";
+		};
 		065F5AF11E35CD0A00283910 = {
 			isa = PBXGroup;
 			children = (
@@ -598,6 +628,8 @@
 			children = (
 				065F5B001E35CD0B00283910 /* AppDelegate.h */,
 				065F5B011E35CD0B00283910 /* AppDelegate.m */,
+				064FB1A91E79F0090030C639 /* Categories */,
+				064FB19F1E7925E20030C639 /* CustomViews */,
 				065F5B311E35D4BF00283910 /* Models */,
 				065F5C0E1E35D4BF00283910 /* SystemUtils */,
 				065F5B301E35D4B500283910 /* Controllers */,
@@ -656,6 +688,8 @@
 				064FB18B1E73026A0030C639 /* PostConsumerEntity.m */,
 				064FB1991E78AAD80030C639 /* GetConsumerVehiclesEntity.h */,
 				064FB19A1E78AAD80030C639 /* GetConsumerVehiclesEntity.m */,
+				064FB1A31E79266F0030C639 /* GetConsumerVehiclesVehiclesEntity.h */,
+				064FB1A41E79266F0030C639 /* GetConsumerVehiclesVehiclesEntity.m */,
 			);
 			path = Models;
 			sourceTree = "<group>";
@@ -675,6 +709,8 @@
 				06D8DCD61E47FB270066547A /* HttpAPISession.m */,
 				064FB19C1E78B6B60030C639 /* CaknowClient.h */,
 				064FB19D1E78B6B60030C639 /* CaknowClient.m */,
+				064FB1A61E792EAC0030C639 /* UIColor+Hex.h */,
+				064FB1A71E792EAC0030C639 /* UIColor+Hex.m */,
 			);
 			path = SystemUtils;
 			sourceTree = "<group>";
@@ -1463,22 +1499,26 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				064FB1AC1E79F02D0030C639 /* UIImageView+WebCache.m in Sources */,
 				064FB19B1E78AAD80030C639 /* GetConsumerVehiclesEntity.m in Sources */,
 				067964591E3E51E80025C178 /* SignMainViewController.m in Sources */,
 				065F5B021E35CD0B00283910 /* AppDelegate.m in Sources */,
 				065F5CF21E35E25800283910 /* GuideViewController.m in Sources */,
+				064FB1A81E792EAC0030C639 /* UIColor+Hex.m in Sources */,
 				06D8DCD71E47FB270066547A /* HttpAPISession.m in Sources */,
 				066D20FA1E7226A3007B7833 /* SystemUtils.m in Sources */,
 				0679641D1E375EAC0025C178 /* GuidePageViewController.m in Sources */,
 				067964421E3B197D0025C178 /* GuidePageGetStartViewController.m in Sources */,
 				06D8DCD41E46BF8D0066547A /* HttpRequestManager.m in Sources */,
 				066D20F71E7221EF007B7833 /* BaseEntity.m in Sources */,
+				064FB1A21E7926040030C639 /* GarageCell.m in Sources */,
 				066D20F41E711C0D007B7833 /* CKUIKit.m in Sources */,
 				066D20F11E70DD79007B7833 /* GarageViewController.m in Sources */,
 				065F5AFF1E35CD0B00283910 /* main.m in Sources */,
 				065F5CEF1E35E20500283910 /* LaunchViewController.m in Sources */,
 				067964A51E4322200025C178 /* SignInViewController.m in Sources */,
 				064FB18C1E73026A0030C639 /* PostConsumerEntity.m in Sources */,
+				064FB1A51E79266F0030C639 /* GetConsumerVehiclesVehiclesEntity.m in Sources */,
 				0679643F1E3AB6780025C178 /* ImageResourceConstants.m in Sources */,
 				064FB19E1E78B6B60030C639 /* CaknowClient.m in Sources */,
 			);

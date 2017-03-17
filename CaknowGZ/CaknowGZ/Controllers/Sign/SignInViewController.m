@@ -9,6 +9,7 @@
 #import "SignInViewController.h"
 #import "GarageViewController.h"
 #import "PostConsumerEntity.h"
+#import "CKUIKit.h"
 
 @interface SignInViewController () //<UIViewControllerTransitioningDelegate, UIViewControllerAnimatedTransitioning>
 
@@ -157,7 +158,17 @@
     [super viewDidLoad];
     // Do any additional setup after loading the view.
     [self setupViewConstraint];
-    
+}
+
+- (void)viewWillAppear:(BOOL)animated {
+    [super viewWillAppear:animated];
+    [self.navigationController.navigationBar setBackgroundImage:[UIImage imageNamed:kColorMain]
+                                                  forBarMetrics:UIBarMetricsDefault];
+    UIButton *dismissButton = [CKUIKit generateNormalButtonWithTitle:@"" titleColor:nil backgroundImage:[UIImage imageNamed:kButtonNavigationShutRight]];
+    dismissButton.frame = CGRectMake(0, 0, 71, 30);
+    // [dismissButton addTarget:self action:@selector(dismissButtonClicked:) forControlEvents:UIControlEventTouchUpInside];
+    UIBarButtonItem *dismiss = [[UIBarButtonItem alloc] initWithCustomView:dismissButton];
+    self.navigationItem.rightBarButtonItem = dismiss;
 }
 
 - (void)didReceiveMemoryWarning {
@@ -184,10 +195,19 @@
                 return;
             }
             [[NSOperationQueue mainQueue] addOperationWithBlock:^{
+                
                 UINavigationController *nav = (UINavigationController *)self.presentingViewController;
                 [self dismissViewControllerAnimated:YES completion:^{
-                    [nav presentViewController:garageViewController animated:YES completion:nil];
+                    UINavigationController *navGarageViewController = [[UINavigationController alloc] initWithRootViewController:garageViewController];
+                    [nav presentViewController:navGarageViewController animated:YES completion:nil];
                 }];
+                
+//                [self dismissViewControllerAnimated:YES completion:^{
+//                    UINavigationController *nav = [[UINavigationController alloc] initWithRootViewController:garageViewController];
+//                    UIWindow *window = [UIApplication sharedApplication].windows[0];
+//                    window.rootViewController = nav;
+//                }];
+                
             }];
         }
     }];

@@ -16,6 +16,9 @@
 
 + (UIButton *)generateButton;
 
++ (UIButton *)generateCustomButtonWithTitle:(NSString *)title
+                                 titleColor:(UIColor *)titleColor backgroundImage:(UIImage *)image;
+
 + (UIButton *)generateNormalButtonWithTitle:(NSString *)title
                                  titleColor:(UIColor *)titleColor backgroundImage:(UIImage *)image;
 

@@ -18,6 +18,12 @@ NSString *const kColorButtonRed = @"color_button_red.png";
 NSString *const kBgLogin = @"bg_login.jpg";
 NSString *const kLoginButton = @"login_button.png";
 NSString *const kBackgroundSignUp = @"background_sign_up.jpg";
+NSString *const kBackgroundMain = @"background_main.jpg";
 NSString *const kIconWarning = @"icon_warning.png";
 NSString *const kIconEmail = @"icon_email.png";
 NSString *const kIconPassword = @"icon_password.png";
+NSString *const kColorBlue = @"color_blue.png";
+NSString *const kColorMain = @"color_main.png";
+NSString *const kButtonNavigationBackWhite = @"button_navigation_back_white.png";
+NSString *const kButtonNavigationShutRight = @"button_navigation_shut_right.png";
+
