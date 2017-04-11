@@ -25,11 +25,9 @@
         for (id model in sectionModels) {
             NSDictionary *attributes = nil;
             if (setterBlock) {
-            
                 setterBlock(model);
             }
             // table section initializer with model and attributes
-            
             GZEasyTableSection *section = [[GZEasyTableSection alloc] initWithModel:model attributes:attributes];
             // GZNode addChild: ssection
             [self addChild:section];

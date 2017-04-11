@@ -44,7 +44,7 @@ const char GZEasyTableCellKey;
         objc_setAssociatedObject(self, &GZEasyTableCellKey, cellsDict, OBJC_ASSOCIATION_RETAIN_NONATOMIC);
     }
     [cellsDict setObject:cell forKey:identifier];
-    DLog(@"cellDict :%@", cellsDict);
+//    DLog(@"cellDict :%@", cellsDict);
 }
 
 - (CGFloat)intrinsicHeightAtIndexPath:(NSIndexPath *)indexPath
@@ -53,7 +53,7 @@ const char GZEasyTableCellKey;
     id model = [self.tableModel modelAtIndexPath: indexPath];
     
     CGFloat cellHeight = [self.tableModel cellHeightAtIndexPath:indexPath];
-    // DLog(@"cellHeight: %fd", cellHeight);
+    DLog(@"cellHeight: %fd", cellHeight);
     if (cellHeight > 0) {
         return cellHeight;
     }
@@ -66,7 +66,6 @@ const char GZEasyTableCellKey;
     if (configBlock) {
         configBlock(cell, model);
     }
-    
     [cell setNeedsUpdateConstraints];
     [cell updateConstraintsIfNeeded];
     
@@ -74,7 +73,7 @@ const char GZEasyTableCellKey;
 
     [cell setNeedsLayout];
     [cell layoutIfNeeded];
-    DLog(@"%@", NSStringFromCGSize([cell.contentView systemLayoutSizeFittingSize:UILayoutFittingCompressedSize]));
+    
     CGFloat height = [cell.contentView systemLayoutSizeFittingSize:UILayoutFittingCompressedSize].height;
 
     height += 1.0f;

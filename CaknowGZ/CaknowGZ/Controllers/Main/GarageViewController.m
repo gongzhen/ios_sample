@@ -24,7 +24,7 @@ const static int NUMBEROFCOLUMNS = 2;
 
 // About NSMutable - String / Dictionary
 // http://stackoverflow.com/questions/4995254/nsmutablestring-as-retain-copy
-@property (retain, nonatomic) NSMutableArray *vehiclesDatasource;
+@property (strong, nonatomic) NSMutableArray *vehiclesDatasource;
 
 @end
 
@@ -63,7 +63,7 @@ const static int NUMBEROFCOLUMNS = 2;
 
 - (void)viewDidLoad {
     [super viewDidLoad];
-    DLog(@"%@", self.navigationController);
+    self.title = @"GARAGE";
     [self.view addSubview:self.bgImageView];
     [self.view addSubview:self.collectionView];
     [self.view setBackgroundColor:[UIColor whiteColor]];
@@ -73,6 +73,23 @@ const static int NUMBEROFCOLUMNS = 2;
 - (void)viewDidAppear:(BOOL)animated {
     [super viewDidAppear:animated];
     [self refreshData];
+}
+
+- (void)viewWillAppear:(BOOL)animated {
+    [super viewWillAppear:animated];
+    [self.navigationController.navigationBar setBackgroundImage:[UIImage imageNamed:kColorMain]
+                                                  forBarMetrics:UIBarMetricsDefault];
+    UIButton *leftMenuButton = [CKUIKit generateNormalButtonWithTitle:@"" titleColor:nil backgroundImage:[UIImage imageNamed:kButtonNavigationMenu]];
+    leftMenuButton.frame = CGRectMake(0, 0, 71, 30);
+    // [dismissButton addTarget:self action:@selector(dismissButtonClicked:) forControlEvents:UIControlEventTouchUpInside];
+    UIBarButtonItem *leftMenuItem = [[UIBarButtonItem alloc] initWithCustomView:leftMenuButton];
+    self.navigationItem.rightBarButtonItem = leftMenuItem;
+    
+    UIButton *addCarButton = [CKUIKit generateNormalButtonWithTitle:@"" titleColor:nil backgroundImage:[UIImage imageNamed:kPlusWhilt]];
+    addCarButton.frame = CGRectMake(0, 0, 71, 30);
+    // [dismissButton addTarget:self action:@selector(dismissButtonClicked:) forControlEvents:UIControlEventTouchUpInside];
+    UIBarButtonItem *addCarItem = [[UIBarButtonItem alloc] initWithCustomView:addCarButton];
+    self.navigationItem.rightBarButtonItem = addCarItem;
 }
 
 - (void)didReceiveMemoryWarning {
@@ -98,7 +115,6 @@ const static int NUMBEROFCOLUMNS = 2;
 #pragma mark - UICollectionViewDelegateFlowLayout method
 
 - (CGSize)collectionView:(UICollectionView *)collectionView layout:(UICollectionViewLayout*)collectionViewLayout sizeForItemAtIndexPath:(NSIndexPath *)indexPath {
-    
     UIEdgeInsets insets = _collectionView.contentInset;
     CGFloat contentWidth = _collectionView.bounds.size.width - (insets.left + insets.right);
     CGFloat columnWidth = contentWidth / NUMBEROFCOLUMNS - 20;
@@ -147,7 +163,6 @@ const static int NUMBEROFCOLUMNS = 2;
                                           DLog(@"%@", resultObj);
                                           dispatch_async(dispatch_get_main_queue(), ^{
                                               _vehiclesDatasource = consumerVehiclesEntity.vehicles;
-
                                               [_collectionView reloadData];
                                           });
                                       } failure:^(NSError *error) {

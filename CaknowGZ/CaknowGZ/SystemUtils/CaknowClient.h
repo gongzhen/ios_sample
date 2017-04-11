@@ -16,9 +16,11 @@
 
 #pragma mark -
 @property (nonatomic, copy, readonly) NSString *accessToken;
+@property (nonatomic, copy, readonly) NSString *refreshToken;
 
 #pragma mark AccessToken
-- (BOOL)saveAccessToken:(NSString *)accessToken;
-- (BOOL)removeAccessToken;
+- (NSString *)getAccessToken:(NSString *)service;
+- (BOOL)saveAccessToken:(NSString *)accessToken service:(NSString *)service;
+- (BOOL)removeAccessToken:(NSString *)service;
 
 @end

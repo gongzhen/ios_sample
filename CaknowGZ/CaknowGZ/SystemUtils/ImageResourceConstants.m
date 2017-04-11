@@ -26,4 +26,6 @@ NSString *const kColorBlue = @"color_blue.png";
 NSString *const kColorMain = @"color_main.png";
 NSString *const kButtonNavigationBackWhite = @"button_navigation_back_white.png";
 NSString *const kButtonNavigationShutRight = @"button_navigation_shut_right.png";
+NSString *const kButtonNavigationMenu = @"button_navigation_menu.png";
+NSString *const kPlusWhilt = @"plus__whilt.png";
 

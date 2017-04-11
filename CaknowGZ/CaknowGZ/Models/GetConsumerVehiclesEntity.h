@@ -10,6 +10,6 @@
 
 @interface GetConsumerVehiclesEntity : BaseEntity
 
-@property (nonatomic, retain) NSMutableArray *vehicles;
+@property (nonatomic, copy) NSMutableArray *vehicles;
 
 @end

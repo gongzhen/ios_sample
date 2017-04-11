@@ -80,7 +80,7 @@
 
 - (void)setCellHeight:(CGFloat)cellHeight atRow:(NSInteger)row {
     GZEasyTableRow *rowObj = (GZEasyTableRow *)[self childAtIndex:row];
-    DLog(@"%fd", cellHeight);
+//    DLog(@"%fd", cellHeight);
     if (rowObj) {
         rowObj.cellHeight = cellHeight;
     } else {

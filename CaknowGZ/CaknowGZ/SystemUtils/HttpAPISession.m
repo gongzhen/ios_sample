@@ -81,22 +81,23 @@ NSString *const kServerURL = @"https://staging.caknow.com/";
 - (id)convertJSONToEntity:(id)jsonObject methodName:(NSString *)methodName statusCode:(long)statusCode {
     id result;
     if ([SystemUtils isDictionaryClass:jsonObject]) {
+        
         NSDictionary* jsonResult = [jsonObject objectForKey:@"payload"];
         if(!jsonResult) {
-            return jsonResult;
+            return jsonObject;
         }
         
-            if ([SystemUtils isDictionaryClass:jsonResult]) {
-            Class objectClass = NSClassFromString([self convertMethodName:methodName]); DLog(@"%@", methodName);
-            id resultEntity = [[objectClass alloc] init];
-            if ([SystemUtils isBaseClass:resultEntity]) {
-                [resultEntity performSelector:@selector(setAttributes:) withObject:jsonResult];
-            }
-            if(resultEntity) {
-                result = resultEntity;
-            } else {
-                result = jsonObject;
-            }
+        if ([SystemUtils isDictionaryClass:jsonResult]) {
+        Class objectClass = NSClassFromString([self convertMethodName:methodName]); 
+        id resultEntity = [[objectClass alloc] init];
+        if ([SystemUtils isBaseClass:resultEntity]) {
+            [resultEntity performSelector:@selector(setAttributes:) withObject:jsonResult];
+        }
+        if(resultEntity) {
+            result = resultEntity;
+        } else {
+            result = jsonObject;
+        }
             
         } else {
             // handle error

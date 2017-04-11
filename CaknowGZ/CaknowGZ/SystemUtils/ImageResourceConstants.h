@@ -26,3 +26,5 @@ extern NSString *const kColorBlue;
 extern NSString *const kColorMain;
 extern NSString *const kButtonNavigationBackWhite;
 extern NSString *const kButtonNavigationShutRight;
+extern NSString *const kButtonNavigationMenu;
+extern NSString *const kPlusWhilt;

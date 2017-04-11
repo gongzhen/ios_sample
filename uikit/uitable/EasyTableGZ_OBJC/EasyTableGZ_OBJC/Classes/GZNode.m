@@ -25,11 +25,11 @@
             if (_children == nil) {
                 _children = [[NSMutableArray alloc] init];
             }
-            DLog(@"_children addObject node: %@", node);
+//            DLog(@"_children addObject node: %@", node);
             [_children addObject:node];
         }
     }
-    DLog(@"_children count: %lu", (unsigned long)_children.count);
+//    DLog(@"_children count: %lu", (unsigned long)_children.count);
 }
 
 - (GZNode *)childAtIndex:(NSUInteger)index {

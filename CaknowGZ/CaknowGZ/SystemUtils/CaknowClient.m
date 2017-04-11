@@ -12,6 +12,8 @@
 
 // Internal
 static NSString * const kCaknowClientAPIURL = @"https://staging.caknow.com/";
+static NSString * const kRefreshToken = @"refreshToken";
+static NSString * const kAccessToken = @"accessToken";
 
 @interface CaknowClient()
 
@@ -33,8 +35,8 @@ static NSString * const kCaknowClientAPIURL = @"https://staging.caknow.com/";
 - (instancetype)init{
     self = [super init];
     if (self) {
-        NSURL *baseURL = [NSURL URLWithString:kCaknowClientAPIURL];
-        _service = baseURL.host;
+//        NSURL *baseURL = [NSURL URLWithString:kCaknowClientAPIURL];
+//        _service = baseURL.host;
     }
     return self;
 }
@@ -45,8 +47,9 @@ static NSString * const kCaknowClientAPIURL = @"https://staging.caknow.com/";
                                      parameters:parameters
                                         success:^(id resultObj) {
                                             PostConsumerEntity *postConsumerEntity = resultObj;
-                                            [self saveAccessToken:postConsumerEntity.token];
-                                            [[HttpRequestManager sharedInstance] setAccessToken:[self accessToken]];
+                                            [self saveAccessToken:postConsumerEntity.token service:kAccessToken];
+                                            [self saveAccessToken:postConsumerEntity.refreshToken service:kRefreshToken];
+                                            [[HttpRequestManager sharedInstance] setAccessToken:[self getAccessToken:kAccessToken]];
                                             completion(postConsumerEntity.verified, nil);
                                         } failure:^(NSError *error) {
                                             completion(false, error);
@@ -59,8 +62,8 @@ static NSDictionary *OAuthKeychainDictionaryForService(NSString *service) {
              (__bridge id)kSecAttrService:service};
 }
 
-- (NSString *)accessToken {
-    NSMutableDictionary *dictionary = [OAuthKeychainDictionaryForService(self.service) mutableCopy];
+- (NSString *)getAccessToken:(NSString *)service {
+    NSMutableDictionary *dictionary = [OAuthKeychainDictionaryForService(service) mutableCopy];
     dictionary[(__bridge id)kSecReturnData] = (__bridge id)kCFBooleanTrue;
     dictionary[(__bridge id)kSecMatchLimit] = (__bridge id)kSecMatchLimitOne;
     
@@ -74,8 +77,8 @@ static NSDictionary *OAuthKeychainDictionaryForService(NSString *service) {
         return nil;
 }
 
-- (BOOL)saveAccessToken:(NSString *)accessToken {
-    NSMutableDictionary *dictionary = [OAuthKeychainDictionaryForService(self.service) mutableCopy];
+- (BOOL)saveAccessToken:(NSString *)accessToken service:(NSString *)service {
+    NSMutableDictionary *dictionary = [OAuthKeychainDictionaryForService(service) mutableCopy];
     NSMutableDictionary *updateDictionary = [NSMutableDictionary dictionary];
     
     NSData *data = [NSKeyedArchiver archivedDataWithRootObject:accessToken];
@@ -95,8 +98,8 @@ static NSDictionary *OAuthKeychainDictionaryForService(NSString *service) {
     return NO;
 }
 
-- (BOOL)removeAccessToken {
-    OSStatus status = SecItemDelete((__bridge CFDictionaryRef)OAuthKeychainDictionaryForService(self.service));
+- (BOOL)removeAccessToken:(NSString *)service {
+    OSStatus status = SecItemDelete((__bridge CFDictionaryRef)OAuthKeychainDictionaryForService(service));
     if (status == noErr)
         return YES;
     else

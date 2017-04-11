@@ -1,0 +1,6 @@
+framework module Pods_ZXingObjCDemoTests {
+  umbrella header "Pods-ZXingObjCDemoTests-umbrella.h"
+
+  export *
+  module * { export * }
+}

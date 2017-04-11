@@ -21,6 +21,7 @@
 -(UILabel *)sizeLabel {
     if (_sizeLabel == nil) {
         _sizeLabel = [[UILabel alloc] init];
+        [_sizeLabel setTranslatesAutoresizingMaskIntoConstraints:NO];
         [_sizeLabel setBackgroundColor:[UIColor whiteColor]];
         _sizeLabel.numberOfLines = 0;
     }
@@ -33,15 +34,12 @@
     self = [super initWithStyle:style reuseIdentifier:reuseIdentifier];
     if (self) {
         [self.contentView addSubview:self.sizeLabel];
-        [self.sizeLabel setTranslatesAutoresizingMaskIntoConstraints:NO];
-        
         [self.contentView addConstraint:[NSLayoutConstraint constraintWithItem:self.sizeLabel
                                                                     attribute:NSLayoutAttributeLeading
                                                                     relatedBy:NSLayoutRelationEqual
                                                                        toItem:self.contentView
                                                                     attribute:NSLayoutAttributeLeading
                                                                    multiplier:1.0 constant:18.f]];
-
         [self.contentView addConstraint:[NSLayoutConstraint constraintWithItem:self.sizeLabel
                                                                      attribute:NSLayoutAttributeTop
                                                                      relatedBy:NSLayoutRelationEqual
@@ -54,7 +52,7 @@
                                                                             relatedBy:NSLayoutRelationEqual
                                                                                toItem:self.contentView
                                                                             attribute:NSLayoutAttributeBottom
-                                                                           multiplier:1.0 constant:9.f];
+                                                                           multiplier:1.0 constant:-9.f];
         bottomConstraint.priority = 998;
         [self.contentView addConstraint: bottomConstraint];
                 
@@ -64,13 +62,10 @@
                                                                                toItem:self.sizeLabel
                                                                             attribute:NSLayoutAttributeTrailing
                                                                            multiplier:1.0 constant:18.f];
-        
         trailingConstraint.priority = 998;
         [self.contentView addConstraint: trailingConstraint];
-        
         [self.sizeLabel setContentCompressionResistancePriority:UILayoutPriorityRequired forAxis:UILayoutConstraintAxisVertical];
-        self.sizeLabel.preferredMaxLayoutWidth = [[UIScreen mainScreen] bounds].size
-        .width - 36;
+        self.sizeLabel.preferredMaxLayoutWidth = [[UIScreen mainScreen] bounds].size.width - 36;
     }
     return self;
 }
@@ -92,12 +87,11 @@
 -(UITableView *)tableView {
     if (_tableView == nil) {
         _tableView = [[UITableView alloc] initWithFrame:CGRectZero style:UITableViewStylePlain];
+        [_tableView setTranslatesAutoresizingMaskIntoConstraints: NO];
         _tableView.dataSource = self;
         _tableView.delegate = self;
         _tableView.backgroundView = nil;
-        [_tableView setTranslatesAutoresizingMaskIntoConstraints: NO];
         TestCell *cell = [[TestCell alloc] initWithStyle:UITableViewCellStyleDefault reuseIdentifier:nil];
-        // registerAutolayoutCell
         [_tableView registAutolayoutCell:cell forAutomaticCalculationHeightIdentifier:@"cell"];
     }
     return _tableView;
@@ -161,7 +155,6 @@
                                              forIdentifier:@"cell"
                                            configCellBlock:^(TestCell *cell, NSString *text) {
                                                cell.sizeLabel.text = [text copy];
-                                               DLog(@"cell sizeLabel text %@", text);
     }];
     DLog(@"height: %fd", height);
     return height;
@@ -191,13 +184,13 @@
 - (void)initializeDataSource {
     _dataSource= @[
                    @"aa",
-                   @"baaaaaaaaaaaaaaaaaaaaaaaab",                   @"caaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaac",
-//                   @"aaaaaaaaaaaaaaaaaaaaaaaa",
+                   @"aaaaaaaaaaaaaaaaaaaaaaaa",
+                   @"aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa",
+                   @"aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa",                   
 //                   @"aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa",
 //                   @"aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa",
 //                   @"aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa",
 //                   @"aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa",
-//                   @"aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa",
 //                   @"aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa",
 //                   @"aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa",
 //                   @"aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa",
