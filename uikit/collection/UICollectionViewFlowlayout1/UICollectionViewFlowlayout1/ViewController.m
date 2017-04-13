@@ -7,11 +7,16 @@
 //
 
 #import "ViewController.h"
+#import "CustomCollectionLayout.h"
+
 #define CELL_COUNT 30
 #define CELL_IDENTIFIER @"WaterfallCell"
+#define SCREEN_WIDTH [UIScreen mainScreen].bounds.size.width
+#define SCREEN_HEIGHT [UIScreen mainScreen].bounds.size.height
 
-@interface ViewController ()
+@interface ViewController ()<UICollectionViewDelegate, UICollectionViewDataSource, CustomCollectionViewLayoutDelegate>
 
+@property(strong, nonatomic)NSMutableArray *itemHeights;
 
 @end
 
@@ -21,10 +26,12 @@
 
 - (UICollectionView *)collectionView {
     if(!_collectionView) {
-        UICollectionViewFlowLayout *flowLayout = [[UICollectionViewFlowLayout alloc] init];
-        _collectionView = [[UICollectionView alloc] initWithFrame:self.view.bounds collectionViewLayout:flowLayout];
+        CustomCollectionLayout *layout = [[CustomCollectionLayout alloc] init];
+        layout.delegate = self;
+        _collectionView = [[UICollectionView alloc] initWithFrame:self.view.bounds collectionViewLayout:layout];
         _collectionView.dataSource = self;
         _collectionView.delegate = self;
+        [_collectionView setBackgroundColor:[UIColor clearColor]];
         [_collectionView registerClass:[UICollectionViewCell class] forCellWithReuseIdentifier:CELL_IDENTIFIER];
     }
     return _collectionView;
@@ -32,6 +39,11 @@
 
 - (void)viewDidLoad {
     [super viewDidLoad];
+    _itemHeights = [[NSMutableArray alloc] init];
+    for(int i = 0; i < CELL_COUNT; i++) {
+        CGFloat itemHeight = arc4random_uniform(100) + 1;
+        [_itemHeights addObject:@(itemHeight)];
+    }
     [self.view addSubview:self.collectionView];
 }
 
@@ -58,24 +70,23 @@
 }
 
 - (__kindof UICollectionViewCell *)collectionView:(UICollectionView *)collectionView cellForItemAtIndexPath:(NSIndexPath *)indexPath {
-    UICollectionViewCell *cell = [collectionView dequeueReusableCellWithReuseIdentifier:CELL_IDENTIFIER
-                                                                                forIndexPath:indexPath];
+    UICollectionViewCell *cell = [collectionView dequeueReusableCellWithReuseIdentifier:CELL_IDENTIFIER forIndexPath:indexPath];
     cell.backgroundColor = [self randomColor];
     return cell;
 }
 
-#pragma mark -
-#pragma mark - UICollectionViewFlowLayout
-
-- (CGSize)collectionView:(UICollectionView *)collectionView layout:(UICollectionViewLayout*)collectionViewLayout sizeForItemAtIndexPath:(NSIndexPath *)indexPath {
-    CGFloat picDimension = self.view.frame.size.width / 4.0f;
-    return CGSizeMake(picDimension, picDimension);
-}
-
-- (UIEdgeInsets)collectionView:(UICollectionView *)collectionView layout:(UICollectionViewLayout*)collectionViewLayout insetForSectionAtIndex:(NSInteger)section {
-    CGFloat leftRightInset = self.view.frame.size.width / 14.0f;
-    return UIEdgeInsetsMake(0, leftRightInset, 0, leftRightInset);
-}
+//#pragma mark -
+//#pragma mark - UICollectionViewFlowLayout
+//
+//- (CGSize)collectionView:(UICollectionView *)collectionView layout:(UICollectionViewLayout*)collectionViewLayout sizeForItemAtIndexPath:(NSIndexPath *)indexPath {
+//    CGFloat picDimension = self.view.frame.size.width / 4.0f;
+//    return CGSizeMake(picDimension, picDimension);
+//}
+//
+//- (UIEdgeInsets)collectionView:(UICollectionView *)collectionView layout:(UICollectionViewLayout*)collectionViewLayout insetForSectionAtIndex:(NSInteger)section {
+//    CGFloat leftRightInset = self.view.frame.size.width / 14.0f;
+//    return UIEdgeInsetsMake(0, leftRightInset, 0, leftRightInset);
+//}
 
 #pragma mark - private helper method
 
@@ -84,6 +95,12 @@
     int blue = arc4random_uniform(255);
     int green = arc4random_uniform(255);
     return [UIColor colorWithRed:red / 255.f green:green / 255.f blue:blue / 255.f alpha:1.0];
+}
+
+#pragma mark - CustomCollectionViewLayoutDelegate
+
+- (CGSize)collectionView:(UICollectionView *)collectionView collectionViewLayout:(CustomCollectionLayout *)layout sizeOfItemAtIndexPath:(NSIndexPath *)indexPath {
+    return CGSizeMake(SCREEN_WIDTH / 2 - 3 * 10, [[_itemHeights objectAtIndex:indexPath.row] floatValue]);
 }
 
 @end

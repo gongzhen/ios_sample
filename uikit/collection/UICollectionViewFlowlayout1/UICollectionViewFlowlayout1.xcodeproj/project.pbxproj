@@ -15,6 +15,7 @@
 		0640D5421E9C8833007ECD92 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 0640D5401E9C8833007ECD92 /* LaunchScreen.storyboard */; };
 		0640D54D1E9C8833007ECD92 /* UICollectionViewFlowlayout1Tests.m in Sources */ = {isa = PBXBuildFile; fileRef = 0640D54C1E9C8833007ECD92 /* UICollectionViewFlowlayout1Tests.m */; };
 		0640D5581E9C8833007ECD92 /* UICollectionViewFlowlayout1UITests.m in Sources */ = {isa = PBXBuildFile; fileRef = 0640D5571E9C8833007ECD92 /* UICollectionViewFlowlayout1UITests.m */; };
+		0640D5671E9D165C007ECD92 /* CustomCollectionLayout.m in Sources */ = {isa = PBXBuildFile; fileRef = 0640D5661E9D165C007ECD92 /* CustomCollectionLayout.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -51,6 +52,9 @@
 		0640D5531E9C8833007ECD92 /* UICollectionViewFlowlayout1UITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = UICollectionViewFlowlayout1UITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		0640D5571E9C8833007ECD92 /* UICollectionViewFlowlayout1UITests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = UICollectionViewFlowlayout1UITests.m; sourceTree = "<group>"; };
 		0640D5591E9C8833007ECD92 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		0640D5651E9D165C007ECD92 /* CustomCollectionLayout.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CustomCollectionLayout.h; sourceTree = "<group>"; };
+		0640D5661E9D165C007ECD92 /* CustomCollectionLayout.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CustomCollectionLayout.m; sourceTree = "<group>"; };
+		0640D5681E9F884F007ECD92 /* PrefixHeader.pch */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = PrefixHeader.pch; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -105,6 +109,8 @@
 				0640D5361E9C8833007ECD92 /* AppDelegate.m */,
 				0640D5381E9C8833007ECD92 /* ViewController.h */,
 				0640D5391E9C8833007ECD92 /* ViewController.m */,
+				0640D5651E9D165C007ECD92 /* CustomCollectionLayout.h */,
+				0640D5661E9D165C007ECD92 /* CustomCollectionLayout.m */,
 				0640D53B1E9C8833007ECD92 /* Main.storyboard */,
 				0640D53E1E9C8833007ECD92 /* Assets.xcassets */,
 				0640D5401E9C8833007ECD92 /* LaunchScreen.storyboard */,
@@ -118,6 +124,7 @@
 			isa = PBXGroup;
 			children = (
 				0640D5331E9C8833007ECD92 /* main.m */,
+				0640D5681E9F884F007ECD92 /* PrefixHeader.pch */,
 			);
 			name = "Supporting Files";
 			sourceTree = "<group>";
@@ -278,6 +285,7 @@
 			files = (
 				0640D53A1E9C8833007ECD92 /* ViewController.m in Sources */,
 				0640D5371E9C8833007ECD92 /* AppDelegate.m in Sources */,
+				0640D5671E9D165C007ECD92 /* CustomCollectionLayout.m in Sources */,
 				0640D5341E9C8833007ECD92 /* main.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -426,6 +434,8 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				DEVELOPMENT_TEAM = 78R59ZRT89;
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = /Users/gongzhen/Projects/ios/github_gz/ios_sample/uikit/collection/UICollectionViewFlowlayout1/UICollectionViewFlowlayout1/PrefixHeader.pch;
 				INFOPLIST_FILE = UICollectionViewFlowlayout1/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.gongzhen.ObjCApp.UICollectionViewFlowlayout1;
@@ -438,6 +448,8 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				DEVELOPMENT_TEAM = 78R59ZRT89;
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = /Users/gongzhen/Projects/ios/github_gz/ios_sample/uikit/collection/UICollectionViewFlowlayout1/UICollectionViewFlowlayout1/PrefixHeader.pch;
 				INFOPLIST_FILE = UICollectionViewFlowlayout1/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.gongzhen.ObjCApp.UICollectionViewFlowlayout1;
