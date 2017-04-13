@@ -55,8 +55,10 @@
     CGSize itemSize = [self.delegate collectionView:self.collectionView collectionViewLayout:self sizeOfItemAtIndexPath:indexPath];
     
     UICollectionViewLayoutAttributes *attributes = [UICollectionViewLayoutAttributes layoutAttributesForCellWithIndexPath:indexPath];
-    
-    BOOL isLeft = _leftY < _rightY;
+    // DLog(@"indexPath:(%ld:%ld), _leftY:%f, _rightY:%f", indexPath.section, indexPath.row, _leftY, _rightY);
+    // _leftY and _rightY start from 10, 10.
+    // It will update the height of y. The left side and right side of cell will grow gradually.
+    BOOL isLeft = _leftY <= _rightY;
     
     if (isLeft) {
         CGFloat x = _interitemSpacing;
@@ -64,7 +66,7 @@
         _leftY += itemSize.height + _interitemSpacing;
     }
     
-    if(!isLeft) {
+    if(!isLeft){
         CGFloat x = _interitemSpacing * 2 + _itemWidth;
         attributes.frame = CGRectMake(x, _rightY, _itemWidth, itemSize.height);
         _rightY += itemSize.height + _interitemSpacing;

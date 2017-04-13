@@ -72,6 +72,9 @@
 - (__kindof UICollectionViewCell *)collectionView:(UICollectionView *)collectionView cellForItemAtIndexPath:(NSIndexPath *)indexPath {
     UICollectionViewCell *cell = [collectionView dequeueReusableCellWithReuseIdentifier:CELL_IDENTIFIER forIndexPath:indexPath];
     cell.backgroundColor = [self randomColor];
+    UILabel *label = [[UILabel alloc] initWithFrame:CGRectMake(0, 0, 100, 20)];
+    [label setText:[NSString stringWithFormat:@"%ld:%ld", (long)indexPath.section, (long)indexPath.row]];
+    [cell.contentView addSubview:label];
     return cell;
 }
 
