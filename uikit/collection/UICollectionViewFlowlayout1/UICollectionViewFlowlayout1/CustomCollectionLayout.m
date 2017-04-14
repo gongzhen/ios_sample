@@ -17,7 +17,11 @@
 @property (assign, nonatomic) CGFloat rightY; // 右侧起始Y轴
 @property (assign, nonatomic) NSInteger cellCount; // cell个数
 @property (assign, nonatomic) CGFloat itemWidth; // cell宽度
-@property (assign, nonatomic) CGFloat interitemSpacing;
+@property (assign, nonatomic) CGFloat cellPadding;
+@property (assign, nonatomic) NSInteger numberOfColumns;
+@property (strong, nonatomic) NSMutableArray *cache;
+@property (assign, nonatomic) NSInteger contentHeight;
+@property (assign, nonatomic) NSInteger contentWidth;
 
 @end
 
@@ -27,52 +31,58 @@
     [super prepareLayout];
     
     // 初始化参数
-    _cellCount = [self.collectionView numberOfItemsInSection:0]; // cell个数，直接从collectionView中获得
-    _interitemSpacing = 10; // 设置间距
-    _itemWidth = (SCREEN_WIDTH - 3 *_interitemSpacing) / 2; // cell宽度
+    _cellCount = [self.collectionView numberOfItemsInSection:0];
+    _numberOfColumns = 2;
+    _cellPadding = 10;
+    _contentHeight = 0.f;
+    UIEdgeInsets insets = self.collectionView.contentInset;
+    _contentWidth = self.collectionView.bounds.size.width - (insets.left + insets.right);
+    
+    if([self.cache count] == 0) {
+        _cache = [NSMutableArray new];
+        CGFloat columnWidth = (CGFloat)_contentWidth / _numberOfColumns;
+        NSMutableArray *xOffset = [[NSMutableArray alloc] init];
+        for(int i = 0; i < _numberOfColumns; i++) {
+            [xOffset addObject:@(i * columnWidth)];
+        }
+        
+        NSMutableArray *yOffset = [[NSMutableArray alloc] init];
+        for(int i = 0; i < _numberOfColumns; i++) {
+            [yOffset addObject:@(0)];
+        }
+        
+        int column = 0;
+        
+        for (int i = 0; i < [self.collectionView numberOfItemsInSection:0]; i++) {
+            NSIndexPath *indexPath = [NSIndexPath indexPathForRow:i inSection:0];
+            CGSize itemSize = [self.delegate collectionView:self.collectionView collectionViewLayout:self sizeOfItemAtIndexPath:indexPath];
+            CGFloat height = _cellPadding * 2 + itemSize.height;
+            CGRect frame = CGRectMake([xOffset[column] floatValue], [yOffset[column] floatValue], columnWidth, height);
+            CGRect insetFrame = CGRectInset(frame, _cellPadding, _cellPadding);
+            UICollectionViewLayoutAttributes *attributes = [UICollectionViewLayoutAttributes layoutAttributesForCellWithIndexPath:indexPath];
+            attributes.frame = insetFrame;
+            [_cache addObject:attributes];
+            _contentHeight = MAX(_contentHeight, CGRectGetMaxY(frame));
+            [yOffset setObject:@([yOffset[column] floatValue] + height) atIndexedSubscript:column];
+            column = (column >= (_numberOfColumns - 1)) ? 0 : column + 1;
+        }
+    }
 }
 
 -(CGSize)collectionViewContentSize {
-    return CGSizeMake(SCREEN_WIDTH, MAX(_leftY, _rightY));
+    return CGSizeMake(_contentWidth, _contentHeight);
 }
 
 - (NSArray *)layoutAttributesForElementsInRect:(CGRect)rect {
     
-    _leftY = _interitemSpacing; // 左边起始Y轴
-    _rightY = _interitemSpacing; // 右边起始Y轴
-    
-    NSMutableArray *attributes = [[NSMutableArray alloc] init];
-    for(int i = 0; i < self.cellCount; i++) {
-        NSIndexPath *indexPath = [NSIndexPath indexPathForRow:i inSection:0];
-        [attributes addObject:[self layoutAttributesForItemAtIndexPath:indexPath]];
+    NSMutableArray *layoutAttributes = [[NSMutableArray alloc] init];
+    for(int i = 0; i < [self.cache count]; i++) {
+        UICollectionViewLayoutAttributes *attributes = (UICollectionViewLayoutAttributes *)self.cache[i];
+        if(CGRectIntersectsRect(attributes.frame, rect) == YES) {
+            [layoutAttributes addObject:attributes];
+        }
     }
-    return attributes;
-}
-
-// it will call many times and generate the cell size.
-- (UICollectionViewLayoutAttributes *)layoutAttributesForItemAtIndexPath:(NSIndexPath *)indexPath {
-    
-    CGSize itemSize = [self.delegate collectionView:self.collectionView collectionViewLayout:self sizeOfItemAtIndexPath:indexPath];
-    
-    UICollectionViewLayoutAttributes *attributes = [UICollectionViewLayoutAttributes layoutAttributesForCellWithIndexPath:indexPath];
-    // DLog(@"indexPath:(%ld:%ld), _leftY:%f, _rightY:%f", indexPath.section, indexPath.row, _leftY, _rightY);
-    // _leftY and _rightY start from 10, 10.
-    // It will update the height of y. The left side and right side of cell will grow gradually.
-    BOOL isLeft = _leftY <= _rightY;
-    
-    if (isLeft) {
-        CGFloat x = _interitemSpacing;
-        attributes.frame = CGRectMake(x, _leftY, _itemWidth, itemSize.height);
-        _leftY += itemSize.height + _interitemSpacing;
-    }
-    
-    if(!isLeft){
-        CGFloat x = _interitemSpacing * 2 + _itemWidth;
-        attributes.frame = CGRectMake(x, _rightY, _itemWidth, itemSize.height);
-        _rightY += itemSize.height + _interitemSpacing;
-    }
-    
-    return attributes;
+    return layoutAttributes;
 }
 
 @end
