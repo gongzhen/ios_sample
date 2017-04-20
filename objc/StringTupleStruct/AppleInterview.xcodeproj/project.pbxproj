@@ -223,7 +223,7 @@
 			buildSettings = {
 				DEVELOPMENT_TEAM = 78R59ZRT89;
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
-				GCC_PREFIX_HEADER = /Users/gongzhen/Project/interview/AppleInterview/AppleInterview/PrefixHeader.pch;
+				GCC_PREFIX_HEADER = /Users/gongzhen/Project/mobile/iOS/ios_sample/objc/StringTupleStruct/AppleInterview/PrefixHeader.pch;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 			};
 			name = Debug;
@@ -233,7 +233,7 @@
 			buildSettings = {
 				DEVELOPMENT_TEAM = 78R59ZRT89;
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
-				GCC_PREFIX_HEADER = /Users/gongzhen/Project/interview/AppleInterview/AppleInterview/PrefixHeader.pch;
+				GCC_PREFIX_HEADER = /Users/gongzhen/Project/mobile/iOS/ios_sample/objc/StringTupleStruct/AppleInterview/PrefixHeader.pch;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 			};
 			name = Release;
@@ -257,6 +257,7 @@
 				061F1DD51EA9291A00D05F74 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};
