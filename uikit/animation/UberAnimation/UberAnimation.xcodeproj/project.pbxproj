@@ -15,6 +15,8 @@
 		061F1DA01EA871A100D05F74 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 061F1D9E1EA871A100D05F74 /* LaunchScreen.storyboard */; };
 		061F1DAB1EA871A100D05F74 /* UberAnimationTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 061F1DAA1EA871A100D05F74 /* UberAnimationTests.m */; };
 		061F1DB61EA871A100D05F74 /* UberAnimationUITests.m in Sources */ = {isa = PBXBuildFile; fileRef = 061F1DB51EA871A100D05F74 /* UberAnimationUITests.m */; };
+		061F1DF01EA9CC0200D05F74 /* SplashViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 061F1DEE1EA9CC0200D05F74 /* SplashViewController.m */; };
+		061F1DF31EA9CC3E00D05F74 /* AnimatedULogoView.m in Sources */ = {isa = PBXBuildFile; fileRef = 061F1DF21EA9CC3E00D05F74 /* AnimatedULogoView.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -51,6 +53,10 @@
 		061F1DB11EA871A100D05F74 /* UberAnimationUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = UberAnimationUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		061F1DB51EA871A100D05F74 /* UberAnimationUITests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = UberAnimationUITests.m; sourceTree = "<group>"; };
 		061F1DB71EA871A100D05F74 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		061F1DEE1EA9CC0200D05F74 /* SplashViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SplashViewController.m; sourceTree = "<group>"; };
+		061F1DEF1EA9CC0200D05F74 /* SplashViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SplashViewController.h; sourceTree = "<group>"; };
+		061F1DF11EA9CC3E00D05F74 /* AnimatedULogoView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AnimatedULogoView.h; sourceTree = "<group>"; };
+		061F1DF21EA9CC3E00D05F74 /* AnimatedULogoView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AnimatedULogoView.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -102,6 +108,7 @@
 			isa = PBXGroup;
 			children = (
 				061F1D931EA871A100D05F74 /* AppDelegate.h */,
+				061F1DE71EA9CB8B00D05F74 /* SplashScreenUI */,
 				061F1D941EA871A100D05F74 /* AppDelegate.m */,
 				061F1D961EA871A100D05F74 /* RootViewController.h */,
 				061F1D971EA871A100D05F74 /* RootViewController.m */,
@@ -138,6 +145,17 @@
 				061F1DB71EA871A100D05F74 /* Info.plist */,
 			);
 			path = UberAnimationUITests;
+			sourceTree = "<group>";
+		};
+		061F1DE71EA9CB8B00D05F74 /* SplashScreenUI */ = {
+			isa = PBXGroup;
+			children = (
+				061F1DF11EA9CC3E00D05F74 /* AnimatedULogoView.h */,
+				061F1DF21EA9CC3E00D05F74 /* AnimatedULogoView.m */,
+				061F1DEE1EA9CC0200D05F74 /* SplashViewController.m */,
+				061F1DEF1EA9CC0200D05F74 /* SplashViewController.h */,
+			);
+			name = SplashScreenUI;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -276,9 +294,11 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				061F1DF31EA9CC3E00D05F74 /* AnimatedULogoView.m in Sources */,
 				061F1D981EA871A100D05F74 /* RootViewController.m in Sources */,
 				061F1D951EA871A100D05F74 /* AppDelegate.m in Sources */,
 				061F1D921EA871A100D05F74 /* main.m in Sources */,
+				061F1DF01EA9CC0200D05F74 /* SplashViewController.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -516,6 +536,7 @@
 				061F1DBC1EA871A100D05F74 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		061F1DBD1EA871A100D05F74 /* Build configuration list for PBXNativeTarget "UberAnimationTests" */ = {
 			isa = XCConfigurationList;
@@ -524,6 +545,7 @@
 				061F1DBF1EA871A100D05F74 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		061F1DC01EA871A100D05F74 /* Build configuration list for PBXNativeTarget "UberAnimationUITests" */ = {
 			isa = XCConfigurationList;
@@ -532,6 +554,7 @@
 				061F1DC21EA871A100D05F74 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};

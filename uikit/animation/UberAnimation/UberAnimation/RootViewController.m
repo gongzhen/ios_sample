@@ -7,8 +7,11 @@
 //
 
 #import "RootViewController.h"
+#import "SplashViewController.h"
 
 @interface RootViewController ()
+
+@property(strong, nonatomic) UIViewController *rootViewController;
 
 @end
 
@@ -16,8 +19,13 @@
 
 - (void)viewDidLoad {
     [super viewDidLoad];
+    self.rootViewController = [[UIViewController alloc] init];
+    [self.rootViewController willMoveToParentViewController:nil];
+    [self.rootViewController removeFromParentViewController];
+    [self.rootViewController.view removeFromSuperview];
+    [self.rootViewController didMoveToParentViewController:nil];
     
-    CGPoint point = CGPointMake(123, 123);
+    
 }
 
 

@@ -371,6 +371,8 @@
 				GCC_DYNAMIC_NO_PIC = NO;
 				GCC_NO_COMMON_BLOCKS = YES;
 				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PRECOMPILE_PREFIX_HEADER = NO;
+				GCC_PREFIX_HEADER = "";
 				GCC_PREPROCESSOR_DEFINITIONS = (
 					"DEBUG=1",
 					"$(inherited)",
@@ -416,6 +418,8 @@
 				ENABLE_STRICT_OBJC_MSGSEND = YES;
 				GCC_C_LANGUAGE_STANDARD = gnu99;
 				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_PRECOMPILE_PREFIX_HEADER = NO;
+				GCC_PREFIX_HEADER = "";
 				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
 				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
 				GCC_WARN_UNDECLARED_SELECTOR = YES;
@@ -435,7 +439,7 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				DEVELOPMENT_TEAM = 78R59ZRT89;
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
-				GCC_PREFIX_HEADER = /Users/gongzhen/Projects/ios/github_gz/ios_sample/uikit/collection/UICollectionViewFlowlayout1/UICollectionViewFlowlayout1/PrefixHeader.pch;
+				GCC_PREFIX_HEADER = /Users/gongzhen/Project/mobile/iOS/ios_sample/uikit/collection/UICollectionViewFlowlayout1/UICollectionViewFlowlayout1/PrefixHeader.pch;
 				INFOPLIST_FILE = UICollectionViewFlowlayout1/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.gongzhen.ObjCApp.UICollectionViewFlowlayout1;
@@ -449,7 +453,7 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				DEVELOPMENT_TEAM = 78R59ZRT89;
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
-				GCC_PREFIX_HEADER = /Users/gongzhen/Projects/ios/github_gz/ios_sample/uikit/collection/UICollectionViewFlowlayout1/UICollectionViewFlowlayout1/PrefixHeader.pch;
+				GCC_PREFIX_HEADER = /Users/gongzhen/Project/mobile/iOS/ios_sample/uikit/collection/UICollectionViewFlowlayout1/UICollectionViewFlowlayout1/PrefixHeader.pch;
 				INFOPLIST_FILE = UICollectionViewFlowlayout1/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.gongzhen.ObjCApp.UICollectionViewFlowlayout1;
@@ -526,6 +530,7 @@
 				0640D55E1E9C8833007ECD92 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		0640D55F1E9C8833007ECD92 /* Build configuration list for PBXNativeTarget "UICollectionViewFlowlayout1Tests" */ = {
 			isa = XCConfigurationList;
@@ -534,6 +539,7 @@
 				0640D5611E9C8833007ECD92 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		0640D5621E9C8833007ECD92 /* Build configuration list for PBXNativeTarget "UICollectionViewFlowlayout1UITests" */ = {
 			isa = XCConfigurationList;
@@ -542,6 +548,7 @@
 				0640D5641E9C8833007ECD92 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};

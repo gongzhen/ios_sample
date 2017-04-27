@@ -1,13 +1,13 @@
 //
 //  AppDelegate.m
-//  UberAnimation
+//  UICollectionViewFlowlayout2
 //
-//  Created by zhen gong on 4/19/17.
+//  Created by zhen gong on 4/26/17.
 //  Copyright © 2017 zhen gong. All rights reserved.
 //
 
 #import "AppDelegate.h"
-#import "RootViewController.h"
+#import "ViewController.h"
 
 @interface AppDelegate ()
 
@@ -18,12 +18,16 @@
 
 - (BOOL)application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions {
     // Override point for customization after application launch.
-    RootViewController *viewController = [[RootViewController alloc] init];
-    UINavigationController *navigationController = [[UINavigationController alloc] initWithRootViewController:viewController];
-    self.window = [[UIWindow alloc] initWithFrame:[UIScreen mainScreen].bounds];
+    
+    ViewController *viewController = [[ViewController alloc] init];
+    
+    UINavigationController *navigationController = [[UINavigationController alloc] initWithRootViewController: viewController];
+    
+    self.window = [[UIWindow alloc] initWithFrame: [UIScreen mainScreen].bounds];
     self.window.backgroundColor = [UIColor clearColor];
     self.window.rootViewController = navigationController;
     [self.window makeKeyAndVisible];
+    
     return YES;
 }
 
