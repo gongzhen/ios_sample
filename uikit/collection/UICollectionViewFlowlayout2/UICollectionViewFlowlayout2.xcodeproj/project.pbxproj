@@ -7,6 +7,9 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		062CBF701EB8DB02004483AC /* CollectionViewWaterfallHeader.m in Sources */ = {isa = PBXBuildFile; fileRef = 062CBF6F1EB8DB02004483AC /* CollectionViewWaterfallHeader.m */; };
+		062CBF731EB8DB91004483AC /* CollectionViewWaterfallFooter.m in Sources */ = {isa = PBXBuildFile; fileRef = 062CBF721EB8DB91004483AC /* CollectionViewWaterfallFooter.m */; };
+		0671B6891EB6EF6E00846F64 /* CollectionViewWaterfallCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 0671B6881EB6EF6E00846F64 /* CollectionViewWaterfallCell.m */; };
 		06E9CBDA1EB1B5DE00C07664 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 06E9CBD91EB1B5DE00C07664 /* main.m */; };
 		06E9CBDD1EB1B5DE00C07664 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 06E9CBDC1EB1B5DE00C07664 /* AppDelegate.m */; };
 		06E9CBE01EB1B5DE00C07664 /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 06E9CBDF1EB1B5DE00C07664 /* ViewController.m */; };
@@ -36,6 +39,13 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		062CBF191EB7CD91004483AC /* PrefixHeader.pch */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = PrefixHeader.pch; sourceTree = "<group>"; };
+		062CBF6E1EB8DB02004483AC /* CollectionViewWaterfallHeader.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CollectionViewWaterfallHeader.h; sourceTree = "<group>"; };
+		062CBF6F1EB8DB02004483AC /* CollectionViewWaterfallHeader.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CollectionViewWaterfallHeader.m; sourceTree = "<group>"; };
+		062CBF711EB8DB91004483AC /* CollectionViewWaterfallFooter.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CollectionViewWaterfallFooter.h; sourceTree = "<group>"; };
+		062CBF721EB8DB91004483AC /* CollectionViewWaterfallFooter.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CollectionViewWaterfallFooter.m; sourceTree = "<group>"; };
+		0671B6871EB6EF6E00846F64 /* CollectionViewWaterfallCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CollectionViewWaterfallCell.h; sourceTree = "<group>"; };
+		0671B6881EB6EF6E00846F64 /* CollectionViewWaterfallCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CollectionViewWaterfallCell.m; sourceTree = "<group>"; };
 		06E9CBD51EB1B5DE00C07664 /* UICollectionViewFlowlayout2.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = UICollectionViewFlowlayout2.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		06E9CBD91EB1B5DE00C07664 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
 		06E9CBDB1EB1B5DE00C07664 /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
@@ -108,8 +118,14 @@
 				06E9CBDC1EB1B5DE00C07664 /* AppDelegate.m */,
 				06E9CBDE1EB1B5DE00C07664 /* ViewController.h */,
 				06E9CBDF1EB1B5DE00C07664 /* ViewController.m */,
+				062CBF6E1EB8DB02004483AC /* CollectionViewWaterfallHeader.h */,
+				062CBF6F1EB8DB02004483AC /* CollectionViewWaterfallHeader.m */,
+				062CBF711EB8DB91004483AC /* CollectionViewWaterfallFooter.h */,
+				062CBF721EB8DB91004483AC /* CollectionViewWaterfallFooter.m */,
 				06E9CC0B1EB1BCCF00C07664 /* CustomCollectionLayout.h */,
 				06E9CC0C1EB1BCCF00C07664 /* CustomCollectionLayout.m */,
+				0671B6871EB6EF6E00846F64 /* CollectionViewWaterfallCell.h */,
+				0671B6881EB6EF6E00846F64 /* CollectionViewWaterfallCell.m */,
 				06E9CBE11EB1B5DE00C07664 /* Main.storyboard */,
 				06E9CBE41EB1B5DE00C07664 /* Assets.xcassets */,
 				06E9CBE61EB1B5DE00C07664 /* LaunchScreen.storyboard */,
@@ -123,6 +139,7 @@
 			isa = PBXGroup;
 			children = (
 				06E9CBD91EB1B5DE00C07664 /* main.m */,
+				062CBF191EB7CD91004483AC /* PrefixHeader.pch */,
 			);
 			name = "Supporting Files";
 			sourceTree = "<group>";
@@ -282,9 +299,12 @@
 			buildActionMask = 2147483647;
 			files = (
 				06E9CC0D1EB1BCD000C07664 /* CustomCollectionLayout.m in Sources */,
+				062CBF731EB8DB91004483AC /* CollectionViewWaterfallFooter.m in Sources */,
 				06E9CBE01EB1B5DE00C07664 /* ViewController.m in Sources */,
 				06E9CBDD1EB1B5DE00C07664 /* AppDelegate.m in Sources */,
 				06E9CBDA1EB1B5DE00C07664 /* main.m in Sources */,
+				062CBF701EB8DB02004483AC /* CollectionViewWaterfallHeader.m in Sources */,
+				0671B6891EB6EF6E00846F64 /* CollectionViewWaterfallCell.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -434,6 +454,8 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				DEVELOPMENT_TEAM = 78R59ZRT89;
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = /Users/gongzhen/Project/mobile/iOS/ios_sample/uikit/collection/UICollectionViewFlowlayout2/UICollectionViewFlowlayout2/PrefixHeader.pch;
 				INFOPLIST_FILE = UICollectionViewFlowlayout2/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.caknow.gongzhen.UICollectionViewFlowlayout2;
@@ -446,6 +468,8 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				DEVELOPMENT_TEAM = 78R59ZRT89;
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = /Users/gongzhen/Project/mobile/iOS/ios_sample/uikit/collection/UICollectionViewFlowlayout2/UICollectionViewFlowlayout2/PrefixHeader.pch;
 				INFOPLIST_FILE = UICollectionViewFlowlayout2/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.caknow.gongzhen.UICollectionViewFlowlayout2;
@@ -522,6 +546,7 @@
 				06E9CC041EB1B5DE00C07664 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		06E9CC051EB1B5DE00C07664 /* Build configuration list for PBXNativeTarget "UICollectionViewFlowlayout2Tests" */ = {
 			isa = XCConfigurationList;
@@ -530,6 +555,7 @@
 				06E9CC071EB1B5DE00C07664 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		06E9CC081EB1B5DE00C07664 /* Build configuration list for PBXNativeTarget "UICollectionViewFlowlayout2UITests" */ = {
 			isa = XCConfigurationList;
@@ -538,6 +564,7 @@
 				06E9CC0A1EB1B5DE00C07664 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};
