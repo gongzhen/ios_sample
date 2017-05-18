@@ -34,5 +34,7 @@
 		<string>UIInterfaceOrientationLandscapeLeft</string>
 		<string>UIInterfaceOrientationLandscapeRight</string>
 	</array>
+	<key>NSContactsUsageDescription</key>
+	<string>Please allow CAKNOW to access your contact list. Otherwise the &apos;invitation&apos; function will not work properly.</string>
 </dict>
 </plist>

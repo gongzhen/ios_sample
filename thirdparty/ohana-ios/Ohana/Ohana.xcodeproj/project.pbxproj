@@ -50,6 +50,7 @@
 		062CBFA51EBA1A0D004483AC /* OhanaUITests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = OhanaUITests.m; sourceTree = "<group>"; };
 		062CBFA71EBA1A0D004483AC /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		062CBFBA1EBB96DF004483AC /* Ohana */ = {isa = PBXFileReference; lastKnownFileType = folder; path = Ohana; sourceTree = "<group>"; };
+		062F330D1ECE661300259FE3 /* PrefixHeader.pch */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = PrefixHeader.pch; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -118,6 +119,7 @@
 			isa = PBXGroup;
 			children = (
 				062CBF811EBA1A0D004483AC /* main.m */,
+				062F330D1ECE661300259FE3 /* PrefixHeader.pch */,
 			);
 			name = "Supporting Files";
 			sourceTree = "<group>";
@@ -426,7 +428,10 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				DEVELOPMENT_TEAM = 78R59ZRT89;
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = "/Users/gongzhen/Project/mobile/iOS/ios_sample/thirdparty/ohana-ios/Ohana/Ohana/PrefixHeader.pch";
 				INFOPLIST_FILE = Ohana/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.caknow.gongzhen.Ohana;
 				PRODUCT_NAME = "$(TARGET_NAME)";
@@ -438,7 +443,10 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				DEVELOPMENT_TEAM = 78R59ZRT89;
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = "/Users/gongzhen/Project/mobile/iOS/ios_sample/thirdparty/ohana-ios/Ohana/Ohana/PrefixHeader.pch";
 				INFOPLIST_FILE = Ohana/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.caknow.gongzhen.Ohana;
 				PRODUCT_NAME = "$(TARGET_NAME)";

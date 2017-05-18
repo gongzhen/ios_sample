@@ -66,7 +66,7 @@ NSString *const kServerURL = @"https://staging.caknow.com/";
         NSInteger statusCode = [(NSHTTPURLResponse *)response statusCode];
         NSString *fullMethodName = [self getFullMethodNameByHttpMethod:httpMethodName method:methodName];
         if (error) {
-            
+            // added error handling to 
         } else {
             NSDictionary *parsedData = [NSJSONSerialization JSONObjectWithData:data
                                                                        options:NSJSONReadingMutableContainers error:nil];
