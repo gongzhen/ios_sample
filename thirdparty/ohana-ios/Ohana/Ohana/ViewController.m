@@ -8,8 +8,12 @@
 
 #import "ViewController.h"
 #import <AddressBook/AddressBook.h>
+#import "GZContactsDataProviderProtocol.h"
+#import "GZABAddressBookContactsDataProvider.h"
+#import "GZAlphabeticalSortPostProcessor.h"
+#import "GZContactsDataSource.h"
 
-@interface ViewController () {
+@interface ViewController () <GZABAddressBookContactsDataProviderDelegate> {
     ABAddressBookRef _addressBook;
     NSDictionary *_contactDictioanry;
 }
@@ -17,8 +21,14 @@
 //@TODO: 1. null_resettable definition.
 @property(nonatomic, strong, null_resettable) UITableView *tableView;
 
-// @TODO: 2. IMPLEMENTED Ohana/Classes/Core/OHContactsDataSource
-// Implemented OHContactsDataSource *dataSource
+// @TODO: 2. Implemented GZContactsDataSource *dataSource
+@property(nonatomic) GZContactsDataSource *dataSource;
+
+// @note: cannot use self.dataSource.contacts = contacts because self.dataSource.contacts is readonly.
+//
+@property (nonatomic, readwrite, nullable) NSOrderedSet<GZContact *> *contacts;
+
+// last version
 @property (nonatomic, strong) NSArray* contactInfos;
 
 @end
@@ -38,68 +48,71 @@
     return _tableView;
 }
 
+- (instancetype)init {
+    if(self = [super init]) {
+        // 1: initialized dataProvder with protocol GZContactsDataProviderProtocol. GZABAddressBookContactsDataProvider implemented GZContactsDataProviderProtocol.
+        // 2: initialized sortProcessor with sort Mode.
+        
+        //@todo:dataProvider is id with GZContactsDataProviderProtocol type.
+        // initWithDelegate with self. passing id<GZABAddressBookContactsDataProviderDelegate> type self.
+        // self implemented GZABAddressBookContactsDataProviderDelegate
+        
+        // GZABAddressBookContactsDataProvider:NSObject<GZContactsDataProviderProtocol>
+        // initWithDelegate:self is it just same as the self.delegate = self;
+        // self:ViewController implement GZABAddressBookContactsDataProviderDelegate.
+        
+        // GZABAddressBookContactsDataProvider extends NSObjet and implemented <GZContactsDataProviderProtocol>
+        // GZABAddressBookContactsDataProvider initWithDelegate will return id type with GZContactsDataProviderProtocol.
+        id<GZContactsDataProviderProtocol> dataProvider = [[GZABAddressBookContactsDataProvider alloc] initWithDelegate:self];
+        
+        GZAlphabeticalSortPostProcessor *alphabeticalSortProcessor = [[GZAlphabeticalSortPostProcessor alloc] initWithSortMode:GZAlphabeticalSortPostProcessorSortModeFullName];
+        
+        // 3: initialized dataSource with dataProviders and postProcessors
+        _dataSource = [[GZContactsDataSource alloc] initWithDataProviders:[NSOrderedSet orderedSetWithObjects:dataProvider, nil]
+                                                           postProcessors:[NSOrderedSet orderedSetWithObjects:alphabeticalSortProcessor, nil]];
+        
+        // 4: dataSource loadContacts.
+        [self.dataSource loadContacts];
+    }
+    return self;
+}
+
 - (void)viewDidLoad {
     [super viewDidLoad];
     [self setupView];
-    
-    // Get contact permission.
-    ABAuthorizationStatus authorizationStatus = ABAddressBookGetAuthorizationStatus();
-    
-    switch (authorizationStatus) {
-        case kABAuthorizationStatusDenied:
-        case kABAuthorizationStatusRestricted:
-            NSLog(@"Denied");
-            [self promptForAddressBookRequestAccess];
-            break;
-        case kABAuthorizationStatusNotDetermined:
-            NSLog(@"Not Determined");
-            [self promptForAddressBookRequestAccess];
-            break;
-        case kABAuthorizationStatusAuthorized:
-            NSLog(@"Authorized");
-            [self getAuthorizedToshowContacts];
-            break;
-    }
-    
-    // contact datasource
-    // initDatasource()
-    
-    // Do any additional setup after loading the view, typically from a nib.
-    
-
-}
-
-- (void)initDatasource {
-    
-    // Implemented OHContactsDataProviderProtocol and create dataProvider
-    // if CNContact class to generate dataProvider
-    // Implemented OHCNContactsDataProvider or OHABAddressBookContactsDataProvider.
-    // Implemented OHAlphabeticalSortPostProcessor alphabeticalSortProcessor
-    // Created _dataSource comes from dataProvider and alphabeticalSortProcessor
-    // Implemented onContactsDataSourceReadySignal for dataSource
-    
-    // dataSource.onContactsDataSourceReadySingal
-    // dataSource.onContactsDataSourceSelectedContactsSingal addObserver
-    // dataSource.onContactsDataSourceSelectedContactsSignal
-    // dataSource loadContacts
 }
 
 #pragma mark - table view delegate
 
 -(NSInteger)numberOfSectionsInTableView:(UITableView *)tableView
 {
+//    if (self.dataSource.contacts) {
+//        return [self.contactsByLetter count];
+//    } else {
+//        return 1;
+//    }
     return 1;
 }
 
 -(NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section
 {
-    return [_contactInfos count];
+//    return [self.dataSource.contacts count];
+    return [self.contacts count];
 }
 
 -(UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath
 {
-    UITableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:@"cell" forIndexPath:indexPath];
-    cell.textLabel.text = (NSString *)[_contactInfos objectAtIndex:indexPath.row];
+    UITableViewCell *cell = [self.tableView dequeueReusableCellWithIdentifier:@"cell"];
+    
+    if (self.contacts) {
+        GZContact *contact = [self.contacts objectAtIndex:indexPath.row];
+        
+        cell.textLabel.text = [self _displayNameForContact:contact];
+        cell.imageView.image = contact.thumbnailPhoto;
+    } else {
+        cell.textLabel.text = @"No contacts access, open Settings app to fix this";
+    }
+    
     return cell;
 }
 
@@ -191,14 +204,30 @@
     }
 }
 
+- (NSString *)_displayNameForContact:(GZContact *)contact
+{
+    if (contact.fullName.length) {
+        return contact.fullName;
+    }
+    if (contact.contactFields.count) {
+        return [contact.contactFields objectAtIndex:0].value;
+    }
+    return nil;
+}
+
+#pragma mark - GZABAddressBookContactsDataProviderDelegate
+
+// delegate GZABAddressBookContactsDataProviderDelegate impment method here.
+
+- (void)dataProviderHitABAddressBookAuthChallenge:(GZABAddressBookContactsDataProvider *)dataProvider requiresUserAuthentication:(void (^)())userAuthenticationTrigger
+{
+    userAuthenticationTrigger();
+}
+
+//@todo: Added delegate method for preparing dataSource.contacts loading.
+- (void)dataProviderFinishLoadingABAddressBook:(NSOrderedSet<GZContact *> *)contacts
+{   DLog(@"%@", self.dataSource.contacts);
+    self.contacts = contacts;
+}
+
 @end
-
-
-
-
-
-
-
-
-
-

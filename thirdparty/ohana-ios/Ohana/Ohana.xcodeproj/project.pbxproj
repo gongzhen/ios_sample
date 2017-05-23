@@ -13,6 +13,12 @@
 		062CBF9B1EBA1A0D004483AC /* OhanaTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 062CBF9A1EBA1A0D004483AC /* OhanaTests.m */; };
 		062CBFA61EBA1A0D004483AC /* OhanaUITests.m in Sources */ = {isa = PBXBuildFile; fileRef = 062CBFA51EBA1A0D004483AC /* OhanaUITests.m */; };
 		06A4B7691EC4AA3600556EF7 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 062CBF891EBA1A0D004483AC /* Main.storyboard */; };
+		06F540521ED2590E00343469 /* GZABAddressBookContactsDataProvider.m in Sources */ = {isa = PBXBuildFile; fileRef = 06F540511ED2590E00343469 /* GZABAddressBookContactsDataProvider.m */; };
+		06F5405E1ED2593700343469 /* GZContactsDataSource.m in Sources */ = {isa = PBXBuildFile; fileRef = 06F5405C1ED2593700343469 /* GZContactsDataSource.m */; };
+		06F540671ED286A300343469 /* GZContact.m in Sources */ = {isa = PBXBuildFile; fileRef = 06F540661ED286A300343469 /* GZContact.m */; };
+		06F5406B1ED28AF100343469 /* GZAlphabeticalSortPostProcessor.m in Sources */ = {isa = PBXBuildFile; fileRef = 06F5406A1ED28AF100343469 /* GZAlphabeticalSortPostProcessor.m */; };
+		06F5406E1ED2C24500343469 /* GZContactField.m in Sources */ = {isa = PBXBuildFile; fileRef = 06F5406D1ED2C24500343469 /* GZContactField.m */; };
+		06F540711ED3430400343469 /* GZContactAddress.m in Sources */ = {isa = PBXBuildFile; fileRef = 06F540701ED3430400343469 /* GZContactAddress.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -49,8 +55,25 @@
 		062CBFA11EBA1A0D004483AC /* OhanaUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = OhanaUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		062CBFA51EBA1A0D004483AC /* OhanaUITests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = OhanaUITests.m; sourceTree = "<group>"; };
 		062CBFA71EBA1A0D004483AC /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		062CBFBA1EBB96DF004483AC /* Ohana */ = {isa = PBXFileReference; lastKnownFileType = folder; path = Ohana; sourceTree = "<group>"; };
 		062F330D1ECE661300259FE3 /* PrefixHeader.pch */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = PrefixHeader.pch; sourceTree = "<group>"; };
+		06F5404A1ED258B800343469 /* GZABAddressBookContactsDataProvider.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = GZABAddressBookContactsDataProvider.h; sourceTree = "<group>"; };
+		06F540511ED2590E00343469 /* GZABAddressBookContactsDataProvider.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = GZABAddressBookContactsDataProvider.m; sourceTree = "<group>"; };
+		06F5405B1ED2593700343469 /* GZContactsDataSource.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GZContactsDataSource.h; sourceTree = "<group>"; };
+		06F5405C1ED2593700343469 /* GZContactsDataSource.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = GZContactsDataSource.m; sourceTree = "<group>"; };
+		06F5405F1ED25ABA00343469 /* GZContactsDataProviderProtocol.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GZContactsDataProviderProtocol.h; sourceTree = "<group>"; };
+		06F540601ED25D6500343469 /* ohana.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ohana.h; sourceTree = "<group>"; };
+		06F540611ED25D9A00343469 /* OhanaCore.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = OhanaCore.h; sourceTree = "<group>"; };
+		06F540621ED25DC100343469 /* OhanaCommon.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = OhanaCommon.h; sourceTree = "<group>"; };
+		06F540631ED278BB00343469 /* GZContactsSelectionFilterProtocol.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GZContactsSelectionFilterProtocol.h; sourceTree = "<group>"; };
+		06F540641ED27A7000343469 /* GZContactsPostProcessorProtocol.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GZContactsPostProcessorProtocol.h; sourceTree = "<group>"; };
+		06F540651ED286A300343469 /* GZContact.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GZContact.h; sourceTree = "<group>"; };
+		06F540661ED286A300343469 /* GZContact.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = GZContact.m; sourceTree = "<group>"; };
+		06F540691ED28AF100343469 /* GZAlphabeticalSortPostProcessor.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GZAlphabeticalSortPostProcessor.h; sourceTree = "<group>"; };
+		06F5406A1ED28AF100343469 /* GZAlphabeticalSortPostProcessor.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = GZAlphabeticalSortPostProcessor.m; sourceTree = "<group>"; };
+		06F5406C1ED2C24500343469 /* GZContactField.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GZContactField.h; sourceTree = "<group>"; };
+		06F5406D1ED2C24500343469 /* GZContactField.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = GZContactField.m; sourceTree = "<group>"; };
+		06F5406F1ED3430400343469 /* GZContactAddress.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GZContactAddress.h; sourceTree = "<group>"; };
+		06F540701ED3430400343469 /* GZContactAddress.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = GZContactAddress.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -105,7 +128,8 @@
 				062CBF841EBA1A0D004483AC /* AppDelegate.m */,
 				062CBF861EBA1A0D004483AC /* ViewController.h */,
 				062CBF871EBA1A0D004483AC /* ViewController.m */,
-				062CBFBA1EBB96DF004483AC /* Ohana */,
+				06F540601ED25D6500343469 /* ohana.h */,
+				06F540421ED2570300343469 /* Ohana */,
 				062CBF891EBA1A0D004483AC /* Main.storyboard */,
 				062CBF8C1EBA1A0D004483AC /* Assets.xcassets */,
 				062CBF8E1EBA1A0D004483AC /* LaunchScreen.storyboard */,
@@ -140,6 +164,70 @@
 				062CBFA71EBA1A0D004483AC /* Info.plist */,
 			);
 			path = OhanaUITests;
+			sourceTree = "<group>";
+		};
+		06F540421ED2570300343469 /* Ohana */ = {
+			isa = PBXGroup;
+			children = (
+				06F540441ED2572000343469 /* Core */,
+				06F540431ED2571800343469 /* Common */,
+				06F540451ED2587800343469 /* Utilities */,
+			);
+			name = Ohana;
+			sourceTree = "<group>";
+		};
+		06F540431ED2571800343469 /* Common */ = {
+			isa = PBXGroup;
+			children = (
+				06F540621ED25DC100343469 /* OhanaCommon.h */,
+				06F540681ED28AC000343469 /* PostProcessors */,
+				06F540461ED2588400343469 /* DataProviders */,
+			);
+			name = Common;
+			sourceTree = "<group>";
+		};
+		06F540441ED2572000343469 /* Core */ = {
+			isa = PBXGroup;
+			children = (
+				06F540651ED286A300343469 /* GZContact.h */,
+				06F540661ED286A300343469 /* GZContact.m */,
+				06F5406F1ED3430400343469 /* GZContactAddress.h */,
+				06F540701ED3430400343469 /* GZContactAddress.m */,
+				06F5406C1ED2C24500343469 /* GZContactField.h */,
+				06F5406D1ED2C24500343469 /* GZContactField.m */,
+				06F5405F1ED25ABA00343469 /* GZContactsDataProviderProtocol.h */,
+				06F540631ED278BB00343469 /* GZContactsSelectionFilterProtocol.h */,
+				06F540641ED27A7000343469 /* GZContactsPostProcessorProtocol.h */,
+				06F5405B1ED2593700343469 /* GZContactsDataSource.h */,
+				06F5405C1ED2593700343469 /* GZContactsDataSource.m */,
+				06F540611ED25D9A00343469 /* OhanaCore.h */,
+			);
+			name = Core;
+			sourceTree = "<group>";
+		};
+		06F540451ED2587800343469 /* Utilities */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			name = Utilities;
+			sourceTree = "<group>";
+		};
+		06F540461ED2588400343469 /* DataProviders */ = {
+			isa = PBXGroup;
+			children = (
+				06F5404A1ED258B800343469 /* GZABAddressBookContactsDataProvider.h */,
+				06F540511ED2590E00343469 /* GZABAddressBookContactsDataProvider.m */,
+			);
+			name = DataProviders;
+			sourceTree = "<group>";
+		};
+		06F540681ED28AC000343469 /* PostProcessors */ = {
+			isa = PBXGroup;
+			children = (
+				06F540691ED28AF100343469 /* GZAlphabeticalSortPostProcessor.h */,
+				06F5406A1ED28AF100343469 /* GZAlphabeticalSortPostProcessor.m */,
+			);
+			name = PostProcessors;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -277,8 +365,14 @@
 			buildActionMask = 2147483647;
 			files = (
 				062CBF881EBA1A0D004483AC /* ViewController.m in Sources */,
+				06F540521ED2590E00343469 /* GZABAddressBookContactsDataProvider.m in Sources */,
+				06F540711ED3430400343469 /* GZContactAddress.m in Sources */,
 				062CBF851EBA1A0D004483AC /* AppDelegate.m in Sources */,
+				06F5405E1ED2593700343469 /* GZContactsDataSource.m in Sources */,
+				06F5406E1ED2C24500343469 /* GZContactField.m in Sources */,
+				06F5406B1ED28AF100343469 /* GZAlphabeticalSortPostProcessor.m in Sources */,
 				062CBF821EBA1A0D004483AC /* main.m in Sources */,
+				06F540671ED286A300343469 /* GZContact.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
