@@ -75,6 +75,77 @@ class PhotoCollectionViewController: UICollectionViewController {
         // Present alert
         present(alert, animated: true, completion: nil)
     }
+    
+    // MARK: - IBAction Methods for callback closure
+    
+    @IBAction func replyCallBack(_ sender: UIBarButtonItem) {
+        let email:String = "replyCallBack@caknow.com"
+        var chris : String = "";
+        print("1: replyCallBack")
+        self.signup(email: email, vc: self) { (error:Error?, user:String?) in
+            if let error = error {
+                print(error)
+                return
+            } else if let user = user {
+                print("9:\(user)")
+                chris = user
+            } else {
+                print("no user return")
+            }
+        }
+        print("5:\(chris)")
+    }
+}
+
+// MARK: - Private Methods for callback closure methods
+
+typealias ERROR_DATA_COMP = (_ error: Error?, _ data: String?) -> Void
+typealias ERROR_USER_COMP = ((_ error: Error?, _ user:String?) -> Void)?
+
+private extension PhotoCollectionViewController {
+    func signup(email:String, vc:UICollectionViewDelegate, completion:ERROR_USER_COMP) {
+        print("2: signup")
+        let url = "signup->\(email)"
+        self.runPost(url: url, vc: self) { (error, data) in
+            if let comp = completion {
+                if let err = error {
+                    comp(err, nil)
+                    return
+                }
+                
+                if let user = data {
+                    print("8:signup->\(user)")
+                    comp(nil, user)
+                }
+            }
+        }
+    }
+    
+    func runPost(url:String, vc:UICollectionViewDelegate, completion:@escaping ERROR_DATA_COMP) {
+        let url = "runPost->\(url)"
+        print("3:\(url)")
+        self.dataTask(url: url) { (user, error) in
+            if let err = error {
+                completion(err, nil)
+                return
+            }
+            
+            let data = "runPost->\(user!)"
+            print("7:\(data)")
+            completion(nil, data)
+        }
+        
+    }
+    
+    func dataTask(url:String, completion:@escaping (String?, Error?)->Void) {
+        let task = "dataTask:\(url)"
+        print("4:\(task)")
+        DispatchQueue.global().asyncAfter(deadline: DispatchTime.now() + 1) {
+            print("6:\(task)")
+            completion(task, nil);
+        }
+        
+    }
 }
 
 // MARK: - Private Methods

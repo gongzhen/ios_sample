@@ -64,6 +64,11 @@
                         </connections>
                     </collectionView>
                     <navigationItem key="navigationItem" title="Photos" id="Edm-f2-b1x">
+                        <barButtonItem key="leftBarButtonItem" systemItem="reply" id="gVR-Zz-iH6">
+                            <connections>
+                                <action selector="replyCallBack:" destination="UYy-UU-jgg" id="eRR-3D-nJ2"/>
+                            </connections>
+                        </barButtonItem>
                         <barButtonItem key="rightBarButtonItem" systemItem="add" id="pIE-Ra-zbO">
                             <connections>
                                 <action selector="addPhotoAssets:" destination="UYy-UU-jgg" id="ZgM-xc-lCH"/>
@@ -107,6 +112,7 @@
                                 <action selector="cancelPressed:" destination="f35-7T-5Mb" id="Yk1-4h-v6n"/>
                             </connections>
                         </barButtonItem>
+                        <barButtonItem key="rightBarButtonItem" systemItem="compose" id="H4G-JN-HGV"/>
                     </navigationItem>
                 </tableViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="VNB-5R-svY" userLabel="First Responder" sceneMemberID="firstResponder"/>
@@ -198,7 +204,7 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="Jfm-7y-YZx">
-                                <rect key="frame" x="0.0" y="64" width="375" height="603"/>
+                                <rect key="frame" x="0.0" y="20" width="375" height="647"/>
                             </imageView>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
