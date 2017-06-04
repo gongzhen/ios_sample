@@ -18,7 +18,7 @@
 		06BC05D51EE29EC8000B5442 /* TableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 06BC05D41EE29EC8000B5442 /* TableViewCell.swift */; };
 		06BC05D91EE2A5C0000B5442 /* TickLabel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 06BC05D81EE2A5C0000B5442 /* TickLabel.swift */; };
 		06BC05DB1EE2A5CB000B5442 /* CrossLabel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 06BC05DA1EE2A5CB000B5442 /* CrossLabel.swift */; };
-		06BC05DD1EE2A5F4000B5442 /* StrikeThroughTextLabel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 06BC05DC1EE2A5F4000B5442 /* StrikeThroughTextLabel.swift */; };
+		06BC05DD1EE2A5F4000B5442 /* StrikeThroughTextField.swift in Sources */ = {isa = PBXBuildFile; fileRef = 06BC05DC1EE2A5F4000B5442 /* StrikeThroughTextField.swift */; };
 		06BC05DF1EE2A6CA000B5442 /* BaseLabel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 06BC05DE1EE2A6CA000B5442 /* BaseLabel.swift */; };
 		06BC05E21EE2AA8D000B5442 /* LayoutConstant.swift in Sources */ = {isa = PBXBuildFile; fileRef = 06BC05E11EE2AA8D000B5442 /* LayoutConstant.swift */; };
 		06BC05E51EE31469000B5442 /* BaseGradientLayerLayer.swift in Sources */ = {isa = PBXBuildFile; fileRef = 06BC05E41EE31469000B5442 /* BaseGradientLayerLayer.swift */; };
@@ -63,7 +63,7 @@
 		06BC05D41EE29EC8000B5442 /* TableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TableViewCell.swift; sourceTree = "<group>"; };
 		06BC05D81EE2A5C0000B5442 /* TickLabel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TickLabel.swift; sourceTree = "<group>"; };
 		06BC05DA1EE2A5CB000B5442 /* CrossLabel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CrossLabel.swift; sourceTree = "<group>"; };
-		06BC05DC1EE2A5F4000B5442 /* StrikeThroughTextLabel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = StrikeThroughTextLabel.swift; sourceTree = "<group>"; };
+		06BC05DC1EE2A5F4000B5442 /* StrikeThroughTextField.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = StrikeThroughTextField.swift; sourceTree = "<group>"; };
 		06BC05DE1EE2A6CA000B5442 /* BaseLabel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BaseLabel.swift; sourceTree = "<group>"; };
 		06BC05E11EE2AA8D000B5442 /* LayoutConstant.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LayoutConstant.swift; sourceTree = "<group>"; };
 		06BC05E41EE31469000B5442 /* BaseGradientLayerLayer.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BaseGradientLayerLayer.swift; sourceTree = "<group>"; };
@@ -180,6 +180,7 @@
 		06BC05D31EE29EAB000B5442 /* Elements */ = {
 			isa = PBXGroup;
 			children = (
+				06BC06031EE48B2B000B5442 /* textfields */,
 				06BC05EA1EE3389D000B5442 /* Protocols */,
 				06BC05E31EE31452000B5442 /* Layers */,
 				06BC05D71EE2A591000B5442 /* Labels */,
@@ -202,7 +203,6 @@
 				06BC05D81EE2A5C0000B5442 /* TickLabel.swift */,
 				06BC05DE1EE2A6CA000B5442 /* BaseLabel.swift */,
 				06BC05DA1EE2A5CB000B5442 /* CrossLabel.swift */,
-				06BC05DC1EE2A5F4000B5442 /* StrikeThroughTextLabel.swift */,
 			);
 			name = Labels;
 			sourceTree = "<group>";
@@ -231,6 +231,14 @@
 				06BC05EB1EE33A7D000B5442 /* TableViewCellDelegate.swift */,
 			);
 			name = Protocols;
+			sourceTree = "<group>";
+		};
+		06BC06031EE48B2B000B5442 /* textfields */ = {
+			isa = PBXGroup;
+			children = (
+				06BC05DC1EE2A5F4000B5442 /* StrikeThroughTextField.swift */,
+			);
+			name = textfields;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -373,7 +381,7 @@
 				06BC05E51EE31469000B5442 /* BaseGradientLayerLayer.swift in Sources */,
 				06BC05A31EE29961000B5442 /* ViewController.swift in Sources */,
 				06BC05E91EE31C57000B5442 /* BaseLayer.swift in Sources */,
-				06BC05DD1EE2A5F4000B5442 /* StrikeThroughTextLabel.swift in Sources */,
+				06BC05DD1EE2A5F4000B5442 /* StrikeThroughTextField.swift in Sources */,
 				06BC06021EE3B245000B5442 /* Macros.swift in Sources */,
 				06BC05DB1EE2A5CB000B5442 /* CrossLabel.swift in Sources */,
 				06BC05D91EE2A5C0000B5442 /* TickLabel.swift in Sources */,
@@ -634,6 +642,7 @@
 				06BC05C71EE29961000B5442 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		06BC05C81EE29961000B5442 /* Build configuration list for PBXNativeTarget "UIGestureRecognizerAppTests" */ = {
 			isa = XCConfigurationList;
@@ -642,6 +651,7 @@
 				06BC05CA1EE29961000B5442 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		06BC05CB1EE29961000B5442 /* Build configuration list for PBXNativeTarget "UIGestureRecognizerAppUITests" */ = {
 			isa = XCConfigurationList;
@@ -650,6 +660,7 @@
 				06BC05CD1EE29961000B5442 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};

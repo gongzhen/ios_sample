@@ -14,4 +14,5 @@ struct LayoutConstant {
     static let kLabelLeftMargin: CGFloat = 15.0
     static let kUICuesMargin: CGFloat = 10.0
     static let kUICuesWidth: CGFloat = 50.0
+    static let kRowHeight: CGFloat = 50.0
 }

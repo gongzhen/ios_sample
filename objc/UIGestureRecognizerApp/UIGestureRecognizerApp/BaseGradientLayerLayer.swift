@@ -17,5 +17,9 @@ class BaseGradientLayerLayer: CAGradientLayer {
     override init() {
         super.init()
     }
+    
+    override init(layer: Any) {
+        super.init(layer: layer)
+    }
 
 }

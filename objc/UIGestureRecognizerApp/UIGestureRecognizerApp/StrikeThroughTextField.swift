@@ -1,5 +1,5 @@
 //
-//  StrikeThroughTextLabel.swift
+//  StrikeThroughTextField.swift
 //  UIGestureRecognizerApp
 //
 //  Created by zhen gong on 6/3/17.
@@ -8,7 +8,7 @@
 
 import UIKit
 
-class StrikeThroughTextLabel: UILabel {
+class StrikeThroughTextField: UITextField {
     
     var strikeThroughLayer: CALayer
     
@@ -44,7 +44,6 @@ class StrikeThroughTextLabel: UILabel {
     
     private func _setup() {
         self.textColor = UIColor.white
-        self.font = UIFont.boldSystemFont(ofSize: 16)
         self.backgroundColor = UIColor.clear
     }
     
@@ -54,7 +53,7 @@ class StrikeThroughTextLabel: UILabel {
     }
     
     fileprivate func _resizeStrikeThrough() {
-        let textSize = text!.size(attributes: [NSFontAttributeName:font])
+        let textSize = text!.size(attributes: [NSFontAttributeName:UIFont.boldSystemFont(ofSize: 16)])
         strikeThroughLayer.frame = CGRect(x: 0,
                                           y: bounds.size.height/2,
                                           width: textSize.width,

@@ -19,6 +19,11 @@ class GradientLayer: BaseGradientLayerLayer {
         fatalError("init(coder:) has not been implemented")
     }
     
+    override init(layer: Any) {
+        super.init(layer: layer)
+        _setup()
+    }
+    
     fileprivate func _setup() {
         let color1 = UIColor(white: 1.0, alpha: 0.2).cgColor as CGColor
         let color2 = UIColor(white: 1.0, alpha: 0.1).cgColor as CGColor
