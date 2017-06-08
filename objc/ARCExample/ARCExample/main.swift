@@ -7,7 +7,9 @@
 //
 
 import Foundation
+
 // weak reference
+
 class Person {
     let name: String
     init(name:String) {self.name = name}
@@ -75,7 +77,7 @@ don = nil
 class Country {
     let name:String
     var capitalCity:City!
-    init(name:String, country:Country) {
+    init(name:String, capitalName:String) {
         self.name = name
         self.capitalCity = City(name: capitalName, country: self)
     }
@@ -91,7 +93,49 @@ class City {
     }
 }
 
-var country = Country(name: "Canada", country: "Ottawa")
+var country = Country(name: "Canada", capitalName: "Ottawa")
 
 print("Hello, World!")
+
+// weak delegate
+// https://krakendev.io/blog/weak-and-unowned-references-in-swift
+
+class Jason: TrapStoneDelegate{
+    // CIA holds a strong reference to Jason in its agent property
+    let agent = CIA()
+    init() {
+        agent.delegate = self
+    }
+    
+    deinit {
+        print("Jason is being deinitialized")
+    }
+    
+    func startTrapstone() {
+        print("jason start trap stone")
+    }
+}
+
+// class type protocol for reference semantics rather than value semantics.
+protocol TrapStoneDelegate: class {
+    func startTrapstone()
+}
+
+class CIA {
+    // Non class type protocols cannot be marked as weak
+    weak var delegate: TrapStoneDelegate?
+    
+    deinit {
+        print("CIA is being deinitialized")
+    }
+    
+    func takeOutJason() {
+        delegate?.startTrapstone()
+    }
+}
+
+var jason = Jason()
+var cia = CIA()
+jason.startTrapstone()
+print(jason.agent)
 

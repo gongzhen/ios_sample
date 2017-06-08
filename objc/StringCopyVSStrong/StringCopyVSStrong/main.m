@@ -29,9 +29,27 @@ void (^calculateSimpleOperationTime)(NSString *, SimpleOperation) = ^(NSString* 
 @property (nonatomic, strong) NSString *strongString;
 @property (nonatomic, copy) NSString *copyedString;
 
+@property (copy, nonatomic) NSString *nameCopy;
+@property (strong, nonatomic) NSString *nameStrong;
+
 @end
 
 @implementation Solution
+
+- (id)init {
+    if(self = [super init]) {
+    
+    }
+    return self;
+}
+
+- (id)initWithCopyname:(NSString *)copyName strongName:(NSString *) strongName{
+    if (self = [super init]) {
+        _nameCopy = copyName;
+        _nameStrong = strongName;
+    }
+    return self;
+}
 
 -(void)viewDidLoad {
     for(long i = 0; i < 1000000000; i++) {
@@ -76,6 +94,10 @@ void (^calculateSimpleOperationTime)(NSString *, SimpleOperation) = ^(NSString* 
     NSLog(@"copy   string: %p, %p, %@", _copyedString, &_copyedString, _copyedString);
 }
 
+- (void)testMutableStringChanged {
+    
+}
+
 @end
 
 #import <Foundation/Foundation.h>
@@ -84,10 +106,31 @@ int main(int argc, const char * argv[]) {
     @autoreleasepool {
         // insert code here...
         NSLog(@"Hello, World!");
-        Solution* obj = [[Solution alloc] init];
+//        Solution* obj = [[Solution alloc] init];
 //        [obj viewDidLoad];
 //        [obj testImmutableStringCopy];
-        [obj testMutableStringMutableCopy];
+//        [obj testMutableStringMutableCopy];
+        
+        Solution *obj = [[Solution alloc] initWithCopyname:@"copyZhen" strongName:@"strongGong"];
+        // https://stackoverflow.com/questions/27468595/objective-c-address-of-property-expression
+        NSString* copyPtr = obj.nameCopy;
+        NSString* strongPtr = obj.nameStrong;
+
+        NSLog(@"copyStr:%@:[%p]", obj.nameCopy, &copyPtr);
+        NSLog(@"strongStr:%@:[%p]", obj.nameStrong, &strongPtr);
+        // NSString* immutableStr = @"immutableStr";
+        NSMutableString *immutableStr = [NSMutableString stringWithFormat:@"mutableStr"];
+        NSLog(@"immutableStr:%@:[%p]", immutableStr, &immutableStr);
+        obj.nameCopy = immutableStr;
+        obj.nameStrong = immutableStr;
+        NSLog(@"copyStr:%@:[%p]", obj.nameCopy, &copyPtr);
+        NSLog(@"strongStr:%@:[%p]", obj.nameStrong, &strongPtr);
+        
+        [immutableStr setString:@"immutableString changed"];
+        NSLog(@"immutableStr:%@:[%p]", immutableStr, &immutableStr);
+        NSLog(@"copyStr:%@:[%p] will not be changed with immutableString", obj.nameCopy, &copyPtr);
+        NSLog(@"strongStr:%p:[%p] is changed with immutableString", obj.nameStrong, &strongPtr);
+        
     }
     return 0;
 }

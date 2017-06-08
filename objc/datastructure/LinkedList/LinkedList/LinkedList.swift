@@ -38,13 +38,20 @@ public final class LinkedList<T> {
     
     public var last:Node? {
         if var node = head {
-//            while case let next? = node.next {
+            // version 1
+            while case let next? = node.next {
+                node = next
+            }
+
+            // version 2
+//            while let next = node.next {
 //                node = next
 //            }
             
-            while node.next != nil {
-                node = node.next!
-            }
+            // version 3
+//            while node.next != nil {
+//                node = node.next!
+//            }
             return node
         } else {
             return nil
@@ -112,7 +119,7 @@ public final class LinkedList<T> {
     }
     
     // By Chris
-    private func nodesBeforeAndAfter(index: Int) -> (Node?, Node?) {
+    private func nodesBeforeAndAfterByChris(index: Int) -> (Node?, Node?) {
         assert(index >= 0)
         let i = index
         var prev:Node?
@@ -128,6 +135,22 @@ public final class LinkedList<T> {
         } else {
             next = self.node(atIndex: i)
         }
+        return (prev, next)
+    }
+    
+    private func nodesBeforeAndAfter(index:Int) -> (Node?, Node?) {
+        assert(index >= 0)
+        var i = index
+        var next = head
+        var prev:Node?
+        
+        // iterate to the end.
+        while next != nil && i > 0 {
+            i -= 1
+            prev = next
+            next = next!.next
+        }
+        assert(i == 0)
         return (prev, next)
     }
     
