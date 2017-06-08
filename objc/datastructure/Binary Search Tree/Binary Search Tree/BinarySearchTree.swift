@@ -4,17 +4,19 @@
 //
 //  Created by zhen gong on 6/7/17.
 //  Copyright © 2017 zhen gong. All rights reserved.
-//
+//  Resource: http://interactivepython.org/runestone/static/pythonds/Trees/SearchTreeImplementation.html#fig-bstdel2
+//  https://stackoverflow.com/questions/13373854/binary-search-tree-java-implementation
+//  http://algorithms.tutorialhorizon.com/binary-search-tree-complete-implementation/
 
 import Foundation
 
 public class BinarySearchTree<T: Comparable> {
     
     public class BinarySearchTreeNode<T> {
-        var value: T
-        var left:BinarySearchTreeNode?
-        var right:BinarySearchTreeNode?
-        var parent:BinarySearchTreeNode?
+        fileprivate var value: T
+        fileprivate var left:BinarySearchTreeNode?
+        fileprivate var right:BinarySearchTreeNode?
+        fileprivate var parent:BinarySearchTreeNode?
         
         public init(value: T, left:BinarySearchTreeNode?, right:BinarySearchTreeNode?, parent:BinarySearchTreeNode?) {
             self.value = value
@@ -27,26 +29,8 @@ public class BinarySearchTree<T: Comparable> {
             return parent
         }
         
-        public func reconnectParentToNode(replacement:BinarySearchTreeNode?) {
-            if let parent = self.parent {
-                if self.isLeftChild {
-                    parent.left = replacement
-                } else if self.isRightChild {
-                    parent.right = replacement
-//                    print("inside reconnectParentToNode self.value :", terminator:"")
-//                    print(self.value)
-//                    print("inside reconnectParentToNode self.parent.value :", terminator:"")
-//                    print(self.parent?.value ?? "node no value")
-//                    print("inside reconnectParentToNode self.parent.right?.value :", terminator:"")
-//                    print(self.parent?.right?.value ?? "node no value")// no value
-//                    print("inside reconnectParentToNode replacement node :", terminator:"")
-//                    print(replacement?.value ?? "replacement is nill") //
-//                    print("inside reconnectParentToNode self.value :", terminator:"")
-//                    print(self.value)
-                    
-                }
-            }
-            replacement?.parent = parent
+        public func getValue() -> T {
+            return value
         }
         
         public var isLeftChild:Bool {
@@ -55,6 +39,18 @@ public class BinarySearchTree<T: Comparable> {
         
         public var isRightChild: Bool {
             return self.parent?.right === self
+        }
+        
+        // set self's parent's left or right point to replacement node.
+        public func reconnectParentToNode(replacement:BinarySearchTreeNode?) {
+            if let parent = self.parent {
+                if self.isLeftChild {
+                    parent.left = replacement
+                } else if self.isRightChild {
+                    parent.right = replacement
+                }
+            }
+            replacement?.parent = parent
         }
     }
 
@@ -79,6 +75,63 @@ extension BinarySearchTree {
         self.root = self.insertRecursive(node: &root, value: value, parent: nil)
     }
     
+    private func insertRecursive(node: inout Node?, value:T, parent: Node?) -> Node? {
+        if let node = node {
+            if value <= node.value {
+                node.left = insertRecursive(node: &(node.left), value: value, parent:node)
+            } else {
+                node.right = insertRecursive(node:&(node.right), value: value, parent:node)
+            }
+        } else {
+            node = Node(value: value, left: nil, right: nil, parent: parent)
+        }
+        return node
+    }
+
+}
+
+extension BinarySearchTree {
+    
+    // MARK: - Deleting items
+    @discardableResult public func remove(node:Node?) -> Node? {
+        let replacement:Node?
+        
+        if let right = node?.right {
+            replacement = minimum(node: right)
+        } else if let left = node?.left {
+            replacement = maximum(node: left)
+        } else {
+            replacement = nil
+        }
+        
+        // recusivly remove replacement.
+        if let replacement = replacement {
+            remove(node: replacement)
+        }
+        
+        replacement?.right = node?.right
+        replacement?.left = node?.left
+        node?.right?.parent = replacement
+        node?.left?.parent = replacement
+        
+        // remove node
+        node?.reconnectParentToNode(replacement: replacement)
+        
+        if node?.parent == nil {
+            // node is root
+            self.root = replacement
+        }
+        node?.parent = nil
+        node?.left = nil
+        node?.right = nil
+        return replacement
+    }
+    
+}
+
+// MARK: - Searching 
+
+extension BinarySearchTree {
     // MARK: - Searching item
     
     public func search(value: T) -> Node? {
@@ -97,59 +150,12 @@ extension BinarySearchTree {
         }
         return nil
     }
-    
-    @discardableResult public func remove(node:Node?) -> Node? {
-        let replacement:Node?
-        
-        if let right = node?.right {
-            replacement = minimum(node: right)
-        } else if let left = node?.left {
-            replacement = maximum(node: left)
-        } else {
-            replacement = nil
-        }
-        
-        if let replacement = replacement {
-            remove(node: replacement)
-        }
+}
 
-//        print("reconnectParentToNode self.parent :", terminator:"")
-//        print(parent.value)
-//        print("reconnectParentToNode parent.right = node self.parent.right :", terminator:"")
-//        print(parent.right?.value ?? "parent no right value")
-        
-        replacement?.right = node?.right
-        replacement?.left = node?.left
-        node?.right?.parent = replacement
-        node?.left?.parent = replacement
-        
-        // remove node
-        // repaced by replacement
-        
-        print("before reconnectParentToNode node :", terminator:"")
-        print(node?.value ?? "node no value")
-        print("before reconnectParentToNode node :", terminator:"")
-        print(node?.value ?? "node no value")
-        
-        node?.reconnectParentToNode(replacement: replacement)
-        
-        print("after reconnectParentToNode node :", terminator:"")
-        print(node?.value ?? "node no value")
-        print("after reconnectParentToNode node :", terminator:"")
-        print(node?.value ?? "node no value")
-        
-        if node?.parent == nil {
-            // node is root
-            self.root = replacement
-        }
-        node?.parent = nil
-        node?.left = nil
-        node?.right = nil
-        return replacement
-    }
+extension BinarySearchTree {
     
     
-    private func minimum(node:Node?) -> Node? {
+    public func minimum(node:Node?) -> Node? {
         if var node = node {
             while case let left? = node.left {
                 node = left
@@ -160,7 +166,7 @@ extension BinarySearchTree {
         }
     }
     
-    private func maximum(node: Node?) -> Node? {
+    public func maximum(node: Node?) -> Node? {
         if var node = node {
             while case let right? = node.right {
                 node = right
@@ -169,21 +175,6 @@ extension BinarySearchTree {
         } else {
             return nil
         }
-    }
-    
-
-    
-    private func insertRecursive(node: inout Node?, value:T, parent: Node?) -> Node? {
-        if let node = node {
-            if value <= node.value {
-                node.left = insertRecursive(node: &(node.left), value: value, parent:node)
-            } else {
-                node.right = insertRecursive(node:&(node.right), value: value, parent:node)
-            }
-        } else {
-            node = Node(value: value, left: nil, right: nil, parent: parent)
-        }
-        return node
     }
     
     // MARK: - Print tree
@@ -201,12 +192,32 @@ extension BinarySearchTree {
                         queue.append(left)
                     }
                     if let right = node.right {
-                       queue.append(right)
+                        queue.append(right)
                     }
                 }
                 print("\n")
             }
         }
     }
+}
 
+extension BinarySearchTree: CustomDebugStringConvertible {
+    
+    public var debugDescription:String {
+        var s = ""
+        if let left = self.root?.left {
+            s += "\(left.getValue()) <-"
+        }
+        
+        if let root = self.root {
+            s += "\(root.getValue())"
+        } else {
+            s = "no root"
+        }
+        
+        if let right = self.root?.right {
+            s += "-> \(right.getValue()) <-"
+        }
+        return s
+    }
 }

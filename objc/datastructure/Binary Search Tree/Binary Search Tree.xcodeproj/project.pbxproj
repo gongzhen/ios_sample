@@ -9,6 +9,8 @@
 /* Begin PBXBuildFile section */
 		06E6EF4A1EE885A00036069E /* main.swift in Sources */ = {isa = PBXBuildFile; fileRef = 06E6EF491EE885A00036069E /* main.swift */; };
 		06E6EF511EE892670036069E /* BinarySearchTree.swift in Sources */ = {isa = PBXBuildFile; fileRef = 06E6EF501EE892670036069E /* BinarySearchTree.swift */; };
+		06E6EF5D1EEA0A010036069E /* Binary_Search_Tree_Unit_Test.swift in Sources */ = {isa = PBXBuildFile; fileRef = 06E6EF5C1EEA0A010036069E /* Binary_Search_Tree_Unit_Test.swift */; };
+		06E6EF641EEA0A490036069E /* BinarySearchTree.swift in Sources */ = {isa = PBXBuildFile; fileRef = 06E6EF501EE892670036069E /* BinarySearchTree.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXCopyFilesBuildPhase section */
@@ -27,10 +29,20 @@
 		06E6EF461EE8859F0036069E /* Binary Search Tree */ = {isa = PBXFileReference; explicitFileType = "compiled.mach-o.executable"; includeInIndex = 0; path = "Binary Search Tree"; sourceTree = BUILT_PRODUCTS_DIR; };
 		06E6EF491EE885A00036069E /* main.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = main.swift; sourceTree = "<group>"; };
 		06E6EF501EE892670036069E /* BinarySearchTree.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BinarySearchTree.swift; sourceTree = "<group>"; };
+		06E6EF5A1EEA0A010036069E /* Binary Search Tree Unit Test.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "Binary Search Tree Unit Test.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
+		06E6EF5C1EEA0A010036069E /* Binary_Search_Tree_Unit_Test.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Binary_Search_Tree_Unit_Test.swift; sourceTree = "<group>"; };
+		06E6EF5E1EEA0A010036069E /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
 		06E6EF431EE8859F0036069E /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		06E6EF571EEA0A010036069E /* Frameworks */ = {
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
@@ -44,6 +56,7 @@
 			isa = PBXGroup;
 			children = (
 				06E6EF481EE8859F0036069E /* Binary Search Tree */,
+				06E6EF5B1EEA0A010036069E /* Binary Search Tree Unit Test */,
 				06E6EF471EE8859F0036069E /* Products */,
 			);
 			sourceTree = "<group>";
@@ -52,6 +65,7 @@
 			isa = PBXGroup;
 			children = (
 				06E6EF461EE8859F0036069E /* Binary Search Tree */,
+				06E6EF5A1EEA0A010036069E /* Binary Search Tree Unit Test.xctest */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -63,6 +77,15 @@
 				06E6EF501EE892670036069E /* BinarySearchTree.swift */,
 			);
 			path = "Binary Search Tree";
+			sourceTree = "<group>";
+		};
+		06E6EF5B1EEA0A010036069E /* Binary Search Tree Unit Test */ = {
+			isa = PBXGroup;
+			children = (
+				06E6EF5C1EEA0A010036069E /* Binary_Search_Tree_Unit_Test.swift */,
+				06E6EF5E1EEA0A010036069E /* Info.plist */,
+			);
+			path = "Binary Search Tree Unit Test";
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -85,6 +108,23 @@
 			productReference = 06E6EF461EE8859F0036069E /* Binary Search Tree */;
 			productType = "com.apple.product-type.tool";
 		};
+		06E6EF591EEA0A010036069E /* Binary Search Tree Unit Test */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 06E6EF5F1EEA0A010036069E /* Build configuration list for PBXNativeTarget "Binary Search Tree Unit Test" */;
+			buildPhases = (
+				06E6EF561EEA0A010036069E /* Sources */,
+				06E6EF571EEA0A010036069E /* Frameworks */,
+				06E6EF581EEA0A010036069E /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = "Binary Search Tree Unit Test";
+			productName = "Binary Search Tree Unit Test";
+			productReference = 06E6EF5A1EEA0A010036069E /* Binary Search Tree Unit Test.xctest */;
+			productType = "com.apple.product-type.bundle.unit-test";
+		};
 /* End PBXNativeTarget section */
 
 /* Begin PBXProject section */
@@ -96,6 +136,11 @@
 				ORGANIZATIONNAME = "zhen gong";
 				TargetAttributes = {
 					06E6EF451EE8859F0036069E = {
+						CreatedOnToolsVersion = 8.3.2;
+						DevelopmentTeam = 78R59ZRT89;
+						ProvisioningStyle = Automatic;
+					};
+					06E6EF591EEA0A010036069E = {
 						CreatedOnToolsVersion = 8.3.2;
 						DevelopmentTeam = 78R59ZRT89;
 						ProvisioningStyle = Automatic;
@@ -115,9 +160,20 @@
 			projectRoot = "";
 			targets = (
 				06E6EF451EE8859F0036069E /* Binary Search Tree */,
+				06E6EF591EEA0A010036069E /* Binary Search Tree Unit Test */,
 			);
 		};
 /* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		06E6EF581EEA0A010036069E /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
 		06E6EF421EE8859F0036069E /* Sources */ = {
@@ -126,6 +182,15 @@
 			files = (
 				06E6EF511EE892670036069E /* BinarySearchTree.swift in Sources */,
 				06E6EF4A1EE885A00036069E /* main.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		06E6EF561EEA0A010036069E /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				06E6EF641EEA0A490036069E /* BinarySearchTree.swift in Sources */,
+				06E6EF5D1EEA0A010036069E /* Binary_Search_Tree_Unit_Test.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -240,6 +305,34 @@
 			};
 			name = Release;
 		};
+		06E6EF601EEA0A010036069E /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				COMBINE_HIDPI_IMAGES = YES;
+				DEVELOPMENT_TEAM = 78R59ZRT89;
+				INFOPLIST_FILE = "Binary Search Tree Unit Test/Info.plist";
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/../Frameworks @loader_path/../Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = "com.caknow.gongzhen.Binary-Search-Tree-Unit-Test";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = DEBUG;
+				SWIFT_VERSION = 3.0;
+			};
+			name = Debug;
+		};
+		06E6EF611EEA0A010036069E /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				COMBINE_HIDPI_IMAGES = YES;
+				DEVELOPMENT_TEAM = 78R59ZRT89;
+				INFOPLIST_FILE = "Binary Search Tree Unit Test/Info.plist";
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/../Frameworks @loader_path/../Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = "com.caknow.gongzhen.Binary-Search-Tree-Unit-Test";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_OPTIMIZATION_LEVEL = "-Owholemodule";
+				SWIFT_VERSION = 3.0;
+			};
+			name = Release;
+		};
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
@@ -257,6 +350,14 @@
 			buildConfigurations = (
 				06E6EF4E1EE885A00036069E /* Debug */,
 				06E6EF4F1EE885A00036069E /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+		};
+		06E6EF5F1EEA0A010036069E /* Build configuration list for PBXNativeTarget "Binary Search Tree Unit Test" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				06E6EF601EEA0A010036069E /* Debug */,
+				06E6EF611EEA0A010036069E /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 		};
