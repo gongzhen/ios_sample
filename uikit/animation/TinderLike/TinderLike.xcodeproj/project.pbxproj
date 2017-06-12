@@ -247,7 +247,7 @@
 				TargetAttributes = {
 					06F733E61ED72A59005C7BC7 = {
 						CreatedOnToolsVersion = 8.3.2;
-						DevelopmentTeam = J9PKQ8Y5Y3;
+						DevelopmentTeam = 78R59ZRT89;
 						ProvisioningStyle = Automatic;
 					};
 					06F733FF1ED72A5A005C7BC7 = {
@@ -473,8 +473,9 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
-				DEVELOPMENT_TEAM = J9PKQ8Y5Y3;
+				DEVELOPMENT_TEAM = 78R59ZRT89;
 				INFOPLIST_FILE = TinderLike/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 10.1;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.caknow.gongzhen.TinderLike;
 				PRODUCT_NAME = "$(TARGET_NAME)";
@@ -485,8 +486,9 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
-				DEVELOPMENT_TEAM = J9PKQ8Y5Y3;
+				DEVELOPMENT_TEAM = 78R59ZRT89;
 				INFOPLIST_FILE = TinderLike/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 10.1;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.caknow.gongzhen.TinderLike;
 				PRODUCT_NAME = "$(TARGET_NAME)";
@@ -562,6 +564,7 @@
 				06F734161ED72A5A005C7BC7 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		06F734171ED72A5A005C7BC7 /* Build configuration list for PBXNativeTarget "TinderLikeTests" */ = {
 			isa = XCConfigurationList;
@@ -570,6 +573,7 @@
 				06F734191ED72A5A005C7BC7 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		06F7341A1ED72A5A005C7BC7 /* Build configuration list for PBXNativeTarget "TinderLikeUITests" */ = {
 			isa = XCConfigurationList;
@@ -578,6 +582,7 @@
 				06F7341C1ED72A5A005C7BC7 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};
