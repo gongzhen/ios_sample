@@ -4,7 +4,8 @@
 //
 //  Created by gongzhen on 11/28/16.
 //  Copyright © 2016 gongzhen. All rights reserved.
-//
+//  http://www.thomashanning.com/the-most-common-mistake-in-using-uitableview/
+//  http://techqa.info/programming/question/23599161/Strange-Reorder-Cell-animation-glitch
 
 #import "ViewController.h"
 

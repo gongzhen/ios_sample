@@ -48,7 +48,7 @@ class ViewController: UIViewController {
 // MARK: KolodaViewDelegate
 
 extension ViewController: KolodaViewDelegate {
-    func kolodaDidRunOutOfCards(_ koloda: KolodaView) {
+    func kolodaDidRunOutOfCards(_ koloda: KolodaView) { /// Flipping cards will call this method.
         let position = kolodaView.currentCardIndex
         for i in 1...4 {
             dataSource.append(UIImage(named: "Card_like_\(i)")!)

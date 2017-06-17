@@ -60,7 +60,6 @@
     [self.textImageView addBottomConstraintToView:self.textImageView.superview relation:NSLayoutRelationEqual constant:0.f];
     [self.textImageView addLeftConstraintToView:self.textField attribute:NSLayoutAttributeRight relation:NSLayoutRelationEqual constant:0.f];
     [self.textImageView addTrailingConstraintToView:self.textImageView.superview relation:NSLayoutRelationEqual constant:0.f];
-    
     [self.textField addTopConstraintToView:self.textField.superview relation:NSLayoutRelationEqual constant:0.f];
     [self.textField addLeftConstraintToView:self.textField.superview relation:NSLayoutRelationEqual constant:0.f];
     [self.textField addBottomConstraintToView:self.textField.superview relation:NSLayoutRelationEqual constant:0.f];

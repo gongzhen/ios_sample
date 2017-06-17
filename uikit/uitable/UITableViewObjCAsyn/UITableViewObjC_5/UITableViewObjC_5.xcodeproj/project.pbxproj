@@ -1329,7 +1329,7 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
-				GCC_PREFIX_HEADER = /Users/gongzhen/Projects/ios/github_gz/ios_sample/uikit/uitable/UITableViewObjCAsyn/UITableViewObjC_5/UITableViewObjC/PrefixHeader.pch;
+				GCC_PREFIX_HEADER = /Users/gongzhen/Project/mobile/iOS/ios_sample/uikit/uitable/UITableViewObjCAsyn/UITableViewObjC_5/UITableViewObjC/PrefixHeader.pch;
 				INFOPLIST_FILE = UITableViewObjC/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.gongzhen.ObjCApp.UITableViewObjC;
@@ -1342,7 +1342,7 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
-				GCC_PREFIX_HEADER = /Users/gongzhen/Projects/ios/github_gz/ios_sample/uikit/uitable/UITableViewObjCAsyn/UITableViewObjC_5/UITableViewObjC/PrefixHeader.pch;
+				GCC_PREFIX_HEADER = /Users/gongzhen/Project/mobile/iOS/ios_sample/uikit/uitable/UITableViewObjCAsyn/UITableViewObjC_5/UITableViewObjC/PrefixHeader.pch;
 				INFOPLIST_FILE = UITableViewObjC/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.gongzhen.ObjCApp.UITableViewObjC;

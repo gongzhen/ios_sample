@@ -49,34 +49,34 @@
     }
     return self;
 }
-
-- (id<SDWebImageOperation>)downloadImageWithURL:(NSURL *)url
-                                        options:(SDWebImageOptions)options
-                                       progress:(SDWebImageDownloaderProgressBlock)progressBlock
-                                      completed:(SDWebImageCompletionWithFinishedBlock)completedBlock {
-    // NSString convert to NSURL
-    if ([url isKindOfClass:NSString.class]) {
-        url = [NSURL URLWithString:(NSString *)url];
-    }
-    
-    if (![url isKindOfClass:NSURL.class]) {
-        url = nil;
-    }
-    
-    __block SDWebImageCombinedOperation *operation = [SDWebImageCombinedOperation new];
-    __weak SDWebImageCombinedOperation *weakOperation = operation;
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-
-}
+//
+//- (id<SDWebImageOperation>)downloadImageWithURL:(NSURL *)url
+//                                        options:(SDWebImageOptions)options
+//                                       progress:(SDWebImageDownloaderProgressBlock)progressBlock
+//                                      completed:(SDWebImageCompletionWithFinishedBlock)completedBlock {
+//    // NSString convert to NSURL
+//    if ([url isKindOfClass:NSString.class]) {
+//        url = [NSURL URLWithString:(NSString *)url];
+//    }
+//    
+//    if (![url isKindOfClass:NSURL.class]) {
+//        url = nil;
+//    }
+//    
+//    __block SDWebImageCombinedOperation *operation = [SDWebImageCombinedOperation new];
+//    __weak SDWebImageCombinedOperation *weakOperation = operation;
+//    
+//    
+//    
+//    
+//    
+//    
+//    
+//    
+//    
+//    
+//
+//}
 
 @end
 

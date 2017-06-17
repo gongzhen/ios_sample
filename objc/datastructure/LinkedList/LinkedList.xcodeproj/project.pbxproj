@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		062FD4E21EEFD9D5000D6866 /* LinkedListSequence.swift in Sources */ = {isa = PBXBuildFile; fileRef = 062FD4E11EEFD9D5000D6866 /* LinkedListSequence.swift */; };
 		06BC063B1EE4E467000B5442 /* main.swift in Sources */ = {isa = PBXBuildFile; fileRef = 06BC063A1EE4E467000B5442 /* main.swift */; };
 		06BC06421EE4E472000B5442 /* LinkedList.swift in Sources */ = {isa = PBXBuildFile; fileRef = 06BC06411EE4E472000B5442 /* LinkedList.swift */; };
 		06BC064A1EE5AB75000B5442 /* LinkedListUnitTest.swift in Sources */ = {isa = PBXBuildFile; fileRef = 06BC06491EE5AB75000B5442 /* LinkedListUnitTest.swift */; };
@@ -26,6 +27,7 @@
 /* End PBXCopyFilesBuildPhase section */
 
 /* Begin PBXFileReference section */
+		062FD4E11EEFD9D5000D6866 /* LinkedListSequence.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LinkedListSequence.swift; sourceTree = "<group>"; };
 		06BC06371EE4E467000B5442 /* LinkedList */ = {isa = PBXFileReference; explicitFileType = "compiled.mach-o.executable"; includeInIndex = 0; path = LinkedList; sourceTree = BUILT_PRODUCTS_DIR; };
 		06BC063A1EE4E467000B5442 /* main.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = main.swift; sourceTree = "<group>"; };
 		06BC06411EE4E472000B5442 /* LinkedList.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LinkedList.swift; sourceTree = "<group>"; };
@@ -75,6 +77,7 @@
 			children = (
 				06BC063A1EE4E467000B5442 /* main.swift */,
 				06BC06411EE4E472000B5442 /* LinkedList.swift */,
+				062FD4E11EEFD9D5000D6866 /* LinkedListSequence.swift */,
 			);
 			path = LinkedList;
 			sourceTree = "<group>";
@@ -181,6 +184,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				06BC06421EE4E472000B5442 /* LinkedList.swift in Sources */,
+				062FD4E21EEFD9D5000D6866 /* LinkedListSequence.swift in Sources */,
 				06BC063B1EE4E467000B5442 /* main.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -361,6 +365,7 @@
 				06BC064D1EE5AB75000B5442 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};
