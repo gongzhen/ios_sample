@@ -17,9 +17,13 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
         // Override point for customization after application launch.
         
         window = UIWindow(frame: UIScreen.main.bounds)
-        let photoViewController = PhotoViewController()
-        window?.rootViewController = UINavigationController(rootViewController: photoViewController)
-        window?.makeKeyAndVisible()        
+//        let photoViewController = PhotoViewController()
+//        window?.rootViewController = UINavigationController(rootViewController: photoViewController)
+        
+        let storyboardId = "Signup"
+        let vc = UIStoryboard(name: storyboardId, bundle: nil).instantiateInitialViewController()
+        window?.rootViewController = vc
+        window?.makeKeyAndVisible()
         return true
     }
 
@@ -45,6 +49,16 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
         // Called when the application is about to terminate. Save data if appropriate. See also applicationDidEnterBackground:.
     }
 
-
+    func application(_ app: UIApplication, open url: URL, options: [UIApplicationOpenURLOptionsKey : Any] = [:]) -> Bool{
+        if let scheme = url.scheme {
+            print(scheme)
+            if scheme == "flickrapp" {
+                NotificationCenter.default.post(name: NSNotification.Name(rawValue:"UserAuthCallbackNotification"), object: url, userInfo: nil)
+            }
+        }
+        
+        return true
+    }
+    
 }
 

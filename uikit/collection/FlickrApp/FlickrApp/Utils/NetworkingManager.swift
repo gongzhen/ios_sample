@@ -85,6 +85,11 @@ class NetworkingManager: NSObject {
 }
 
 extension NetworkingManager {
+    
+    func userAuthenticateCallbackURL(url:URL) {
+        
+    }
+    
 
     func displayImageFromFlickrByGetList(_ completionHandlerImageList:@escaping (_ result:[Picture]?, _ error: NSError?) -> Void) {
         let methodParameters = [
@@ -125,9 +130,17 @@ extension NetworkingManager {
             completionHandlerImageList(pictures, nil)
         }
     }
+    
+
+}
+
+enum HttpMethod{
+    case HttpMethodGET;
+    case HttpMethodPOST;
 }
 
 extension NetworkingManager {
+    
     struct Flickr {
         static let ApiScheme = "https"
         static let ApiHost = "api.flickr.com"
@@ -136,6 +149,7 @@ extension NetworkingManager {
     
     struct FlickrParameterKeys {
         static let APIKey = "api_key"
+        static let Secret = "secret"
         static let Method = "method"
         static let PerPage = "per_page"
         static let Format = "format"
@@ -145,6 +159,8 @@ extension NetworkingManager {
     
     struct FlickrParameterValues {
         static let APIKey = "6d0a75210d7fa6268d56f466540ea839"
+
+        static let Secret = "11be804d16b24bbd"
         static let Method = "flickr.interestingness.getList"
         static let PerPage = "99"
         static let Format = "json"

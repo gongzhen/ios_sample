@@ -1,0 +1,83 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="12120" systemVersion="16E195" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES" initialViewController="qCX-ms-OMZ">
+    <device id="retina4_7" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="12088"/>
+        <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--Signup View Controller-->
+        <scene sceneID="aa8-d1-KC8">
+            <objects>
+                <viewController storyboardIdentifier="SignUpLogin" id="qCX-ms-OMZ" customClass="SignupViewController" customModule="FlickrApp" customModuleProvider="target" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="mt9-Wy-oK2"/>
+                        <viewControllerLayoutGuide type="bottom" id="re9-KB-Ogk"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="zrc-Rw-FGV">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Mgu-j8-S31">
+                                <rect key="frame" x="68" y="344" width="242" height="41"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="24"/>
+                                <state key="normal" title="Button">
+                                    <color key="titleColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                </state>
+                                <connections>
+                                    <action selector="signUpAction:" destination="qCX-ms-OMZ" eventType="touchUpInside" id="LpK-11-8Jr"/>
+                                </connections>
+                            </button>
+                        </subviews>
+                        <color key="backgroundColor" red="0.35070900710000003" green="0.79530321839999996" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <constraints>
+                            <constraint firstAttribute="trailingMargin" secondItem="Mgu-j8-S31" secondAttribute="trailing" constant="49" id="5kH-EL-7QJ"/>
+                            <constraint firstItem="Mgu-j8-S31" firstAttribute="top" secondItem="mt9-Wy-oK2" secondAttribute="bottom" constant="324" id="NaO-Vh-QcV"/>
+                            <constraint firstItem="Mgu-j8-S31" firstAttribute="leading" secondItem="zrc-Rw-FGV" secondAttribute="leadingMargin" constant="52" id="iQy-aY-ywc"/>
+                            <constraint firstItem="re9-KB-Ogk" firstAttribute="top" secondItem="Mgu-j8-S31" secondAttribute="bottom" constant="282" id="pdR-Ir-daa"/>
+                        </constraints>
+                    </view>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="wRU-te-U2Y" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-103.2" y="139.880059970015"/>
+        </scene>
+        <!--Flickr Auth View Controller-->
+        <scene sceneID="ZTw-sv-QEY">
+            <objects>
+                <viewController storyboardIdentifier="TMDBAuthViewController" id="xMA-m1-aMo" customClass="FlickrAuthViewController" customModule="FlickrApp" customModuleProvider="target" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="aA6-l0-zsq"/>
+                        <viewControllerLayoutGuide type="bottom" id="5ip-VX-eTw"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="gpD-FL-HTc">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <webView contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="1Nv-UE-ZIj">
+                                <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                                <color key="backgroundColor" red="0.36078431370000003" green="0.38823529410000002" blue="0.4039215686" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                            </webView>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstItem="5ip-VX-eTw" firstAttribute="top" secondItem="1Nv-UE-ZIj" secondAttribute="bottom" id="NXh-Gv-Kc3"/>
+                            <constraint firstAttribute="trailing" secondItem="1Nv-UE-ZIj" secondAttribute="trailing" id="bJ0-1j-8ao"/>
+                            <constraint firstItem="1Nv-UE-ZIj" firstAttribute="leading" secondItem="gpD-FL-HTc" secondAttribute="leading" id="oJB-sP-NuT"/>
+                            <constraint firstItem="1Nv-UE-ZIj" firstAttribute="top" secondItem="gpD-FL-HTc" secondAttribute="top" id="zry-lr-JsR"/>
+                        </constraints>
+                    </view>
+                    <connections>
+                        <outlet property="webView" destination="1Nv-UE-ZIj" id="2WD-pa-0fp"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="XCM-WP-Y5O" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-103.2" y="834.33283358320841"/>
+        </scene>
+    </scenes>
+</document>

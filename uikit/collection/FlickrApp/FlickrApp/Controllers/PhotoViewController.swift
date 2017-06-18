@@ -23,7 +23,7 @@ class PhotoViewController: UIViewController {
         self.addElements()
         NetworkingManager.sharedInstance.displayImageFromFlickrByGetList { (pictures, error) in
             if let error = error {
-                print(error)
+                print(error.localizedDescription)
             } else if let pictures = pictures {
                 self.pictures = pictures
                 DispatchQueue.main.async {

@@ -14,8 +14,12 @@
 		062FD54A1EF1B147000D6866 /* FlickrAppUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 062FD5491EF1B147000D6866 /* FlickrAppUITests.swift */; };
 		0679BF1C1EF4B50600661D84 /* PhotoViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0679BF1B1EF4B50600661D84 /* PhotoViewController.swift */; };
 		0679BF1F1EF4B51000661D84 /* Picture.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0679BF1E1EF4B51000661D84 /* Picture.swift */; };
-		0679BF241EF4B51700661D84 /* Constants.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0679BF211EF4B51700661D84 /* Constants.swift */; };
 		0679BF251EF4B51700661D84 /* NetworkingManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0679BF221EF4B51700661D84 /* NetworkingManager.swift */; };
+		0679BF2A1EF5867300661D84 /* Signup.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 0679BF291EF5867300661D84 /* Signup.storyboard */; };
+		0679BF2C1EF5878300661D84 /* SignupViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0679BF2B1EF5878300661D84 /* SignupViewController.swift */; };
+		0679BF321EF60BA700661D84 /* FKOFHMACSha1Base64.m in Sources */ = {isa = PBXBuildFile; fileRef = 0679BF311EF60BA700661D84 /* FKOFHMACSha1Base64.m */; };
+		0679BF361EF616CF00661D84 /* FKUtilities.m in Sources */ = {isa = PBXBuildFile; fileRef = 0679BF351EF616CF00661D84 /* FKUtilities.m */; };
+		0679BF381EF6404A00661D84 /* FlickrAuthViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0679BF371EF6404A00661D84 /* FlickrAuthViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -49,8 +53,15 @@
 		062FD54B1EF1B147000D6866 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		0679BF1B1EF4B50600661D84 /* PhotoViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PhotoViewController.swift; sourceTree = "<group>"; };
 		0679BF1E1EF4B51000661D84 /* Picture.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Picture.swift; sourceTree = "<group>"; };
-		0679BF211EF4B51700661D84 /* Constants.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Constants.swift; sourceTree = "<group>"; };
 		0679BF221EF4B51700661D84 /* NetworkingManager.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = NetworkingManager.swift; sourceTree = "<group>"; };
+		0679BF291EF5867300661D84 /* Signup.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; name = Signup.storyboard; path = ../Signup.storyboard; sourceTree = "<group>"; };
+		0679BF2B1EF5878300661D84 /* SignupViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SignupViewController.swift; sourceTree = "<group>"; };
+		0679BF2E1EF5FDDC00661D84 /* FlickrApp-Bridging-Header.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "FlickrApp-Bridging-Header.h"; sourceTree = SOURCE_ROOT; };
+		0679BF301EF60BA700661D84 /* FKOFHMACSha1Base64.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FKOFHMACSha1Base64.h; sourceTree = "<group>"; };
+		0679BF311EF60BA700661D84 /* FKOFHMACSha1Base64.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = FKOFHMACSha1Base64.m; sourceTree = "<group>"; };
+		0679BF341EF616CE00661D84 /* FKUtilities.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FKUtilities.h; sourceTree = "<group>"; };
+		0679BF351EF616CF00661D84 /* FKUtilities.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = FKUtilities.m; sourceTree = "<group>"; };
+		0679BF371EF6404A00661D84 /* FlickrAuthViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FlickrAuthViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -101,6 +112,8 @@
 		062FD5281EF1B147000D6866 /* FlickrApp */ = {
 			isa = PBXGroup;
 			children = (
+				0679BF2E1EF5FDDC00661D84 /* FlickrApp-Bridging-Header.h */,
+				0679BF2F1EF60B9A00661D84 /* objcsha1 */,
 				0679BF201EF4B51700661D84 /* Utils */,
 				0679BF231EF4B51700661D84 /* Views */,
 				0679BF1D1EF4B51000661D84 /* Models */,
@@ -108,6 +121,7 @@
 				062FD5291EF1B147000D6866 /* AppDelegate.swift */,
 				062FD5301EF1B147000D6866 /* Assets.xcassets */,
 				062FD5321EF1B147000D6866 /* LaunchScreen.storyboard */,
+				0679BF291EF5867300661D84 /* Signup.storyboard */,
 				062FD5351EF1B147000D6866 /* Info.plist */,
 			);
 			path = FlickrApp;
@@ -135,6 +149,8 @@
 			isa = PBXGroup;
 			children = (
 				0679BF1B1EF4B50600661D84 /* PhotoViewController.swift */,
+				0679BF2B1EF5878300661D84 /* SignupViewController.swift */,
+				0679BF371EF6404A00661D84 /* FlickrAuthViewController.swift */,
 			);
 			path = Controllers;
 			sourceTree = "<group>";
@@ -150,7 +166,6 @@
 		0679BF201EF4B51700661D84 /* Utils */ = {
 			isa = PBXGroup;
 			children = (
-				0679BF211EF4B51700661D84 /* Constants.swift */,
 				0679BF221EF4B51700661D84 /* NetworkingManager.swift */,
 			);
 			path = Utils;
@@ -161,6 +176,17 @@
 			children = (
 			);
 			path = Views;
+			sourceTree = "<group>";
+		};
+		0679BF2F1EF60B9A00661D84 /* objcsha1 */ = {
+			isa = PBXGroup;
+			children = (
+				0679BF301EF60BA700661D84 /* FKOFHMACSha1Base64.h */,
+				0679BF311EF60BA700661D84 /* FKOFHMACSha1Base64.m */,
+				0679BF341EF616CE00661D84 /* FKUtilities.h */,
+				0679BF351EF616CF00661D84 /* FKUtilities.m */,
+			);
+			path = objcsha1;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -274,6 +300,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				062FD5341EF1B147000D6866 /* LaunchScreen.storyboard in Resources */,
+				0679BF2A1EF5867300661D84 /* Signup.storyboard in Resources */,
 				062FD5311EF1B147000D6866 /* Assets.xcassets in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -299,11 +326,14 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				0679BF2C1EF5878300661D84 /* SignupViewController.swift in Sources */,
 				0679BF1F1EF4B51000661D84 /* Picture.swift in Sources */,
 				062FD52A1EF1B147000D6866 /* AppDelegate.swift in Sources */,
+				0679BF381EF6404A00661D84 /* FlickrAuthViewController.swift in Sources */,
 				0679BF251EF4B51700661D84 /* NetworkingManager.swift in Sources */,
 				0679BF1C1EF4B50600661D84 /* PhotoViewController.swift in Sources */,
-				0679BF241EF4B51700661D84 /* Constants.swift in Sources */,
+				0679BF361EF616CF00661D84 /* FKUtilities.m in Sources */,
+				0679BF321EF60BA700661D84 /* FKOFHMACSha1Base64.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -453,6 +483,7 @@
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.caknow.gongzhen.FlickrApp;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_OBJC_BRIDGING_HEADER = "/Users/gongzhen/Project/mobile/iOS/ios_sample/uikit/collection/FlickrApp/FlickrApp-Bridging-Header.h";
 				SWIFT_VERSION = 3.0;
 			};
 			name = Debug;
@@ -467,6 +498,7 @@
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.caknow.gongzhen.FlickrApp;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_OBJC_BRIDGING_HEADER = "/Users/gongzhen/Project/mobile/iOS/ios_sample/uikit/collection/FlickrApp/FlickrApp-Bridging-Header.h";
 				SWIFT_VERSION = 3.0;
 			};
 			name = Release;
