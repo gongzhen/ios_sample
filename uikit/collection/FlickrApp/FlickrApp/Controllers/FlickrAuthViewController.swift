@@ -49,8 +49,10 @@ extension FlickrAuthViewController: UIWebViewDelegate {
     
     func webViewDidFinishLoad(_ webView: UIWebView) {
         if let urlString = webView.request?.url?.absoluteString {
-            print("webview did finish load! \(urlString)")
-            
+            print("webViewDidFinishLoad: \(urlString)")
+            if urlString.contains("authorize.gne") {
+
+            }
         }
     }
     
@@ -59,11 +61,11 @@ extension FlickrAuthViewController: UIWebViewDelegate {
     }
     
     func webView(_ webView: UIWebView, shouldStartLoadWith request: URLRequest, navigationType: UIWebViewNavigationType) -> Bool{
-        print("webview asking for permission to start loading")
-        if let url = request.url {
-            print(url.absoluteString)
+        if let urlString = webView.request?.url?.absoluteString {
+            print("shouldStartLoadWith: \(urlString)")
         }
         
+
         return true
     }
     

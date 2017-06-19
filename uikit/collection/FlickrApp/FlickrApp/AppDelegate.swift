@@ -51,7 +51,6 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
 
     func application(_ app: UIApplication, open url: URL, options: [UIApplicationOpenURLOptionsKey : Any] = [:]) -> Bool{
         if let scheme = url.scheme {
-            print(scheme)
             if scheme == "flickrapp" {
                 NotificationCenter.default.post(name: NSNotification.Name(rawValue:"UserAuthCallbackNotification"), object: url, userInfo: nil)
             }

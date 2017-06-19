@@ -29,6 +29,9 @@ class SignupViewController: UIViewController {
                     return
                 } else {
                     self.userLogin(by: userName!, by: userId!)
+                    let photoViewController = PhotoViewController()
+                    let navigationViewController = UINavigationController(rootViewController: photoViewController)
+                    self.present(navigationViewController, animated: true, completion: nil)
                 }
             })
         }
@@ -38,6 +41,7 @@ class SignupViewController: UIViewController {
     func userLogin(by name:String, by id:String ) {
         print(name)
         print(name)
+        dismiss(animated: true, completion: nil)
     }
     
     override func viewWillDisappear(_ animated: Bool) {
@@ -90,7 +94,6 @@ extension SignupViewController {
         let baseURLString = "https://www.flickr.com/services/oauth/access_token"
         let baseURL = NSURL(string: baseURLString)
         let requestURL = self.oauthURLFromBaseURL(inURL: baseURL!, httpMethod: .HttpMethodGET, httpParams: paramsDictionary as [String: AnyObject])
-        print(requestURL!)
         let session = URLSession.shared
         let request = URLRequest(url: requestURL!)
         let task = session.dataTask(with: request) { (data, response, error) in
@@ -107,7 +110,6 @@ extension SignupViewController {
             }
             
             responseString = responseString.removingPercentEncoding!
-            print(responseString)
             if responseString.hasPrefix("oauth_problem=") {
                 completionHandler(nil, nil, nil, NSError(domain: "completeAuthWithURL", code: 1, userInfo: [NSLocalizedDescriptionKey:"Cannot obtain token/secret from URL"]))
                 return
@@ -124,9 +126,9 @@ extension SignupViewController {
                     completionHandler(nil, nil, nil, NSError(domain: "completeAuthWithURL", code: 1, userInfo: [NSLocalizedDescriptionKey:"Cannot obtain token/secret from URL"]))
                     return
                 } else {
-//                    UserDefaults.standard.set(fn, forKey: "kFKStoredTokenKey")
-//                    UserDefaults.standard.set(fn, forKey: "kFKStoredTokenSecret")
-//                    UserDefaults.standard.synchronize()
+                    UserDefaults.standard.set(fn, forKey: "kFKStoredTokenKey")
+                    UserDefaults.standard.set(fn, forKey: "kFKStoredTokenSecret")
+                    UserDefaults.standard.synchronize()
                     completionHandler(un, nsid, fn, nil)
                     NotificationCenter.default.removeObserver(self, name:NSNotification.Name(rawValue: "UserAuthCallbackNotification") , object: nil)
                 }
@@ -155,7 +157,6 @@ extension SignupViewController {
             guard let responseString = String(data: data, encoding: String.Encoding.utf8) else {
                 return
             }
-            print(responseString)
             var oauthToken:String?
             var oauthTokenSecret:String?
             if let params = FKQueryParamDictionaryFromQueryString(responseString) {
@@ -193,7 +194,6 @@ extension SignupViewController {
         }
         
         let newURLStringWithQuery = "\(inURL.absoluteString!)?\(queryArray.joined(separator: "&"))"
-        print(newURLStringWithQuery)
         return URL(string: newURLStringWithQuery)
     }
     
@@ -248,7 +248,6 @@ extension SignupViewController {
         baseString.append(FKEscapedURLStringPlus(baseStrArgs.joined(separator: "&"))!)
         let signature = FKOFHMACSha1Base64(signatureKey, baseString)
         newArgs["oauth_signature"] = signature
-        print(baseString)
         return newArgs
     }
     
