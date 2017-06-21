@@ -14,6 +14,8 @@
 		0679BF581EFA531100661D84 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 0679BF561EFA531100661D84 /* LaunchScreen.storyboard */; };
 		0679BF631EFA531100661D84 /* iOS10DrawShapesTutorialTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0679BF621EFA531100661D84 /* iOS10DrawShapesTutorialTests.swift */; };
 		0679BF6E1EFA531100661D84 /* iOS10DrawShapesTutorialUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0679BF6D1EFA531100661D84 /* iOS10DrawShapesTutorialUITests.swift */; };
+		0679BF7C1EFA578000661D84 /* AppDelegate+AppService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0679BF7B1EFA578000661D84 /* AppDelegate+AppService.swift */; };
+		0679BF7E1EFA5F8C00661D84 /* ShapeView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0679BF7D1EFA5F8C00661D84 /* ShapeView.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -47,6 +49,8 @@
 		0679BF691EFA531100661D84 /* iOS10DrawShapesTutorialUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = iOS10DrawShapesTutorialUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		0679BF6D1EFA531100661D84 /* iOS10DrawShapesTutorialUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = iOS10DrawShapesTutorialUITests.swift; sourceTree = "<group>"; };
 		0679BF6F1EFA531100661D84 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		0679BF7B1EFA578000661D84 /* AppDelegate+AppService.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "AppDelegate+AppService.swift"; sourceTree = "<group>"; };
+		0679BF7D1EFA5F8C00661D84 /* ShapeView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ShapeView.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -98,6 +102,8 @@
 			isa = PBXGroup;
 			children = (
 				0679BF4D1EFA531000661D84 /* AppDelegate.swift */,
+				0679BF7B1EFA578000661D84 /* AppDelegate+AppService.swift */,
+				0679BF7D1EFA5F8C00661D84 /* ShapeView.swift */,
 				0679BF4F1EFA531000661D84 /* ViewController.swift */,
 				0679BF511EFA531100661D84 /* Main.storyboard */,
 				0679BF541EFA531100661D84 /* Assets.xcassets */,
@@ -264,6 +270,8 @@
 			files = (
 				0679BF501EFA531000661D84 /* ViewController.swift in Sources */,
 				0679BF4E1EFA531000661D84 /* AppDelegate.swift in Sources */,
+				0679BF7E1EFA5F8C00661D84 /* ShapeView.swift in Sources */,
+				0679BF7C1EFA578000661D84 /* AppDelegate+AppService.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
