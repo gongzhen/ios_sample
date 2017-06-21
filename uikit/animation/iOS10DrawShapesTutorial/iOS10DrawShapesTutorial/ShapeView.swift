@@ -68,7 +68,22 @@ class ShapeView: UIView {
     }
     
     func drawCircle() {
-    
+        let center = CGPoint(x: self.frame.size.width / 2.0, y: self.frame.size.height / 2.0);
+        
+        guard let ctx = UIGraphicsGetCurrentContext() else { return }
+        ctx.beginPath()
+        
+        //6
+        ctx.setLineWidth(5)
+        
+        let x:CGFloat = center.x
+        let y:CGFloat = center.y
+        let radius: CGFloat = 100.0
+        let endAngle: CGFloat = CGFloat(2 * Double.pi)
+        
+        ctx.addArc(center: CGPoint(x: x,y: y), radius: radius, startAngle: 0, endAngle: endAngle, clockwise: true)
+        
+        ctx.strokePath()
     }
     
     
