@@ -63,9 +63,7 @@ extension FlickrAuthViewController: UIWebViewDelegate {
     func webView(_ webView: UIWebView, shouldStartLoadWith request: URLRequest, navigationType: UIWebViewNavigationType) -> Bool{
         if let urlString = webView.request?.url?.absoluteString {
             print("shouldStartLoadWith: \(urlString)")
-        }
-        
-
+        }        
         return true
     }
     

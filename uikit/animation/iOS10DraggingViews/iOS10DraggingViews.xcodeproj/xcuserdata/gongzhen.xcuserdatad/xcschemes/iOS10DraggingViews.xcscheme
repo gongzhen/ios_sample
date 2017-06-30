@@ -14,10 +14,10 @@
             buildForAnalyzing = "YES">
             <BuildableReference
                BuildableIdentifier = "primary"
-               BlueprintIdentifier = "064744F61E236FFA007FD578"
-               BuildableName = "SDWebImageGZ.app"
-               BlueprintName = "SDWebImageGZ"
-               ReferencedContainer = "container:SDWebImageGZ.xcodeproj">
+               BlueprintIdentifier = "0679BF871EFB351F00661D84"
+               BuildableName = "iOS10DraggingViews.app"
+               BlueprintName = "iOS10DraggingViews"
+               ReferencedContainer = "container:iOS10DraggingViews.xcodeproj">
             </BuildableReference>
          </BuildActionEntry>
       </BuildActionEntries>
@@ -32,30 +32,30 @@
             skipped = "NO">
             <BuildableReference
                BuildableIdentifier = "primary"
-               BlueprintIdentifier = "0647450F1E236FFA007FD578"
-               BuildableName = "SDWebImageGZTests.xctest"
-               BlueprintName = "SDWebImageGZTests"
-               ReferencedContainer = "container:SDWebImageGZ.xcodeproj">
+               BlueprintIdentifier = "0679BF9B1EFB351F00661D84"
+               BuildableName = "iOS10DraggingViewsTests.xctest"
+               BlueprintName = "iOS10DraggingViewsTests"
+               ReferencedContainer = "container:iOS10DraggingViews.xcodeproj">
             </BuildableReference>
          </TestableReference>
          <TestableReference
             skipped = "NO">
             <BuildableReference
                BuildableIdentifier = "primary"
-               BlueprintIdentifier = "0647451A1E236FFA007FD578"
-               BuildableName = "SDWebImageGZUITests.xctest"
-               BlueprintName = "SDWebImageGZUITests"
-               ReferencedContainer = "container:SDWebImageGZ.xcodeproj">
+               BlueprintIdentifier = "0679BFA61EFB352000661D84"
+               BuildableName = "iOS10DraggingViewsUITests.xctest"
+               BlueprintName = "iOS10DraggingViewsUITests"
+               ReferencedContainer = "container:iOS10DraggingViews.xcodeproj">
             </BuildableReference>
          </TestableReference>
       </Testables>
       <MacroExpansion>
          <BuildableReference
             BuildableIdentifier = "primary"
-            BlueprintIdentifier = "064744F61E236FFA007FD578"
-            BuildableName = "SDWebImageGZ.app"
-            BlueprintName = "SDWebImageGZ"
-            ReferencedContainer = "container:SDWebImageGZ.xcodeproj">
+            BlueprintIdentifier = "0679BF871EFB351F00661D84"
+            BuildableName = "iOS10DraggingViews.app"
+            BlueprintName = "iOS10DraggingViews"
+            ReferencedContainer = "container:iOS10DraggingViews.xcodeproj">
          </BuildableReference>
       </MacroExpansion>
       <AdditionalOptions>
@@ -75,10 +75,10 @@
          runnableDebuggingMode = "0">
          <BuildableReference
             BuildableIdentifier = "primary"
-            BlueprintIdentifier = "064744F61E236FFA007FD578"
-            BuildableName = "SDWebImageGZ.app"
-            BlueprintName = "SDWebImageGZ"
-            ReferencedContainer = "container:SDWebImageGZ.xcodeproj">
+            BlueprintIdentifier = "0679BF871EFB351F00661D84"
+            BuildableName = "iOS10DraggingViews.app"
+            BlueprintName = "iOS10DraggingViews"
+            ReferencedContainer = "container:iOS10DraggingViews.xcodeproj">
          </BuildableReference>
       </BuildableProductRunnable>
       <AdditionalOptions>
@@ -94,10 +94,10 @@
          runnableDebuggingMode = "0">
          <BuildableReference
             BuildableIdentifier = "primary"
-            BlueprintIdentifier = "064744F61E236FFA007FD578"
-            BuildableName = "SDWebImageGZ.app"
-            BlueprintName = "SDWebImageGZ"
-            ReferencedContainer = "container:SDWebImageGZ.xcodeproj">
+            BlueprintIdentifier = "0679BF871EFB351F00661D84"
+            BuildableName = "iOS10DraggingViews.app"
+            BlueprintName = "iOS10DraggingViews"
+            ReferencedContainer = "container:iOS10DraggingViews.xcodeproj">
          </BuildableReference>
       </BuildableProductRunnable>
    </ProfileAction>

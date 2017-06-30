@@ -14,10 +14,10 @@
             buildForAnalyzing = "YES">
             <BuildableReference
                BuildableIdentifier = "primary"
-               BlueprintIdentifier = "064744F61E236FFA007FD578"
-               BuildableName = "SDWebImageGZ.app"
-               BlueprintName = "SDWebImageGZ"
-               ReferencedContainer = "container:SDWebImageGZ.xcodeproj">
+               BlueprintIdentifier = "0607D8671F020BAB00D4BF2B"
+               BuildableName = "CacheManager1.app"
+               BlueprintName = "CacheManager1"
+               ReferencedContainer = "container:CacheManager1.xcodeproj">
             </BuildableReference>
          </BuildActionEntry>
       </BuildActionEntries>
@@ -32,30 +32,30 @@
             skipped = "NO">
             <BuildableReference
                BuildableIdentifier = "primary"
-               BlueprintIdentifier = "0647450F1E236FFA007FD578"
-               BuildableName = "SDWebImageGZTests.xctest"
-               BlueprintName = "SDWebImageGZTests"
-               ReferencedContainer = "container:SDWebImageGZ.xcodeproj">
+               BlueprintIdentifier = "0607D87B1F020BAC00D4BF2B"
+               BuildableName = "CacheManager1Tests.xctest"
+               BlueprintName = "CacheManager1Tests"
+               ReferencedContainer = "container:CacheManager1.xcodeproj">
             </BuildableReference>
          </TestableReference>
          <TestableReference
             skipped = "NO">
             <BuildableReference
                BuildableIdentifier = "primary"
-               BlueprintIdentifier = "0647451A1E236FFA007FD578"
-               BuildableName = "SDWebImageGZUITests.xctest"
-               BlueprintName = "SDWebImageGZUITests"
-               ReferencedContainer = "container:SDWebImageGZ.xcodeproj">
+               BlueprintIdentifier = "0607D8861F020BAC00D4BF2B"
+               BuildableName = "CacheManager1UITests.xctest"
+               BlueprintName = "CacheManager1UITests"
+               ReferencedContainer = "container:CacheManager1.xcodeproj">
             </BuildableReference>
          </TestableReference>
       </Testables>
       <MacroExpansion>
          <BuildableReference
             BuildableIdentifier = "primary"
-            BlueprintIdentifier = "064744F61E236FFA007FD578"
-            BuildableName = "SDWebImageGZ.app"
-            BlueprintName = "SDWebImageGZ"
-            ReferencedContainer = "container:SDWebImageGZ.xcodeproj">
+            BlueprintIdentifier = "0607D8671F020BAB00D4BF2B"
+            BuildableName = "CacheManager1.app"
+            BlueprintName = "CacheManager1"
+            ReferencedContainer = "container:CacheManager1.xcodeproj">
          </BuildableReference>
       </MacroExpansion>
       <AdditionalOptions>
@@ -75,10 +75,10 @@
          runnableDebuggingMode = "0">
          <BuildableReference
             BuildableIdentifier = "primary"
-            BlueprintIdentifier = "064744F61E236FFA007FD578"
-            BuildableName = "SDWebImageGZ.app"
-            BlueprintName = "SDWebImageGZ"
-            ReferencedContainer = "container:SDWebImageGZ.xcodeproj">
+            BlueprintIdentifier = "0607D8671F020BAB00D4BF2B"
+            BuildableName = "CacheManager1.app"
+            BlueprintName = "CacheManager1"
+            ReferencedContainer = "container:CacheManager1.xcodeproj">
          </BuildableReference>
       </BuildableProductRunnable>
       <AdditionalOptions>
@@ -94,10 +94,10 @@
          runnableDebuggingMode = "0">
          <BuildableReference
             BuildableIdentifier = "primary"
-            BlueprintIdentifier = "064744F61E236FFA007FD578"
-            BuildableName = "SDWebImageGZ.app"
-            BlueprintName = "SDWebImageGZ"
-            ReferencedContainer = "container:SDWebImageGZ.xcodeproj">
+            BlueprintIdentifier = "0607D8671F020BAB00D4BF2B"
+            BuildableName = "CacheManager1.app"
+            BlueprintName = "CacheManager1"
+            ReferencedContainer = "container:CacheManager1.xcodeproj">
          </BuildableReference>
       </BuildableProductRunnable>
    </ProfileAction>
