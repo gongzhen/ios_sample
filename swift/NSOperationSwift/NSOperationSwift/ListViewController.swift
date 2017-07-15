@@ -96,7 +96,7 @@ class ListViewController: UITableViewController {
             }
             DispatchQueue.main.async(execute: {
                 self.pendingOperations.downloadsInProgress.removeValue(forKey: indexPath)
-                self.tableView.reloadRows(at: [indexPath as IndexPath], with: .fade)
+                self.tableView.reloadRows(at: [indexPath], with: .fade)
             })
         }
         //4 Add the operation to downloadsInProgress to help keep track of things.
@@ -125,12 +125,13 @@ class ListViewController: UITableViewController {
     }
     
     override func scrollViewWillBeginDragging(_ scrollView: UIScrollView) {
-        //1
+        // 1 As soon as the user starts scrolling, you will want to suspend all operations and take a look at
+        // what the user wants to see. You will implement suspendAllOperations in just a moment.
         suspendAllOperations()
     }
     
     override func scrollViewDidEndDragging(_ scrollView: UIScrollView, willDecelerate decelerate: Bool) {
-        // 2
+        // 2 If the value of decelerate is false, that means the user stopped dragging the table view. Therefore you want to resume suspended operations, cancel operations for offscreen cells, and start operations for onscreen cells.
         if !decelerate {
             loadImagesForOnscreenCells()
             resumeAllOperations()
@@ -138,7 +139,7 @@ class ListViewController: UITableViewController {
     }
 
     override func scrollViewDidEndDecelerating(_ scrollView: UIScrollView) {
-        // 3
+        // 3 This delegate method tells you that table view stopped scrolling.
         loadImagesForOnscreenCells()
         resumeAllOperations()
     }
@@ -212,7 +213,7 @@ extension ListViewController {
             
             do {
                 let datasourceDictionary = try PropertyListSerialization.propertyList(from: data, options: PropertyListSerialization.ReadOptions(rawValue:UInt(Int(PropertyListSerialization.MutabilityOptions.mutableContainers.rawValue))), format: nil) as! NSDictionary
-                print(datasourceDictionary)
+
                 for (key, value) in datasourceDictionary {
                     let name = key as? String
                     let url = URL(string:value as? String ?? "")
@@ -235,6 +236,32 @@ extension ListViewController {
             UIApplication.shared.isNetworkActivityIndicatorVisible = false
             
         }.resume()
+        
+        //    let request = URLRequest(url:dataSourceURL!)
+        //    UIApplication.shared.isNetworkActivityIndicatorVisible = true
+        //
+        //    NSURLConnection.sendAsynchronousRequest(request, queue: OperationQueue.main) {response,data,error in
+        //      if data != nil {
+        //        let datasourceDictionary = PropertyListSerialization.propertyListWithData(data, options: Int(PropertyListSerialization.MutabilityOptions.Immutable.rawValue), format: nil, error: nil) as! NSDictionary
+        //
+        //        for(key : AnyObject,value : AnyObject) in datasourceDictionary {
+        //          let name = key as? String
+        //          let url = NSURL(string:value as? String ?? "")
+        //          if name != nil && url != nil {
+        //            let photoRecord = PhotoRecord(name:name!, url:url!)
+        //            self.photos.append(photoRecord)
+        //          }
+        //        }
+        //
+        //        self.tableView.reloadData()
+        //      }
+        //
+        //      if error != nil {
+        //        let alert = UIAlertView(title:"Oops!",message:error?.localizedDescription, delegate:nil, cancelButtonTitle:"OK")
+        //        alert.show()
+        //      }
+        //      UIApplication.shared.isNetworkActivityIndicatorVisible = false
+        //    }
     }
 
 }

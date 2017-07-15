@@ -1,0 +1,566 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 46;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		060E9EA61F17440C005E0614 /* Shree714.ttc in Resources */ = {isa = PBXBuildFile; fileRef = 060E9EA51F174408005E0614 /* Shree714.ttc */; };
+		06F98C471F1723730064CFB6 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 06F98C461F1723730064CFB6 /* main.m */; };
+		06F98C4A1F1723730064CFB6 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 06F98C491F1723730064CFB6 /* AppDelegate.m */; };
+		06F98C4D1F1723730064CFB6 /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 06F98C4C1F1723730064CFB6 /* ViewController.m */; };
+		06F98C501F1723730064CFB6 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 06F98C4E1F1723730064CFB6 /* Main.storyboard */; };
+		06F98C521F1723730064CFB6 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 06F98C511F1723730064CFB6 /* Assets.xcassets */; };
+		06F98C551F1723730064CFB6 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 06F98C531F1723730064CFB6 /* LaunchScreen.storyboard */; };
+		06F98C601F1723740064CFB6 /* ColletionViewCellNestedTableViewTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 06F98C5F1F1723740064CFB6 /* ColletionViewCellNestedTableViewTests.m */; };
+		06F98C6B1F1723740064CFB6 /* ColletionViewCellNestedTableViewUITests.m in Sources */ = {isa = PBXBuildFile; fileRef = 06F98C6A1F1723740064CFB6 /* ColletionViewCellNestedTableViewUITests.m */; };
+		06F98C7A1F1730950064CFB6 /* CustomCollectionViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 06F98C791F1730950064CFB6 /* CustomCollectionViewCell.m */; };
+		06F98C7D1F1735B30064CFB6 /* CustomTableViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 06F98C7C1F1735B30064CFB6 /* CustomTableViewCell.m */; };
+		06F98C811F17365C0064CFB6 /* MSCustomElements.m in Sources */ = {isa = PBXBuildFile; fileRef = 06F98C801F17365C0064CFB6 /* MSCustomElements.m */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		06F98C5C1F1723730064CFB6 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 06F98C3A1F1723730064CFB6 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 06F98C411F1723730064CFB6;
+			remoteInfo = ColletionViewCellNestedTableView;
+		};
+		06F98C671F1723740064CFB6 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 06F98C3A1F1723730064CFB6 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 06F98C411F1723730064CFB6;
+			remoteInfo = ColletionViewCellNestedTableView;
+		};
+/* End PBXContainerItemProxy section */
+
+/* Begin PBXFileReference section */
+		060E9EA51F174408005E0614 /* Shree714.ttc */ = {isa = PBXFileReference; lastKnownFileType = file; path = Shree714.ttc; sourceTree = "<group>"; };
+		06F98C421F1723730064CFB6 /* ColletionViewCellNestedTableView.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = ColletionViewCellNestedTableView.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		06F98C461F1723730064CFB6 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
+		06F98C481F1723730064CFB6 /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
+		06F98C491F1723730064CFB6 /* AppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
+		06F98C4B1F1723730064CFB6 /* ViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ViewController.h; sourceTree = "<group>"; };
+		06F98C4C1F1723730064CFB6 /* ViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ViewController.m; sourceTree = "<group>"; };
+		06F98C4F1F1723730064CFB6 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
+		06F98C511F1723730064CFB6 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		06F98C541F1723730064CFB6 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
+		06F98C561F1723730064CFB6 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		06F98C5B1F1723730064CFB6 /* ColletionViewCellNestedTableViewTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = ColletionViewCellNestedTableViewTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		06F98C5F1F1723740064CFB6 /* ColletionViewCellNestedTableViewTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ColletionViewCellNestedTableViewTests.m; sourceTree = "<group>"; };
+		06F98C611F1723740064CFB6 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		06F98C661F1723740064CFB6 /* ColletionViewCellNestedTableViewUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = ColletionViewCellNestedTableViewUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		06F98C6A1F1723740064CFB6 /* ColletionViewCellNestedTableViewUITests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ColletionViewCellNestedTableViewUITests.m; sourceTree = "<group>"; };
+		06F98C6C1F1723740064CFB6 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		06F98C781F1730950064CFB6 /* CustomCollectionViewCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CustomCollectionViewCell.h; sourceTree = "<group>"; };
+		06F98C791F1730950064CFB6 /* CustomCollectionViewCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CustomCollectionViewCell.m; sourceTree = "<group>"; };
+		06F98C7B1F1735B30064CFB6 /* CustomTableViewCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CustomTableViewCell.h; sourceTree = "<group>"; };
+		06F98C7C1F1735B30064CFB6 /* CustomTableViewCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CustomTableViewCell.m; sourceTree = "<group>"; };
+		06F98C7E1F17362A0064CFB6 /* Constant.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = Constant.h; sourceTree = "<group>"; };
+		06F98C7F1F17365C0064CFB6 /* MSCustomElements.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MSCustomElements.h; sourceTree = "<group>"; };
+		06F98C801F17365C0064CFB6 /* MSCustomElements.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MSCustomElements.m; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		06F98C3F1F1723730064CFB6 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		06F98C581F1723730064CFB6 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		06F98C631F1723740064CFB6 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		06F98C391F1723730064CFB6 = {
+			isa = PBXGroup;
+			children = (
+				06F98C441F1723730064CFB6 /* ColletionViewCellNestedTableView */,
+				06F98C5E1F1723740064CFB6 /* ColletionViewCellNestedTableViewTests */,
+				06F98C691F1723740064CFB6 /* ColletionViewCellNestedTableViewUITests */,
+				06F98C431F1723730064CFB6 /* Products */,
+			);
+			sourceTree = "<group>";
+		};
+		06F98C431F1723730064CFB6 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				06F98C421F1723730064CFB6 /* ColletionViewCellNestedTableView.app */,
+				06F98C5B1F1723730064CFB6 /* ColletionViewCellNestedTableViewTests.xctest */,
+				06F98C661F1723740064CFB6 /* ColletionViewCellNestedTableViewUITests.xctest */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		06F98C441F1723730064CFB6 /* ColletionViewCellNestedTableView */ = {
+			isa = PBXGroup;
+			children = (
+				06F98C481F1723730064CFB6 /* AppDelegate.h */,
+				06F98C491F1723730064CFB6 /* AppDelegate.m */,
+				06F98C7E1F17362A0064CFB6 /* Constant.h */,
+				06F98C7F1F17365C0064CFB6 /* MSCustomElements.h */,
+				06F98C801F17365C0064CFB6 /* MSCustomElements.m */,
+				06F98C7B1F1735B30064CFB6 /* CustomTableViewCell.h */,
+				06F98C7C1F1735B30064CFB6 /* CustomTableViewCell.m */,
+				06F98C781F1730950064CFB6 /* CustomCollectionViewCell.h */,
+				06F98C791F1730950064CFB6 /* CustomCollectionViewCell.m */,
+				06F98C4B1F1723730064CFB6 /* ViewController.h */,
+				06F98C4C1F1723730064CFB6 /* ViewController.m */,
+				06F98C4E1F1723730064CFB6 /* Main.storyboard */,
+				06F98C511F1723730064CFB6 /* Assets.xcassets */,
+				06F98C531F1723730064CFB6 /* LaunchScreen.storyboard */,
+				06F98C561F1723730064CFB6 /* Info.plist */,
+				06F98C451F1723730064CFB6 /* Supporting Files */,
+			);
+			path = ColletionViewCellNestedTableView;
+			sourceTree = "<group>";
+		};
+		06F98C451F1723730064CFB6 /* Supporting Files */ = {
+			isa = PBXGroup;
+			children = (
+				060E9EA51F174408005E0614 /* Shree714.ttc */,
+				06F98C461F1723730064CFB6 /* main.m */,
+			);
+			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+		06F98C5E1F1723740064CFB6 /* ColletionViewCellNestedTableViewTests */ = {
+			isa = PBXGroup;
+			children = (
+				06F98C5F1F1723740064CFB6 /* ColletionViewCellNestedTableViewTests.m */,
+				06F98C611F1723740064CFB6 /* Info.plist */,
+			);
+			path = ColletionViewCellNestedTableViewTests;
+			sourceTree = "<group>";
+		};
+		06F98C691F1723740064CFB6 /* ColletionViewCellNestedTableViewUITests */ = {
+			isa = PBXGroup;
+			children = (
+				06F98C6A1F1723740064CFB6 /* ColletionViewCellNestedTableViewUITests.m */,
+				06F98C6C1F1723740064CFB6 /* Info.plist */,
+			);
+			path = ColletionViewCellNestedTableViewUITests;
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		06F98C411F1723730064CFB6 /* ColletionViewCellNestedTableView */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 06F98C6F1F1723740064CFB6 /* Build configuration list for PBXNativeTarget "ColletionViewCellNestedTableView" */;
+			buildPhases = (
+				06F98C3E1F1723730064CFB6 /* Sources */,
+				06F98C3F1F1723730064CFB6 /* Frameworks */,
+				06F98C401F1723730064CFB6 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = ColletionViewCellNestedTableView;
+			productName = ColletionViewCellNestedTableView;
+			productReference = 06F98C421F1723730064CFB6 /* ColletionViewCellNestedTableView.app */;
+			productType = "com.apple.product-type.application";
+		};
+		06F98C5A1F1723730064CFB6 /* ColletionViewCellNestedTableViewTests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 06F98C721F1723740064CFB6 /* Build configuration list for PBXNativeTarget "ColletionViewCellNestedTableViewTests" */;
+			buildPhases = (
+				06F98C571F1723730064CFB6 /* Sources */,
+				06F98C581F1723730064CFB6 /* Frameworks */,
+				06F98C591F1723730064CFB6 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				06F98C5D1F1723730064CFB6 /* PBXTargetDependency */,
+			);
+			name = ColletionViewCellNestedTableViewTests;
+			productName = ColletionViewCellNestedTableViewTests;
+			productReference = 06F98C5B1F1723730064CFB6 /* ColletionViewCellNestedTableViewTests.xctest */;
+			productType = "com.apple.product-type.bundle.unit-test";
+		};
+		06F98C651F1723740064CFB6 /* ColletionViewCellNestedTableViewUITests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 06F98C751F1723740064CFB6 /* Build configuration list for PBXNativeTarget "ColletionViewCellNestedTableViewUITests" */;
+			buildPhases = (
+				06F98C621F1723740064CFB6 /* Sources */,
+				06F98C631F1723740064CFB6 /* Frameworks */,
+				06F98C641F1723740064CFB6 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				06F98C681F1723740064CFB6 /* PBXTargetDependency */,
+			);
+			name = ColletionViewCellNestedTableViewUITests;
+			productName = ColletionViewCellNestedTableViewUITests;
+			productReference = 06F98C661F1723740064CFB6 /* ColletionViewCellNestedTableViewUITests.xctest */;
+			productType = "com.apple.product-type.bundle.ui-testing";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		06F98C3A1F1723730064CFB6 /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				LastUpgradeCheck = 0830;
+				ORGANIZATIONNAME = "zhen gong";
+				TargetAttributes = {
+					06F98C411F1723730064CFB6 = {
+						CreatedOnToolsVersion = 8.3.3;
+						DevelopmentTeam = G66RX9MATK;
+						ProvisioningStyle = Automatic;
+					};
+					06F98C5A1F1723730064CFB6 = {
+						CreatedOnToolsVersion = 8.3.3;
+						DevelopmentTeam = G66RX9MATK;
+						ProvisioningStyle = Automatic;
+						TestTargetID = 06F98C411F1723730064CFB6;
+					};
+					06F98C651F1723740064CFB6 = {
+						CreatedOnToolsVersion = 8.3.3;
+						DevelopmentTeam = G66RX9MATK;
+						ProvisioningStyle = Automatic;
+						TestTargetID = 06F98C411F1723730064CFB6;
+					};
+				};
+			};
+			buildConfigurationList = 06F98C3D1F1723730064CFB6 /* Build configuration list for PBXProject "ColletionViewCellNestedTableView" */;
+			compatibilityVersion = "Xcode 3.2";
+			developmentRegion = English;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+				Base,
+			);
+			mainGroup = 06F98C391F1723730064CFB6;
+			productRefGroup = 06F98C431F1723730064CFB6 /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				06F98C411F1723730064CFB6 /* ColletionViewCellNestedTableView */,
+				06F98C5A1F1723730064CFB6 /* ColletionViewCellNestedTableViewTests */,
+				06F98C651F1723740064CFB6 /* ColletionViewCellNestedTableViewUITests */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		06F98C401F1723730064CFB6 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				060E9EA61F17440C005E0614 /* Shree714.ttc in Resources */,
+				06F98C551F1723730064CFB6 /* LaunchScreen.storyboard in Resources */,
+				06F98C521F1723730064CFB6 /* Assets.xcassets in Resources */,
+				06F98C501F1723730064CFB6 /* Main.storyboard in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		06F98C591F1723730064CFB6 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		06F98C641F1723740064CFB6 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		06F98C3E1F1723730064CFB6 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				06F98C4D1F1723730064CFB6 /* ViewController.m in Sources */,
+				06F98C811F17365C0064CFB6 /* MSCustomElements.m in Sources */,
+				06F98C4A1F1723730064CFB6 /* AppDelegate.m in Sources */,
+				06F98C471F1723730064CFB6 /* main.m in Sources */,
+				06F98C7D1F1735B30064CFB6 /* CustomTableViewCell.m in Sources */,
+				06F98C7A1F1730950064CFB6 /* CustomCollectionViewCell.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		06F98C571F1723730064CFB6 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				06F98C601F1723740064CFB6 /* ColletionViewCellNestedTableViewTests.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		06F98C621F1723740064CFB6 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				06F98C6B1F1723740064CFB6 /* ColletionViewCellNestedTableViewUITests.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		06F98C5D1F1723730064CFB6 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 06F98C411F1723730064CFB6 /* ColletionViewCellNestedTableView */;
+			targetProxy = 06F98C5C1F1723730064CFB6 /* PBXContainerItemProxy */;
+		};
+		06F98C681F1723740064CFB6 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 06F98C411F1723730064CFB6 /* ColletionViewCellNestedTableView */;
+			targetProxy = 06F98C671F1723740064CFB6 /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
+
+/* Begin PBXVariantGroup section */
+		06F98C4E1F1723730064CFB6 /* Main.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				06F98C4F1F1723730064CFB6 /* Base */,
+			);
+			name = Main.storyboard;
+			sourceTree = "<group>";
+		};
+		06F98C531F1723730064CFB6 /* LaunchScreen.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				06F98C541F1723730064CFB6 /* Base */,
+			);
+			name = LaunchScreen.storyboard;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
+
+/* Begin XCBuildConfiguration section */
+		06F98C6D1F1723740064CFB6 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 10.3;
+				MTL_ENABLE_DEBUG_INFO = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = iphoneos;
+			};
+			name = Debug;
+		};
+		06F98C6E1F1723740064CFB6 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 10.3;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				SDKROOT = iphoneos;
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		06F98C701F1723740064CFB6 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				DEVELOPMENT_TEAM = G66RX9MATK;
+				INFOPLIST_FILE = ColletionViewCellNestedTableView/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = com.gongzhen.ColletionViewCellNestedTableView;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+			};
+			name = Debug;
+		};
+		06F98C711F1723740064CFB6 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				DEVELOPMENT_TEAM = G66RX9MATK;
+				INFOPLIST_FILE = ColletionViewCellNestedTableView/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = com.gongzhen.ColletionViewCellNestedTableView;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+			};
+			name = Release;
+		};
+		06F98C731F1723740064CFB6 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				DEVELOPMENT_TEAM = G66RX9MATK;
+				INFOPLIST_FILE = ColletionViewCellNestedTableViewTests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = com.gongzhen.ColletionViewCellNestedTableViewTests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/ColletionViewCellNestedTableView.app/ColletionViewCellNestedTableView";
+			};
+			name = Debug;
+		};
+		06F98C741F1723740064CFB6 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				DEVELOPMENT_TEAM = G66RX9MATK;
+				INFOPLIST_FILE = ColletionViewCellNestedTableViewTests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = com.gongzhen.ColletionViewCellNestedTableViewTests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/ColletionViewCellNestedTableView.app/ColletionViewCellNestedTableView";
+			};
+			name = Release;
+		};
+		06F98C761F1723740064CFB6 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				DEVELOPMENT_TEAM = G66RX9MATK;
+				INFOPLIST_FILE = ColletionViewCellNestedTableViewUITests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = com.gongzhen.ColletionViewCellNestedTableViewUITests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TEST_TARGET_NAME = ColletionViewCellNestedTableView;
+			};
+			name = Debug;
+		};
+		06F98C771F1723740064CFB6 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				DEVELOPMENT_TEAM = G66RX9MATK;
+				INFOPLIST_FILE = ColletionViewCellNestedTableViewUITests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = com.gongzhen.ColletionViewCellNestedTableViewUITests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TEST_TARGET_NAME = ColletionViewCellNestedTableView;
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		06F98C3D1F1723730064CFB6 /* Build configuration list for PBXProject "ColletionViewCellNestedTableView" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				06F98C6D1F1723740064CFB6 /* Debug */,
+				06F98C6E1F1723740064CFB6 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		06F98C6F1F1723740064CFB6 /* Build configuration list for PBXNativeTarget "ColletionViewCellNestedTableView" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				06F98C701F1723740064CFB6 /* Debug */,
+				06F98C711F1723740064CFB6 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		06F98C721F1723740064CFB6 /* Build configuration list for PBXNativeTarget "ColletionViewCellNestedTableViewTests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				06F98C731F1723740064CFB6 /* Debug */,
+				06F98C741F1723740064CFB6 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		06F98C751F1723740064CFB6 /* Build configuration list for PBXNativeTarget "ColletionViewCellNestedTableViewUITests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				06F98C761F1723740064CFB6 /* Debug */,
+				06F98C771F1723740064CFB6 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = 06F98C3A1F1723730064CFB6 /* Project object */;
+}

@@ -26,7 +26,10 @@ class ImageDownloader: Operation {
             return
         }
         //5 Download the image data.
-        let imageData = NSData(contentsOf: self.photoRecord.url as URL)
+        // let imageData = NSData(contentsOf: self.photoRecord.url as URL)
+        // let imageData = Data(contentsOf: self.photoRecord.url)
+        
+        let imageData:Data? = try? Data(contentsOf: self.photoRecord.url)
         
         //6 Check again for cancellation.
         if self.isCancelled {
@@ -34,7 +37,7 @@ class ImageDownloader: Operation {
         }
         
         //7 If there is data, create an image object and add it to the record, and move the state along. If there is no data, mark the record as failed and set the appropriate image.
-        if (imageData?.length)! > 0 {
+        if (imageData?.count)! > 0 {
             self.photoRecord.image = UIImage(data: imageData! as Data)
             self.photoRecord.state = .Downloaded
         }

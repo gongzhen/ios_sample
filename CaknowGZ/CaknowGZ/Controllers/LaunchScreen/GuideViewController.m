@@ -74,7 +74,7 @@
     if ([viewController isKindOfClass:[GuidePageViewController class]]) {
         GuidePageViewController *_viewController = (GuidePageViewController *)viewController;
         index = _viewController.pageIndex;
-    } else if ([viewController isKindOfClass:[GuidePageGetStartViewController class]]) {
+    } else {
         GuidePageGetStartViewController *_viewController = (GuidePageGetStartViewController *)viewController;
         index = _viewController.pageIndex;
     }
@@ -98,7 +98,7 @@
     if ([viewController isKindOfClass:[GuidePageViewController class]]) {
         GuidePageViewController *_viewController = (GuidePageViewController *)viewController;
         index = _viewController.pageIndex;
-    } else if ([viewController isKindOfClass:[GuidePageGetStartViewController class]]) {
+    } else {
         GuidePageGetStartViewController *_viewController = (GuidePageGetStartViewController *)viewController;
         index = _viewController.pageIndex;
     }

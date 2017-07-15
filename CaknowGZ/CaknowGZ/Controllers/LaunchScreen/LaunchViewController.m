@@ -10,6 +10,7 @@
 #import "GuideViewController.h"
 #import "SignMainViewController.h"
 #import "GarageViewController.h"
+#import "ImageResourceConstants.h"
 
 static NSString * const kAccessToken = @"accessToken";
 
@@ -35,6 +36,8 @@ static NSString * const kAccessToken = @"accessToken";
     [super viewDidLoad];
     // [[CaknowClient sharedInstance] removeAccessToken];
     [self setupLayoutConstraint];
+    
+    
     
     NSString *accessToken = [[CaknowClient sharedInstance] getAccessToken:kAccessToken];DLog(@"%@", accessToken);
     if (accessToken == nil || accessToken.length == 0) {
@@ -75,7 +78,8 @@ static NSString * const kAccessToken = @"accessToken";
 }
 
 - (void)redirectLoginView {
-    SignMainViewController *signMainViewController = [[SignMainViewController alloc] init];
+    // SignMainViewController *signMainViewController = [[SignMainViewController alloc] init];
+    GuideViewController *signMainViewController = [[GuideViewController alloc] init];
     self.navigationController.navigationBarHidden = YES;
     [self.navigationController pushViewController:signMainViewController animated:YES];
 }
