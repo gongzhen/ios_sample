@@ -64,6 +64,7 @@
         // GZABAddressBookContactsDataProvider extends NSObjet and implemented <GZContactsDataProviderProtocol>
         // GZABAddressBookContactsDataProvider initWithDelegate will return id type with GZContactsDataProviderProtocol.
         id<GZContactsDataProviderProtocol> dataProvider = [[GZABAddressBookContactsDataProvider alloc] initWithDelegate:self];
+        // GZABAddressBookContactsDataProvider *fakeDataProvider = [[GZABAddressBookContactsDataProvider alloc] initWithDelegate:self];
         
         GZAlphabeticalSortPostProcessor *alphabeticalSortProcessor = [[GZAlphabeticalSortPostProcessor alloc] initWithSortMode:GZAlphabeticalSortPostProcessorSortModeFullName];
         
