@@ -25,9 +25,10 @@ class FlickrAuthViewController: UIViewController {
         navigationItem.leftBarButtonItem = UIBarButtonItem(title: "Cancel", style: .plain, target: self, action: #selector(cancelAuth))
     }
     
+    // begin auth
     override func viewWillAppear(_ animated: Bool) {
         super.viewWillAppear(animated)
-        print("viewWillAppear")
+        print("Function: \(#function), line: \(#line):viewWillAppear" )
         if let urlRequest = urlRequest {
             print(urlRequest)
             webView.loadRequest(urlRequest)

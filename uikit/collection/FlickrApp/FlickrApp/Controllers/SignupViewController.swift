@@ -8,7 +8,6 @@
 
 import UIKit
 
-
 class SignupViewController: UIViewController {
     
     var authSecret: String?
@@ -19,12 +18,11 @@ class SignupViewController: UIViewController {
 
         // Do any additional setup after loading the view.
         NotificationCenter.default.addObserver(self, selector: #selector(userAuthenticateCallback), name: NSNotification.Name(rawValue: "UserAuthCallbackNotification"), object: nil)
-        
     }
 
     func userAuthenticateCallback(notification:Notification) {
         if let url = notification.object as? URL {
-            self.completeAuthWithURL(url: url, completionHandler: { [unowned self] (userName, userId, fullName, error) in
+            FlickrClient.sharedInstance.completeAuthWithURL(url: url, completionHandler: { [unowned self] (userName, userId, fullName, error) in
                 if error != nil {
                     return
                 } else {
@@ -35,7 +33,6 @@ class SignupViewController: UIViewController {
                 }
             })
         }
-        
     }
     
     func userLogin(by name:String, by id:String ) {
@@ -53,15 +50,20 @@ class SignupViewController: UIViewController {
         // Dispose of any resources that can be recreated.
     }
     
+    
+    // complete auth:
     @IBAction func signUpAction(_ sender: Any) {
         let callbackURLString = "flickrApp://auth"
         let url = NSURL(string: callbackURLString)!
-        self.beginAuthWithCallbackURL(url, permission: nil) { (flickrLoginPageURL, error) in
+        FlickrClient.sharedInstance.beginAuthWithCallbackURL(url, permission: nil) { (flickrLoginPageURL, error) in
             if let error = error {
                 print(error)
                 return
             } else {
                 if let flickrLoginPageURL = flickrLoginPageURL {
+                    print("Function: \(#function), line: \(#line):\(flickrLoginPageURL)" )
+                    // line: 65:https://www.flickr.com/services/oauth/authorize?oauth_token=72157684045594134-3779866796125927
+                    
                     let urlRequest = URLRequest(url: flickrLoginPageURL)
                     let webViewController = self.storyboard?.instantiateViewController(withIdentifier: "TMDBAuthViewController") as! FlickrAuthViewController
                     webViewController.urlRequest = urlRequest
@@ -77,7 +79,58 @@ class SignupViewController: UIViewController {
     }
 }
 
-extension SignupViewController {
+class FlickrClient {
+    static let sharedInstance = FlickrClient()
+    
+    typealias FlickrClientSuccess = () -> Void
+    var FlickrClientSuccess:FlickrClient?
+    
+    var authSecret: String?
+    var authToken: String?
+    
+    private init(){}
+    
+    func handleCallbackURL(url: URL?) {
+        if let url = url {
+            self.completeAuthWithURL(url: url, completionHandler: { (userName, userId, fullName, error) in
+                if let error = error {
+                    print(error)
+                    return;
+                } else {
+                    if let userName = userName {
+                        print("Function: \(#function), line: \(#line):\(userName)" )
+                    }
+                    if let userId = userId {
+                        print("Function: \(#function), line: \(#line):\(userId)" )
+                    }
+                    if let fullName = fullName {
+                        print("Function: \(#function), line: \(#line):\(fullName)" )
+                    }
+                    
+                    DispatchQueue.main.async {
+                        let window = UIApplication.shared.windows[0]
+                        let photoViewController = PhotoViewController()
+                        window.rootViewController = photoViewController;
+                    }
+                }
+            })
+        }
+    }
+    
+//    func userAuthenticateCallback(notification:Notification) {
+//        if let url = notification.object as? URL {
+//            self.completeAuthWithURL(url: url, completionHandler: { [unowned self] (userName, userId, fullName, error) in
+//                if error != nil {
+//                    return
+//                } else {
+//                    self.userLogin(by: userName!, by: userId!)
+//                    let photoViewController = PhotoViewController()
+//                    let navigationViewController = UINavigationController(rootViewController: photoViewController)
+//                    self.present(navigationViewController, animated: true, completion: nil)
+//                }
+//            })
+//        }
+//    }
     
     func completeAuthWithURL(url:URL, completionHandler:@escaping(_ userName:String?, _ userId:String?, _ fullName: String?, _ error:NSError?) -> Void) {
         
@@ -173,7 +226,7 @@ extension SignupViewController {
             
             if oauthToken == nil || oauthTokenSecret == nil {
                 completion(nil, NSError(domain: "beginAuthWithCallbackURL", code: 1, userInfo: [NSLocalizedDescriptionKey: "beginAuthWithCallbackURL"]))
-                return                
+                return
             }
             self.authToken = oauthToken
             self.authSecret = oauthTokenSecret
@@ -214,7 +267,7 @@ extension SignupViewController {
         } else {
             newArgs = [String:String]()
         }
-    
+        
         newArgs["oauth_nonce"] = FKGenerateOauthNonce()
         let time = NSDate().timeIntervalSince1970
         newArgs["oauth_timestamp"] = "\(time)"
@@ -255,10 +308,6 @@ extension SignupViewController {
         let URLString = "https://www.flickr.com/services/oauth/authorize?oauth_token=\(inRequestToken)"
         return URL(string: URLString)
     }
-
-}
-
-extension SignupViewController {
     
     func FKGenerateOauthNonce() -> String {
         let uuid = FKGenerateUUID()
@@ -270,6 +319,13 @@ extension SignupViewController {
         let uuid = NSUUID().uuidString
         return uuid
     }
+    
+    
+}
+
+extension SignupViewController {
+    
+
     
 //    func FKQueryParamDictionaryFromQueryString(queryString:String) ->[String:String]? {
 //        if queryString.characters.count < 1 {
