@@ -61,13 +61,18 @@ class SignupViewController: UIViewController {
 class FlickrClient {
     static let sharedInstance = FlickrClient()
     
-    typealias FlickrClientSuccess = () -> Void
-    var FlickrClientSuccess:FlickrClient?
+    typealias FlickrClientSuccess = (_ error:Error?, _ data:AnyObject?) -> Void
+    typealias FLickrClientFailure = (_ error:Error?) -> Void
+    
+    var flickrClientSuccessBlock:FlickrClientSuccess?
+    var flickrClientFailureBlock:FLickrClientFailure?
     
     var authSecret: String?
     var authToken: String?
     
-    private init(){}
+    private init(){
+        
+    }
     
     func handleCallbackURL(url: URL?) {
         if let url = url {
@@ -155,12 +160,16 @@ class FlickrClient {
                 let un = params["username"]
                 
                 if fn == nil || oat == nil || oats == nil || nsid == nil || un == nil {
+                    
                     completionHandler(nil, nil, nil, NSError(domain: "completeAuthWithURL", code: 1, userInfo: [NSLocalizedDescriptionKey:"Cannot obtain token/secret from URL"]))
                     return
                 } else {
                     UserDefaults.standard.set(fn, forKey: "kFKStoredTokenKey")
                     UserDefaults.standard.set(fn, forKey: "kFKStoredTokenSecret")
                     UserDefaults.standard.synchronize()
+                    self.flickrClientSuccessBlock = {(error, result) -> Void in
+                        
+                    }
                     completionHandler(un, nsid, fn, nil)
                     NotificationCenter.default.removeObserver(self, name:NSNotification.Name(rawValue: "UserAuthCallbackNotification") , object: nil)
                 }
@@ -171,6 +180,7 @@ class FlickrClient {
     }
     
     func beginAuthWithCallbackURL(_ url: NSURL, permission:String? = nil, completion:@escaping(_ flickrLoginPageURL:URL?, _ error: NSError?) -> Void) {
+        
         let paramsDictionary = ["oauth_callback": url.absoluteString!]
         let baseURLString = "https://www.flickr.com/services/oauth/request_token"
         let baseURL = NSURL(string: baseURLString)!
