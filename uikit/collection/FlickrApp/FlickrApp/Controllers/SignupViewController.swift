@@ -15,9 +15,6 @@ class SignupViewController: UIViewController {
 
     override func viewDidLoad() {
         super.viewDidLoad()
-
-        // Do any additional setup after loading the view.
-        NotificationCenter.default.addObserver(self, selector: #selector(userAuthenticateCallback), name: NSNotification.Name(rawValue: "UserAuthCallbackNotification"), object: nil)
     }
 
     func userAuthenticateCallback(notification:Notification) {
@@ -53,28 +50,10 @@ class SignupViewController: UIViewController {
     
     // complete auth:
     @IBAction func signUpAction(_ sender: Any) {
-        let callbackURLString = "flickrApp://auth"
-        let url = NSURL(string: callbackURLString)!
-        FlickrClient.sharedInstance.beginAuthWithCallbackURL(url, permission: nil) { (flickrLoginPageURL, error) in
-            if let error = error {
-                print(error)
-                return
-            } else {
-                if let flickrLoginPageURL = flickrLoginPageURL {
-                    print("Function: \(#function), line: \(#line):\(flickrLoginPageURL)" )
-                    // line: 65:https://www.flickr.com/services/oauth/authorize?oauth_token=72157684045594134-3779866796125927
-                    
-                    let urlRequest = URLRequest(url: flickrLoginPageURL)
-                    let webViewController = self.storyboard?.instantiateViewController(withIdentifier: "TMDBAuthViewController") as! FlickrAuthViewController
-                    webViewController.urlRequest = urlRequest
-                    
-                    let webAuthNavigationController = UINavigationController()
-                    webAuthNavigationController.pushViewController(webViewController, animated: false)
-                    DispatchQueue.main.async {
-                        self.present(webAuthNavigationController, animated: true, completion: nil)
-                    }
-                }
-            }
+        if let storyboard = self.storyboard {
+            let flickrAuthViewController = storyboard.instantiateViewController(withIdentifier: "TMDBAuthViewController") as! FlickrAuthViewController
+            let navigationViewController = UINavigationController(rootViewController: flickrAuthViewController);
+            self.present(navigationViewController, animated: true, completion: nil);
         }
     }
 }

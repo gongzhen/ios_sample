@@ -28,10 +28,23 @@ class FlickrAuthViewController: UIViewController {
     // begin auth
     override func viewWillAppear(_ animated: Bool) {
         super.viewWillAppear(animated)
-        print("Function: \(#function), line: \(#line):viewWillAppear" )
-        if let urlRequest = urlRequest {
-            print(urlRequest)
-            webView.loadRequest(urlRequest)
+        
+        let callbackURLString = "flickrApp://auth"
+        let url = NSURL(string: callbackURLString)!
+        
+        FlickrClient.sharedInstance.beginAuthWithCallbackURL(url, permission: nil) { (flickrLoginPageURL, error) in
+            if let error = error {
+                print(error.localizedDescription)
+                return
+            } else {
+                if let flickrLoginPageURL = flickrLoginPageURL {
+                    print("Function: \(#function), line: \(#line):\(flickrLoginPageURL)" )
+                    // line: 65:https://www.flickr.com/services/oauth/authorize?oauth_token=72157684045594134-3779866796125927
+                    let urlRequest = URLRequest(url: flickrLoginPageURL)
+                    print("Function: \(#function), line: \(#line):\(flickrLoginPageURL)" )
+                    self.webView.loadRequest(urlRequest)
+                }
+            }
         }
     }
 
@@ -62,9 +75,12 @@ extension FlickrAuthViewController: UIWebViewDelegate {
     }
     
     func webView(_ webView: UIWebView, shouldStartLoadWith request: URLRequest, navigationType: UIWebViewNavigationType) -> Bool{
-        if let urlString = webView.request?.url?.absoluteString {
-            print("shouldStartLoadWith: \(urlString)")
-        }        
+        if let url = request.url {
+            if url.scheme != "http" && url.scheme != "https" {
+                UIApplication.shared.open(url, options: [:], completionHandler: nil)
+                return false
+            }
+        }
         return true
     }
     

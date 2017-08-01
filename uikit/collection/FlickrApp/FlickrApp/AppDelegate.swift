@@ -50,18 +50,12 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
     }
 
     func application(_ app: UIApplication, open url: URL, options: [UIApplicationOpenURLOptionsKey : Any] = [:]) -> Bool{
-//        if let scheme = url.scheme {
-//            if scheme == "flickrapp" {
-//                NotificationCenter.default.post(name: NSNotification.Name(rawValue:"UserAuthCallbackNotification"), object: url, userInfo: nil)
-//            }
-//        }
 
         if let scheme = url.scheme {
             if scheme == "flickrapp" {
                 FlickrClient.sharedInstance.handleCallbackURL(url: url);
             }
         }
-        
 
         return true
     }
