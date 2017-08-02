@@ -92,10 +92,28 @@ void (^calculateSimpleOperationTime)(NSString *, SimpleOperation) = ^(NSString* 
     NSLog(@"stringCopy:    %p, %p, %@", stringCopy, &stringCopy, stringCopy);
     NSLog(@"strong string: %p, %p, %@", _strongString, &_strongString, _strongString);
     NSLog(@"copy   string: %p, %p, %@", _copyedString, &_copyedString, _copyedString);
+    
+
 }
 
+// https://stackoverflow.com/questions/26993427/should-i-use-copy-or-strong-with-arrays
 - (void)testMutableStringChanged {
-    
+    NSMutableString *s = [@"test1" mutableCopy];
+    NSArray *a1 = @[s];
+    NSArray *a2 = [a1 copy];
+    NSLog(@"\na1: %1$p, %1$@\na2: %2$p, %2$@", a1, a2);
+    [s appendString:@"2"];
+    NSLog(@"\na1: %1$p, %1$@\na2: %2$p, %2$@", a1, a2);
+}
+
+- (void)testMutableStringNotChanged {
+    NSString *s1 = @"test1";
+    NSString *s2 = @"test2";
+    NSMutableArray *a1 = [@[s1] mutableCopy];
+    NSArray *a2 = [a1 copy];
+    NSLog(@"\na1: %1$p, %1$@\na2: %2$p, %2$@", a1, a2);
+    [a1 addObject:s2];
+    NSLog(@"\na1: %1$p, %1$@\na2: %2$p, %2$@", a1, a2);
 }
 
 @end
@@ -130,6 +148,9 @@ int main(int argc, const char * argv[]) {
         NSLog(@"immutableStr:%@:[%p]", immutableStr, &immutableStr);
         NSLog(@"copyStr:%@:[%p] will not be changed with immutableString", obj.nameCopy, &copyPtr);
         NSLog(@"strongStr:%p:[%p] is changed with immutableString", obj.nameStrong, &strongPtr);
+        
+        [obj testMutableStringChanged];
+        [obj testMutableStringNotChanged];
         
     }
     return 0;
