@@ -11,14 +11,142 @@ import Foundation
 class NetworkingManager: NSObject {
 
     // MARK: Properties
-    
-    // shared session
+    var authSecret:String?
+    var authToken:String?
     fileprivate var session = URLSession.shared
-    
     static let sharedInstance = NetworkingManager()
     
+    // MARK: Initializer
     override init() {
         super.init()
+    }
+    
+    func beginAuthWithCallbackURL(_ url: URL, permission:String? = nil, completion:@escaping(_ flickrLoginPageURL:URL?, _ error: NSError?) -> Void) {
+        
+        let paramsDictionary = ["oauth_callback": url.absoluteString];
+        let baseURLString = self.requestTokenURLFromBaseURL()
+        let baseURL = URL(string: baseURLString)!
+        let requestURL = self.oauthURLFromBaseURL(inURL: baseURL, httpMethod: .HttpMethodGET, httpParams: paramsDictionary as [String: AnyObject])
+        let request = URLRequest(url: requestURL!)
+        
+        let task = self.session.dataTask(with: request) { (data, response, error) in
+            guard error == nil else {
+                return
+            }
+            
+            guard let data = data else {
+                return
+            }
+            
+            guard let responseString = String(data: data, encoding: String.Encoding.utf8) else {
+                return
+            }
+            
+            var oauthToken:String = ""
+            var oauthTokenSecret:String = ""
+            if let params = FKQueryParamDictionaryFromQueryString(responseString) {
+                if let oauthTokenStr = params[FlickrParameterKeys.OAuthToken] as? String {
+                    oauthToken = oauthTokenStr
+                }
+                if let oauthTokenSecretStr = params[FlickrParameterKeys.OAuthTokenSecret] as? String {
+                    oauthTokenSecret = oauthTokenSecretStr
+                }
+            } else {
+                completion(nil, NSError(domain: "Begin Auth with Callback URL", code: 1, userInfo: [NSLocalizedDescriptionKey: "beginAuthWithCallbackURL"]))
+                return
+            }
+            
+            if oauthToken.isEmpty || oauthTokenSecret.isEmpty {
+                completion(nil, NSError(domain: "Begin Auth with Callback URL", code: 1, userInfo: [NSLocalizedDescriptionKey: "beginAuthWithCallbackURL"]))
+                return
+            }
+            self.authToken = oauthToken
+            self.authSecret = oauthTokenSecret
+            guard let beginAuthURL = self.userAuthorizationURLWithRequestToken(inRequestToken:oauthToken) else {
+                return
+            }
+            completion(beginAuthURL, nil)
+        }
+        task.resume()
+    }
+    
+    func requestTokenURLFromBaseURL() -> String {
+        return FlickrOAuth.BASE_URL + FlickrOAuth.ApiPath + "/" + FlickrParameterKeys.RequestToken
+    }
+    
+    func oauthURLFromBaseURL(inURL:URL, httpMethod method:HttpMethod, httpParams params:[String:AnyObject]) -> URL? {
+        let newArgs:[String: String] = self.signedOAuthHTTPQueryParameters(params, baseURL: inURL, method: method)
+        var queryArray = [String]()
+        for (key, value) in newArgs {
+            let escapedValue = FKEscapedURLStringPlus(value)!
+            queryArray.append("\(key)=\(escapedValue)")
+        }
+        let newURLStringWithQuery = "\(inURL.absoluteString)?\(queryArray.joined(separator: "&"))"
+        return URL(string: newURLStringWithQuery)
+    }
+    
+    func signedOAuthHTTPQueryParameters(_ params:[String: AnyObject]?, baseURL inURL:URL, method:HttpMethod) -> [String: String] {
+        var newArgs:[String:String]
+        var httpMethod:String
+        switch method {
+        case .HttpMethodGET:
+            httpMethod = "GET"
+            break;
+        case .HttpMethodPOST:
+            httpMethod = "POST"
+            break;
+        }
+        
+        if let params = params {
+            newArgs = params as! [String: String]
+        } else {
+            newArgs = [String: String]()
+        }
+        
+        newArgs[FlickrParameterKeys.OAuthNonce] = FKGenerateOauthNonce()
+        let time = NSDate().timeIntervalSince1970
+        newArgs[FlickrParameterKeys.OAuthTimestamp] = "\(time)"
+        newArgs[FlickrParameterKeys.OAuthVersion] = FlickrParameterValues.OAuthVersion
+        newArgs[FlickrParameterKeys.OAuthSignatureMethod] = FlickrParameterValues.OAuthSignatureMethod
+        newArgs[FlickrParameterKeys.OAuthConsumerKey] = FlickrParameterValues.APIKey
+        
+        let signatureKey:String
+        if let authSecret = self.authSecret {
+            signatureKey = FlickrParameterValues.Secret + "&" + authSecret
+        } else {
+            signatureKey = FlickrParameterValues.Secret + "&"
+        }
+        
+        var baseString: String = ""
+        baseString += httpMethod
+        baseString += "&"
+        baseString += FKEscapedURLStringPlus(inURL.absoluteString)
+        let sortedKeys = newArgs.keys.sorted { (s0, s1) -> Bool in
+            return s0 < s1
+        }
+        baseString += "&"
+        var baseStrArgs:[String] = []
+        
+        for key in sortedKeys {
+            if let value = FKEscapedURLStringPlus(newArgs[key]!) {
+                baseStrArgs.append("\(key)=\(value)")
+            }
+        }
+        
+        baseString.append(FKEscapedURLStringPlus(baseStrArgs.joined(separator: "&")))
+        let signature = FKOFHMACSha1Base64(signatureKey, baseString)
+        newArgs[FlickrParameterKeys.OAuthSignature] = signature
+        return newArgs
+    }
+    
+    func FKGenerateOauthNonce() -> String {
+        let uuid = FKGenerateUUID()
+        let endIndex = uuid.index(uuid.startIndex, offsetBy: 8)
+        return uuid.substring(to: endIndex)
+    }
+    
+    func FKGenerateUUID() -> String {
+        return NSUUID().uuidString
     }
     
     func taskForGETMethod(_ method:String?, parameters:[String:AnyObject], completionHandlerForGet: @escaping (_ result: AnyObject?, _ error: NSError?) -> Void) -> URLSessionTask {
@@ -82,6 +210,11 @@ class NetworkingManager: NSObject {
         return component.url!
     }
     
+    func userAuthorizationURLWithRequestToken(inRequestToken:String) -> URL? {
+        let URLString = FlickrOAuth.BASE_URL + FlickrOAuth.ApiPath + "/authorize?oauth_token=\(inRequestToken)"
+        return URL(string: URLString)
+    }
+    
 }
 
 extension NetworkingManager {
@@ -141,6 +274,11 @@ enum HttpMethod{
 
 extension NetworkingManager {
     
+    struct FlickrOAuth {
+        static let BASE_URL = "https://www.flickr.com"
+        static let ApiPath = "/services/oauth"
+    }
+    
     struct Flickr {
         static let ApiScheme = "https"
         static let ApiHost = "api.flickr.com"
@@ -149,6 +287,18 @@ extension NetworkingManager {
     
     struct FlickrParameterKeys {
         static let APIKey = "api_key"
+        static let RequestToken = "request_token"
+        static let OAuthCallback = "oauth_callback"
+        static let OAuthToken = "oauth_token"
+        static let OAuthTokenSecret = "oauth_token_secret"
+        static let OAuthNonce = "oauth_nonce"
+        
+        static let OAuthTimestamp = "oauth_timestamp"
+        static let OAuthVersion = "oauth_version"
+        static let OAuthSignatureMethod = "oauth_signature_method"
+        static let OAuthConsumerKey = "oauth_consumer_key"
+        static let OAuthSignature = "oauth_signature"
+        
         static let Secret = "secret"
         static let Method = "method"
         static let PerPage = "per_page"
@@ -159,13 +309,14 @@ extension NetworkingManager {
     
     struct FlickrParameterValues {
         static let APIKey = "6d0a75210d7fa6268d56f466540ea839"
-
         static let Secret = "11be804d16b24bbd"
         static let Method = "flickr.interestingness.getList"
         static let PerPage = "99"
         static let Format = "json"
         static let NoJSONCallback = "1"
         static let Extras = "url_q,url_z"
+        static let OAuthVersion = "1.0"
+        static let OAuthSignatureMethod = "HMAC-SHA1"
     }
     
     struct FlickrResponseKeys {

@@ -257,7 +257,7 @@
 				TargetAttributes = {
 					062FD5251EF1B147000D6866 = {
 						CreatedOnToolsVersion = 8.3.2;
-						DevelopmentTeam = G66RX9MATK;
+						DevelopmentTeam = 637B86FV5H;
 						ProvisioningStyle = Automatic;
 					};
 					062FD5391EF1B147000D6866 = {
@@ -477,13 +477,13 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
-				DEVELOPMENT_TEAM = G66RX9MATK;
+				DEVELOPMENT_TEAM = 637B86FV5H;
 				INFOPLIST_FILE = FlickrApp/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 10.1;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.caknow.gongzhen.FlickrApp;
 				PRODUCT_NAME = "$(TARGET_NAME)";
-				SWIFT_OBJC_BRIDGING_HEADER = "/Users/gongzhen/Project/mobile/iOS/ios_sample/uikit/collection/FlickrApp/FlickrApp-Bridging-Header.h";
+				SWIFT_OBJC_BRIDGING_HEADER = "$(SRCROOT)/$(PROJECT_NAME)-Bridging-Header.h";
 				SWIFT_VERSION = 3.0;
 			};
 			name = Debug;
@@ -492,13 +492,13 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
-				DEVELOPMENT_TEAM = G66RX9MATK;
+				DEVELOPMENT_TEAM = 637B86FV5H;
 				INFOPLIST_FILE = FlickrApp/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 10.1;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.caknow.gongzhen.FlickrApp;
 				PRODUCT_NAME = "$(TARGET_NAME)";
-				SWIFT_OBJC_BRIDGING_HEADER = "/Users/gongzhen/Project/mobile/iOS/ios_sample/uikit/collection/FlickrApp/FlickrApp-Bridging-Header.h";
+				SWIFT_OBJC_BRIDGING_HEADER = "$(SRCROOT)/$(PROJECT_NAME)-Bridging-Header.h";
 				SWIFT_VERSION = 3.0;
 			};
 			name = Release;

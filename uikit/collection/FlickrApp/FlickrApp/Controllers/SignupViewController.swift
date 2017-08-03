@@ -314,8 +314,7 @@ class FlickrClient {
 
 extension SignupViewController {
     
-
-    
+//// My own cusntom methods.
 //    func FKQueryParamDictionaryFromQueryString(queryString:String) ->[String:String]? {
 //        if queryString.characters.count < 1 {
 //            return nil
@@ -332,7 +331,7 @@ extension SignupViewController {
 //        }
 //        return keyValues
 //    }
-    
+//    
 //    func FKEscapedURLStringPlus(string:String) -> String? {
 //        let unreleved = "`~!@#$^&*()=+[]\\{}|;':\",/<>?"
 //        let allowed = NSMutableCharacterSet.alphanumeric()
