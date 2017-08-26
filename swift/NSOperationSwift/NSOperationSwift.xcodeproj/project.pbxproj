@@ -224,7 +224,7 @@
 				TargetAttributes = {
 					0607D8DE1F07528600D4BF2B = {
 						CreatedOnToolsVersion = 8.3.2;
-						DevelopmentTeam = G66RX9MATK;
+						DevelopmentTeam = X92HRP6SLX;
 						ProvisioningStyle = Automatic;
 					};
 					0607D8F21F07528700D4BF2B = {
@@ -451,7 +451,7 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
-				DEVELOPMENT_TEAM = G66RX9MATK;
+				DEVELOPMENT_TEAM = X92HRP6SLX;
 				INFOPLIST_FILE = NSOperationSwift/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.caknow.gongzhen.NSOperationSwift;
@@ -464,7 +464,7 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
-				DEVELOPMENT_TEAM = G66RX9MATK;
+				DEVELOPMENT_TEAM = X92HRP6SLX;
 				INFOPLIST_FILE = NSOperationSwift/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.caknow.gongzhen.NSOperationSwift;
@@ -550,6 +550,7 @@
 				0607D9091F07528700D4BF2B /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		0607D90A1F07528700D4BF2B /* Build configuration list for PBXNativeTarget "NSOperationSwiftTests" */ = {
 			isa = XCConfigurationList;
@@ -558,6 +559,7 @@
 				0607D90C1F07528700D4BF2B /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		0607D90D1F07528700D4BF2B /* Build configuration list for PBXNativeTarget "NSOperationSwiftUITests" */ = {
 			isa = XCConfigurationList;
@@ -566,6 +568,7 @@
 				0607D90F1F07528700D4BF2B /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};
