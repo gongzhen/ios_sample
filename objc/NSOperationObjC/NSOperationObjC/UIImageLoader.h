@@ -17,6 +17,9 @@ typedef NS_ENUM(NSInteger, UIImageLoadSource) {
     UIImageLoadSourceNetworkToDisk,
 };
 
+//forward
+@class UIImageMemoryCache;
+
 typedef void (^UIImageLoader_HasCacheBlock)(UIImage* _Nullable image, UIImageLoadSource loadedFromSource);
 typedef void (^UIImageLoader_SendingRequestBlock)(BOOL didHaveCachedImage);
 typedef void (^UIImageLoader_RequestCompletedBlock)(NSError *_Nullable error, UIImage* _Nullable image, UIImageLoadSource loadedFromSource);
@@ -26,6 +29,9 @@ extern NSString * _Nonnull const UIImageLoaderErrorDomain;
 extern const NSInteger UIImageLoaderErrorNilURL;
 
 @interface UIImageLoader : NSObject <NSURLSessionDelegate>
+
+//memory cache where images get stored if cacheImagesInMemory is on.
+@property UIImageMemoryCache * _Nullable memoryCache;
 
 //the session object used to download data.
 //If you change this then you are responsible for implementing delegate logic for acceptsAnySSLCertificate if needed.

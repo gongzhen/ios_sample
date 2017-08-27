@@ -10,6 +10,8 @@
 
 @interface UIImageMemoryCache : NSObject
 
+@property (nonatomic, readonly) NSCache * _Nullable cache;
+
 //max cache size in bytes.
 @property (nonatomic) NSUInteger maxBytes;
 
