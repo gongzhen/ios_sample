@@ -4,7 +4,8 @@
 //
 //  Created by Admin  on 8/25/17.
 //  Copyright © 2017 Admin . All rights reserved.
-//
+//  Asynchronous image loading in fast scrolling table cells
+//  http://cocoanuts.mobi/2014/04/27/fastscroll/
 
 #import "ViewController.h"
 #import "NetworkManager.h"
