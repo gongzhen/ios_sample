@@ -88,9 +88,9 @@ static NSString *const cellIdentifier = @"cellidentifier";
     }
     cell.textLabel.text = photoDetails.name;DLog(@"photoDetails.name:%@", photoDetails.name);
     cell.imageView.image = photoDetails.image;
-    if(!_tableView.isDragging && !_tableView.isDecelerating) {
+//    if(!_tableView.isDragging && !_tableView.isDecelerating) {
         [self startOperationsForPhotoRecord:photoDetails indexPath:indexPath];
-    }
+//    }
     
 }
 
@@ -100,7 +100,9 @@ static NSString *const cellIdentifier = @"cellidentifier";
 
 - (void)startDownloadForRecord:(PhotoRecord *)photoRecord indexPath:(NSIndexPath *)indexPath {
     // Check for the particular indexPath to see if there is already an operation.
-    if([_pendingOperation.downloadsInProgress objectForKey:indexPath]) {
+    DLog(@"indexPath:%ld", (long)indexPath.row);
+    DLog(@"_pendingOperation.downloadsInProgress:%@", _pendingOperation.downloadsInProgress);
+    if([_pendingOperation.downloadsInProgress objectForKey:indexPath] != nil) {
         return;
     }
 
@@ -112,12 +114,14 @@ static NSString *const cellIdentifier = @"cellidentifier";
         }
         dispatch_async(dispatch_get_main_queue(), ^{
             [_pendingOperation.downloadsInProgress removeObjectForKey:indexPath];
+            DLog(@"reload:%ld", (long)indexPath.row);
             [_tableView reloadRowsAtIndexPaths:@[indexPath] withRowAnimation:UITableViewRowAnimationFade];
         });
     };
     
     [_pendingOperation.downloadsInProgress setObject:downloader forKey:indexPath];
     [_pendingOperation.downloadQueue addOperation:downloader];
+    DLog(@"_pendingOperation.downloadsInProgress:%@", _pendingOperation.downloadsInProgress);
 }
 
 - (void)scrollViewWillBeginDragging:(UIScrollView *)scrollView {
