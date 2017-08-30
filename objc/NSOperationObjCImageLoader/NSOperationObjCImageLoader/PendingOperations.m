@@ -12,12 +12,25 @@
 
 - (instancetype)init {
     if(self = [super init]) {
-        _downloadsInProgress = [NSMutableDictionary new];
+    
+    }
+    return self;
+}
+
+- (NSOperationQueue *)downloadQueue {
+    if(_downloadQueue == nil) {
         _downloadQueue = [[NSOperationQueue alloc] init];
         _downloadQueue.name = @"Download queue";
         _downloadQueue.maxConcurrentOperationCount = 1;
     }
-    return self;
+    return _downloadQueue;
+}
+
+- (NSMutableDictionary *)downloadsInProgress {
+    if(_downloadsInProgress == nil) {
+        _downloadsInProgress = [NSMutableDictionary new];
+    }
+    return _downloadsInProgress;
 }
 
 @end

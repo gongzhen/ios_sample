@@ -83,6 +83,8 @@ class ListViewController: UITableViewController {
     
     func startDownloadForRecord(photoDetails: PhotoRecord, indexPath: IndexPath){
         //1 First, check for the particular indexPath to see if there is already an operation in downloadsInProgress for it. If so, ignore it.
+        print("86 ------ indexPath \(indexPath)")
+        print("87 ------ downloadsInProgress \(pendingOperations.downloadsInProgress)")
         if pendingOperations.downloadsInProgress[indexPath] != nil {
             return
         }
@@ -96,6 +98,8 @@ class ListViewController: UITableViewController {
             }
             DispatchQueue.main.async(execute: {
                 self.pendingOperations.downloadsInProgress.removeValue(forKey: indexPath)
+                print("101 ------ indexPath \(indexPath)")
+                print("102 ------ downloadsInProgress \(self.pendingOperations.downloadsInProgress)")
                 self.tableView.reloadRows(at: [indexPath], with: .fade)
             })
         }
@@ -103,6 +107,8 @@ class ListViewController: UITableViewController {
         pendingOperations.downloadsInProgress[indexPath] = downloader
         //5 Add the operation to the download queue.
         pendingOperations.downloadQueue.addOperation(downloader)
+        print("110 ------ downloadsInProgress \(pendingOperations.downloadsInProgress)")
+        print("111 ------ downloadsInProgress \(pendingOperations.downloadQueue)")
     }
     
     func startFiltrationForRecord(photoDetails: PhotoRecord, indexPath: IndexPath){

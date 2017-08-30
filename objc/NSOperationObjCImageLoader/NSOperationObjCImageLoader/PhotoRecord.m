@@ -14,7 +14,8 @@
     if(self = [super init]) {
         _name = name;
         _url = url;
-        _image = [UIImage imageNamed:@"dribbble_ball"];
+        _image = [UIImage imageNamed:@"Placeholder"];
+        _state = PhotoRecordStateNew;
     }
     return self;
 }

@@ -244,7 +244,7 @@
 				TargetAttributes = {
 					06E2F4FA1F52AFB600D245E7 = {
 						CreatedOnToolsVersion = 8.3.3;
-						DevelopmentTeam = J9PKQ8Y5Y3;
+						DevelopmentTeam = X92HRP6SLX;
 						ProvisioningStyle = Automatic;
 					};
 					06E2F5131F52AFB600D245E7 = {
@@ -475,7 +475,7 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
-				DEVELOPMENT_TEAM = J9PKQ8Y5Y3;
+				DEVELOPMENT_TEAM = X92HRP6SLX;
 				INFOPLIST_FILE = NSOperationObjCImageLoader/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.gongzhen.NSOperationObjCImageLoader;
@@ -487,7 +487,7 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
-				DEVELOPMENT_TEAM = J9PKQ8Y5Y3;
+				DEVELOPMENT_TEAM = X92HRP6SLX;
 				INFOPLIST_FILE = NSOperationObjCImageLoader/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.gongzhen.NSOperationObjCImageLoader;
@@ -564,6 +564,7 @@
 				06E2F52A1F52AFB600D245E7 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		06E2F52B1F52AFB600D245E7 /* Build configuration list for PBXNativeTarget "NSOperationObjCImageLoaderTests" */ = {
 			isa = XCConfigurationList;
@@ -572,6 +573,7 @@
 				06E2F52D1F52AFB600D245E7 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		06E2F52E1F52AFB600D245E7 /* Build configuration list for PBXNativeTarget "NSOperationObjCImageLoaderUITests" */ = {
 			isa = XCConfigurationList;
@@ -580,6 +582,7 @@
 				06E2F5301F52AFB600D245E7 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};
