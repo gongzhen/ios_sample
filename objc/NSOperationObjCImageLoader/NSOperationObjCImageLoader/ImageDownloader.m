@@ -31,7 +31,7 @@
         return;
     }
     
-//
+
 //    NSData *data = [NSData dataWithContentsOfURL:_photoRecord.url];
 //    if(data == nil || data.length == 0) {
 //        _photoRecord.image = [UIImage imageNamed:@"Failed"];

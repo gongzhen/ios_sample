@@ -78,6 +78,10 @@ static NSString *const cellIdentifier = @"cellidentifier";
     if(cell == nil) {
         cell = [[UITableViewCell alloc] initWithStyle:UITableViewCellStyleDefault reuseIdentifier:cellIdentifier];
     }
+    cell.selectionStyle = UITableViewCellSelectionStyleNone;
+    if(cell.accessoryView == nil) {
+        cell.accessoryView = [[UIActivityIndicatorView alloc] initWithActivityIndicatorStyle:UIActivityIndicatorViewStyleGray];
+    }
     return cell;
 }
     
@@ -86,9 +90,6 @@ static NSString *const cellIdentifier = @"cellidentifier";
 //    if([photoDetails.name isEqualToString:@"Volcan y saltos"]) {
 //        DLog(@"photoDetails name:%@ state:%ld", photoDetails.name, (long)photoDetails.state);
 //    }
-    if(cell.accessoryView == nil) {
-        cell.accessoryView = [[UIActivityIndicatorView alloc] initWithActivityIndicatorStyle:UIActivityIndicatorViewStyleGray];
-    }
     cell.textLabel.text = [NSString stringWithFormat:@"%@%ld", photoDetails.name, (long)indexPath.row];
     cell.imageView.image = photoDetails.image;
     
@@ -100,7 +101,7 @@ static NSString *const cellIdentifier = @"cellidentifier";
 //            if([photoDetails.name isEqualToString:@"Volcan y saltos"]) {
 //                DLog(@"isDragging:%d,isDecelerating:%d", tableView.isDragging, tableView.isDecelerating);
 //            }
-            if(!tableView.isDragging && !tableView.isDecelerating) {
+            if (!tableView.dragging && !tableView.decelerating){
                 [self startOperationsForPhotoRecord:photoDetails indexPath:indexPath];
             }
             break;
@@ -130,8 +131,7 @@ static NSString *const cellIdentifier = @"cellidentifier";
 
 - (void)startDownloadForRecord:(PhotoRecord *)photoRecord indexPath:(NSIndexPath *)indexPath {
     // Check for the particular indexPath to see if there is already an operation.
-    DLog(@"_pendingOperation.indexPath:%ld", indexPath.row);
-    DLog(@"_pendingOperation.indexPath:%@", [_pendingOperation.downloadsInProgress objectForKey:indexPath]);
+    DLog(@"_pendingOperation[indexPath:%ld]:%@", indexPath.row, [_pendingOperation.downloadsInProgress objectForKey:indexPath]);
     if([_pendingOperation.downloadsInProgress objectForKey:indexPath] != nil) {
         return;
     }
@@ -158,7 +158,7 @@ static NSString *const cellIdentifier = @"cellidentifier";
     [_pendingOperation updateMapWithKey:downloader.name];
     DLog(@"_pendingOperation.map:%@ add:%@", _pendingOperation.map, downloader.name);
     DLog(@"_pendingOperation.operations:%@",_pendingOperation.downloadQueue.operations);
-    DLog(@"_pendingOperation.downloadsInProgress:%@ forkey:%ld",downloader.name, (long)indexPath.row);
+    DLog(@"_pendingOperation.downloadsInProgress:%@ indexPath:%ld",downloader.name, (long)indexPath.row);
     
 }
 
