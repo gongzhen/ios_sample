@@ -12,5 +12,8 @@
 
 @property (strong, nonatomic) NSMutableDictionary *downloadsInProgress;
 @property (strong, nonatomic) NSOperationQueue* downloadQueue;
+@property (strong, nonatomic) NSMutableDictionary *map;
+
+- (void)updateMapWithKey:(NSString *)key;
 
 @end

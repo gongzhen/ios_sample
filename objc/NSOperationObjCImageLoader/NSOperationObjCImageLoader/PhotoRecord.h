@@ -10,10 +10,10 @@
 #import <UIKit/UIKit.h>
 
 typedef NS_ENUM(NSInteger, PhotoRecordState){
-    PhotoRecordStateNew,
-    PhotoRecordStateDownloaded,
-    PhotoRecordStateFiltered,
-    PhotoRecordStateFailed
+    PhotoRecordStateNew = 0,
+    PhotoRecordStateDownloaded = 1,
+    PhotoRecordStateFiltered = 2,
+    PhotoRecordStateFailed = 3
 };
 
 

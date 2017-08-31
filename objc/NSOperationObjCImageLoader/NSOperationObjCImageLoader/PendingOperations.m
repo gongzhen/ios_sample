@@ -12,9 +12,19 @@
 
 - (instancetype)init {
     if(self = [super init]) {
-    
+        _map = [[NSMutableDictionary alloc] init];
     }
     return self;
+}
+
+- (void)updateMapWithKey:(NSString *)key {
+    NSNumber* count = [_map valueForKey:key];
+    if(count == nil) {
+        [_map setValue:@1 forKey:key];
+    } else {
+        int countInt = [count intValue];
+        [_map setValue:@(countInt + 1) forKey:key];
+    }
 }
 
 - (NSOperationQueue *)downloadQueue {

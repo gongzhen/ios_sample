@@ -16,6 +16,8 @@ class ImageDownloader: Operation {
     //2 Create a designated initializer allowing the photo record to be passed in.
     init(photoRecord: PhotoRecord) {
         self.photoRecord = photoRecord
+        super.init()        
+        self.name = photoRecord.name
     }
     
     //3 main is the method you override in NSOperation subclasses to actually perform work.
@@ -40,11 +42,13 @@ class ImageDownloader: Operation {
         if (imageData?.count)! > 0 {
             self.photoRecord.image = UIImage(data: imageData! as Data)
             self.photoRecord.state = .Downloaded
+            print("photo:\(photoRecord.name) is successful")
         }
         else
         {
             self.photoRecord.state = .Failed
             self.photoRecord.image = UIImage(named: "Failed")
+            print("photo:\(photoRecord.name) is failed")
         }
         
     }

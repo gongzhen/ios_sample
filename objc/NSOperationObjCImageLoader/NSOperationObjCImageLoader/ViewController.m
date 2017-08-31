@@ -83,16 +83,24 @@ static NSString *const cellIdentifier = @"cellidentifier";
     
 - (void)tableView:(UITableView *)tableView willDisplayCell:(UITableViewCell *)cell forRowAtIndexPath:(NSIndexPath *)indexPath {
     PhotoRecord* photoDetails = _photos[indexPath.row];
+//    if([photoDetails.name isEqualToString:@"Volcan y saltos"]) {
+//        DLog(@"photoDetails name:%@ state:%ld", photoDetails.name, (long)photoDetails.state);
+//    }
     if(cell.accessoryView == nil) {
         cell.accessoryView = [[UIActivityIndicatorView alloc] initWithActivityIndicatorStyle:UIActivityIndicatorViewStyleGray];
     }
-    cell.textLabel.text = photoDetails.name;
+    cell.textLabel.text = [NSString stringWithFormat:@"%@%ld", photoDetails.name, (long)indexPath.row];
     cell.imageView.image = photoDetails.image;
     
     switch (photoDetails.state) {
         case PhotoRecordStateNew:
         case PhotoRecordStateDownloaded:
-            if(!_tableView.isDragging && !_tableView.isDecelerating) {
+            // isDragging: returns YES if user has started scrolling.
+            // returns YES if user isn't dragging (touch up) but scroll view is still moving
+//            if([photoDetails.name isEqualToString:@"Volcan y saltos"]) {
+//                DLog(@"isDragging:%d,isDecelerating:%d", tableView.isDragging, tableView.isDecelerating);
+//            }
+            if(!tableView.isDragging && !tableView.isDecelerating) {
                 [self startOperationsForPhotoRecord:photoDetails indexPath:indexPath];
             }
             break;
@@ -104,9 +112,9 @@ static NSString *const cellIdentifier = @"cellidentifier";
 }
 
 - (void)startOperationsForPhotoRecord:(PhotoRecord *)photoRecord indexPath:(NSIndexPath *)indexPath {
-    if([photoRecord.name isEqualToString:@"Cute Monkey"]) {
-        DLog(@"photoRecord name:%@ state:%ld", photoRecord.name, (long)photoRecord.state);
-    }
+//    if([photoRecord.name isEqualToString:@"Volcan y saltos"]) {
+//        DLog(@"photoRecord name:%@ state:%ld", photoRecord.name, (long)photoRecord.state);
+//    }
     switch (photoRecord.state) {
         case PhotoRecordStateNew:
             [self startDownloadForRecord:photoRecord indexPath:indexPath];
@@ -114,22 +122,27 @@ static NSString *const cellIdentifier = @"cellidentifier";
         case PhotoRecordStateDownloaded:
             break;
         default:
+            DLog(@"photoRecord name:%@%ld state:%ld", photoRecord.name,(long)indexPath, (long)photoRecord.state);
+            NSLog(@"do nothing");
             break;
     }
 }
 
 - (void)startDownloadForRecord:(PhotoRecord *)photoRecord indexPath:(NSIndexPath *)indexPath {
     // Check for the particular indexPath to see if there is already an operation.
+    DLog(@"_pendingOperation.indexPath:%ld", indexPath.row);
+    DLog(@"_pendingOperation.indexPath:%@", [_pendingOperation.downloadsInProgress objectForKey:indexPath]);
     if([_pendingOperation.downloadsInProgress objectForKey:indexPath] != nil) {
         return;
     }
 
     ImageDownloader* downloader = [[ImageDownloader alloc] initWithRecord:photoRecord];
     __weak ImageDownloader* weakDownloader = downloader;
+
     downloader.completionBlock = ^{
-        if([weakDownloader.photoRecord.name isEqualToString:@"Cute Monkey"]) {
-            DLog(@"downloader:%@ is fisnih:. %d, status:%ld", weakDownloader.name, weakDownloader.isFinished, (long)weakDownloader.photoRecord.state);
-        }
+//        if([weakDownloader.photoRecord.name isEqualToString:@"Volcan y saltos"]) {
+//            DLog(@"downloader:%@ is fisnih:. %d, status:%ld", weakDownloader.name, weakDownloader.isFinished, (long)weakDownloader.photoRecord.state);
+//        }
         
         if(weakDownloader.isCancelled) {
             return;
@@ -142,6 +155,11 @@ static NSString *const cellIdentifier = @"cellidentifier";
     
     [_pendingOperation.downloadsInProgress setObject:downloader forKey:indexPath];
     [_pendingOperation.downloadQueue addOperation:downloader];
+    [_pendingOperation updateMapWithKey:downloader.name];
+    DLog(@"_pendingOperation.map:%@ add:%@", _pendingOperation.map, downloader.name);
+    DLog(@"_pendingOperation.operations:%@",_pendingOperation.downloadQueue.operations);
+    DLog(@"_pendingOperation.downloadsInProgress:%@ forkey:%ld",downloader.name, (long)indexPath.row);
+    
 }
 
 - (void)scrollViewWillBeginDragging:(UIScrollView *)scrollView {
@@ -166,14 +184,44 @@ static NSString *const cellIdentifier = @"cellidentifier";
 
 - (void)loadImagesForOnscreenCells {
     NSArray *pathsArray = [_tableView indexPathsForVisibleRows];
-    if(pathsArray.count <= 0) {
+    NSSet* visibleRows = [NSSet setWithArray:pathsArray];
+    if(visibleRows == nil || visibleRows.count <= 0) {
         return;
     }
     
+    NSMutableSet *pendingOperations = [NSMutableSet setWithArray:_pendingOperation.downloadsInProgress.allKeys];
+    
+    NSMutableSet *toBeCancelled = [pendingOperations mutableCopy];
+    NSMutableSet *toBeStarted = [visibleRows mutableCopy];
+    
+    [toBeStarted minusSet:pendingOperations];
+    
+    [toBeCancelled minusSet:visibleRows];
+    
+//    DLog(@"toBeStarted:%@", toBeStarted);
+//    DLog(@"toBeCancelled:%@", toBeCancelled);
+    
+    for(NSIndexPath *indexPath in toBeCancelled) {
+        ImageDownloader* pendingDownload = [_pendingOperation.downloadsInProgress objectForKey:indexPath];
+        if(pendingDownload) {
+            [pendingDownload cancel];
+            [_pendingOperation.downloadsInProgress removeObjectForKey:indexPath];
+        }
+    }
+    toBeCancelled = nil;
+    
+    for(NSIndexPath *indexPath in toBeStarted) {
+        PhotoRecord *recordToProcess = [_photos objectAtIndex:indexPath.row];
+        if(recordToProcess) {
+//            DLog(@"recordToProcess:%@, status:%ld, indexPath:%ld", recordToProcess.name, (long)recordToProcess.state, (long)indexPath.row);
+            [self startOperationsForPhotoRecord:recordToProcess indexPath:indexPath];
+        }
+    }
+    toBeStarted = nil;
 }
 
 - (void)resumeAllOperations {
-    _pendingOperation.downloadQueue.suspended = NO;
+    [_pendingOperation.downloadQueue setSuspended:NO];
 }
 
 

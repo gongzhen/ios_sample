@@ -10,6 +10,26 @@ import Foundation
 
 class PendingOperations{
     
+    var map:[String: Int] = [String: Int]()
+    
+    func updateMap(key:String) {
+        if let value = map[key] {
+            map.updateValue(value + 1, forKey: key)
+        } else {
+            map.updateValue(1, forKey: key)
+        }
+    }
+    
+    
+//    var map:[String: Int]? {
+//        willSet {
+//        
+//        }
+//        didSet {
+//        
+//        }
+//    }
+//    
     lazy var downloadsInProgress = [IndexPath:Operation]()
     lazy var downloadQueue: OperationQueue = {
         var queue = OperationQueue()

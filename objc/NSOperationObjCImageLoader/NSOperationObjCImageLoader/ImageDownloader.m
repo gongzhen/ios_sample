@@ -26,10 +26,7 @@
 }
 
 - (void)main {
-    if([self.name isEqualToString:@"Cute Monkey"]) {
-        DLog(@"self.name:%@ state:%ld", self.name, (long)self.photoRecord.state);
-        DLog(@"self.name:%@ url:%@", self.name, self.photoRecord.url);
-    }
+
     if(self.isCancelled) {
         return;
     }
@@ -43,9 +40,15 @@
 //    }
 //    _photoRecord.image = [UIImage imageWithData:data];
 //    _photoRecord.state = PhotoRecordStateDownloaded;
+
+    if([self.name isEqualToString:@"Volcan y saltos"]) {
+        DLog(@"self.name:%@ state:%ld", self.name, (long)self.photoRecord.state);
+        DLog(@"self.name:%@ url:%@", self.name, self.photoRecord.url);
+    }
     
     [[NetworkManager sharedInstance] fetchPhotoDataFromURL:_photoRecord.url success:^(NSData *data) {
         if(self.isCancelled) {
+            data = nil;
             return;
         }
         _photoRecord.image = [UIImage imageWithData:data];

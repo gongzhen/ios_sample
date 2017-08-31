@@ -33,6 +33,10 @@ class ListViewController: UITableViewController {
         return photos.count
     }
     
+    override func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat {
+        return 100;
+    }
+    
     override func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let cell = tableView.dequeueReusableCell(withIdentifier: "CellIdentifier", for: indexPath)
         
@@ -62,6 +66,9 @@ class ListViewController: UITableViewController {
             indicator.startAnimating()
             
             // tell the table view to start operation only if the tableView is not scrolling.
+            if(photoDetails.name == "Three Giraffes") {
+                print("isDragging:\(tableView.isDragging). isDecelerating:\(tableView.isDecelerating)")
+            }
             if (!tableView.isDragging && !tableView.isDecelerating){
                 self.startOperationsForPhotoRecord(photoDetails: photoDetails,indexPath:indexPath)
             }
@@ -71,6 +78,10 @@ class ListViewController: UITableViewController {
     }
     
     func startOperationsForPhotoRecord(photoDetails: PhotoRecord, indexPath: IndexPath){
+        // tell the table view to start operation only if the tableView is not scrolling.
+        if(photoDetails.name == "Three Giraffes") {
+            print("photoRecord name:\(photoDetails.name). state:\(photoDetails.state)")
+        }
         switch (photoDetails.state) {
         case .New:
             startDownloadForRecord(photoDetails: photoDetails, indexPath: indexPath)
@@ -83,8 +94,8 @@ class ListViewController: UITableViewController {
     
     func startDownloadForRecord(photoDetails: PhotoRecord, indexPath: IndexPath){
         //1 First, check for the particular indexPath to see if there is already an operation in downloadsInProgress for it. If so, ignore it.
-        print("86 ------ indexPath \(indexPath)")
-        print("87 ------ downloadsInProgress \(pendingOperations.downloadsInProgress)")
+//        print("86 ------ indexPath \(indexPath)")
+//        print("87 ------ downloadsInProgress \(pendingOperations.downloadsInProgress)")
         if pendingOperations.downloadsInProgress[indexPath] != nil {
             return
         }
@@ -92,14 +103,18 @@ class ListViewController: UITableViewController {
         //2 If not, create an instance of ImageDownloader by using the designated initializer.
         let downloader = ImageDownloader(photoRecord: photoDetails)
         //3 Add a completion block which will be executed when the operation is completed.
+        print("_pendingOperation.map:\(pendingOperations.map)")
         downloader.completionBlock = {
             if downloader.isCancelled {
                 return
             }
+            if(photoDetails.name == "Three Giraffes") {
+                print("downloader:\(photoDetails.name) is fisnih:\(downloader.isFinished), status:\(photoDetails.state)");
+            }
             DispatchQueue.main.async(execute: {
                 self.pendingOperations.downloadsInProgress.removeValue(forKey: indexPath)
-                print("101 ------ indexPath \(indexPath)")
-                print("102 ------ downloadsInProgress \(self.pendingOperations.downloadsInProgress)")
+//                print("101 ------ indexPath \(indexPath)")
+//                print("102 ------ downloadsInProgress \(self.pendingOperations.downloadsInProgress)")
                 self.tableView.reloadRows(at: [indexPath], with: .fade)
             })
         }
@@ -107,8 +122,9 @@ class ListViewController: UITableViewController {
         pendingOperations.downloadsInProgress[indexPath] = downloader
         //5 Add the operation to the download queue.
         pendingOperations.downloadQueue.addOperation(downloader)
-        print("110 ------ downloadsInProgress \(pendingOperations.downloadsInProgress)")
-        print("111 ------ downloadsInProgress \(pendingOperations.downloadQueue)")
+//        print("110 ------ downloadsInProgress \(pendingOperations.downloadsInProgress)")
+//        print("111 ------ downloadsInProgress \(pendingOperations.downloadQueue)")
+        pendingOperations.updateMap(key: downloader.name!);
     }
     
     func startFiltrationForRecord(photoDetails: PhotoRecord, indexPath: IndexPath){
@@ -175,7 +191,8 @@ class ListViewController: UITableViewController {
             //4
             var toBeStarted = visiblePaths
             toBeStarted.subtract(allPendingOperations)
-            
+            print("toBeStarted:\(toBeStarted)")
+            print("allPendingOperations:\(allPendingOperations)")
             // 5
             for indexPath in toBeCancelled {
                 if let pendingDownload = pendingOperations.downloadsInProgress[indexPath] {
@@ -191,6 +208,7 @@ class ListViewController: UITableViewController {
             // 6
             for indexPath in toBeStarted {
                 let recordToProcess = self.photos[indexPath.row]
+                print("recordToProcess:\(recordToProcess.name), status:\(recordToProcess.state), indexPath:\(indexPath.row))")
                 startOperationsForPhotoRecord(photoDetails: recordToProcess, indexPath: indexPath)
             }
         }
