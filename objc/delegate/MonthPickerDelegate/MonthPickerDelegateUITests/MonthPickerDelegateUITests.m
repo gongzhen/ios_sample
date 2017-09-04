@@ -1,18 +1,18 @@
 //
-//  DelegateUITests.m
-//  DelegateUITests
+//  MonthPickerDelegateUITests.m
+//  MonthPickerDelegateUITests
 //
-//  Created by zhen gong on 5/22/17.
+//  Created by zhen gong on 9/2/17.
 //  Copyright © 2017 zhen gong. All rights reserved.
 //
 
 #import <XCTest/XCTest.h>
 
-@interface DelegateUITests : XCTestCase
+@interface MonthPickerDelegateUITests : XCTestCase
 
 @end
 
-@implementation DelegateUITests
+@implementation MonthPickerDelegateUITests
 
 - (void)setUp {
     [super setUp];

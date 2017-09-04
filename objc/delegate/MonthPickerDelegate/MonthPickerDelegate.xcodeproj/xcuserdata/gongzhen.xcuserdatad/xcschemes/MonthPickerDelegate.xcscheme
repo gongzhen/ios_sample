@@ -14,10 +14,10 @@
             buildForAnalyzing = "YES">
             <BuildableReference
                BuildableIdentifier = "primary"
-               BlueprintIdentifier = "06F5407A1ED3905F00343469"
-               BuildableName = "Delegate.app"
-               BlueprintName = "Delegate"
-               ReferencedContainer = "container:Delegate.xcodeproj">
+               BlueprintIdentifier = "0634E9451F5B1875008F7547"
+               BuildableName = "MonthPickerDelegate.app"
+               BlueprintName = "MonthPickerDelegate"
+               ReferencedContainer = "container:MonthPickerDelegate.xcodeproj">
             </BuildableReference>
          </BuildActionEntry>
       </BuildActionEntries>
@@ -32,30 +32,30 @@
             skipped = "NO">
             <BuildableReference
                BuildableIdentifier = "primary"
-               BlueprintIdentifier = "06F540931ED3905F00343469"
-               BuildableName = "DelegateTests.xctest"
-               BlueprintName = "DelegateTests"
-               ReferencedContainer = "container:Delegate.xcodeproj">
+               BlueprintIdentifier = "0634E95E1F5B1876008F7547"
+               BuildableName = "MonthPickerDelegateTests.xctest"
+               BlueprintName = "MonthPickerDelegateTests"
+               ReferencedContainer = "container:MonthPickerDelegate.xcodeproj">
             </BuildableReference>
          </TestableReference>
          <TestableReference
             skipped = "NO">
             <BuildableReference
                BuildableIdentifier = "primary"
-               BlueprintIdentifier = "06F5409E1ED3905F00343469"
-               BuildableName = "DelegateUITests.xctest"
-               BlueprintName = "DelegateUITests"
-               ReferencedContainer = "container:Delegate.xcodeproj">
+               BlueprintIdentifier = "0634E9691F5B1876008F7547"
+               BuildableName = "MonthPickerDelegateUITests.xctest"
+               BlueprintName = "MonthPickerDelegateUITests"
+               ReferencedContainer = "container:MonthPickerDelegate.xcodeproj">
             </BuildableReference>
          </TestableReference>
       </Testables>
       <MacroExpansion>
          <BuildableReference
             BuildableIdentifier = "primary"
-            BlueprintIdentifier = "06F5407A1ED3905F00343469"
-            BuildableName = "Delegate.app"
-            BlueprintName = "Delegate"
-            ReferencedContainer = "container:Delegate.xcodeproj">
+            BlueprintIdentifier = "0634E9451F5B1875008F7547"
+            BuildableName = "MonthPickerDelegate.app"
+            BlueprintName = "MonthPickerDelegate"
+            ReferencedContainer = "container:MonthPickerDelegate.xcodeproj">
          </BuildableReference>
       </MacroExpansion>
       <AdditionalOptions>
@@ -75,10 +75,10 @@
          runnableDebuggingMode = "0">
          <BuildableReference
             BuildableIdentifier = "primary"
-            BlueprintIdentifier = "06F5407A1ED3905F00343469"
-            BuildableName = "Delegate.app"
-            BlueprintName = "Delegate"
-            ReferencedContainer = "container:Delegate.xcodeproj">
+            BlueprintIdentifier = "0634E9451F5B1875008F7547"
+            BuildableName = "MonthPickerDelegate.app"
+            BlueprintName = "MonthPickerDelegate"
+            ReferencedContainer = "container:MonthPickerDelegate.xcodeproj">
          </BuildableReference>
       </BuildableProductRunnable>
       <AdditionalOptions>
@@ -94,10 +94,10 @@
          runnableDebuggingMode = "0">
          <BuildableReference
             BuildableIdentifier = "primary"
-            BlueprintIdentifier = "06F5407A1ED3905F00343469"
-            BuildableName = "Delegate.app"
-            BlueprintName = "Delegate"
-            ReferencedContainer = "container:Delegate.xcodeproj">
+            BlueprintIdentifier = "0634E9451F5B1875008F7547"
+            BuildableName = "MonthPickerDelegate.app"
+            BlueprintName = "MonthPickerDelegate"
+            ReferencedContainer = "container:MonthPickerDelegate.xcodeproj">
          </BuildableReference>
       </BuildableProductRunnable>
    </ProfileAction>
