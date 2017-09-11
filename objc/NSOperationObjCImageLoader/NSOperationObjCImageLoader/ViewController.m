@@ -4,6 +4,7 @@
 //
 //  Created by zhen gong on 8/27/17.
 //  Copyright © 2017 zhen gong. All rights reserved.
+//  https://github.com/gngrwzrd/UIImageLoader
 //
 
 #import "ViewController.h"
