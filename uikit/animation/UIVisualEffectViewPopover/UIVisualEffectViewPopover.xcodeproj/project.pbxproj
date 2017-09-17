@@ -1,0 +1,539 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 46;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		06E0031A1F6DF23F00CB0122 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 06E003191F6DF23F00CB0122 /* main.m */; };
+		06E0031D1F6DF23F00CB0122 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 06E0031C1F6DF23F00CB0122 /* AppDelegate.m */; };
+		06E003201F6DF23F00CB0122 /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 06E0031F1F6DF23F00CB0122 /* ViewController.m */; };
+		06E003231F6DF23F00CB0122 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 06E003211F6DF23F00CB0122 /* Main.storyboard */; };
+		06E003251F6DF23F00CB0122 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 06E003241F6DF23F00CB0122 /* Assets.xcassets */; };
+		06E003281F6DF23F00CB0122 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 06E003261F6DF23F00CB0122 /* LaunchScreen.storyboard */; };
+		06E003331F6DF23F00CB0122 /* UIVisualEffectViewPopoverTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 06E003321F6DF23F00CB0122 /* UIVisualEffectViewPopoverTests.m */; };
+		06E0033E1F6DF23F00CB0122 /* UIVisualEffectViewPopoverUITests.m in Sources */ = {isa = PBXBuildFile; fileRef = 06E0033D1F6DF23F00CB0122 /* UIVisualEffectViewPopoverUITests.m */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		06E0032F1F6DF23F00CB0122 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 06E0030D1F6DF23F00CB0122 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 06E003141F6DF23F00CB0122;
+			remoteInfo = UIVisualEffectViewPopover;
+		};
+		06E0033A1F6DF23F00CB0122 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 06E0030D1F6DF23F00CB0122 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 06E003141F6DF23F00CB0122;
+			remoteInfo = UIVisualEffectViewPopover;
+		};
+/* End PBXContainerItemProxy section */
+
+/* Begin PBXFileReference section */
+		06E003151F6DF23F00CB0122 /* UIVisualEffectViewPopover.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = UIVisualEffectViewPopover.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		06E003191F6DF23F00CB0122 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
+		06E0031B1F6DF23F00CB0122 /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
+		06E0031C1F6DF23F00CB0122 /* AppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
+		06E0031E1F6DF23F00CB0122 /* ViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ViewController.h; sourceTree = "<group>"; };
+		06E0031F1F6DF23F00CB0122 /* ViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ViewController.m; sourceTree = "<group>"; };
+		06E003221F6DF23F00CB0122 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
+		06E003241F6DF23F00CB0122 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		06E003271F6DF23F00CB0122 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
+		06E003291F6DF23F00CB0122 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		06E0032E1F6DF23F00CB0122 /* UIVisualEffectViewPopoverTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = UIVisualEffectViewPopoverTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		06E003321F6DF23F00CB0122 /* UIVisualEffectViewPopoverTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = UIVisualEffectViewPopoverTests.m; sourceTree = "<group>"; };
+		06E003341F6DF23F00CB0122 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		06E003391F6DF23F00CB0122 /* UIVisualEffectViewPopoverUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = UIVisualEffectViewPopoverUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		06E0033D1F6DF23F00CB0122 /* UIVisualEffectViewPopoverUITests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = UIVisualEffectViewPopoverUITests.m; sourceTree = "<group>"; };
+		06E0033F1F6DF23F00CB0122 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		06E003121F6DF23F00CB0122 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		06E0032B1F6DF23F00CB0122 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		06E003361F6DF23F00CB0122 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		06E0030C1F6DF23E00CB0122 = {
+			isa = PBXGroup;
+			children = (
+				06E003171F6DF23F00CB0122 /* UIVisualEffectViewPopover */,
+				06E003311F6DF23F00CB0122 /* UIVisualEffectViewPopoverTests */,
+				06E0033C1F6DF23F00CB0122 /* UIVisualEffectViewPopoverUITests */,
+				06E003161F6DF23F00CB0122 /* Products */,
+			);
+			sourceTree = "<group>";
+		};
+		06E003161F6DF23F00CB0122 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				06E003151F6DF23F00CB0122 /* UIVisualEffectViewPopover.app */,
+				06E0032E1F6DF23F00CB0122 /* UIVisualEffectViewPopoverTests.xctest */,
+				06E003391F6DF23F00CB0122 /* UIVisualEffectViewPopoverUITests.xctest */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		06E003171F6DF23F00CB0122 /* UIVisualEffectViewPopover */ = {
+			isa = PBXGroup;
+			children = (
+				06E0031B1F6DF23F00CB0122 /* AppDelegate.h */,
+				06E0031C1F6DF23F00CB0122 /* AppDelegate.m */,
+				06E0031E1F6DF23F00CB0122 /* ViewController.h */,
+				06E0031F1F6DF23F00CB0122 /* ViewController.m */,
+				06E003211F6DF23F00CB0122 /* Main.storyboard */,
+				06E003241F6DF23F00CB0122 /* Assets.xcassets */,
+				06E003261F6DF23F00CB0122 /* LaunchScreen.storyboard */,
+				06E003291F6DF23F00CB0122 /* Info.plist */,
+				06E003181F6DF23F00CB0122 /* Supporting Files */,
+			);
+			path = UIVisualEffectViewPopover;
+			sourceTree = "<group>";
+		};
+		06E003181F6DF23F00CB0122 /* Supporting Files */ = {
+			isa = PBXGroup;
+			children = (
+				06E003191F6DF23F00CB0122 /* main.m */,
+			);
+			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+		06E003311F6DF23F00CB0122 /* UIVisualEffectViewPopoverTests */ = {
+			isa = PBXGroup;
+			children = (
+				06E003321F6DF23F00CB0122 /* UIVisualEffectViewPopoverTests.m */,
+				06E003341F6DF23F00CB0122 /* Info.plist */,
+			);
+			path = UIVisualEffectViewPopoverTests;
+			sourceTree = "<group>";
+		};
+		06E0033C1F6DF23F00CB0122 /* UIVisualEffectViewPopoverUITests */ = {
+			isa = PBXGroup;
+			children = (
+				06E0033D1F6DF23F00CB0122 /* UIVisualEffectViewPopoverUITests.m */,
+				06E0033F1F6DF23F00CB0122 /* Info.plist */,
+			);
+			path = UIVisualEffectViewPopoverUITests;
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		06E003141F6DF23F00CB0122 /* UIVisualEffectViewPopover */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 06E003421F6DF23F00CB0122 /* Build configuration list for PBXNativeTarget "UIVisualEffectViewPopover" */;
+			buildPhases = (
+				06E003111F6DF23F00CB0122 /* Sources */,
+				06E003121F6DF23F00CB0122 /* Frameworks */,
+				06E003131F6DF23F00CB0122 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = UIVisualEffectViewPopover;
+			productName = UIVisualEffectViewPopover;
+			productReference = 06E003151F6DF23F00CB0122 /* UIVisualEffectViewPopover.app */;
+			productType = "com.apple.product-type.application";
+		};
+		06E0032D1F6DF23F00CB0122 /* UIVisualEffectViewPopoverTests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 06E003451F6DF23F00CB0122 /* Build configuration list for PBXNativeTarget "UIVisualEffectViewPopoverTests" */;
+			buildPhases = (
+				06E0032A1F6DF23F00CB0122 /* Sources */,
+				06E0032B1F6DF23F00CB0122 /* Frameworks */,
+				06E0032C1F6DF23F00CB0122 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				06E003301F6DF23F00CB0122 /* PBXTargetDependency */,
+			);
+			name = UIVisualEffectViewPopoverTests;
+			productName = UIVisualEffectViewPopoverTests;
+			productReference = 06E0032E1F6DF23F00CB0122 /* UIVisualEffectViewPopoverTests.xctest */;
+			productType = "com.apple.product-type.bundle.unit-test";
+		};
+		06E003381F6DF23F00CB0122 /* UIVisualEffectViewPopoverUITests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 06E003481F6DF23F00CB0122 /* Build configuration list for PBXNativeTarget "UIVisualEffectViewPopoverUITests" */;
+			buildPhases = (
+				06E003351F6DF23F00CB0122 /* Sources */,
+				06E003361F6DF23F00CB0122 /* Frameworks */,
+				06E003371F6DF23F00CB0122 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				06E0033B1F6DF23F00CB0122 /* PBXTargetDependency */,
+			);
+			name = UIVisualEffectViewPopoverUITests;
+			productName = UIVisualEffectViewPopoverUITests;
+			productReference = 06E003391F6DF23F00CB0122 /* UIVisualEffectViewPopoverUITests.xctest */;
+			productType = "com.apple.product-type.bundle.ui-testing";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		06E0030D1F6DF23F00CB0122 /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				LastUpgradeCheck = 0830;
+				ORGANIZATIONNAME = "zhen gong";
+				TargetAttributes = {
+					06E003141F6DF23F00CB0122 = {
+						CreatedOnToolsVersion = 8.3.3;
+						DevelopmentTeam = 78R59ZRT89;
+						ProvisioningStyle = Automatic;
+					};
+					06E0032D1F6DF23F00CB0122 = {
+						CreatedOnToolsVersion = 8.3.3;
+						DevelopmentTeam = 78R59ZRT89;
+						ProvisioningStyle = Automatic;
+						TestTargetID = 06E003141F6DF23F00CB0122;
+					};
+					06E003381F6DF23F00CB0122 = {
+						CreatedOnToolsVersion = 8.3.3;
+						DevelopmentTeam = 78R59ZRT89;
+						ProvisioningStyle = Automatic;
+						TestTargetID = 06E003141F6DF23F00CB0122;
+					};
+				};
+			};
+			buildConfigurationList = 06E003101F6DF23F00CB0122 /* Build configuration list for PBXProject "UIVisualEffectViewPopover" */;
+			compatibilityVersion = "Xcode 3.2";
+			developmentRegion = English;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+				Base,
+			);
+			mainGroup = 06E0030C1F6DF23E00CB0122;
+			productRefGroup = 06E003161F6DF23F00CB0122 /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				06E003141F6DF23F00CB0122 /* UIVisualEffectViewPopover */,
+				06E0032D1F6DF23F00CB0122 /* UIVisualEffectViewPopoverTests */,
+				06E003381F6DF23F00CB0122 /* UIVisualEffectViewPopoverUITests */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		06E003131F6DF23F00CB0122 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				06E003281F6DF23F00CB0122 /* LaunchScreen.storyboard in Resources */,
+				06E003251F6DF23F00CB0122 /* Assets.xcassets in Resources */,
+				06E003231F6DF23F00CB0122 /* Main.storyboard in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		06E0032C1F6DF23F00CB0122 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		06E003371F6DF23F00CB0122 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		06E003111F6DF23F00CB0122 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				06E003201F6DF23F00CB0122 /* ViewController.m in Sources */,
+				06E0031D1F6DF23F00CB0122 /* AppDelegate.m in Sources */,
+				06E0031A1F6DF23F00CB0122 /* main.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		06E0032A1F6DF23F00CB0122 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				06E003331F6DF23F00CB0122 /* UIVisualEffectViewPopoverTests.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		06E003351F6DF23F00CB0122 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				06E0033E1F6DF23F00CB0122 /* UIVisualEffectViewPopoverUITests.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		06E003301F6DF23F00CB0122 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 06E003141F6DF23F00CB0122 /* UIVisualEffectViewPopover */;
+			targetProxy = 06E0032F1F6DF23F00CB0122 /* PBXContainerItemProxy */;
+		};
+		06E0033B1F6DF23F00CB0122 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 06E003141F6DF23F00CB0122 /* UIVisualEffectViewPopover */;
+			targetProxy = 06E0033A1F6DF23F00CB0122 /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
+
+/* Begin PBXVariantGroup section */
+		06E003211F6DF23F00CB0122 /* Main.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				06E003221F6DF23F00CB0122 /* Base */,
+			);
+			name = Main.storyboard;
+			sourceTree = "<group>";
+		};
+		06E003261F6DF23F00CB0122 /* LaunchScreen.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				06E003271F6DF23F00CB0122 /* Base */,
+			);
+			name = LaunchScreen.storyboard;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
+
+/* Begin XCBuildConfiguration section */
+		06E003401F6DF23F00CB0122 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 10.3;
+				MTL_ENABLE_DEBUG_INFO = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = iphoneos;
+			};
+			name = Debug;
+		};
+		06E003411F6DF23F00CB0122 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 10.3;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				SDKROOT = iphoneos;
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		06E003431F6DF23F00CB0122 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				DEVELOPMENT_TEAM = 78R59ZRT89;
+				INFOPLIST_FILE = UIVisualEffectViewPopover/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = com.gongzhen.UIVisualEffectViewPopover;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+			};
+			name = Debug;
+		};
+		06E003441F6DF23F00CB0122 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				DEVELOPMENT_TEAM = 78R59ZRT89;
+				INFOPLIST_FILE = UIVisualEffectViewPopover/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = com.gongzhen.UIVisualEffectViewPopover;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+			};
+			name = Release;
+		};
+		06E003461F6DF23F00CB0122 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				DEVELOPMENT_TEAM = 78R59ZRT89;
+				INFOPLIST_FILE = UIVisualEffectViewPopoverTests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = com.gongzhen.UIVisualEffectViewPopoverTests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/UIVisualEffectViewPopover.app/UIVisualEffectViewPopover";
+			};
+			name = Debug;
+		};
+		06E003471F6DF23F00CB0122 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				DEVELOPMENT_TEAM = 78R59ZRT89;
+				INFOPLIST_FILE = UIVisualEffectViewPopoverTests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = com.gongzhen.UIVisualEffectViewPopoverTests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/UIVisualEffectViewPopover.app/UIVisualEffectViewPopover";
+			};
+			name = Release;
+		};
+		06E003491F6DF23F00CB0122 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				DEVELOPMENT_TEAM = 78R59ZRT89;
+				INFOPLIST_FILE = UIVisualEffectViewPopoverUITests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = com.gongzhen.UIVisualEffectViewPopoverUITests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TEST_TARGET_NAME = UIVisualEffectViewPopover;
+			};
+			name = Debug;
+		};
+		06E0034A1F6DF23F00CB0122 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				DEVELOPMENT_TEAM = 78R59ZRT89;
+				INFOPLIST_FILE = UIVisualEffectViewPopoverUITests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = com.gongzhen.UIVisualEffectViewPopoverUITests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TEST_TARGET_NAME = UIVisualEffectViewPopover;
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		06E003101F6DF23F00CB0122 /* Build configuration list for PBXProject "UIVisualEffectViewPopover" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				06E003401F6DF23F00CB0122 /* Debug */,
+				06E003411F6DF23F00CB0122 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		06E003421F6DF23F00CB0122 /* Build configuration list for PBXNativeTarget "UIVisualEffectViewPopover" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				06E003431F6DF23F00CB0122 /* Debug */,
+				06E003441F6DF23F00CB0122 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+		};
+		06E003451F6DF23F00CB0122 /* Build configuration list for PBXNativeTarget "UIVisualEffectViewPopoverTests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				06E003461F6DF23F00CB0122 /* Debug */,
+				06E003471F6DF23F00CB0122 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+		};
+		06E003481F6DF23F00CB0122 /* Build configuration list for PBXNativeTarget "UIVisualEffectViewPopoverUITests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				06E003491F6DF23F00CB0122 /* Debug */,
+				06E0034A1F6DF23F00CB0122 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = 06E0030D1F6DF23F00CB0122 /* Project object */;
+}
