@@ -27,7 +27,7 @@ CGFloat buttonSpacerHeight = 0;
  [parentView doSomething]; // iVar
  [parentView doSomethingElse]; // Use generated getter
  */
-@synthesize parentView, containerView, dialogView, onButtonTouchUpInside;
+@synthesize parentView = _parentView, containerView = _containerView, dialogView = _dialogView, onButtonTouchUpInside = _onButtonTouchUpInside;
 @synthesize delegate;
 @synthesize buttonTitles;
 @synthesize useMotionEffects;
@@ -60,10 +60,10 @@ CGFloat buttonSpacerHeight = 0;
 
 // Create the dialog view, and animate opening the dialog
 - (void)show {
-    dialogView = [self createContainerView];
+    _dialogView = [self createContainerView];
     
-    dialogView.layer.shouldRasterize = YES;
-    dialogView.layer.rasterizationScale = [[UIScreen mainScreen] scale];
+    _dialogView.layer.shouldRasterize = YES;
+    _dialogView.layer.rasterizationScale = [[UIScreen mainScreen] scale];
     
     self.layer.shouldRasterize = YES;
     self.layer.rasterizationScale = [[UIScreen mainScreen] scale];
@@ -75,12 +75,12 @@ CGFloat buttonSpacerHeight = 0;
 #endif
     
     self.backgroundColor = [UIColor colorWithRed:0 green:0 blue:0 alpha:0];
-    [self addSubview:dialogView];
+    [self addSubview:_dialogView];
     
     // Can be attached to a view or to the top most window
     // Attached to a view:
-    if (parentView != NULL) {
-        [parentView addSubview:self];
+    if (_parentView != NULL) {
+        [_parentView addSubview:self];
         
         // Attached to the top most window
     } else {
@@ -109,29 +109,29 @@ CGFloat buttonSpacerHeight = 0;
             CGSize screenSize = [self countScreenSize];
             CGSize dialogSize = [self countDialogSize];
             CGSize keyboardSize = CGSizeMake(0, 0);
-            dialogView.frame = CGRectMake((screenSize.width - dialogSize.width) / 2, (screenSize.height - keyboardSize.height - dialogSize.height) / 2, dialogSize.width, dialogSize.height);
+            _dialogView.frame = CGRectMake((screenSize.width - dialogSize.width) / 2, (screenSize.height - keyboardSize.height - dialogSize.height) / 2, dialogSize.width, dialogSize.height);
         }
         [[[[UIApplication sharedApplication] windows] firstObject] addSubview:self];
     }
 }
 
 -(void)close {
-    CATransform3D currentTransform = dialogView.layer.transform;
+    CATransform3D currentTransform = _dialogView.layer.transform;
     
     if (floor(NSFoundationVersionNumber) <= NSFoundationVersionNumber_iOS_7_1) {
-        CGFloat startRotation = [[dialogView valueForKeyPath:@"layer.transform.rotation.z"] floatValue];
+        CGFloat startRotation = [[_dialogView valueForKeyPath:@"layer.transform.rotation.z"] floatValue];
         CATransform3D rotation = CATransform3DMakeRotation(-startRotation + M_PI * 270.0 / 180.0, 0.0f, 0.0f, 0.0f);
         
-        dialogView.layer.transform = CATransform3DConcat(rotation, CATransform3DMakeScale(1, 1, 1));
+        _dialogView.layer.transform = CATransform3DConcat(rotation, CATransform3DMakeScale(1, 1, 1));
     }
     
-    dialogView.layer.opacity = 1.0f;
+    _dialogView.layer.opacity = 1.0f;
     
     [UIView animateWithDuration:0.2f delay:0.0 options:UIViewAnimationOptionTransitionNone
                      animations:^{
                          self.backgroundColor = [UIColor colorWithRed:0.0f green:0.0f blue:0.0f alpha:0.0f];
-                         dialogView.layer.transform = CATransform3DConcat(currentTransform, CATransform3DMakeScale(0.6f, 0.6f, 1.0));
-                         dialogView.layer.opacity = 0.0f;
+                         _dialogView.layer.transform = CATransform3DConcat(currentTransform, CATransform3DMakeScale(0.6f, 0.6f, 1.0));
+                         _dialogView.layer.opacity = 0.0f;
                      }
                      completion:^(BOOL finished) {
                          for (UIView *v in [self subviews]) {
@@ -148,8 +148,8 @@ CGFloat buttonSpacerHeight = 0;
         [delegate customIOS7dialogButtonTouchUpInside:self clickedButtonAtIndex:[sender tag]];
     }
     
-    if (onButtonTouchUpInside != NULL) {
-        onButtonTouchUpInside(self, (int)[sender tag]);
+    if (_onButtonTouchUpInside != NULL) {
+        _onButtonTouchUpInside(self, (int)[sender tag]);
     }
 }
 
@@ -182,13 +182,13 @@ CGFloat buttonSpacerHeight = 0;
     UIMotionEffectGroup *motionEffectGroup = [[UIMotionEffectGroup alloc] init];
     motionEffectGroup.motionEffects = @[horizontalEffect, verticalEffect];
     
-    [dialogView addMotionEffect:motionEffectGroup];
+    [_dialogView addMotionEffect:motionEffectGroup];
 }
 #endif
     
 - (UIView *)createContainerView {
-    if (containerView == NULL) {
-        containerView = [[UIView alloc] initWithFrame:CGRectMake(0, 0, 300, 150)];
+    if (_containerView == NULL) {
+        _containerView = [[UIView alloc] initWithFrame:CGRectMake(0, 0, 300, 150)];
     }
     
     CGSize screenSize = [self countScreenSize];
@@ -229,7 +229,7 @@ CGFloat buttonSpacerHeight = 0;
     // ^^^
     
     // Add the custom container if there is any
-    [dialogContainer addSubview:containerView];
+    [dialogContainer addSubview:_containerView];
     
     // Add the buttons too
     [self addButtonsToView:dialogContainer];
@@ -292,8 +292,8 @@ CGFloat buttonSpacerHeight = 0;
 
 // Helper function: count and return the dialog's size
 - (CGSize)countDialogSize {
-    CGFloat dialogWidth = containerView.frame.size.width;
-    CGFloat dialogHeight = containerView.frame.size.height + buttonHeight + buttonSpacerHeight;
+    CGFloat dialogWidth = _containerView.frame.size.width;
+    CGFloat dialogHeight = _containerView.frame.size.height + buttonHeight + buttonSpacerHeight;
     
     return CGSizeMake(dialogWidth, dialogHeight);
 }
@@ -302,7 +302,7 @@ CGFloat buttonSpacerHeight = 0;
 
 - (void)deviceOrientationDidChange: (NSNotification *)notification {
     // If dialog is attached to the parent view, it probably wants to handle the orientation change itself
-    if (parentView != NULL) {
+    if (_parentView != NULL) {
         return;
     }
     
@@ -325,7 +325,7 @@ CGFloat buttonSpacerHeight = 0;
     
     [UIView animateWithDuration:0.2f delay:0.0 options:UIViewAnimationOptionTransitionNone
                      animations:^{
-                         dialogView.frame = CGRectMake((screenSize.width - dialogSize.width) / 2, (screenSize.height - keyboardSize.height - dialogSize.height) / 2, dialogSize.width, dialogSize.height);
+                         _dialogView.frame = CGRectMake((screenSize.width - dialogSize.width) / 2, (screenSize.height - keyboardSize.height - dialogSize.height) / 2, dialogSize.width, dialogSize.height);
                      }
                      completion:nil
      ];
@@ -337,7 +337,7 @@ CGFloat buttonSpacerHeight = 0;
     
     [UIView animateWithDuration:0.2f delay:0.0 options:UIViewAnimationOptionTransitionNone
                      animations:^{
-                         dialogView.frame = CGRectMake((screenSize.width - dialogSize.width) / 2, (screenSize.height - dialogSize.height) / 2, dialogSize.width, dialogSize.height);
+                         _dialogView.frame = CGRectMake((screenSize.width - dialogSize.width) / 2, (screenSize.height - dialogSize.height) / 2, dialogSize.width, dialogSize.height);
                      }
                      completion:nil
      ];
@@ -366,7 +366,7 @@ CGFloat buttonSpacerHeight = 0;
                          CGSize dialogSize = [self countDialogSize];
                          CGSize keyboardSize = [[[notification userInfo] objectForKey:UIKeyboardFrameBeginUserInfoKey] CGRectValue].size;
                          self.frame = CGRectMake(0, 0, screenWidth, screenHeight);
-                         dialogView.frame = CGRectMake((screenWidth - dialogSize.width) / 2, (screenHeight - keyboardSize.height - dialogSize.height) / 2, dialogSize.width, dialogSize.height);
+                         _dialogView.frame = CGRectMake((screenWidth - dialogSize.width) / 2, (screenHeight - keyboardSize.height - dialogSize.height) / 2, dialogSize.width, dialogSize.height);
                      }
                      completion:nil
      ];
