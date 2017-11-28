@@ -1,0 +1,762 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 48;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		2A68BE805EADEB049E4E1698 /* libPods-StripeTextField.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 4FD7DD88007657D271B7D2D2 /* libPods-StripeTextField.a */; };
+		84083D3F1FB4F06F00CEC8BF /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 84083D3E1FB4F06F00CEC8BF /* AppDelegate.m */; };
+		84083D421FB4F06F00CEC8BF /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 84083D411FB4F06F00CEC8BF /* ViewController.m */; };
+		84083D451FB4F06F00CEC8BF /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 84083D431FB4F06F00CEC8BF /* Main.storyboard */; };
+		84083D471FB4F06F00CEC8BF /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 84083D461FB4F06F00CEC8BF /* Assets.xcassets */; };
+		84083D4A1FB4F06F00CEC8BF /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 84083D481FB4F06F00CEC8BF /* LaunchScreen.storyboard */; };
+		84083D4D1FB4F06F00CEC8BF /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 84083D4C1FB4F06F00CEC8BF /* main.m */; };
+		84083D571FB4F06F00CEC8BF /* StripeTextFieldTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 84083D561FB4F06F00CEC8BF /* StripeTextFieldTests.m */; };
+		84083D621FB4F06F00CEC8BF /* StripeTextFieldUITests.m in Sources */ = {isa = PBXBuildFile; fileRef = 84083D611FB4F06F00CEC8BF /* StripeTextFieldUITests.m */; };
+		84083D701FB4F17100CEC8BF /* Constants.m in Sources */ = {isa = PBXBuildFile; fileRef = 84083D6F1FB4F17100CEC8BF /* Constants.m */; };
+		84083D741FB4F1A900CEC8BF /* BrowseExamplesViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 84083D731FB4F1A900CEC8BF /* BrowseExamplesViewController.m */; };
+		A8CF430ED7C2C1D9ACBB5717 /* libPods-StripeTextFieldTests.a in Frameworks */ = {isa = PBXBuildFile; fileRef = D22DB7E0F9D40D8526CDC1D9 /* libPods-StripeTextFieldTests.a */; };
+		CB4505E7958ACADC2A0FB6FD /* libPods-StripeTextFieldUITests.a in Frameworks */ = {isa = PBXBuildFile; fileRef = F2D93A4194F620684080619D /* libPods-StripeTextFieldUITests.a */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		84083D531FB4F06F00CEC8BF /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 84083D321FB4F06F00CEC8BF /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 84083D391FB4F06F00CEC8BF;
+			remoteInfo = StripeTextField;
+		};
+		84083D5E1FB4F06F00CEC8BF /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 84083D321FB4F06F00CEC8BF /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 84083D391FB4F06F00CEC8BF;
+			remoteInfo = StripeTextField;
+		};
+/* End PBXContainerItemProxy section */
+
+/* Begin PBXFileReference section */
+		3B3B2F9D1E8F3F9951291CE9 /* Pods-StripeTextFieldTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-StripeTextFieldTests.release.xcconfig"; path = "Pods/Target Support Files/Pods-StripeTextFieldTests/Pods-StripeTextFieldTests.release.xcconfig"; sourceTree = "<group>"; };
+		4FD7DD88007657D271B7D2D2 /* libPods-StripeTextField.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-StripeTextField.a"; sourceTree = BUILT_PRODUCTS_DIR; };
+		5BF1368035D780771D86FB5A /* Pods-StripeTextFieldUITests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-StripeTextFieldUITests.release.xcconfig"; path = "Pods/Target Support Files/Pods-StripeTextFieldUITests/Pods-StripeTextFieldUITests.release.xcconfig"; sourceTree = "<group>"; };
+		84083D3A1FB4F06F00CEC8BF /* StripeTextField.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = StripeTextField.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		84083D3D1FB4F06F00CEC8BF /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
+		84083D3E1FB4F06F00CEC8BF /* AppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
+		84083D401FB4F06F00CEC8BF /* ViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ViewController.h; sourceTree = "<group>"; };
+		84083D411FB4F06F00CEC8BF /* ViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ViewController.m; sourceTree = "<group>"; };
+		84083D441FB4F06F00CEC8BF /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
+		84083D461FB4F06F00CEC8BF /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		84083D491FB4F06F00CEC8BF /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
+		84083D4B1FB4F06F00CEC8BF /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		84083D4C1FB4F06F00CEC8BF /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
+		84083D521FB4F06F00CEC8BF /* StripeTextFieldTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = StripeTextFieldTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		84083D561FB4F06F00CEC8BF /* StripeTextFieldTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = StripeTextFieldTests.m; sourceTree = "<group>"; };
+		84083D581FB4F06F00CEC8BF /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		84083D5D1FB4F06F00CEC8BF /* StripeTextFieldUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = StripeTextFieldUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		84083D611FB4F06F00CEC8BF /* StripeTextFieldUITests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = StripeTextFieldUITests.m; sourceTree = "<group>"; };
+		84083D631FB4F06F00CEC8BF /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		84083D6F1FB4F17100CEC8BF /* Constants.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = Constants.m; sourceTree = "<group>"; };
+		84083D711FB4F18700CEC8BF /* Constants.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = Constants.h; sourceTree = "<group>"; };
+		84083D721FB4F1A900CEC8BF /* BrowseExamplesViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = BrowseExamplesViewController.h; sourceTree = "<group>"; };
+		84083D731FB4F1A900CEC8BF /* BrowseExamplesViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = BrowseExamplesViewController.m; sourceTree = "<group>"; };
+		9C1F4C9DEFA3B63709B1ADC9 /* Pods-StripeTextField.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-StripeTextField.debug.xcconfig"; path = "Pods/Target Support Files/Pods-StripeTextField/Pods-StripeTextField.debug.xcconfig"; sourceTree = "<group>"; };
+		C7589CAFE938E7EE858F2404 /* Pods-StripeTextField.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-StripeTextField.release.xcconfig"; path = "Pods/Target Support Files/Pods-StripeTextField/Pods-StripeTextField.release.xcconfig"; sourceTree = "<group>"; };
+		D22DB7E0F9D40D8526CDC1D9 /* libPods-StripeTextFieldTests.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-StripeTextFieldTests.a"; sourceTree = BUILT_PRODUCTS_DIR; };
+		D371E67E7C31D6A79650D9C8 /* Pods-StripeTextFieldTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-StripeTextFieldTests.debug.xcconfig"; path = "Pods/Target Support Files/Pods-StripeTextFieldTests/Pods-StripeTextFieldTests.debug.xcconfig"; sourceTree = "<group>"; };
+		EA3F26AFF8DAB8F98F82A9C3 /* Pods-StripeTextFieldUITests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-StripeTextFieldUITests.debug.xcconfig"; path = "Pods/Target Support Files/Pods-StripeTextFieldUITests/Pods-StripeTextFieldUITests.debug.xcconfig"; sourceTree = "<group>"; };
+		F2D93A4194F620684080619D /* libPods-StripeTextFieldUITests.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-StripeTextFieldUITests.a"; sourceTree = BUILT_PRODUCTS_DIR; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		84083D371FB4F06F00CEC8BF /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				2A68BE805EADEB049E4E1698 /* libPods-StripeTextField.a in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		84083D4F1FB4F06F00CEC8BF /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				A8CF430ED7C2C1D9ACBB5717 /* libPods-StripeTextFieldTests.a in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		84083D5A1FB4F06F00CEC8BF /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				CB4505E7958ACADC2A0FB6FD /* libPods-StripeTextFieldUITests.a in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		217A02DB805A331B4FC94C0A /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				4FD7DD88007657D271B7D2D2 /* libPods-StripeTextField.a */,
+				D22DB7E0F9D40D8526CDC1D9 /* libPods-StripeTextFieldTests.a */,
+				F2D93A4194F620684080619D /* libPods-StripeTextFieldUITests.a */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		28F5A332C935C47360D26EFA /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				9C1F4C9DEFA3B63709B1ADC9 /* Pods-StripeTextField.debug.xcconfig */,
+				C7589CAFE938E7EE858F2404 /* Pods-StripeTextField.release.xcconfig */,
+				D371E67E7C31D6A79650D9C8 /* Pods-StripeTextFieldTests.debug.xcconfig */,
+				3B3B2F9D1E8F3F9951291CE9 /* Pods-StripeTextFieldTests.release.xcconfig */,
+				EA3F26AFF8DAB8F98F82A9C3 /* Pods-StripeTextFieldUITests.debug.xcconfig */,
+				5BF1368035D780771D86FB5A /* Pods-StripeTextFieldUITests.release.xcconfig */,
+			);
+			name = Pods;
+			sourceTree = "<group>";
+		};
+		84083D311FB4F06F00CEC8BF = {
+			isa = PBXGroup;
+			children = (
+				84083D3C1FB4F06F00CEC8BF /* StripeTextField */,
+				84083D551FB4F06F00CEC8BF /* StripeTextFieldTests */,
+				84083D601FB4F06F00CEC8BF /* StripeTextFieldUITests */,
+				84083D3B1FB4F06F00CEC8BF /* Products */,
+				28F5A332C935C47360D26EFA /* Pods */,
+				217A02DB805A331B4FC94C0A /* Frameworks */,
+			);
+			sourceTree = "<group>";
+		};
+		84083D3B1FB4F06F00CEC8BF /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				84083D3A1FB4F06F00CEC8BF /* StripeTextField.app */,
+				84083D521FB4F06F00CEC8BF /* StripeTextFieldTests.xctest */,
+				84083D5D1FB4F06F00CEC8BF /* StripeTextFieldUITests.xctest */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		84083D3C1FB4F06F00CEC8BF /* StripeTextField */ = {
+			isa = PBXGroup;
+			children = (
+				84083D3D1FB4F06F00CEC8BF /* AppDelegate.h */,
+				84083D3E1FB4F06F00CEC8BF /* AppDelegate.m */,
+				84083D721FB4F1A900CEC8BF /* BrowseExamplesViewController.h */,
+				84083D731FB4F1A900CEC8BF /* BrowseExamplesViewController.m */,
+				84083D6F1FB4F17100CEC8BF /* Constants.m */,
+				84083D711FB4F18700CEC8BF /* Constants.h */,
+				84083D401FB4F06F00CEC8BF /* ViewController.h */,
+				84083D411FB4F06F00CEC8BF /* ViewController.m */,
+				84083D431FB4F06F00CEC8BF /* Main.storyboard */,
+				84083D461FB4F06F00CEC8BF /* Assets.xcassets */,
+				84083D481FB4F06F00CEC8BF /* LaunchScreen.storyboard */,
+				84083D4B1FB4F06F00CEC8BF /* Info.plist */,
+				84083D4C1FB4F06F00CEC8BF /* main.m */,
+			);
+			path = StripeTextField;
+			sourceTree = "<group>";
+		};
+		84083D551FB4F06F00CEC8BF /* StripeTextFieldTests */ = {
+			isa = PBXGroup;
+			children = (
+				84083D561FB4F06F00CEC8BF /* StripeTextFieldTests.m */,
+				84083D581FB4F06F00CEC8BF /* Info.plist */,
+			);
+			path = StripeTextFieldTests;
+			sourceTree = "<group>";
+		};
+		84083D601FB4F06F00CEC8BF /* StripeTextFieldUITests */ = {
+			isa = PBXGroup;
+			children = (
+				84083D611FB4F06F00CEC8BF /* StripeTextFieldUITests.m */,
+				84083D631FB4F06F00CEC8BF /* Info.plist */,
+			);
+			path = StripeTextFieldUITests;
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		84083D391FB4F06F00CEC8BF /* StripeTextField */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 84083D661FB4F06F00CEC8BF /* Build configuration list for PBXNativeTarget "StripeTextField" */;
+			buildPhases = (
+				65A7CC5DB91CD2D146F69A6F /* [CP] Check Pods Manifest.lock */,
+				84083D361FB4F06F00CEC8BF /* Sources */,
+				84083D371FB4F06F00CEC8BF /* Frameworks */,
+				84083D381FB4F06F00CEC8BF /* Resources */,
+				049A6097932F16EF124126AA /* [CP] Embed Pods Frameworks */,
+				1F91C07408B563B16DF4A956 /* [CP] Copy Pods Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = StripeTextField;
+			productName = StripeTextField;
+			productReference = 84083D3A1FB4F06F00CEC8BF /* StripeTextField.app */;
+			productType = "com.apple.product-type.application";
+		};
+		84083D511FB4F06F00CEC8BF /* StripeTextFieldTests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 84083D691FB4F06F00CEC8BF /* Build configuration list for PBXNativeTarget "StripeTextFieldTests" */;
+			buildPhases = (
+				CB95C6F6FE5266BBA1FFA8FD /* [CP] Check Pods Manifest.lock */,
+				84083D4E1FB4F06F00CEC8BF /* Sources */,
+				84083D4F1FB4F06F00CEC8BF /* Frameworks */,
+				84083D501FB4F06F00CEC8BF /* Resources */,
+				F0E5496EF3279B0AB3F4A0BD /* [CP] Embed Pods Frameworks */,
+				54BAC4ADA9028A518A328191 /* [CP] Copy Pods Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				84083D541FB4F06F00CEC8BF /* PBXTargetDependency */,
+			);
+			name = StripeTextFieldTests;
+			productName = StripeTextFieldTests;
+			productReference = 84083D521FB4F06F00CEC8BF /* StripeTextFieldTests.xctest */;
+			productType = "com.apple.product-type.bundle.unit-test";
+		};
+		84083D5C1FB4F06F00CEC8BF /* StripeTextFieldUITests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 84083D6C1FB4F06F00CEC8BF /* Build configuration list for PBXNativeTarget "StripeTextFieldUITests" */;
+			buildPhases = (
+				170416CB7C6F7C5E0F6380F9 /* [CP] Check Pods Manifest.lock */,
+				84083D591FB4F06F00CEC8BF /* Sources */,
+				84083D5A1FB4F06F00CEC8BF /* Frameworks */,
+				84083D5B1FB4F06F00CEC8BF /* Resources */,
+				8EE04F0D024475D2B7A07DB2 /* [CP] Embed Pods Frameworks */,
+				A115AAC16B046F1A7E2E3920 /* [CP] Copy Pods Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				84083D5F1FB4F06F00CEC8BF /* PBXTargetDependency */,
+			);
+			name = StripeTextFieldUITests;
+			productName = StripeTextFieldUITests;
+			productReference = 84083D5D1FB4F06F00CEC8BF /* StripeTextFieldUITests.xctest */;
+			productType = "com.apple.product-type.bundle.ui-testing";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		84083D321FB4F06F00CEC8BF /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				LastUpgradeCheck = 0900;
+				ORGANIZATIONNAME = "Admin ";
+				TargetAttributes = {
+					84083D391FB4F06F00CEC8BF = {
+						CreatedOnToolsVersion = 9.0;
+						ProvisioningStyle = Automatic;
+					};
+					84083D511FB4F06F00CEC8BF = {
+						CreatedOnToolsVersion = 9.0;
+						ProvisioningStyle = Automatic;
+						TestTargetID = 84083D391FB4F06F00CEC8BF;
+					};
+					84083D5C1FB4F06F00CEC8BF = {
+						CreatedOnToolsVersion = 9.0;
+						ProvisioningStyle = Automatic;
+						TestTargetID = 84083D391FB4F06F00CEC8BF;
+					};
+				};
+			};
+			buildConfigurationList = 84083D351FB4F06F00CEC8BF /* Build configuration list for PBXProject "StripeTextField" */;
+			compatibilityVersion = "Xcode 8.0";
+			developmentRegion = en;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+				Base,
+			);
+			mainGroup = 84083D311FB4F06F00CEC8BF;
+			productRefGroup = 84083D3B1FB4F06F00CEC8BF /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				84083D391FB4F06F00CEC8BF /* StripeTextField */,
+				84083D511FB4F06F00CEC8BF /* StripeTextFieldTests */,
+				84083D5C1FB4F06F00CEC8BF /* StripeTextFieldUITests */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		84083D381FB4F06F00CEC8BF /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				84083D4A1FB4F06F00CEC8BF /* LaunchScreen.storyboard in Resources */,
+				84083D471FB4F06F00CEC8BF /* Assets.xcassets in Resources */,
+				84083D451FB4F06F00CEC8BF /* Main.storyboard in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		84083D501FB4F06F00CEC8BF /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		84083D5B1FB4F06F00CEC8BF /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXShellScriptBuildPhase section */
+		049A6097932F16EF124126AA /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-StripeTextField/Pods-StripeTextField-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		170416CB7C6F7C5E0F6380F9 /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n";
+			showEnvVarsInLog = 0;
+		};
+		1F91C07408B563B16DF4A956 /* [CP] Copy Pods Resources */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Copy Pods Resources";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-StripeTextField/Pods-StripeTextField-resources.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		54BAC4ADA9028A518A328191 /* [CP] Copy Pods Resources */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Copy Pods Resources";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-StripeTextFieldTests/Pods-StripeTextFieldTests-resources.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		65A7CC5DB91CD2D146F69A6F /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n";
+			showEnvVarsInLog = 0;
+		};
+		8EE04F0D024475D2B7A07DB2 /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-StripeTextFieldUITests/Pods-StripeTextFieldUITests-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		A115AAC16B046F1A7E2E3920 /* [CP] Copy Pods Resources */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Copy Pods Resources";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-StripeTextFieldUITests/Pods-StripeTextFieldUITests-resources.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		CB95C6F6FE5266BBA1FFA8FD /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n";
+			showEnvVarsInLog = 0;
+		};
+		F0E5496EF3279B0AB3F4A0BD /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-StripeTextFieldTests/Pods-StripeTextFieldTests-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		84083D361FB4F06F00CEC8BF /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				84083D421FB4F06F00CEC8BF /* ViewController.m in Sources */,
+				84083D741FB4F1A900CEC8BF /* BrowseExamplesViewController.m in Sources */,
+				84083D4D1FB4F06F00CEC8BF /* main.m in Sources */,
+				84083D3F1FB4F06F00CEC8BF /* AppDelegate.m in Sources */,
+				84083D701FB4F17100CEC8BF /* Constants.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		84083D4E1FB4F06F00CEC8BF /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				84083D571FB4F06F00CEC8BF /* StripeTextFieldTests.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		84083D591FB4F06F00CEC8BF /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				84083D621FB4F06F00CEC8BF /* StripeTextFieldUITests.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		84083D541FB4F06F00CEC8BF /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 84083D391FB4F06F00CEC8BF /* StripeTextField */;
+			targetProxy = 84083D531FB4F06F00CEC8BF /* PBXContainerItemProxy */;
+		};
+		84083D5F1FB4F06F00CEC8BF /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 84083D391FB4F06F00CEC8BF /* StripeTextField */;
+			targetProxy = 84083D5E1FB4F06F00CEC8BF /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
+
+/* Begin PBXVariantGroup section */
+		84083D431FB4F06F00CEC8BF /* Main.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				84083D441FB4F06F00CEC8BF /* Base */,
+			);
+			name = Main.storyboard;
+			sourceTree = "<group>";
+		};
+		84083D481FB4F06F00CEC8BF /* LaunchScreen.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				84083D491FB4F06F00CEC8BF /* Base */,
+			);
+			name = LaunchScreen.storyboard;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
+
+/* Begin XCBuildConfiguration section */
+		84083D641FB4F06F00CEC8BF /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 11.0;
+				MTL_ENABLE_DEBUG_INFO = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = iphoneos;
+			};
+			name = Debug;
+		};
+		84083D651FB4F06F00CEC8BF /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 11.0;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				SDKROOT = iphoneos;
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		84083D671FB4F06F00CEC8BF /* Debug */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 9C1F4C9DEFA3B63709B1ADC9 /* Pods-StripeTextField.debug.xcconfig */;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = X92HRP6SLX;
+				INFOPLIST_FILE = StripeTextField/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = com.mobilestyles.StripeTextField;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Debug;
+		};
+		84083D681FB4F06F00CEC8BF /* Release */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = C7589CAFE938E7EE858F2404 /* Pods-StripeTextField.release.xcconfig */;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = X92HRP6SLX;
+				INFOPLIST_FILE = StripeTextField/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = com.mobilestyles.StripeTextField;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Release;
+		};
+		84083D6A1FB4F06F00CEC8BF /* Debug */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = D371E67E7C31D6A79650D9C8 /* Pods-StripeTextFieldTests.debug.xcconfig */;
+			buildSettings = {
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = X92HRP6SLX;
+				INFOPLIST_FILE = StripeTextFieldTests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = com.mobilestyles.StripeTextFieldTests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/StripeTextField.app/StripeTextField";
+			};
+			name = Debug;
+		};
+		84083D6B1FB4F06F00CEC8BF /* Release */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 3B3B2F9D1E8F3F9951291CE9 /* Pods-StripeTextFieldTests.release.xcconfig */;
+			buildSettings = {
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = X92HRP6SLX;
+				INFOPLIST_FILE = StripeTextFieldTests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = com.mobilestyles.StripeTextFieldTests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/StripeTextField.app/StripeTextField";
+			};
+			name = Release;
+		};
+		84083D6D1FB4F06F00CEC8BF /* Debug */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = EA3F26AFF8DAB8F98F82A9C3 /* Pods-StripeTextFieldUITests.debug.xcconfig */;
+			buildSettings = {
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = X92HRP6SLX;
+				INFOPLIST_FILE = StripeTextFieldUITests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = com.mobilestyles.StripeTextFieldUITests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_TARGET_NAME = StripeTextField;
+			};
+			name = Debug;
+		};
+		84083D6E1FB4F06F00CEC8BF /* Release */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 5BF1368035D780771D86FB5A /* Pods-StripeTextFieldUITests.release.xcconfig */;
+			buildSettings = {
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = X92HRP6SLX;
+				INFOPLIST_FILE = StripeTextFieldUITests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = com.mobilestyles.StripeTextFieldUITests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_TARGET_NAME = StripeTextField;
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		84083D351FB4F06F00CEC8BF /* Build configuration list for PBXProject "StripeTextField" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				84083D641FB4F06F00CEC8BF /* Debug */,
+				84083D651FB4F06F00CEC8BF /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		84083D661FB4F06F00CEC8BF /* Build configuration list for PBXNativeTarget "StripeTextField" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				84083D671FB4F06F00CEC8BF /* Debug */,
+				84083D681FB4F06F00CEC8BF /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		84083D691FB4F06F00CEC8BF /* Build configuration list for PBXNativeTarget "StripeTextFieldTests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				84083D6A1FB4F06F00CEC8BF /* Debug */,
+				84083D6B1FB4F06F00CEC8BF /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		84083D6C1FB4F06F00CEC8BF /* Build configuration list for PBXNativeTarget "StripeTextFieldUITests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				84083D6D1FB4F06F00CEC8BF /* Debug */,
+				84083D6E1FB4F06F00CEC8BF /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = 84083D321FB4F06F00CEC8BF /* Project object */;
+}
