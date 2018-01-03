@@ -35,6 +35,7 @@
     self.signInFailureText.hidden = YES;
     
     RACSignal *validUsernameSignal = [self.usernameTextField.rac_textSignal map:^id(NSString *text) {
+        DLog(@"text:%@", text)
         return @([self isValidUsername:text]);
     }];
     
@@ -57,7 +58,7 @@
     [signUpActiveSignal subscribeNext:^(NSNumber *signupActive) {
         self.signInButton.enabled = [signupActive boolValue];
     }];
-    
+     
     [[[[self.signInButton rac_signalForControlEvents:UIControlEventTouchUpInside] doNext:^(id x) {
         self.signInButton.enabled = NO;
         self.signInFailureText.hidden = YES;
