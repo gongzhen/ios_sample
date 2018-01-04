@@ -1,3 +1,6 @@
 [submodule "framework/reactcocoa/ReactiveCocaDemo1/ReactiveCocaDemo1/framework"]
 	path = framework/reactcocoa/ReactiveCocaDemo1/ReactiveCocaDemo1/framework
 	url = git@github.com:ReactiveCocoa/ReactiveObjC.git
+[submodule "framework/reactcocoa/ReactiveCocaDemo2/ReactiveCocaDemo2/framework"]
+	path = framework/reactcocoa/ReactiveCocaDemo2/ReactiveCocaDemo2/framework
+	url = git@github.com:ReactiveCocoa/ReactiveObjC.git
