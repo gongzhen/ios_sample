@@ -181,12 +181,12 @@
                                                                   constant:16]];
 }
 
-- (void)prepareForReuse {
-    [super prepareForReuse];
-    // self.textFieldView.text = @"";
-    self.nameLabel.text = @"";
-    self.bioLabel.text = @"";
-}
+//- (void)prepareForReuse {
+//    [super prepareForReuse];
+//    // self.textFieldView.text = @"";
+//    self.nameLabel.text = @"";
+//    self.bioLabel.text = @"";
+//}
 
 @end
 
@@ -361,12 +361,12 @@
                                                                   constant:16]];
 }
 
-- (void)prepareForReuse {
-    [super prepareForReuse];
-    // self.textFieldView.text = @"";
-    self.nameLabel.text = @"";
-    self.bioLabel.text = @"";
-}
+//- (void)prepareForReuse {
+//    [super prepareForReuse];
+//    // self.textFieldView.text = @"";
+//    self.nameLabel.text = @"";
+//    self.bioLabel.text = @"";
+//}
 
 // new cell ends
 
@@ -379,6 +379,7 @@
 @property (nonatomic, strong) UIView *topView;
 @property (nonatomic, strong) UITableView *tableView;
 @property (nonatomic, strong) UIView *bottomView;
+@property (nonatomic, strong) NSMutableArray *collapseArray;
 
 @end
 
@@ -425,6 +426,10 @@
     [super viewDidLoad];
     _artists = [Artist artistsFromBundle];
     DLog(@"artists %@", _artists);
+    _collapseArray = [NSMutableArray array];
+    for(int i = 0; i < 2; i++) {
+        [_collapseArray addObject:[NSNumber numberWithBool:YES]]; // default close
+    }
     [self setLayoutConstraint];
     [self.tableView registerClass:[ArtistTableViewCell class] forCellReuseIdentifier:@"artistTableViewCell"];
     [self.tableView registerClass:[ArtistTableViewCell class] forCellReuseIdentifier:@"artistTableViewCell1"];
@@ -449,7 +454,16 @@
 
 #pragma mark uitableviewdatasource
 - (NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section {
-    return [_artists count];
+    if([_collapseArray[section] boolValue] == YES) {
+        return 0;
+    } else {
+        if(section == 0) {
+            return 3;
+        } else if (section == 1) {
+            return 4;
+        }
+    }
+    return 0;
 }
 
 - (NSInteger)numberOfSectionsInTableView:(UITableView *)tableView {
@@ -458,13 +472,14 @@
 
 - (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath {
     ArtistTableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:@"artistTableViewCell" forIndexPath:indexPath];
-    Artist *artist = _artists[indexPath.row];
+    
+    Artist *artist;
     switch (indexPath.section) {
         case 0:
             if (cell == nil) {
                 cell = [[ArtistTableViewCell alloc] initWithStyle:UITableViewCellStyleDefault reuseIdentifier:@"artistTableViewCell"];
             }
-            
+            artist = _artists[indexPath.row];
             if (artist) {
                 cell.bioLabel.text = artist.bio;
                 cell.artistImageView.image = artist.image;
@@ -475,7 +490,7 @@
             if (cell == nil) {
                 cell = [[ArtistTableViewCell alloc] initWithStyle:UITableViewCellStyleDefault reuseIdentifier:@"artistTableViewCell1"];
             }
-            
+            artist = _artists[indexPath.row + 3];
             if (artist) {
                 cell.bioLabel.text = artist.bio;
                 cell.artistImageView.image = artist.image;
@@ -490,18 +505,38 @@
 }
 
 - (CGFloat)tableView:(UITableView *)tableView heightForHeaderInSection:(NSInteger)section {
-    return 30.f;
+    return 120.f;
 }
 
 - (UIView *)tableView:(UITableView *)tableView viewForHeaderInSection:(NSInteger)section {
-    UIView *headerView = [[UIView alloc] init];
+    UIView *headerView = [[UIView alloc] initWithFrame:CGRectMake(0, 0, tableView.frame.size.width, 120.f)];
     headerView.backgroundColor = [UIColor colorWithHex:0x0D60AC];
-    UILabel *label = [[UILabel alloc] initWithFrame:CGRectMake(18.0, 0.0, 300.0, 27.0)];
+    UILabel *label = [[UILabel alloc] initWithFrame:headerView.frame];
     label.textColor = [UIColor blackColor];
     [label setText:[NSString stringWithFormat:@"Section %ld", (long)section]];
     label.font = [UIFont systemFontOfSize:12.0];
     [headerView addSubview:label];
+    headerView.tag = section;
+    label.tag = section;
+    label.userInteractionEnabled = YES;
+    UITapGestureRecognizer *gesture = [[UITapGestureRecognizer alloc] initWithTarget:self action:@selector(labelTap:)];
+    [label addGestureRecognizer:gesture];
     return headerView;
+}
+
+- (void)labelTap:(UITapGestureRecognizer *)sender {
+    if([(UITapGestureRecognizer *)sender view].tag == 0) {
+        DLog(@"%d", [_collapseArray[0] boolValue]);
+        _collapseArray[0] = [NSNumber numberWithBool:!([_collapseArray[0] boolValue])];
+        DLog(@"%d", [_collapseArray[0] boolValue]);
+        [_tableView reloadSections:[NSIndexSet indexSetWithIndex:0] withRowAnimation:UITableViewRowAnimationAutomatic];
+    } else if([(UITapGestureRecognizer *)sender view].tag == 1) {
+        DLog(@"%d", [_collapseArray[1] boolValue]);
+        _collapseArray[1] = [NSNumber numberWithBool:!([_collapseArray[1] boolValue])];
+        DLog(@"%d", [_collapseArray[1] boolValue]);
+        [_tableView reloadSections:[NSIndexSet indexSetWithIndex:1] withRowAnimation:UITableViewRowAnimationAutomatic];
+
+    }
 }
 
 - (void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath {

@@ -1,0 +1,601 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 48;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		6074FB331FE4BD180038F586 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 6074FB321FE4BD180038F586 /* AppDelegate.m */; };
+		6074FB391FE4BD180038F586 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 6074FB371FE4BD180038F586 /* Main.storyboard */; };
+		6074FB3B1FE4BD180038F586 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 6074FB3A1FE4BD180038F586 /* Assets.xcassets */; };
+		6074FB3E1FE4BD180038F586 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 6074FB3C1FE4BD180038F586 /* LaunchScreen.storyboard */; };
+		6074FB411FE4BD180038F586 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 6074FB401FE4BD180038F586 /* main.m */; };
+		6074FB4B1FE4BD180038F586 /* CollapseTableViewTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 6074FB4A1FE4BD180038F586 /* CollapseTableViewTests.m */; };
+		6074FB561FE4BD180038F586 /* CollapseTableViewUITests.m in Sources */ = {isa = PBXBuildFile; fileRef = 6074FB551FE4BD180038F586 /* CollapseTableViewUITests.m */; };
+		6074FB6A1FE4C1C80038F586 /* CollapsibleTableView.m in Sources */ = {isa = PBXBuildFile; fileRef = 6074FB681FE4C1C80038F586 /* CollapsibleTableView.m */; };
+		6074FB6E1FE4C2010038F586 /* CollapsibleTableCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 6074FB6D1FE4C2010038F586 /* CollapsibleTableCell.m */; };
+		6074FB711FE4C23F0038F586 /* TableRow.m in Sources */ = {isa = PBXBuildFile; fileRef = 6074FB701FE4C23F0038F586 /* TableRow.m */; };
+		6074FB741FE4C2540038F586 /* TableSection.m in Sources */ = {isa = PBXBuildFile; fileRef = 6074FB731FE4C2540038F586 /* TableSection.m */; };
+		6074FB771FE4C54E0038F586 /* CollapsibleTableViewHeader.m in Sources */ = {isa = PBXBuildFile; fileRef = 6074FB761FE4C54E0038F586 /* CollapsibleTableViewHeader.m */; };
+		6074FB7A1FE4C8BD0038F586 /* OneTableViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 6074FB791FE4C8BD0038F586 /* OneTableViewController.m */; };
+		6074FB7D1FE4C8CA0038F586 /* TwoTableViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 6074FB7C1FE4C8CA0038F586 /* TwoTableViewController.m */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		6074FB471FE4BD180038F586 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 6074FB261FE4BD180038F586 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 6074FB2D1FE4BD180038F586;
+			remoteInfo = CollapseTableView;
+		};
+		6074FB521FE4BD180038F586 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 6074FB261FE4BD180038F586 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 6074FB2D1FE4BD180038F586;
+			remoteInfo = CollapseTableView;
+		};
+/* End PBXContainerItemProxy section */
+
+/* Begin PBXFileReference section */
+		6074FB2E1FE4BD180038F586 /* CollapseTableView.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = CollapseTableView.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		6074FB311FE4BD180038F586 /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
+		6074FB321FE4BD180038F586 /* AppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
+		6074FB381FE4BD180038F586 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
+		6074FB3A1FE4BD180038F586 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		6074FB3D1FE4BD180038F586 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
+		6074FB3F1FE4BD180038F586 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		6074FB401FE4BD180038F586 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
+		6074FB461FE4BD180038F586 /* CollapseTableViewTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = CollapseTableViewTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		6074FB4A1FE4BD180038F586 /* CollapseTableViewTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = CollapseTableViewTests.m; sourceTree = "<group>"; };
+		6074FB4C1FE4BD180038F586 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		6074FB511FE4BD180038F586 /* CollapseTableViewUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = CollapseTableViewUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		6074FB551FE4BD180038F586 /* CollapseTableViewUITests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = CollapseTableViewUITests.m; sourceTree = "<group>"; };
+		6074FB571FE4BD180038F586 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		6074FB681FE4C1C80038F586 /* CollapsibleTableView.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = CollapsibleTableView.m; sourceTree = "<group>"; };
+		6074FB691FE4C1C80038F586 /* CollapsibleTableView.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = CollapsibleTableView.h; sourceTree = "<group>"; };
+		6074FB6C1FE4C2010038F586 /* CollapsibleTableCell.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = CollapsibleTableCell.h; sourceTree = "<group>"; };
+		6074FB6D1FE4C2010038F586 /* CollapsibleTableCell.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = CollapsibleTableCell.m; sourceTree = "<group>"; };
+		6074FB6F1FE4C23F0038F586 /* TableRow.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = TableRow.h; sourceTree = "<group>"; };
+		6074FB701FE4C23F0038F586 /* TableRow.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = TableRow.m; sourceTree = "<group>"; };
+		6074FB721FE4C2540038F586 /* TableSection.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = TableSection.h; sourceTree = "<group>"; };
+		6074FB731FE4C2540038F586 /* TableSection.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = TableSection.m; sourceTree = "<group>"; };
+		6074FB751FE4C54E0038F586 /* CollapsibleTableViewHeader.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = CollapsibleTableViewHeader.h; sourceTree = "<group>"; };
+		6074FB761FE4C54E0038F586 /* CollapsibleTableViewHeader.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = CollapsibleTableViewHeader.m; sourceTree = "<group>"; };
+		6074FB781FE4C8BD0038F586 /* OneTableViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = OneTableViewController.h; sourceTree = "<group>"; };
+		6074FB791FE4C8BD0038F586 /* OneTableViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = OneTableViewController.m; sourceTree = "<group>"; };
+		6074FB7B1FE4C8CA0038F586 /* TwoTableViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = TwoTableViewController.h; sourceTree = "<group>"; };
+		6074FB7C1FE4C8CA0038F586 /* TwoTableViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = TwoTableViewController.m; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		6074FB2B1FE4BD180038F586 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		6074FB431FE4BD180038F586 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		6074FB4E1FE4BD180038F586 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		6074FB251FE4BD180038F586 = {
+			isa = PBXGroup;
+			children = (
+				6074FB301FE4BD180038F586 /* CollapseTableView */,
+				6074FB491FE4BD180038F586 /* CollapseTableViewTests */,
+				6074FB541FE4BD180038F586 /* CollapseTableViewUITests */,
+				6074FB2F1FE4BD180038F586 /* Products */,
+			);
+			sourceTree = "<group>";
+		};
+		6074FB2F1FE4BD180038F586 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				6074FB2E1FE4BD180038F586 /* CollapseTableView.app */,
+				6074FB461FE4BD180038F586 /* CollapseTableViewTests.xctest */,
+				6074FB511FE4BD180038F586 /* CollapseTableViewUITests.xctest */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		6074FB301FE4BD180038F586 /* CollapseTableView */ = {
+			isa = PBXGroup;
+			children = (
+				6074FB6B1FE4C1D40038F586 /* CollapsibleTableView */,
+				6074FB311FE4BD180038F586 /* AppDelegate.h */,
+				6074FB321FE4BD180038F586 /* AppDelegate.m */,
+				6074FB371FE4BD180038F586 /* Main.storyboard */,
+				6074FB3A1FE4BD180038F586 /* Assets.xcassets */,
+				6074FB3C1FE4BD180038F586 /* LaunchScreen.storyboard */,
+				6074FB3F1FE4BD180038F586 /* Info.plist */,
+				6074FB401FE4BD180038F586 /* main.m */,
+				6074FB781FE4C8BD0038F586 /* OneTableViewController.h */,
+				6074FB791FE4C8BD0038F586 /* OneTableViewController.m */,
+				6074FB7B1FE4C8CA0038F586 /* TwoTableViewController.h */,
+				6074FB7C1FE4C8CA0038F586 /* TwoTableViewController.m */,
+			);
+			path = CollapseTableView;
+			sourceTree = "<group>";
+		};
+		6074FB491FE4BD180038F586 /* CollapseTableViewTests */ = {
+			isa = PBXGroup;
+			children = (
+				6074FB4A1FE4BD180038F586 /* CollapseTableViewTests.m */,
+				6074FB4C1FE4BD180038F586 /* Info.plist */,
+			);
+			path = CollapseTableViewTests;
+			sourceTree = "<group>";
+		};
+		6074FB541FE4BD180038F586 /* CollapseTableViewUITests */ = {
+			isa = PBXGroup;
+			children = (
+				6074FB551FE4BD180038F586 /* CollapseTableViewUITests.m */,
+				6074FB571FE4BD180038F586 /* Info.plist */,
+			);
+			path = CollapseTableViewUITests;
+			sourceTree = "<group>";
+		};
+		6074FB6B1FE4C1D40038F586 /* CollapsibleTableView */ = {
+			isa = PBXGroup;
+			children = (
+				6074FB6F1FE4C23F0038F586 /* TableRow.h */,
+				6074FB701FE4C23F0038F586 /* TableRow.m */,
+				6074FB721FE4C2540038F586 /* TableSection.h */,
+				6074FB731FE4C2540038F586 /* TableSection.m */,
+				6074FB751FE4C54E0038F586 /* CollapsibleTableViewHeader.h */,
+				6074FB761FE4C54E0038F586 /* CollapsibleTableViewHeader.m */,
+				6074FB6C1FE4C2010038F586 /* CollapsibleTableCell.h */,
+				6074FB6D1FE4C2010038F586 /* CollapsibleTableCell.m */,
+				6074FB691FE4C1C80038F586 /* CollapsibleTableView.h */,
+				6074FB681FE4C1C80038F586 /* CollapsibleTableView.m */,
+			);
+			path = CollapsibleTableView;
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		6074FB2D1FE4BD180038F586 /* CollapseTableView */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 6074FB5A1FE4BD180038F586 /* Build configuration list for PBXNativeTarget "CollapseTableView" */;
+			buildPhases = (
+				6074FB2A1FE4BD180038F586 /* Sources */,
+				6074FB2B1FE4BD180038F586 /* Frameworks */,
+				6074FB2C1FE4BD180038F586 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = CollapseTableView;
+			productName = CollapseTableView;
+			productReference = 6074FB2E1FE4BD180038F586 /* CollapseTableView.app */;
+			productType = "com.apple.product-type.application";
+		};
+		6074FB451FE4BD180038F586 /* CollapseTableViewTests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 6074FB5D1FE4BD180038F586 /* Build configuration list for PBXNativeTarget "CollapseTableViewTests" */;
+			buildPhases = (
+				6074FB421FE4BD180038F586 /* Sources */,
+				6074FB431FE4BD180038F586 /* Frameworks */,
+				6074FB441FE4BD180038F586 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				6074FB481FE4BD180038F586 /* PBXTargetDependency */,
+			);
+			name = CollapseTableViewTests;
+			productName = CollapseTableViewTests;
+			productReference = 6074FB461FE4BD180038F586 /* CollapseTableViewTests.xctest */;
+			productType = "com.apple.product-type.bundle.unit-test";
+		};
+		6074FB501FE4BD180038F586 /* CollapseTableViewUITests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 6074FB601FE4BD180038F586 /* Build configuration list for PBXNativeTarget "CollapseTableViewUITests" */;
+			buildPhases = (
+				6074FB4D1FE4BD180038F586 /* Sources */,
+				6074FB4E1FE4BD180038F586 /* Frameworks */,
+				6074FB4F1FE4BD180038F586 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				6074FB531FE4BD180038F586 /* PBXTargetDependency */,
+			);
+			name = CollapseTableViewUITests;
+			productName = CollapseTableViewUITests;
+			productReference = 6074FB511FE4BD180038F586 /* CollapseTableViewUITests.xctest */;
+			productType = "com.apple.product-type.bundle.ui-testing";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		6074FB261FE4BD180038F586 /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				LastUpgradeCheck = 0920;
+				ORGANIZATIONNAME = "Zhen Gong";
+				TargetAttributes = {
+					6074FB2D1FE4BD180038F586 = {
+						CreatedOnToolsVersion = 9.2;
+						ProvisioningStyle = Automatic;
+					};
+					6074FB451FE4BD180038F586 = {
+						CreatedOnToolsVersion = 9.2;
+						ProvisioningStyle = Automatic;
+						TestTargetID = 6074FB2D1FE4BD180038F586;
+					};
+					6074FB501FE4BD180038F586 = {
+						CreatedOnToolsVersion = 9.2;
+						ProvisioningStyle = Automatic;
+						TestTargetID = 6074FB2D1FE4BD180038F586;
+					};
+				};
+			};
+			buildConfigurationList = 6074FB291FE4BD180038F586 /* Build configuration list for PBXProject "CollapseTableView" */;
+			compatibilityVersion = "Xcode 8.0";
+			developmentRegion = en;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+				Base,
+			);
+			mainGroup = 6074FB251FE4BD180038F586;
+			productRefGroup = 6074FB2F1FE4BD180038F586 /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				6074FB2D1FE4BD180038F586 /* CollapseTableView */,
+				6074FB451FE4BD180038F586 /* CollapseTableViewTests */,
+				6074FB501FE4BD180038F586 /* CollapseTableViewUITests */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		6074FB2C1FE4BD180038F586 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				6074FB3E1FE4BD180038F586 /* LaunchScreen.storyboard in Resources */,
+				6074FB3B1FE4BD180038F586 /* Assets.xcassets in Resources */,
+				6074FB391FE4BD180038F586 /* Main.storyboard in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		6074FB441FE4BD180038F586 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		6074FB4F1FE4BD180038F586 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		6074FB2A1FE4BD180038F586 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				6074FB741FE4C2540038F586 /* TableSection.m in Sources */,
+				6074FB411FE4BD180038F586 /* main.m in Sources */,
+				6074FB7D1FE4C8CA0038F586 /* TwoTableViewController.m in Sources */,
+				6074FB331FE4BD180038F586 /* AppDelegate.m in Sources */,
+				6074FB6A1FE4C1C80038F586 /* CollapsibleTableView.m in Sources */,
+				6074FB7A1FE4C8BD0038F586 /* OneTableViewController.m in Sources */,
+				6074FB771FE4C54E0038F586 /* CollapsibleTableViewHeader.m in Sources */,
+				6074FB711FE4C23F0038F586 /* TableRow.m in Sources */,
+				6074FB6E1FE4C2010038F586 /* CollapsibleTableCell.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		6074FB421FE4BD180038F586 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				6074FB4B1FE4BD180038F586 /* CollapseTableViewTests.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		6074FB4D1FE4BD180038F586 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				6074FB561FE4BD180038F586 /* CollapseTableViewUITests.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		6074FB481FE4BD180038F586 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 6074FB2D1FE4BD180038F586 /* CollapseTableView */;
+			targetProxy = 6074FB471FE4BD180038F586 /* PBXContainerItemProxy */;
+		};
+		6074FB531FE4BD180038F586 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 6074FB2D1FE4BD180038F586 /* CollapseTableView */;
+			targetProxy = 6074FB521FE4BD180038F586 /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
+
+/* Begin PBXVariantGroup section */
+		6074FB371FE4BD180038F586 /* Main.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				6074FB381FE4BD180038F586 /* Base */,
+			);
+			name = Main.storyboard;
+			sourceTree = "<group>";
+		};
+		6074FB3C1FE4BD180038F586 /* LaunchScreen.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				6074FB3D1FE4BD180038F586 /* Base */,
+			);
+			name = LaunchScreen.storyboard;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
+
+/* Begin XCBuildConfiguration section */
+		6074FB581FE4BD180038F586 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 11.2;
+				MTL_ENABLE_DEBUG_INFO = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = iphoneos;
+			};
+			name = Debug;
+		};
+		6074FB591FE4BD180038F586 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 11.2;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				SDKROOT = iphoneos;
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		6074FB5B1FE4BD180038F586 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = J9PKQ8Y5Y3;
+				INFOPLIST_FILE = CollapseTableView/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = com.gongzhen.CollapseTableView;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Debug;
+		};
+		6074FB5C1FE4BD180038F586 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = J9PKQ8Y5Y3;
+				INFOPLIST_FILE = CollapseTableView/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = com.gongzhen.CollapseTableView;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Release;
+		};
+		6074FB5E1FE4BD180038F586 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = J9PKQ8Y5Y3;
+				INFOPLIST_FILE = CollapseTableViewTests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = com.gongzhen.CollapseTableViewTests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/CollapseTableView.app/CollapseTableView";
+			};
+			name = Debug;
+		};
+		6074FB5F1FE4BD180038F586 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = J9PKQ8Y5Y3;
+				INFOPLIST_FILE = CollapseTableViewTests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = com.gongzhen.CollapseTableViewTests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/CollapseTableView.app/CollapseTableView";
+			};
+			name = Release;
+		};
+		6074FB611FE4BD180038F586 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = J9PKQ8Y5Y3;
+				INFOPLIST_FILE = CollapseTableViewUITests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = com.gongzhen.CollapseTableViewUITests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_TARGET_NAME = CollapseTableView;
+			};
+			name = Debug;
+		};
+		6074FB621FE4BD180038F586 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = J9PKQ8Y5Y3;
+				INFOPLIST_FILE = CollapseTableViewUITests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = com.gongzhen.CollapseTableViewUITests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_TARGET_NAME = CollapseTableView;
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		6074FB291FE4BD180038F586 /* Build configuration list for PBXProject "CollapseTableView" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				6074FB581FE4BD180038F586 /* Debug */,
+				6074FB591FE4BD180038F586 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		6074FB5A1FE4BD180038F586 /* Build configuration list for PBXNativeTarget "CollapseTableView" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				6074FB5B1FE4BD180038F586 /* Debug */,
+				6074FB5C1FE4BD180038F586 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		6074FB5D1FE4BD180038F586 /* Build configuration list for PBXNativeTarget "CollapseTableViewTests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				6074FB5E1FE4BD180038F586 /* Debug */,
+				6074FB5F1FE4BD180038F586 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		6074FB601FE4BD180038F586 /* Build configuration list for PBXNativeTarget "CollapseTableViewUITests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				6074FB611FE4BD180038F586 /* Debug */,
+				6074FB621FE4BD180038F586 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = 6074FB261FE4BD180038F586 /* Project object */;
+}
