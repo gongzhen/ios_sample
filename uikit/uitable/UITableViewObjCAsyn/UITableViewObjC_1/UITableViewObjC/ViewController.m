@@ -181,7 +181,7 @@
                                                                 toItem:nil
                                                              attribute:NSLayoutAttributeNotAnAttribute
                                                             multiplier:1.0
-                                                              constant:250.f]];
+                                                              constant:50.f]];
     
     // tableView top
     [self.view addConstraint:[NSLayoutConstraint constraintWithItem:self.topView
