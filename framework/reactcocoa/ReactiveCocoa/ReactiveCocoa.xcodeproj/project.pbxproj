@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		60604FCA201961D400E12AD7 /* ReactiveObjC.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 60604FBF2019619B00E12AD7 /* ReactiveObjC.framework */; };
 		84DEB7C12017B1C00017298D /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 84DEB7C02017B1C00017298D /* AppDelegate.m */; };
 		84DEB7C42017B1C00017298D /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 84DEB7C32017B1C00017298D /* ViewController.m */; };
 		84DEB7C72017B1C00017298D /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 84DEB7C52017B1C00017298D /* Main.storyboard */; };
@@ -15,13 +16,67 @@
 		84DEB7CF2017B1C00017298D /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 84DEB7CE2017B1C00017298D /* main.m */; };
 		84DEB7D92017B1C00017298D /* ReactiveCocoaTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 84DEB7D82017B1C00017298D /* ReactiveCocoaTests.m */; };
 		84DEB7E42017B1C00017298D /* ReactiveCocoaUITests.m in Sources */ = {isa = PBXBuildFile; fileRef = 84DEB7E32017B1C00017298D /* ReactiveCocoaUITests.m */; };
-		84DEB80E2017B3F80017298D /* ReactiveObjC.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 84DEB8002017B2110017298D /* ReactiveObjC.framework */; };
-		84DEB80F2017B3F80017298D /* ReactiveObjC.framework in CopyFiles */ = {isa = PBXBuildFile; fileRef = 84DEB8002017B2110017298D /* ReactiveObjC.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
 		84DEB8132017B57D0017298D /* kitten.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 84DEB8122017B57D0017298D /* kitten.jpg */; };
 		84DEB8162017B62E0017298D /* SignInService.m in Sources */ = {isa = PBXBuildFile; fileRef = 84DEB8152017B62E0017298D /* SignInService.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
+		60604FBA2019619B00E12AD7 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 60604FB02019619B00E12AD7 /* ReactiveObjC.xcodeproj */;
+			proxyType = 2;
+			remoteGlobalIDString = D04725EA19E49ED7006002AA;
+			remoteInfo = "ReactiveObjC-macOS";
+		};
+		60604FBC2019619B00E12AD7 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 60604FB02019619B00E12AD7 /* ReactiveObjC.xcodeproj */;
+			proxyType = 2;
+			remoteGlobalIDString = D04725F519E49ED7006002AA;
+			remoteInfo = "ReactiveObjC-macOSTests";
+		};
+		60604FBE2019619B00E12AD7 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 60604FB02019619B00E12AD7 /* ReactiveObjC.xcodeproj */;
+			proxyType = 2;
+			remoteGlobalIDString = D047260C19E49F82006002AA;
+			remoteInfo = "ReactiveObjC-iOS";
+		};
+		60604FC02019619B00E12AD7 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 60604FB02019619B00E12AD7 /* ReactiveObjC.xcodeproj */;
+			proxyType = 2;
+			remoteGlobalIDString = D047261619E49F82006002AA;
+			remoteInfo = "ReactiveObjC-iOSTests";
+		};
+		60604FC22019619B00E12AD7 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 60604FB02019619B00E12AD7 /* ReactiveObjC.xcodeproj */;
+			proxyType = 2;
+			remoteGlobalIDString = A9B315541B3940610001CB9C;
+			remoteInfo = "ReactiveObjC-watchOS";
+		};
+		60604FC42019619B00E12AD7 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 60604FB02019619B00E12AD7 /* ReactiveObjC.xcodeproj */;
+			proxyType = 2;
+			remoteGlobalIDString = 57A4D2411BA13D7A00F7D4B1;
+			remoteInfo = "ReactiveObjC-tvOS";
+		};
+		60604FC62019619B00E12AD7 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 60604FB02019619B00E12AD7 /* ReactiveObjC.xcodeproj */;
+			proxyType = 2;
+			remoteGlobalIDString = 7DFBED031CDB8C9500EE435B;
+			remoteInfo = "ReactiveObjC-tvOSTests";
+		};
+		60604FC8201961C900E12AD7 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 60604FB02019619B00E12AD7 /* ReactiveObjC.xcodeproj */;
+			proxyType = 1;
+			remoteGlobalIDString = D047260B19E49F82006002AA;
+			remoteInfo = "ReactiveObjC-iOS";
+		};
 		84DEB7D52017B1C00017298D /* PBXContainerItemProxy */ = {
 			isa = PBXContainerItemProxy;
 			containerPortal = 84DEB7B42017B1C00017298D /* Project object */;
@@ -36,69 +91,6 @@
 			remoteGlobalIDString = 84DEB7BB2017B1C00017298D;
 			remoteInfo = ReactiveCocoa;
 		};
-		84DEB7FB2017B2110017298D /* PBXContainerItemProxy */ = {
-			isa = PBXContainerItemProxy;
-			containerPortal = 84DEB7F12017B2110017298D /* ReactiveObjC.xcodeproj */;
-			proxyType = 2;
-			remoteGlobalIDString = D04725EA19E49ED7006002AA;
-			remoteInfo = "ReactiveObjC-macOS";
-		};
-		84DEB7FD2017B2110017298D /* PBXContainerItemProxy */ = {
-			isa = PBXContainerItemProxy;
-			containerPortal = 84DEB7F12017B2110017298D /* ReactiveObjC.xcodeproj */;
-			proxyType = 2;
-			remoteGlobalIDString = D04725F519E49ED7006002AA;
-			remoteInfo = "ReactiveObjC-macOSTests";
-		};
-		84DEB7FF2017B2110017298D /* PBXContainerItemProxy */ = {
-			isa = PBXContainerItemProxy;
-			containerPortal = 84DEB7F12017B2110017298D /* ReactiveObjC.xcodeproj */;
-			proxyType = 2;
-			remoteGlobalIDString = D047260C19E49F82006002AA;
-			remoteInfo = "ReactiveObjC-iOS";
-		};
-		84DEB8012017B2110017298D /* PBXContainerItemProxy */ = {
-			isa = PBXContainerItemProxy;
-			containerPortal = 84DEB7F12017B2110017298D /* ReactiveObjC.xcodeproj */;
-			proxyType = 2;
-			remoteGlobalIDString = D047261619E49F82006002AA;
-			remoteInfo = "ReactiveObjC-iOSTests";
-		};
-		84DEB8032017B2110017298D /* PBXContainerItemProxy */ = {
-			isa = PBXContainerItemProxy;
-			containerPortal = 84DEB7F12017B2110017298D /* ReactiveObjC.xcodeproj */;
-			proxyType = 2;
-			remoteGlobalIDString = A9B315541B3940610001CB9C;
-			remoteInfo = "ReactiveObjC-watchOS";
-		};
-		84DEB8052017B2110017298D /* PBXContainerItemProxy */ = {
-			isa = PBXContainerItemProxy;
-			containerPortal = 84DEB7F12017B2110017298D /* ReactiveObjC.xcodeproj */;
-			proxyType = 2;
-			remoteGlobalIDString = 57A4D2411BA13D7A00F7D4B1;
-			remoteInfo = "ReactiveObjC-tvOS";
-		};
-		84DEB8072017B2110017298D /* PBXContainerItemProxy */ = {
-			isa = PBXContainerItemProxy;
-			containerPortal = 84DEB7F12017B2110017298D /* ReactiveObjC.xcodeproj */;
-			proxyType = 2;
-			remoteGlobalIDString = 7DFBED031CDB8C9500EE435B;
-			remoteInfo = "ReactiveObjC-tvOSTests";
-		};
-		84DEB80C2017B23A0017298D /* PBXContainerItemProxy */ = {
-			isa = PBXContainerItemProxy;
-			containerPortal = 84DEB7F12017B2110017298D /* ReactiveObjC.xcodeproj */;
-			proxyType = 1;
-			remoteGlobalIDString = D047260B19E49F82006002AA;
-			remoteInfo = "ReactiveObjC-iOS";
-		};
-		84DEB8102017B3F80017298D /* PBXContainerItemProxy */ = {
-			isa = PBXContainerItemProxy;
-			containerPortal = 84DEB7F12017B2110017298D /* ReactiveObjC.xcodeproj */;
-			proxyType = 1;
-			remoteGlobalIDString = D047260B19E49F82006002AA;
-			remoteInfo = "ReactiveObjC-iOS";
-		};
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXCopyFilesBuildPhase section */
@@ -108,13 +100,13 @@
 			dstPath = "";
 			dstSubfolderSpec = 10;
 			files = (
-				84DEB80F2017B3F80017298D /* ReactiveObjC.framework in CopyFiles */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXCopyFilesBuildPhase section */
 
 /* Begin PBXFileReference section */
+		60604FB02019619B00E12AD7 /* ReactiveObjC.xcodeproj */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.pb-project"; name = ReactiveObjC.xcodeproj; path = external/ReactiveCocoa/ReactiveObjC.xcodeproj; sourceTree = SOURCE_ROOT; };
 		84DEB7BC2017B1C00017298D /* ReactiveCocoa.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = ReactiveCocoa.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		84DEB7BF2017B1C00017298D /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
 		84DEB7C02017B1C00017298D /* AppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
@@ -131,7 +123,6 @@
 		84DEB7DF2017B1C00017298D /* ReactiveCocoaUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = ReactiveCocoaUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		84DEB7E32017B1C00017298D /* ReactiveCocoaUITests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ReactiveCocoaUITests.m; sourceTree = "<group>"; };
 		84DEB7E52017B1C00017298D /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		84DEB7F12017B2110017298D /* ReactiveObjC.xcodeproj */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.pb-project"; name = ReactiveObjC.xcodeproj; path = external/ReactiveCocoa/ReactiveObjC.xcodeproj; sourceTree = SOURCE_ROOT; };
 		84DEB8122017B57D0017298D /* kitten.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = kitten.jpg; sourceTree = "<group>"; };
 		84DEB8142017B62E0017298D /* SignInService.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = SignInService.h; sourceTree = "<group>"; };
 		84DEB8152017B62E0017298D /* SignInService.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = SignInService.m; sourceTree = "<group>"; };
@@ -142,7 +133,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				84DEB80E2017B3F80017298D /* ReactiveObjC.framework in Frameworks */,
+				60604FCA201961D400E12AD7 /* ReactiveObjC.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -163,6 +154,20 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		60604FB12019619B00E12AD7 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				60604FBB2019619B00E12AD7 /* ReactiveObjC.framework */,
+				60604FBD2019619B00E12AD7 /* ReactiveObjCTests.xctest */,
+				60604FBF2019619B00E12AD7 /* ReactiveObjC.framework */,
+				60604FC12019619B00E12AD7 /* ReactiveObjCTests.xctest */,
+				60604FC32019619B00E12AD7 /* ReactiveObjC.framework */,
+				60604FC52019619B00E12AD7 /* ReactiveObjC.framework */,
+				60604FC72019619B00E12AD7 /* ReactiveObjCTests.xctest */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
 		84DEB7B32017B1C00017298D = {
 			isa = PBXGroup;
 			children = (
@@ -197,8 +202,8 @@
 				84DEB7C52017B1C00017298D /* Main.storyboard */,
 				84DEB7C82017B1C00017298D /* Assets.xcassets */,
 				84DEB7CA2017B1C00017298D /* LaunchScreen.storyboard */,
+				60604FB02019619B00E12AD7 /* ReactiveObjC.xcodeproj */,
 				84DEB7CD2017B1C00017298D /* Info.plist */,
-				84DEB7F12017B2110017298D /* ReactiveObjC.xcodeproj */,
 				84DEB7CE2017B1C00017298D /* main.m */,
 			);
 			path = ReactiveCocoa;
@@ -220,20 +225,6 @@
 				84DEB7E52017B1C00017298D /* Info.plist */,
 			);
 			path = ReactiveCocoaUITests;
-			sourceTree = "<group>";
-		};
-		84DEB7F22017B2110017298D /* Products */ = {
-			isa = PBXGroup;
-			children = (
-				84DEB7FC2017B2110017298D /* ReactiveObjC.framework */,
-				84DEB7FE2017B2110017298D /* ReactiveObjCTests.xctest */,
-				84DEB8002017B2110017298D /* ReactiveObjC.framework */,
-				84DEB8022017B2110017298D /* ReactiveObjCTests.xctest */,
-				84DEB8042017B2110017298D /* ReactiveObjC.framework */,
-				84DEB8062017B2110017298D /* ReactiveObjC.framework */,
-				84DEB8082017B2110017298D /* ReactiveObjCTests.xctest */,
-			);
-			name = Products;
 			sourceTree = "<group>";
 		};
 		84DEB8092017B2210017298D /* Frameworks */ = {
@@ -258,8 +249,7 @@
 			buildRules = (
 			);
 			dependencies = (
-				84DEB80D2017B23A0017298D /* PBXTargetDependency */,
-				84DEB8112017B3F80017298D /* PBXTargetDependency */,
+				60604FC9201961C900E12AD7 /* PBXTargetDependency */,
 			);
 			name = ReactiveCocoa;
 			productName = ReactiveCocoa;
@@ -340,8 +330,8 @@
 			projectDirPath = "";
 			projectReferences = (
 				{
-					ProductGroup = 84DEB7F22017B2110017298D /* Products */;
-					ProjectRef = 84DEB7F12017B2110017298D /* ReactiveObjC.xcodeproj */;
+					ProductGroup = 60604FB12019619B00E12AD7 /* Products */;
+					ProjectRef = 60604FB02019619B00E12AD7 /* ReactiveObjC.xcodeproj */;
 				},
 			);
 			projectRoot = "";
@@ -354,53 +344,53 @@
 /* End PBXProject section */
 
 /* Begin PBXReferenceProxy section */
-		84DEB7FC2017B2110017298D /* ReactiveObjC.framework */ = {
+		60604FBB2019619B00E12AD7 /* ReactiveObjC.framework */ = {
 			isa = PBXReferenceProxy;
 			fileType = wrapper.framework;
 			path = ReactiveObjC.framework;
-			remoteRef = 84DEB7FB2017B2110017298D /* PBXContainerItemProxy */;
+			remoteRef = 60604FBA2019619B00E12AD7 /* PBXContainerItemProxy */;
 			sourceTree = BUILT_PRODUCTS_DIR;
 		};
-		84DEB7FE2017B2110017298D /* ReactiveObjCTests.xctest */ = {
+		60604FBD2019619B00E12AD7 /* ReactiveObjCTests.xctest */ = {
 			isa = PBXReferenceProxy;
 			fileType = wrapper.cfbundle;
 			path = ReactiveObjCTests.xctest;
-			remoteRef = 84DEB7FD2017B2110017298D /* PBXContainerItemProxy */;
+			remoteRef = 60604FBC2019619B00E12AD7 /* PBXContainerItemProxy */;
 			sourceTree = BUILT_PRODUCTS_DIR;
 		};
-		84DEB8002017B2110017298D /* ReactiveObjC.framework */ = {
+		60604FBF2019619B00E12AD7 /* ReactiveObjC.framework */ = {
 			isa = PBXReferenceProxy;
 			fileType = wrapper.framework;
 			path = ReactiveObjC.framework;
-			remoteRef = 84DEB7FF2017B2110017298D /* PBXContainerItemProxy */;
+			remoteRef = 60604FBE2019619B00E12AD7 /* PBXContainerItemProxy */;
 			sourceTree = BUILT_PRODUCTS_DIR;
 		};
-		84DEB8022017B2110017298D /* ReactiveObjCTests.xctest */ = {
+		60604FC12019619B00E12AD7 /* ReactiveObjCTests.xctest */ = {
 			isa = PBXReferenceProxy;
 			fileType = wrapper.cfbundle;
 			path = ReactiveObjCTests.xctest;
-			remoteRef = 84DEB8012017B2110017298D /* PBXContainerItemProxy */;
+			remoteRef = 60604FC02019619B00E12AD7 /* PBXContainerItemProxy */;
 			sourceTree = BUILT_PRODUCTS_DIR;
 		};
-		84DEB8042017B2110017298D /* ReactiveObjC.framework */ = {
+		60604FC32019619B00E12AD7 /* ReactiveObjC.framework */ = {
 			isa = PBXReferenceProxy;
 			fileType = wrapper.framework;
 			path = ReactiveObjC.framework;
-			remoteRef = 84DEB8032017B2110017298D /* PBXContainerItemProxy */;
+			remoteRef = 60604FC22019619B00E12AD7 /* PBXContainerItemProxy */;
 			sourceTree = BUILT_PRODUCTS_DIR;
 		};
-		84DEB8062017B2110017298D /* ReactiveObjC.framework */ = {
+		60604FC52019619B00E12AD7 /* ReactiveObjC.framework */ = {
 			isa = PBXReferenceProxy;
 			fileType = wrapper.framework;
 			path = ReactiveObjC.framework;
-			remoteRef = 84DEB8052017B2110017298D /* PBXContainerItemProxy */;
+			remoteRef = 60604FC42019619B00E12AD7 /* PBXContainerItemProxy */;
 			sourceTree = BUILT_PRODUCTS_DIR;
 		};
-		84DEB8082017B2110017298D /* ReactiveObjCTests.xctest */ = {
+		60604FC72019619B00E12AD7 /* ReactiveObjCTests.xctest */ = {
 			isa = PBXReferenceProxy;
 			fileType = wrapper.cfbundle;
 			path = ReactiveObjCTests.xctest;
-			remoteRef = 84DEB8072017B2110017298D /* PBXContainerItemProxy */;
+			remoteRef = 60604FC62019619B00E12AD7 /* PBXContainerItemProxy */;
 			sourceTree = BUILT_PRODUCTS_DIR;
 		};
 /* End PBXReferenceProxy section */
@@ -464,6 +454,11 @@
 /* End PBXSourcesBuildPhase section */
 
 /* Begin PBXTargetDependency section */
+		60604FC9201961C900E12AD7 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			name = "ReactiveObjC-iOS";
+			targetProxy = 60604FC8201961C900E12AD7 /* PBXContainerItemProxy */;
+		};
 		84DEB7D62017B1C00017298D /* PBXTargetDependency */ = {
 			isa = PBXTargetDependency;
 			target = 84DEB7BB2017B1C00017298D /* ReactiveCocoa */;
@@ -473,16 +468,6 @@
 			isa = PBXTargetDependency;
 			target = 84DEB7BB2017B1C00017298D /* ReactiveCocoa */;
 			targetProxy = 84DEB7E02017B1C00017298D /* PBXContainerItemProxy */;
-		};
-		84DEB80D2017B23A0017298D /* PBXTargetDependency */ = {
-			isa = PBXTargetDependency;
-			name = "ReactiveObjC-iOS";
-			targetProxy = 84DEB80C2017B23A0017298D /* PBXContainerItemProxy */;
-		};
-		84DEB8112017B3F80017298D /* PBXTargetDependency */ = {
-			isa = PBXTargetDependency;
-			name = "ReactiveObjC-iOS";
-			targetProxy = 84DEB8102017B3F80017298D /* PBXContainerItemProxy */;
 		};
 /* End PBXTargetDependency section */
 
