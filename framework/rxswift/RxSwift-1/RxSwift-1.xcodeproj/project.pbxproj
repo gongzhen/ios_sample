@@ -27,6 +27,7 @@
 		3D4739AE20746FE200CEF6ED /* CardType.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3D4739AD20746FE200CEF6ED /* CardType.swift */; };
 		3D4739B3207471DF00CEF6ED /* String+CreditCard.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3D4739B2207471DF00CEF6ED /* String+CreditCard.swift */; };
 		3D4739B52074723800CEF6ED /* ImageName.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3D4739B42074723800CEF6ED /* ImageName.swift */; };
+		3D4739BC2075F11B00CEF6ED /* DebugLog.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3D4739BB2075F11B00CEF6ED /* DebugLog.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -52,6 +53,7 @@
 		3D4739AD20746FE200CEF6ED /* CardType.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CardType.swift; sourceTree = "<group>"; };
 		3D4739B2207471DF00CEF6ED /* String+CreditCard.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "String+CreditCard.swift"; sourceTree = "<group>"; };
 		3D4739B42074723800CEF6ED /* ImageName.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ImageName.swift; sourceTree = "<group>"; };
+		3D4739BB2075F11B00CEF6ED /* DebugLog.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DebugLog.swift; sourceTree = "<group>"; };
 		7B4035856E0F2729899405DD /* Pods_RxSwift_1.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_RxSwift_1.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		FAE0C3744A17F5C8DA16CB2F /* Pods-RxSwift-1.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-RxSwift-1.debug.xcconfig"; path = "Pods/Target Support Files/Pods-RxSwift-1/Pods-RxSwift-1.debug.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -98,6 +100,7 @@
 		3D47397E2074523A00CEF6ED /* RxSwift-1 */ = {
 			isa = PBXGroup;
 			children = (
+				3D4739BA2075F0EC00CEF6ED /* Utils */,
 				3D4739AF2074719A00CEF6ED /* Extensions */,
 				3D4739942074553D00CEF6ED /* Views */,
 				3D4739922074552B00CEF6ED /* Protocols */,
@@ -152,6 +155,14 @@
 				3D4739B2207471DF00CEF6ED /* String+CreditCard.swift */,
 			);
 			path = Extensions;
+			sourceTree = "<group>";
+		};
+		3D4739BA2075F0EC00CEF6ED /* Utils */ = {
+			isa = PBXGroup;
+			children = (
+				3D4739BB2075F11B00CEF6ED /* DebugLog.swift */,
+			);
+			path = Utils;
 			sourceTree = "<group>";
 		};
 		7E0CE1E7E59D7BE8131872D1 /* Frameworks */ = {
@@ -294,6 +305,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				3D4739A220745E2B00CEF6ED /* ChocolateCell.swift in Sources */,
+				3D4739BC2075F11B00CEF6ED /* DebugLog.swift in Sources */,
 				3D4739B3207471DF00CEF6ED /* String+CreditCard.swift in Sources */,
 				3D4739982074569A00CEF6ED /* GZTableViewController.swift in Sources */,
 				3D4739A0207459EA00CEF6ED /* Chocolate.swift in Sources */,
