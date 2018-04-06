@@ -8,6 +8,7 @@
 
 import Foundation
 
+// https://useyourloaf.com/blog/swift-string-cheat-sheet/
 extension String {
     
     func rw_allCharactersAreNumbers() -> Bool {
@@ -26,7 +27,8 @@ extension String {
         }
         
         let indexToStopAt = self.index(self.startIndex, offsetBy: characters)
-        let substring = self.substring(to: indexToStopAt)
+        // let substring = self.substring(to: indexToStopAt)
+        let substring = self[...indexToStopAt]
         guard let integerValue = Int(substring) else {
             return NSNotFound
         }

@@ -7,19 +7,35 @@
 //
 
 import UIKit
+import RxSwift
+import RxCocoa
 
 class GZTableViewController: UIViewController {
-
     
     @IBOutlet weak var cartButton: UIBarButtonItem!
     @IBOutlet weak var tableView: UITableView!
-    let europeanChocolates = Chocolate.ofEurope
+    // let europeanChocolates = Chocolate.ofEurope
+    let europeanChocolates = Observable.just(Chocolate.ofEurope)
+    let disposeBag = DisposeBag()
     
     override func viewDidLoad() {
         super.viewDidLoad()
         title = "Chocolate!!!"
-        tableView.dataSource = self
-        tableView.delegate = self
+//        tableView.dataSource = self
+//        tableView.delegate = self
+        // tableView will be relaod here.
+        setupCellConfiguration()
+    }
+    
+    //MARK: Rx Set up
+    
+    private func setupCellConfiguration() {
+        europeanChocolates
+            .bind(to: tableView
+            .rx.items(cellIdentifier: ChocolateCell.Identifier, cellType: ChocolateCell.self)) {
+                row, chocolate, cell in
+                cell.configureWithChocolate(chocolate: chocolate)
+            }.disposed(by: disposeBag)
     }
 
     override func viewWillAppear(_ animated: Bool) {
@@ -49,38 +65,39 @@ class GZTableViewController: UIViewController {
 
 }
 
-extension GZTableViewController: UITableViewDataSource {
-    func numberOfSections(in tableView: UITableView) -> Int {
-        return 1
-    }
-    
-    func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        return europeanChocolates.count
-    }
-    
-    func tableView(_ tableView: UITableView, canEditRowAt indexPath: IndexPath) -> Bool {
-        return false
-    }
-    
-    func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
-        guard let cell = tableView.dequeueReusableCell(withIdentifier: ChocolateCell.Identifier, for: indexPath) as? ChocolateCell else {
-            //Something went wrong with the identifier.
-            return UITableViewCell()
-        }
-        
-        let chocolate = europeanChocolates[indexPath.row]
-        cell.configureWithChocolate(chocolate: chocolate)
-        
-        return cell
-    }
-}
+//extension GZTableViewController: UITableViewDataSource {
+//    func numberOfSections(in tableView: UITableView) -> Int {
+//        return 1
+//    }
+//
+//    func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
+//        return europeanChocolates.count
+//    }
+//
+//    func tableView(_ tableView: UITableView, canEditRowAt indexPath: IndexPath) -> Bool {
+//        return false
+//    }
+//
+//    func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
+//        guard let cell = tableView.dequeueReusableCell(withIdentifier: ChocolateCell.Identifier, for: indexPath) as? ChocolateCell else {
+//            //Something went wrong with the identifier.
+//            return UITableViewCell()
+//        }
+//
+//        let chocolate = europeanChocolates[indexPath.row]
+//        cell.configureWithChocolate(chocolate: chocolate)
+//
+//        return cell
+//    }
+//}
+//
+//extension GZTableViewController: UITableViewDelegate {
+//    func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
+//        tableView.deselectRow(at: indexPath, animated: true)
+//
+//        let chocolate = europeanChocolates[indexPath.row]
+//        ShoppingCart.sharedCart.chocolates.append(chocolate)
+//        updateCartButton()
+//    }
+//}
 
-extension GZTableViewController: UITableViewDelegate {
-    func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
-        tableView.deselectRow(at: indexPath, animated: true)
-        
-        let chocolate = europeanChocolates[indexPath.row]
-        ShoppingCart.sharedCart.chocolates.append(chocolate)
-        updateCartButton()
-    }
-}

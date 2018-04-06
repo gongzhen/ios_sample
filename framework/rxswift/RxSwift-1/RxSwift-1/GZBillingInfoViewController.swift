@@ -8,6 +8,7 @@
 
 import UIKit
 import RxSwift
+import RxCocoa
 
 class GZBillingInfoViewController: UIViewController {
 
@@ -17,7 +18,9 @@ class GZBillingInfoViewController: UIViewController {
     @IBOutlet weak var cvvTextField: ValidatingTextField!
     @IBOutlet weak var purchaseButton: UIButton!
     
-    private let cardType: Variable<CardType> = Variable(.Unknown)
+    private let cardType: Variable <CardType> = Variable(.Unknown)
+    private let disposeBag = DisposeBag()
+    private let throttleInterval = 0.1
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -29,9 +32,6 @@ class GZBillingInfoViewController: UIViewController {
         // Dispose of any resources that can be recreated.
     }
     
-    // MARK: - Navigation
-
-    // In a storyboard-based application, you will often want to do a little preparation before navigation
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
         // Get the new view controller using segue.destinationViewController.
         // Pass the selected object to the new view controller.
@@ -45,6 +45,14 @@ class GZBillingInfoViewController: UIViewController {
             
             destination.cardType = cardType.value
         }
+    }
+    
+    //MARK: - RX Setup
+    
+    private func setupCardImageDisplay() {
+        cardType.asObservable().subscribe(onNext: { cardType in
+            self.creditCardImageView.image = cardType.image
+        }, onError: nil, onCompleted: nil, onDisposed: nil).disposed(by: disposeBag)
     }
 
 }
