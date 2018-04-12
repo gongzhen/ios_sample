@@ -7,7 +7,7 @@
 //
 
 import UIKit
-
+// https://useyourloaf.com/blog/swift-string-cheat-sheet/
 enum CardType {
     
     case
@@ -158,33 +158,40 @@ enum CardType {
             }
             
             let index10 = noSpaces.index(startIndex, offsetBy: 10)
-            let nextSixRange = Range(index4..<index10)
-            let nextSix = noSpaces.substring(with: nextSixRange)
-            let remaining = noSpaces.substring(from: index10)
+            // let nextSixRange = Range(index4..<index10)
+            // let nextSix = noSpaces.substring(with: nextSixRange)
+            let nextSix = noSpaces[index4..<index10]
+            // let remaining = noSpaces.substring(from: index10)
+            let remaining = noSpaces[index10...]
             return formattedString + nextSix + " " + remaining
         default:
             //Other cards are formatted as xxxx xxxx xxxx xxxx
             guard noSpaces.characters.count > 8 else {
                 //No further formatting required.
-                return formattedString + noSpaces.substring(from: index4)
+                // return formattedString + noSpaces.substring(from: index4)
+                return formattedString + String(noSpaces[index4...])
             }
             
             let index8 = noSpaces.index(startIndex, offsetBy: 8)
-            let nextFourRange = Range(index4..<index8)
-            let nextFour = noSpaces.substring(with: nextFourRange)
+            // let nextFourRange = Range(index4..<index8)
+            // let nextFour = noSpaces.substring(with: nextFourRange)
+            let nextFour = noSpaces[index4..<index8]
             formattedString += nextFour + " "
             
             guard noSpaces.characters.count > 12 else {
                 //Just add the remaining spaces
-                let remaining = noSpaces.substring(from: index8)
-                return formattedString + remaining
+                // let remaining = noSpaces.substring(from: index8)
+                let remaining = noSpaces[index8...]
+                return formattedString + String(remaining)
             }
             
             let index12 = noSpaces.index(startIndex, offsetBy: 12)
-            let followingFourRange = Range(index8..<index12)
-            let followingFour = noSpaces.substring(with: followingFourRange)
-            let remaining = noSpaces.substring(from: index12)
-            return formattedString + followingFour + " " + remaining
+            // let followingFourRange = Range(index8..<index12)
+            // let followingFour = noSpaces.substring(with: followingFourRange)
+            let followingFour = noSpaces[index8..<index12]
+            // let remaining = noSpaces.substring(from: index12)
+            let remaining = noSpaces[index12...]
+            return formattedString + followingFour + " " + String(remaining)
         }
     }
     
