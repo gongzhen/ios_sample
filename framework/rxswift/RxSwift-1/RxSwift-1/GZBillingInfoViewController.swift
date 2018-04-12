@@ -36,6 +36,7 @@ class GZBillingInfoViewController: UIViewController {
         // Get the new view controller using segue.destinationViewController.
         // Pass the selected object to the new view controller.
         let identifier = identifierForSegue(segue: segue)
+        
         switch identifier {
         case .PurchaseSuccess:
             guard let destination = segue.destination as? GZCompleteViewController else {
