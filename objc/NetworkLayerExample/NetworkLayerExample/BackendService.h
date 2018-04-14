@@ -8,6 +8,8 @@
 
 #import <Foundation/Foundation.h>
 
+@class BackendConfiguration;
+
 @interface BackendService : NSObject
 
 - (instancetype)initWithConf:(BackendConfiguration *)conf;

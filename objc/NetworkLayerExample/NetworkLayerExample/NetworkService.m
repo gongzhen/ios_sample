@@ -8,18 +8,6 @@
 
 #import "NetworkService.h"
 
-typedef NS_ENUM(NSInteger, Method) {
-    get,
-    post,
-    put,
-    delete
-};
-
-typedef NS_ENUM(NSInteger, QueryType){
-    json,
-    path
-};
-
 @interface NetworkService() {
     NSURLSessionDataTask *_task;
 }

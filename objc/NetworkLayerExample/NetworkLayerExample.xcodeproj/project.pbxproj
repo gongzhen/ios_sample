@@ -19,6 +19,7 @@
 		3D193643207DF27100490F8D /* BackendService.m in Sources */ = {isa = PBXBuildFile; fileRef = 3D193642207DF27100490F8D /* BackendService.m */; };
 		3D193646207DF2E400490F8D /* BackendConfiguration.m in Sources */ = {isa = PBXBuildFile; fileRef = 3D193645207DF2E400490F8D /* BackendConfiguration.m */; };
 		3D193649207DF43400490F8D /* NetworkService.m in Sources */ = {isa = PBXBuildFile; fileRef = 3D193648207DF43400490F8D /* NetworkService.m */; };
+		84614B8D20816CE500A4958F /* SignInRequest.m in Sources */ = {isa = PBXBuildFile; fileRef = 84614B8C20816CE500A4958F /* SignInRequest.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -44,6 +45,9 @@
 		3D193645207DF2E400490F8D /* BackendConfiguration.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = BackendConfiguration.m; sourceTree = "<group>"; };
 		3D193647207DF43400490F8D /* NetworkService.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = NetworkService.h; sourceTree = "<group>"; };
 		3D193648207DF43400490F8D /* NetworkService.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = NetworkService.m; sourceTree = "<group>"; };
+		84614B8A2081669300A4958F /* BackendAPIRequest.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = BackendAPIRequest.h; sourceTree = "<group>"; };
+		84614B8B20816CE500A4958F /* SignInRequest.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = SignInRequest.h; sourceTree = "<group>"; };
+		84614B8C20816CE500A4958F /* SignInRequest.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = SignInRequest.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -84,8 +88,11 @@
 				3D193639207DED8D00490F8D /* SignInOperation.m */,
 				3D19363E207DF23800490F8D /* ServiceOperation.h */,
 				3D19363F207DF23800490F8D /* ServiceOperation.m */,
+				84614B8B20816CE500A4958F /* SignInRequest.h */,
+				84614B8C20816CE500A4958F /* SignInRequest.m */,
 				3D193641207DF27100490F8D /* BackendService.h */,
 				3D193642207DF27100490F8D /* BackendService.m */,
+				84614B8A2081669300A4958F /* BackendAPIRequest.h */,
 				3D193644207DF2E400490F8D /* BackendConfiguration.h */,
 				3D193645207DF2E400490F8D /* BackendConfiguration.m */,
 				3D193647207DF43400490F8D /* NetworkService.h */,
@@ -173,6 +180,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				3D193643207DF27100490F8D /* BackendService.m in Sources */,
+				84614B8D20816CE500A4958F /* SignInRequest.m in Sources */,
 				3D193646207DF2E400490F8D /* BackendConfiguration.m in Sources */,
 				3D193627207DEA8E00490F8D /* ViewController.m in Sources */,
 				3D19363A207DED8D00490F8D /* SignInOperation.m in Sources */,
@@ -315,8 +323,9 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
-				DEVELOPMENT_TEAM = J9PKQ8Y5Y3;
+				DEVELOPMENT_TEAM = X92HRP6SLX;
 				INFOPLIST_FILE = NetworkLayerExample/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 11.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.gongzhen.NetworkLayerExample;
 				PRODUCT_NAME = "$(TARGET_NAME)";
@@ -329,8 +338,9 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
-				DEVELOPMENT_TEAM = J9PKQ8Y5Y3;
+				DEVELOPMENT_TEAM = X92HRP6SLX;
 				INFOPLIST_FILE = NetworkLayerExample/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 11.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.gongzhen.NetworkLayerExample;
 				PRODUCT_NAME = "$(TARGET_NAME)";
