@@ -7,24 +7,48 @@
 //
 
 #import "SignInOperation.h"
+#import "BackendService.h"
+#import "SignInRequest.h"
+#import "SignInItem.h"
 
 @interface SignInOperation() {
-    NSString* _userName;
-    NSString *_passWord;
+    SignInRequest* _request;
 }
-
 @end
 
 @implementation SignInOperation
 
-- (instancetype)initWithUserName:(NSString *)userName password:(NSString *)password 
+- (instancetype)initWithEmail:(NSString *)email password:(NSString *)password 
 {
     self = [super init];
     if (self) {
-        _userName = userName;
-        _passWord = password;
+        DLog(@"email:%@ password:%@", email, password);
+        _request = [[SignInRequest alloc] initWithEmail:email password:password];
     }
     return self;
 }
+
+- (void)start {
+    [super start];
+    
+    void(^handleSuccess)(id response) = ^(id response){
+        NSDictionary *json = (NSDictionary *)response;
+        NSString *token = [json objectForKey:@"token"];
+        NSString *uniqueId = [[json objectForKey:@"user"] objectForKey:@"id"];
+        SignInItem *item = [[SignInItem alloc] initWithToken:token password:uniqueId];
+        self.successBlock(item);
+        [self finish];
+    };
+    
+    void(^handleFailure)(NSError * error) = ^(NSError * error){
+        self.failureBlock(error);
+        [self finish];
+    };
+    DLog(@"service:%@", self.service);
+    [self.service request:_request success:handleSuccess failure:handleFailure];
+}
+
+
+
 
 @end

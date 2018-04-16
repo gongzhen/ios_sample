@@ -8,9 +8,7 @@
 
 #import "BackendConfiguration.h"
 
-@interface BackendConfiguration() {
-    NSURL *_baseURL;
-}
+@interface BackendConfiguration()
 
 @end
 
@@ -26,12 +24,4 @@
     return sharedManager;
 }
 
-- (instancetype)initWithBaseURL:(NSURL *)baseURL
-{
-    self = [super init];
-    if (self) {
-        _baseURL = baseURL;
-    }
-    return self;
-}
 @end

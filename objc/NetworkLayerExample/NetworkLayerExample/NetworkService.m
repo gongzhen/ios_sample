@@ -17,32 +17,15 @@
 @implementation NetworkService
 
 - (void)makeRequestFor:(NSURL *)url
-                method:(Method)method
-                  type:(QueryType)type
+                method:(NSString *)method
+                  type:(NSString *)type
                 params:(NSDictionary *)params
                headers:(NSDictionary *)headers
                success:(void(^)( NSData*))success
                failure:(void(^)(NSData*, NSError *, NSInteger))failure {
     NSMutableURLRequest *mutableRequest = [self makeQueryFor:url params:params type:type];
     mutableRequest.allHTTPHeaderFields = headers;
-    
-    switch (method) {
-        case get:
-            mutableRequest.HTTPMethod = @"get";
-            break;
-        case post:
-            mutableRequest.HTTPMethod = @"post";
-            break;
-        case put:
-            mutableRequest.HTTPMethod = @"put";
-            break;
-        case delete:
-            mutableRequest.HTTPMethod = @"delete";
-            break;
-    }
-    
-    
-    
+    mutableRequest.HTTPMethod = method;
     NSURLSession *session = [NSURLSession sharedSession];
     _task = [session dataTaskWithRequest:mutableRequest completionHandler:^(NSData * _Nullable data, NSURLResponse * _Nullable response, NSError * _Nullable error) {
         if(error) {
@@ -69,33 +52,27 @@
     [_task cancel];
 }
 
-- (NSMutableURLRequest *)makeQueryFor:(NSURL *)url
+- (nonnull NSMutableURLRequest *)makeQueryFor:(NSURL *)url
                         params:(NSDictionary *)params
-                          type:(QueryType)type {
-    switch (type) {
-        case json:
-        {
-            NSMutableURLRequest *mutableRequest = [NSMutableURLRequest requestWithURL:url cachePolicy:NSURLRequestReloadIgnoringLocalAndRemoteCacheData timeoutInterval:10.0];
-            if(params != nil) {
-                NSError *error = nil;
-                mutableRequest.HTTPBody = [NSJSONSerialization dataWithJSONObject:params options:kNilOptions error:&error];
-            }
-            return mutableRequest;
+                          type:(NSString *)type {
+    if([type isEqualToString:@"json"]) {
+        NSMutableURLRequest *mutableRequest = [NSMutableURLRequest requestWithURL:url cachePolicy:NSURLRequestReloadIgnoringLocalAndRemoteCacheData timeoutInterval:10.0];
+        if(params != nil) {
+            NSError *error = nil;
+            mutableRequest.HTTPBody = [NSJSONSerialization dataWithJSONObject:params options:kNilOptions error:&error];
         }
-            break;
-        case path:
-        {
-            __block NSMutableString *query = [NSMutableString stringWithString:@""];
-            [params enumerateKeysAndObjectsUsingBlock:^(id  _Nonnull key, id  _Nonnull obj, BOOL * _Nonnull stop) {
-                NSString *strKey = (NSString *)key;
-                NSString *strValue = (NSString *)obj;
-                [query appendString:[NSString stringWithFormat:@"%@%@=%@", query, strKey, strValue]];
-            }];
-            NSURLComponents *components = [NSURLComponents componentsWithURL:url resolvingAgainstBaseURL:YES];
-            components.query = query;
-            NSMutableURLRequest *request = [NSMutableURLRequest requestWithURL:url cachePolicy:NSURLRequestReloadIgnoringLocalAndRemoteCacheData timeoutInterval:10.0];
-            return request;
-        }
+        return mutableRequest;
+    } else if ([type isEqualToString:@"path"]) {
+        __block NSMutableString *query = [NSMutableString stringWithString:@""];
+        [params enumerateKeysAndObjectsUsingBlock:^(id  _Nonnull key, id  _Nonnull obj, BOOL * _Nonnull stop) {
+            NSString *strKey = (NSString *)key;
+            NSString *strValue = (NSString *)obj;
+            [query appendString:[NSString stringWithFormat:@"%@%@=%@", query, strKey, strValue]];
+        }];
+        NSURLComponents *components = [NSURLComponents componentsWithURL:url resolvingAgainstBaseURL:YES];
+        components.query = query;
+        NSMutableURLRequest *request = [NSMutableURLRequest requestWithURL:url cachePolicy:NSURLRequestReloadIgnoringLocalAndRemoteCacheData timeoutInterval:10.0];
+        return request;
     }
     return nil;
 }

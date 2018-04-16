@@ -22,4 +22,13 @@ typedef NS_ENUM(NSInteger, QueryType){
 
 @interface NetworkService : NSObject
 
+- (void)makeRequestFor:(NSURL *)url
+                method:(NSString *)method
+                  type:(NSString *)type
+                params:(NSDictionary *)params
+               headers:(NSDictionary *)headers
+               success:(void(^)( NSData*))success
+               failure:(void(^)(NSData*, NSError *, NSInteger))failure;
+
+- (void)cancel;
 @end

@@ -7,8 +7,21 @@
 //
 
 #import <Foundation/Foundation.h>
+#import "BackendAPIRequest.h"
 
-@interface SignInRequest : NSObject
+@interface SignInRequest : NSObject <BackendAPIRequest>
+
+- (NSString *)endpoint;
+
+- (NSString *)method;
+
+- (NSString *)query;
+
+- (NSDictionary *)parameters;
+
+- (NSDictionary *)headers;
+
+- (NSDictionary *)defaultJSONHeaders;
 
 -(instancetype)initWithEmail:(NSString *)email password:(NSString *)password;
 

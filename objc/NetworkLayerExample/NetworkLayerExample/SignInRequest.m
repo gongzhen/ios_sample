@@ -7,10 +7,8 @@
 //
 
 #import "SignInRequest.h"
-#import "BackendAPIRequest.h"
 
-@interface SignInRequest() <BackendAPIRequest>
-
+@interface SignInRequest()
 
 @end
 
@@ -18,12 +16,6 @@
     NSString *_email;
     NSString *_password;
 }
-
-@synthesize endpoint;
-@synthesize method;
-@synthesize query;
-@synthesize parameters;
-@synthesize headers;
 
 -(instancetype)initWithEmail:(NSString *)email password:(NSString *)password {
     if(self = [super init]) {
@@ -34,15 +26,27 @@
 }
 
 -(NSString *)endpoint {
-    return @"/users/sign_in";
+    return @"/signin";
+}
+
+- (NSString *)method {
+    return @"post";
+}
+
+- (NSString *)query {
+    return @"json";
+}
+
+- (NSDictionary *)parameters {
+    return @{ @"email":_email, @"password":_password };
+}
+
+- (NSDictionary *)headers {
+    return [self defaultJSONHeaders];
 }
 
 - (NSDictionary *)defaultJSONHeaders {
-    return @{
-             @"Content-Type": @"application/json"
-             };
+    return @{ @"Content-Type": @"application/json" };
 }
-
-
 
 @end

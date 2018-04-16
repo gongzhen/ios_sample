@@ -7,17 +7,18 @@
 //
 
 #import <Foundation/Foundation.h>
+#import "ServiceOperation.h"
 
-@class UserItem;
+@class SignInItem;
 
-typedef void(^success)(UserItem * userItem);
+typedef void(^success)(SignInItem * signinItem);
 typedef void(^failure)(NSError * error);
 
-@interface SignInOperation : NSObject
+@interface SignInOperation : ServiceOperation
 
 @property(copy, nonatomic)success successBlock;
 @property(copy, nonatomic)failure failureBlock;
 
-- (instancetype)initWithUserName:(NSString *)userName password:(NSString *)password;
+- (instancetype)initWithEmail:(NSString *)email password:(NSString *)password;
 
 @end
