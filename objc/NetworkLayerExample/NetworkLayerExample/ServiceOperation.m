@@ -8,10 +8,9 @@
 
 #import "ServiceOperation.h"
 #import "BackendService.h"
+#import "BackendConfiguration.h"
 
-@interface ServiceOperation() {
-    BackendService* _service;
-}
+@interface ServiceOperation()
 
 @end
 
@@ -21,9 +20,14 @@
 {
     self = [super init];
     if (self) {
-        _service = [[BackendService alloc] init];
+        _service = [[BackendService alloc] initWithConf:[BackendConfiguration sharedMamager]];
     }
     return self;
+}
+
+- (void)cancel {
+    [_service cancel];
+    [super cancel];
 }
 
 @end

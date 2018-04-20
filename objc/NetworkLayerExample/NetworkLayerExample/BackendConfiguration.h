@@ -10,6 +10,8 @@
 
 @interface BackendConfiguration : NSObject
 
+@property(strong, nonatomic)NSURL *baseURL;
+
 + (instancetype)sharedMamager;
 
 @end

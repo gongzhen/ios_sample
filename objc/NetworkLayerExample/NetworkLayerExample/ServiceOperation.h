@@ -7,7 +7,13 @@
 //
 
 #import <Foundation/Foundation.h>
+#import "NetworkOperation.h"
 
-@interface ServiceOperation : NSObject
+
+@class BackendService;
+
+@interface ServiceOperation : NetworkOperation
+
+@property(strong, nonatomic) BackendService* service;
 
 @end

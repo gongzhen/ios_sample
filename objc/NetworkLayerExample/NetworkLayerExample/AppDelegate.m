@@ -7,6 +7,32 @@
 //
 
 #import "AppDelegate.h"
+#import "SignInOperation.h"
+#import "SignInItem.h"
+#import "NetworkQueue.h"
+#import "NetworkLayerConfiguration.h"
+
+@interface Demo:NSObject
+
++ (void)performSignIn;
+
+@end
+
+@implementation Demo
+
++ (void)performSignIn {
+    SignInOperation *signInOp = [[SignInOperation alloc] initWithEmail:@"gongzhenusa@gmail.com" password:@"aaa"];
+    signInOp.successBlock = ^(SignInItem *signinItem) {
+        DLog(@"token:%@", signinItem.token);
+        DLog(@"uniqueId:%@", signinItem.uniqueId);
+    };
+    
+    signInOp.failureBlock = ^(NSError *error) {
+        DLog(@"error:%@", error.localizedDescription);
+    };
+    [[NetworkQueue sharedMamager] addOperation:signInOp];
+}
+@end
 
 @interface AppDelegate ()
 
@@ -17,6 +43,8 @@
 
 - (BOOL)application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions {
     // Override point for customization after application launch.
+    [NetworkLayerConfiguration setUp];
+    [Demo performSignIn];
     return YES;
 }
 

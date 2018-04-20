@@ -8,6 +8,27 @@
 
 #import <Foundation/Foundation.h>
 
+typedef NS_ENUM(NSInteger, Method) {
+    get,
+    post,
+    put,
+    delete
+};
+
+typedef NS_ENUM(NSInteger, QueryType){
+    json,
+    path
+};
+
 @interface NetworkService : NSObject
 
+- (void)makeRequestFor:(NSURL *)url
+                method:(NSString *)method
+                  type:(NSString *)type
+                params:(NSDictionary *)params
+               headers:(NSDictionary *)headers
+               success:(void(^)( NSData*))success
+               failure:(void(^)(NSData*, NSError *, NSInteger))failure;
+
+- (void)cancel;
 @end

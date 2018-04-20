@@ -7,9 +7,14 @@
 //
 
 #import <Foundation/Foundation.h>
+#import "BackendAPIRequest.h"
+
+@class BackendConfiguration;
 
 @interface BackendService : NSObject
 
+- (void)cancel;
+- (void)request:(id<BackendAPIRequest>)request success:(void (^)(id))success failure:(void (^)(NSError *))failure;
 - (instancetype)initWithConf:(BackendConfiguration *)conf;
 
 @end
