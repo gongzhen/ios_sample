@@ -1,0 +1,581 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 48;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		84614C332092703100A4958F /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 84614C322092703100A4958F /* AppDelegate.m */; };
+		84614C362092703100A4958F /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 84614C352092703100A4958F /* ViewController.m */; };
+		84614C392092703100A4958F /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 84614C372092703100A4958F /* Main.storyboard */; };
+		84614C3B2092703100A4958F /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 84614C3A2092703100A4958F /* Assets.xcassets */; };
+		84614C3E2092703100A4958F /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 84614C3C2092703100A4958F /* LaunchScreen.storyboard */; };
+		84614C412092703100A4958F /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 84614C402092703100A4958F /* main.m */; };
+		84614C4B2092703100A4958F /* AppleLazyTableViewCellProjectTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 84614C4A2092703100A4958F /* AppleLazyTableViewCellProjectTests.m */; };
+		84614C562092703100A4958F /* AppleLazyTableViewCellProjectUITests.m in Sources */ = {isa = PBXBuildFile; fileRef = 84614C552092703100A4958F /* AppleLazyTableViewCellProjectUITests.m */; };
+		84614C65209271A900A4958F /* ProListViewModel.m in Sources */ = {isa = PBXBuildFile; fileRef = 84614C64209271A900A4958F /* ProListViewModel.m */; };
+		84614C68209277D500A4958F /* Webservice.m in Sources */ = {isa = PBXBuildFile; fileRef = 84614C67209277D500A4958F /* Webservice.m */; };
+		84614C6B209279E200A4958F /* ParseOperation.m in Sources */ = {isa = PBXBuildFile; fileRef = 84614C6A209279E200A4958F /* ParseOperation.m */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		84614C472092703100A4958F /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 84614C262092703100A4958F /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 84614C2D2092703100A4958F;
+			remoteInfo = AppleLazyTableViewCellProject;
+		};
+		84614C522092703100A4958F /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 84614C262092703100A4958F /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 84614C2D2092703100A4958F;
+			remoteInfo = AppleLazyTableViewCellProject;
+		};
+/* End PBXContainerItemProxy section */
+
+/* Begin PBXFileReference section */
+		84614C2E2092703100A4958F /* AppleLazyTableViewCellProject.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = AppleLazyTableViewCellProject.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		84614C312092703100A4958F /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
+		84614C322092703100A4958F /* AppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
+		84614C342092703100A4958F /* ViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ViewController.h; sourceTree = "<group>"; };
+		84614C352092703100A4958F /* ViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ViewController.m; sourceTree = "<group>"; };
+		84614C382092703100A4958F /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
+		84614C3A2092703100A4958F /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		84614C3D2092703100A4958F /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
+		84614C3F2092703100A4958F /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		84614C402092703100A4958F /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
+		84614C462092703100A4958F /* AppleLazyTableViewCellProjectTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = AppleLazyTableViewCellProjectTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		84614C4A2092703100A4958F /* AppleLazyTableViewCellProjectTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AppleLazyTableViewCellProjectTests.m; sourceTree = "<group>"; };
+		84614C4C2092703100A4958F /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		84614C512092703100A4958F /* AppleLazyTableViewCellProjectUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = AppleLazyTableViewCellProjectUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		84614C552092703100A4958F /* AppleLazyTableViewCellProjectUITests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AppleLazyTableViewCellProjectUITests.m; sourceTree = "<group>"; };
+		84614C572092703100A4958F /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		84614C63209271A900A4958F /* ProListViewModel.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ProListViewModel.h; sourceTree = "<group>"; };
+		84614C64209271A900A4958F /* ProListViewModel.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ProListViewModel.m; sourceTree = "<group>"; };
+		84614C66209277D500A4958F /* Webservice.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = Webservice.h; sourceTree = "<group>"; };
+		84614C67209277D500A4958F /* Webservice.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = Webservice.m; sourceTree = "<group>"; };
+		84614C69209279E200A4958F /* ParseOperation.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ParseOperation.h; sourceTree = "<group>"; };
+		84614C6A209279E200A4958F /* ParseOperation.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ParseOperation.m; sourceTree = "<group>"; };
+		84614C6C209293EC00A4958F /* PrefixHeader.pch */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = PrefixHeader.pch; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		84614C2B2092703100A4958F /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		84614C432092703100A4958F /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		84614C4E2092703100A4958F /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		84614C252092703100A4958F = {
+			isa = PBXGroup;
+			children = (
+				84614C302092703100A4958F /* AppleLazyTableViewCellProject */,
+				84614C492092703100A4958F /* AppleLazyTableViewCellProjectTests */,
+				84614C542092703100A4958F /* AppleLazyTableViewCellProjectUITests */,
+				84614C2F2092703100A4958F /* Products */,
+			);
+			sourceTree = "<group>";
+		};
+		84614C2F2092703100A4958F /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				84614C2E2092703100A4958F /* AppleLazyTableViewCellProject.app */,
+				84614C462092703100A4958F /* AppleLazyTableViewCellProjectTests.xctest */,
+				84614C512092703100A4958F /* AppleLazyTableViewCellProjectUITests.xctest */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		84614C302092703100A4958F /* AppleLazyTableViewCellProject */ = {
+			isa = PBXGroup;
+			children = (
+				84614C312092703100A4958F /* AppDelegate.h */,
+				84614C322092703100A4958F /* AppDelegate.m */,
+				84614C342092703100A4958F /* ViewController.h */,
+				84614C352092703100A4958F /* ViewController.m */,
+				84614C63209271A900A4958F /* ProListViewModel.h */,
+				84614C64209271A900A4958F /* ProListViewModel.m */,
+				84614C66209277D500A4958F /* Webservice.h */,
+				84614C67209277D500A4958F /* Webservice.m */,
+				84614C69209279E200A4958F /* ParseOperation.h */,
+				84614C6A209279E200A4958F /* ParseOperation.m */,
+				84614C372092703100A4958F /* Main.storyboard */,
+				84614C3A2092703100A4958F /* Assets.xcassets */,
+				84614C3C2092703100A4958F /* LaunchScreen.storyboard */,
+				84614C3F2092703100A4958F /* Info.plist */,
+				84614C402092703100A4958F /* main.m */,
+				84614C6C209293EC00A4958F /* PrefixHeader.pch */,
+			);
+			path = AppleLazyTableViewCellProject;
+			sourceTree = "<group>";
+		};
+		84614C492092703100A4958F /* AppleLazyTableViewCellProjectTests */ = {
+			isa = PBXGroup;
+			children = (
+				84614C4A2092703100A4958F /* AppleLazyTableViewCellProjectTests.m */,
+				84614C4C2092703100A4958F /* Info.plist */,
+			);
+			path = AppleLazyTableViewCellProjectTests;
+			sourceTree = "<group>";
+		};
+		84614C542092703100A4958F /* AppleLazyTableViewCellProjectUITests */ = {
+			isa = PBXGroup;
+			children = (
+				84614C552092703100A4958F /* AppleLazyTableViewCellProjectUITests.m */,
+				84614C572092703100A4958F /* Info.plist */,
+			);
+			path = AppleLazyTableViewCellProjectUITests;
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		84614C2D2092703100A4958F /* AppleLazyTableViewCellProject */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 84614C5A2092703100A4958F /* Build configuration list for PBXNativeTarget "AppleLazyTableViewCellProject" */;
+			buildPhases = (
+				84614C2A2092703100A4958F /* Sources */,
+				84614C2B2092703100A4958F /* Frameworks */,
+				84614C2C2092703100A4958F /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = AppleLazyTableViewCellProject;
+			productName = AppleLazyTableViewCellProject;
+			productReference = 84614C2E2092703100A4958F /* AppleLazyTableViewCellProject.app */;
+			productType = "com.apple.product-type.application";
+		};
+		84614C452092703100A4958F /* AppleLazyTableViewCellProjectTests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 84614C5D2092703100A4958F /* Build configuration list for PBXNativeTarget "AppleLazyTableViewCellProjectTests" */;
+			buildPhases = (
+				84614C422092703100A4958F /* Sources */,
+				84614C432092703100A4958F /* Frameworks */,
+				84614C442092703100A4958F /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				84614C482092703100A4958F /* PBXTargetDependency */,
+			);
+			name = AppleLazyTableViewCellProjectTests;
+			productName = AppleLazyTableViewCellProjectTests;
+			productReference = 84614C462092703100A4958F /* AppleLazyTableViewCellProjectTests.xctest */;
+			productType = "com.apple.product-type.bundle.unit-test";
+		};
+		84614C502092703100A4958F /* AppleLazyTableViewCellProjectUITests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 84614C602092703100A4958F /* Build configuration list for PBXNativeTarget "AppleLazyTableViewCellProjectUITests" */;
+			buildPhases = (
+				84614C4D2092703100A4958F /* Sources */,
+				84614C4E2092703100A4958F /* Frameworks */,
+				84614C4F2092703100A4958F /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				84614C532092703100A4958F /* PBXTargetDependency */,
+			);
+			name = AppleLazyTableViewCellProjectUITests;
+			productName = AppleLazyTableViewCellProjectUITests;
+			productReference = 84614C512092703100A4958F /* AppleLazyTableViewCellProjectUITests.xctest */;
+			productType = "com.apple.product-type.bundle.ui-testing";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		84614C262092703100A4958F /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				LastUpgradeCheck = 0900;
+				ORGANIZATIONNAME = "Admin ";
+				TargetAttributes = {
+					84614C2D2092703100A4958F = {
+						CreatedOnToolsVersion = 9.0;
+						ProvisioningStyle = Automatic;
+					};
+					84614C452092703100A4958F = {
+						CreatedOnToolsVersion = 9.0;
+						ProvisioningStyle = Automatic;
+						TestTargetID = 84614C2D2092703100A4958F;
+					};
+					84614C502092703100A4958F = {
+						CreatedOnToolsVersion = 9.0;
+						ProvisioningStyle = Automatic;
+						TestTargetID = 84614C2D2092703100A4958F;
+					};
+				};
+			};
+			buildConfigurationList = 84614C292092703100A4958F /* Build configuration list for PBXProject "AppleLazyTableViewCellProject" */;
+			compatibilityVersion = "Xcode 8.0";
+			developmentRegion = en;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+				Base,
+			);
+			mainGroup = 84614C252092703100A4958F;
+			productRefGroup = 84614C2F2092703100A4958F /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				84614C2D2092703100A4958F /* AppleLazyTableViewCellProject */,
+				84614C452092703100A4958F /* AppleLazyTableViewCellProjectTests */,
+				84614C502092703100A4958F /* AppleLazyTableViewCellProjectUITests */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		84614C2C2092703100A4958F /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				84614C3E2092703100A4958F /* LaunchScreen.storyboard in Resources */,
+				84614C3B2092703100A4958F /* Assets.xcassets in Resources */,
+				84614C392092703100A4958F /* Main.storyboard in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		84614C442092703100A4958F /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		84614C4F2092703100A4958F /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		84614C2A2092703100A4958F /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				84614C362092703100A4958F /* ViewController.m in Sources */,
+				84614C6B209279E200A4958F /* ParseOperation.m in Sources */,
+				84614C412092703100A4958F /* main.m in Sources */,
+				84614C332092703100A4958F /* AppDelegate.m in Sources */,
+				84614C65209271A900A4958F /* ProListViewModel.m in Sources */,
+				84614C68209277D500A4958F /* Webservice.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		84614C422092703100A4958F /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				84614C4B2092703100A4958F /* AppleLazyTableViewCellProjectTests.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		84614C4D2092703100A4958F /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				84614C562092703100A4958F /* AppleLazyTableViewCellProjectUITests.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		84614C482092703100A4958F /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 84614C2D2092703100A4958F /* AppleLazyTableViewCellProject */;
+			targetProxy = 84614C472092703100A4958F /* PBXContainerItemProxy */;
+		};
+		84614C532092703100A4958F /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 84614C2D2092703100A4958F /* AppleLazyTableViewCellProject */;
+			targetProxy = 84614C522092703100A4958F /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
+
+/* Begin PBXVariantGroup section */
+		84614C372092703100A4958F /* Main.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				84614C382092703100A4958F /* Base */,
+			);
+			name = Main.storyboard;
+			sourceTree = "<group>";
+		};
+		84614C3C2092703100A4958F /* LaunchScreen.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				84614C3D2092703100A4958F /* Base */,
+			);
+			name = LaunchScreen.storyboard;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
+
+/* Begin XCBuildConfiguration section */
+		84614C582092703100A4958F /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 11.0;
+				MTL_ENABLE_DEBUG_INFO = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = iphoneos;
+			};
+			name = Debug;
+		};
+		84614C592092703100A4958F /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 11.0;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				SDKROOT = iphoneos;
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		84614C5B2092703100A4958F /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = X92HRP6SLX;
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = "$(SRCROOT)/$(PROJECT_NAME)/PrefixHeader.pch";
+				INFOPLIST_FILE = AppleLazyTableViewCellProject/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = com.mobilestyles.AppleLazyTableViewCellProject;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Debug;
+		};
+		84614C5C2092703100A4958F /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = X92HRP6SLX;
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = "$(SRCROOT)/$(PROJECT_NAME)/PrefixHeader.pch";
+				INFOPLIST_FILE = AppleLazyTableViewCellProject/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = com.mobilestyles.AppleLazyTableViewCellProject;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Release;
+		};
+		84614C5E2092703100A4958F /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = X92HRP6SLX;
+				INFOPLIST_FILE = AppleLazyTableViewCellProjectTests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = com.mobilestyles.AppleLazyTableViewCellProjectTests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/AppleLazyTableViewCellProject.app/AppleLazyTableViewCellProject";
+			};
+			name = Debug;
+		};
+		84614C5F2092703100A4958F /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = X92HRP6SLX;
+				INFOPLIST_FILE = AppleLazyTableViewCellProjectTests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = com.mobilestyles.AppleLazyTableViewCellProjectTests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/AppleLazyTableViewCellProject.app/AppleLazyTableViewCellProject";
+			};
+			name = Release;
+		};
+		84614C612092703100A4958F /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = X92HRP6SLX;
+				INFOPLIST_FILE = AppleLazyTableViewCellProjectUITests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = com.mobilestyles.AppleLazyTableViewCellProjectUITests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_TARGET_NAME = AppleLazyTableViewCellProject;
+			};
+			name = Debug;
+		};
+		84614C622092703100A4958F /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = X92HRP6SLX;
+				INFOPLIST_FILE = AppleLazyTableViewCellProjectUITests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = com.mobilestyles.AppleLazyTableViewCellProjectUITests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_TARGET_NAME = AppleLazyTableViewCellProject;
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		84614C292092703100A4958F /* Build configuration list for PBXProject "AppleLazyTableViewCellProject" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				84614C582092703100A4958F /* Debug */,
+				84614C592092703100A4958F /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		84614C5A2092703100A4958F /* Build configuration list for PBXNativeTarget "AppleLazyTableViewCellProject" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				84614C5B2092703100A4958F /* Debug */,
+				84614C5C2092703100A4958F /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		84614C5D2092703100A4958F /* Build configuration list for PBXNativeTarget "AppleLazyTableViewCellProjectTests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				84614C5E2092703100A4958F /* Debug */,
+				84614C5F2092703100A4958F /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		84614C602092703100A4958F /* Build configuration list for PBXNativeTarget "AppleLazyTableViewCellProjectUITests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				84614C612092703100A4958F /* Debug */,
+				84614C622092703100A4958F /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = 84614C262092703100A4958F /* Project object */;
+}
