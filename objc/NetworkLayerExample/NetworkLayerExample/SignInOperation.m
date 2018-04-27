@@ -22,7 +22,6 @@
 {
     self = [super init];
     if (self) {
-        DLog(@"email:%@ password:%@", email, password);
         _request = [[SignInRequest alloc] initWithEmail:email password:password];
     }
     return self;

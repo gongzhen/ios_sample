@@ -48,6 +48,7 @@
         } else {
             NSDictionary *dict = object;
             DLog(@"dict:%@", dict);
+            success(dict);
         }
         
     } failure:^(NSData *data, NSError *error, NSInteger statusCode) {

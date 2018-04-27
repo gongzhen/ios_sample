@@ -83,6 +83,18 @@
     }];
 }
 
+- (void)isFinished:(BOOL)finished {
+    [self updateForKey:@"isFinished" change:^{
+        _isFinished = finished;
+    }];
+}
+
+- (void)isCancelled:(BOOL)cancelled {
+    [self updateForKey:@"isCancelled" change:^{
+        _isCancelled = cancelled;
+    }];
+}
+
 - (BOOL)isExecuting {
     return _isExecuting;
 }
