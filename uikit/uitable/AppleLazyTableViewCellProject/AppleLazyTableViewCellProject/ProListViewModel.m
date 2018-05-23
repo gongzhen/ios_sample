@@ -11,7 +11,8 @@
 
 
 /// static NSString *const TopPaidAppsFeed = @"http://phobos.apple.com/WebObjects/MZStoreServices.woa/ws/RSS/toppaidapplications/limit=75/xml";
-/// https://dev.mobilestyles.com/users?query=HAIRCUT&lat=34.119302&lng=-118.256236
+/// https://dev.mobilestyles.com/users?query=HAIRCUT&lat=34.119301&lng=-118.256236
+/// users?query=HAIRCUT&lat=34.119302&lng=-118.256236
 static NSString *const TopPaidAppsFeed = @"https://dev.mobilestyles.com/users?query=HAIRCUT&lat=34.119302&lng=-118.256236";
 
 @interface ProListViewModel()
@@ -30,10 +31,9 @@ static NSString *const TopPaidAppsFeed = @"https://dev.mobilestyles.com/users?qu
 }
 
 
-- (void)getProList:(void(^)(NSArray *))proList {
-    NSURL *url = [NSURL URLWithString:TopPaidAppsFeed];
-    [self.webService get:url callBack:^(NSArray *results) {
-        
+- (void)getProListFromUrl:(NSURL *)url success:(void(^)(NSArray *))success {
+    [self.webService get:url success:^(NSArray *results) {
+        success(results);
     }];
 }
 

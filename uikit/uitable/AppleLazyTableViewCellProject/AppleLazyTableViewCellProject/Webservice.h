@@ -12,6 +12,6 @@ typedef void (^Success)(NSArray *results);
 
 @interface Webservice : NSObject
 
-- (void) get:(NSURL *)url callBack:(Success)success;
+- (void) get:(NSURL *)url success:(Success)success;
 
 @end

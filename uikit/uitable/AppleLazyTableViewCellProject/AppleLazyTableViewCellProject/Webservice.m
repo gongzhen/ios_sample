@@ -26,7 +26,7 @@
     return self;
 }
 
-- (void)get:(NSURL *)url callBack:(Success)success {
+- (void)get:(NSURL *)url success:(Success)success {
     NSURLRequest *request = [NSURLRequest requestWithURL:url];
     NSURLSessionDataTask *sessionTask = [[NSURLSession sharedSession] dataTaskWithRequest:request completionHandler:^(NSData * _Nullable data, NSURLResponse * _Nullable response, NSError * _Nullable error) {
         if(error != nil) {
@@ -42,7 +42,7 @@
                 }
             }];
         } else {
-            _parser = [[ParseOperation alloc] initWithData:data];
+            self.parser = [[ParseOperation alloc] initWithData:data];
             self.queue = [[NSOperationQueue alloc] init];
             __weak Webservice* weakSelf = self;
             self.parser.errorHandler = ^(NSError* parseError){
@@ -52,10 +52,9 @@
             
             __weak ParseOperation *weakParser = self.parser;
             self.parser.completionBlock = ^(void){
-                
                 dispatch_async(dispatch_get_main_queue(), ^{
                     [UIApplication sharedApplication].networkActivityIndicatorVisible = NO;
-                    DLog(@"weakParser:%@", weakParser.proList);
+                    success(weakParser.proList);
                 });
                 
                 weakSelf.queue = nil;

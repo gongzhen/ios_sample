@@ -16,6 +16,6 @@ typedef void (^GetProListModel)(void);
 
 - (instancetype)initWithService:(Webservice *)webService;
 
-- (void)getProList:(void(^)(NSArray *))proList;
+- (void)getProListFromUrl:(NSURL *)url success:(void(^)(NSArray *))success;
 
 @end
