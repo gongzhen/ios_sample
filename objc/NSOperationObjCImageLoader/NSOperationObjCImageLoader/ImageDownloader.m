@@ -51,13 +51,13 @@
             data = nil;
             return;
         }
-        _photoRecord.image = [UIImage imageWithData:data];
-        _photoRecord.state = PhotoRecordStateDownloaded;
-        DLog(@"_photoRecord:%@ is successful.", _photoRecord.name);
+        self.photoRecord.image = [UIImage imageWithData:data];
+        self.photoRecord.state = PhotoRecordStateDownloaded;
+        DLog(@"_photoRecord:%@ is successful.", self.photoRecord.name);
     } failure:^(NSError *error) {
-        _photoRecord.image = [UIImage imageNamed:@"Failed"];
-        _photoRecord.state = PhotoRecordStateFailed;
-        DLog(@"_photoRecord:%@ is failed.", _photoRecord.name);
+        self.photoRecord.image = [UIImage imageNamed:@"Failed"];
+        self.photoRecord.state = PhotoRecordStateFailed;
+        DLog(@"_photoRecord:%@ is failed.", self.photoRecord.name);
     }];
     
 }

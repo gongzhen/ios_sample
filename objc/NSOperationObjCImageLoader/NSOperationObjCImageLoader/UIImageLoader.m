@@ -42,7 +42,7 @@ const NSInteger UIImageLoaderErrorNilURL = 1;
 - (id) init {
     NSURL *appSupportURL = [[[NSFileManager defaultManager] URLsForDirectory:NSCachesDirectory inDomains:NSUserDomainMask] lastObject];
 //    DLog(@"appSupportURL:%@", appSupportURL);
-    NSString* bundleId = [[NSBundle mainBundle] infoDictionary][@"CFBundleIdentifier"];
+    NSString* bundleId = [[[NSBundle mainBundle] infoDictionary] objectForKey:@"CFBundleIdentifier"];
 //    DLog(@"bundleId:%@", bundleId);
     NSURL* defaultCacheDir = appSupportURL;
     if(bundleId) {

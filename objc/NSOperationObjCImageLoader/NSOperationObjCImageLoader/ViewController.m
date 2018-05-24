@@ -47,12 +47,12 @@ static NSString *const cellIdentifier = @"cellidentifier";
         }
     
         dispatch_async(dispatch_get_main_queue(), ^{
-            _photos = [tempArray copy];
-            [_tableView reloadData];
+            self.photos = [tempArray copy];
+            [self.tableView reloadData];
         });
     } failure:^(NSError *error) {
         dispatch_async(dispatch_get_main_queue(), ^{
-            _photos = [NSArray array];        
+            self.photos = [NSArray array];
         });
     }];
 }
@@ -149,8 +149,8 @@ static NSString *const cellIdentifier = @"cellidentifier";
             return;
         }
         dispatch_async(dispatch_get_main_queue(), ^{
-            [_pendingOperation.downloadsInProgress removeObjectForKey:indexPath];
-            [_tableView reloadRowsAtIndexPaths:@[indexPath] withRowAnimation:UITableViewRowAnimationFade];
+            [self.pendingOperation.downloadsInProgress removeObjectForKey:indexPath];
+            [self.tableView reloadRowsAtIndexPaths:@[indexPath] withRowAnimation:UITableViewRowAnimationFade];
         });
     };
     

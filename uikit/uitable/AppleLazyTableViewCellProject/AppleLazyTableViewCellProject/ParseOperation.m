@@ -25,6 +25,9 @@
     return self;
 }
 
+//- (void)start;
+//- (void)main;
+
 - (void)main {
     NSError* error = nil;
     id object = [NSJSONSerialization JSONObjectWithData:_dataToParse options:kNilOptions error:&error];

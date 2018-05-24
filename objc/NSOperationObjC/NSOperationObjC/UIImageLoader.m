@@ -1,5 +1,5 @@
 //
-    //  UIImageLoader.m
+//  UIImageLoader.m
 //  NSOperationObjC
 //
 //  Created by Admin  on 8/25/17.
@@ -39,24 +39,25 @@ const NSInteger UIImageLoaderErrorNilURL = 1;
     return _sharedInstance;
 }
 
-- (id) init {
-    NSURL *appSupportURL = [[[NSFileManager defaultManager] URLsForDirectory:NSCachesDirectory inDomains:NSUserDomainMask] lastObject];
-//    DLog(@"appSupportURL:%@", appSupportURL);
-    NSString* bundleId = [[NSBundle mainBundle] infoDictionary][@"CFBundleIdentifier"];
-//    DLog(@"bundleId:%@", bundleId);
-    NSURL* defaultCacheDir = appSupportURL;
-    if(bundleId) {
-        defaultCacheDir = [defaultCacheDir URLByAppendingPathComponent:bundleId];
-//        DLog(@"defaultCacheDir:%@", defaultCacheDir);
+- (instancetype) init {
+    if(self = [super init]) {
+        NSURL *appSupportURL = [[[NSFileManager defaultManager] URLsForDirectory:NSCachesDirectory inDomains:NSUserDomainMask] lastObject];
+//        DLog(@"appSupportURL:%@", appSupportURL);
+        NSString* bundleId = [[[NSBundle mainBundle] infoDictionary] objectForKey:@"CFBundleIdentifier"];
+//        DLog(@"bundleId:%@", bundleId);
+        NSURL* defaultCacheDir = appSupportURL;
+        if(bundleId) {
+            defaultCacheDir = [defaultCacheDir URLByAppendingPathComponent:bundleId];
+//            DLog(@"defaultCacheDir:%@", defaultCacheDir);
+        }
+        defaultCacheDir = [defaultCacheDir URLByAppendingPathComponent:@"UIImageLoader"];
+        self = [self initWithCacheDirectory:defaultCacheDir];
     }
-    defaultCacheDir = [defaultCacheDir URLByAppendingPathComponent:@"UIImageLoader"];
-    self = [self initWithCacheDirectory:defaultCacheDir];
     return self;
 }
 
 - (instancetype)initWithCacheDirectory:(NSURL *)url {
     if(self = [super init]) {
-        self = [super init];
         self.cacheImagesInMemory = FALSE;
         self.trustAnySSLCertificate = FALSE;
         self.useServerCachePolicy = TRUE;

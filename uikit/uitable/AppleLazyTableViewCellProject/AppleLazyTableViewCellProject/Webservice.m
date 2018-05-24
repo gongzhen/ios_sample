@@ -42,7 +42,7 @@
                 }
             }];
         } else {
-            _parser = [[ParseOperation alloc] initWithData:data];
+            self.parser = [[ParseOperation alloc] initWithData:data];
             self.queue = [[NSOperationQueue alloc] init];
             __weak Webservice* weakSelf = self;
             self.parser.errorHandler = ^(NSError* parseError){

@@ -39,11 +39,11 @@ static NSString *const cellIdentifier = @"cellidentifier";
     [self.tableView registerClass:[UITableViewCell class] forCellReuseIdentifier:cellIdentifier];
     [[NetworkManager sharedInstance] fetchPhotoURLDetails:^(NSDictionary *datasourceDictionary) {
         dispatch_async(dispatch_get_main_queue(), ^{
-            _photos = datasourceDictionary;
-            [_tableView reloadData];
+            self.photos = datasourceDictionary;
+            [self.tableView reloadData];
         });
     } failure:^(NSError *error) {
-        _photos = [NSDictionary dictionary];
+        self.photos = [NSDictionary dictionary];
     }];
 }
 
@@ -85,14 +85,15 @@ static NSString *const cellIdentifier = @"cellidentifier";
     
     [_imageLoader loadImageWithURL:imageURL hasCache:^(UIImage * _Nullable image, UIImageLoadSource loadedFromSource) {
 //        DLog(@"rowKey:%@=>image:%@", rowKey, image);
-        cell.textLabel.text = [NSString stringWithFormat:@"%@:%ld is cached.", rowKey, indexPath.row];
+        cell.textLabel.text = [NSString stringWithFormat:@"%@:%ld is cached.", rowKey, (long)indexPath.row];
         cell.imageView.image = image;
     } sendingRequest:^(BOOL didHaveCachedImage) {
-//        DLog(@"didHaveCachedImage:%dl", didHaveCachedImage);
+        DLog(@"didHaveCachedImage:%dl", didHaveCachedImage);
+        
     } requestCompleted:^(NSError * _Nullable error, UIImage * _Nullable image, UIImageLoadSource loadedFromSource) {
         if(loadedFromSource == UIImageLoadSourceNetworkToDisk) {
 //            DLog(@"image:%@", image);
-            cell.textLabel.text = [NSString stringWithFormat:@"%@:%ld is downloaded", rowKey, indexPath.row];
+            cell.textLabel.text = [NSString stringWithFormat:@"%@:%ld is downloaded.", rowKey, (long)indexPath.row];
             cell.imageView.image = image;
         }
     }];
