@@ -18,6 +18,7 @@
 		84614C65209271A900A4958F /* ProListViewModel.m in Sources */ = {isa = PBXBuildFile; fileRef = 84614C64209271A900A4958F /* ProListViewModel.m */; };
 		84614C68209277D500A4958F /* Webservice.m in Sources */ = {isa = PBXBuildFile; fileRef = 84614C67209277D500A4958F /* Webservice.m */; };
 		84614C6B209279E200A4958F /* ParseOperation.m in Sources */ = {isa = PBXBuildFile; fileRef = 84614C6A209279E200A4958F /* ParseOperation.m */; };
+		8461CB5620B63B47000B971C /* ProServicesTableViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 8461CB5520B63B47000B971C /* ProServicesTableViewCell.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -61,6 +62,8 @@
 		84614C69209279E200A4958F /* ParseOperation.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ParseOperation.h; sourceTree = "<group>"; };
 		84614C6A209279E200A4958F /* ParseOperation.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ParseOperation.m; sourceTree = "<group>"; };
 		84614C6C209293EC00A4958F /* PrefixHeader.pch */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = PrefixHeader.pch; sourceTree = "<group>"; };
+		8461CB5420B63B47000B971C /* ProServicesTableViewCell.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ProServicesTableViewCell.h; sourceTree = "<group>"; };
+		8461CB5520B63B47000B971C /* ProServicesTableViewCell.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ProServicesTableViewCell.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -117,6 +120,8 @@
 				84614C352092703100A4958F /* ViewController.m */,
 				84614C63209271A900A4958F /* ProListViewModel.h */,
 				84614C64209271A900A4958F /* ProListViewModel.m */,
+				8461CB5420B63B47000B971C /* ProServicesTableViewCell.h */,
+				8461CB5520B63B47000B971C /* ProServicesTableViewCell.m */,
 				84614C66209277D500A4958F /* Webservice.h */,
 				84614C67209277D500A4958F /* Webservice.m */,
 				84614C69209279E200A4958F /* ParseOperation.h */,
@@ -282,6 +287,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				8461CB5620B63B47000B971C /* ProServicesTableViewCell.m in Sources */,
 				84614C362092703100A4958F /* ViewController.m in Sources */,
 				84614C6B209279E200A4958F /* ParseOperation.m in Sources */,
 				84614C412092703100A4958F /* main.m in Sources */,
