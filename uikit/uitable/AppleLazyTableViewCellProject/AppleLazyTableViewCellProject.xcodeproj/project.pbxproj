@@ -7,6 +7,9 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		6007CD9620B8909800D1E5FA /* BaseCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 6007CD9520B8909800D1E5FA /* BaseCell.m */; };
+		6007CD9E20B9D42B00D1E5FA /* ProAvatarDownloader.m in Sources */ = {isa = PBXBuildFile; fileRef = 6007CD9D20B9D42B00D1E5FA /* ProAvatarDownloader.m */; };
+		6007CE2020BBDF9300D1E5FA /* ProModel.m in Sources */ = {isa = PBXBuildFile; fileRef = 6007CE1F20BBDF9300D1E5FA /* ProModel.m */; };
 		84614C332092703100A4958F /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 84614C322092703100A4958F /* AppDelegate.m */; };
 		84614C362092703100A4958F /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 84614C352092703100A4958F /* ViewController.m */; };
 		84614C392092703100A4958F /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 84614C372092703100A4958F /* Main.storyboard */; };
@@ -39,6 +42,13 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		6007CD9420B8909800D1E5FA /* BaseCell.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = BaseCell.h; sourceTree = "<group>"; };
+		6007CD9520B8909800D1E5FA /* BaseCell.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = BaseCell.m; sourceTree = "<group>"; };
+		6007CD9820B8BC5100D1E5FA /* Constants.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = Constants.h; sourceTree = "<group>"; };
+		6007CD9C20B9D42B00D1E5FA /* ProAvatarDownloader.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ProAvatarDownloader.h; sourceTree = "<group>"; };
+		6007CD9D20B9D42B00D1E5FA /* ProAvatarDownloader.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ProAvatarDownloader.m; sourceTree = "<group>"; };
+		6007CE1E20BBDF9300D1E5FA /* ProModel.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ProModel.h; sourceTree = "<group>"; };
+		6007CE1F20BBDF9300D1E5FA /* ProModel.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ProModel.m; sourceTree = "<group>"; };
 		84614C2E2092703100A4958F /* AppleLazyTableViewCellProject.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = AppleLazyTableViewCellProject.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		84614C312092703100A4958F /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
 		84614C322092703100A4958F /* AppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
@@ -118,14 +128,21 @@
 				84614C322092703100A4958F /* AppDelegate.m */,
 				84614C342092703100A4958F /* ViewController.h */,
 				84614C352092703100A4958F /* ViewController.m */,
-				84614C63209271A900A4958F /* ProListViewModel.h */,
-				84614C64209271A900A4958F /* ProListViewModel.m */,
 				8461CB5420B63B47000B971C /* ProServicesTableViewCell.h */,
 				8461CB5520B63B47000B971C /* ProServicesTableViewCell.m */,
+				84614C63209271A900A4958F /* ProListViewModel.h */,
+				84614C64209271A900A4958F /* ProListViewModel.m */,
+				6007CD9C20B9D42B00D1E5FA /* ProAvatarDownloader.h */,
+				6007CD9D20B9D42B00D1E5FA /* ProAvatarDownloader.m */,
+				6007CE1E20BBDF9300D1E5FA /* ProModel.h */,
+				6007CE1F20BBDF9300D1E5FA /* ProModel.m */,
+				6007CD9420B8909800D1E5FA /* BaseCell.h */,
+				6007CD9520B8909800D1E5FA /* BaseCell.m */,
 				84614C66209277D500A4958F /* Webservice.h */,
 				84614C67209277D500A4958F /* Webservice.m */,
 				84614C69209279E200A4958F /* ParseOperation.h */,
 				84614C6A209279E200A4958F /* ParseOperation.m */,
+				6007CD9820B8BC5100D1E5FA /* Constants.h */,
 				84614C372092703100A4958F /* Main.storyboard */,
 				84614C3A2092703100A4958F /* Assets.xcassets */,
 				84614C3C2092703100A4958F /* LaunchScreen.storyboard */,
@@ -288,8 +305,11 @@
 			buildActionMask = 2147483647;
 			files = (
 				8461CB5620B63B47000B971C /* ProServicesTableViewCell.m in Sources */,
+				6007CD9620B8909800D1E5FA /* BaseCell.m in Sources */,
 				84614C362092703100A4958F /* ViewController.m in Sources */,
 				84614C6B209279E200A4958F /* ParseOperation.m in Sources */,
+				6007CD9E20B9D42B00D1E5FA /* ProAvatarDownloader.m in Sources */,
+				6007CE2020BBDF9300D1E5FA /* ProModel.m in Sources */,
 				84614C412092703100A4958F /* main.m in Sources */,
 				84614C332092703100A4958F /* AppDelegate.m in Sources */,
 				84614C65209271A900A4958F /* ProListViewModel.m in Sources */,
@@ -398,7 +418,7 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 11.0;
+				IPHONEOS_DEPLOYMENT_TARGET = 10.0;
 				MTL_ENABLE_DEBUG_INFO = YES;
 				ONLY_ACTIVE_ARCH = YES;
 				SDKROOT = iphoneos;
@@ -449,7 +469,7 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 11.0;
+				IPHONEOS_DEPLOYMENT_TARGET = 10.0;
 				MTL_ENABLE_DEBUG_INFO = NO;
 				SDKROOT = iphoneos;
 				VALIDATE_PRODUCT = YES;

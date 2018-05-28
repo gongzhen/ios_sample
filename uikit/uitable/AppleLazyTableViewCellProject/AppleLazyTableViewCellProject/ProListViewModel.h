@@ -7,15 +7,17 @@
 //
 
 #import <Foundation/Foundation.h>
-
-typedef void (^GetProListModel)(void);
+#import <UIKit/UIKit.h>
 
 @class Webservice;
+@class ProModel;
+@class ProServicesTableViewCell;
 
 @interface ProListViewModel : NSObject
 
 - (instancetype)initWithService:(Webservice *)webService;
-
-- (void)getProListFromUrl:(NSURL *)url success:(void(^)(NSArray *))success;
+- (void)getProListFromUrl:(NSString *)url success:(void(^)(NSArray *))success failure:(void(^)(NSError *))failure;
+- (void)startIconDownload:(ProModel *)model forIndexPath:(NSIndexPath *)indexPath tableView:(UITableView *)tableView;
+- (void)removeAllObjectsFromDownloadsInProgress;
 
 @end

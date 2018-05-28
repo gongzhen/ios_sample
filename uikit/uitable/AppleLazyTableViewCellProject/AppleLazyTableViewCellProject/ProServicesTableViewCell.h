@@ -7,7 +7,10 @@
 //
 
 #import <UIKit/UIKit.h>
+@class ProModel;
 
 @interface ProServicesTableViewCell : UITableViewCell
+
+- (void)configure:(ProModel *)model index:(NSInteger)index;
 
 @end

@@ -8,7 +8,10 @@
 
 #import "ProListViewModel.h"
 #import "Webservice.h"
-
+#import "ProAvatarDownloader.h"
+#import "ProModel.h"
+#import "Constants.h"
+#import "ProServicesTableViewCell.h"
 
 /// static NSString *const TopPaidAppsFeed = @"http://phobos.apple.com/WebObjects/MZStoreServices.woa/ws/RSS/toppaidapplications/limit=75/xml";
 /// https://dev.mobilestyles.com/users?query=HAIRCUT&lat=34.119301&lng=-118.256236
@@ -17,6 +20,7 @@ static NSString *const TopPaidAppsFeed = @"https://dev.mobilestyles.com/users?qu
 
 @interface ProListViewModel()
 
+@property (nonatomic, strong) NSMutableDictionary *imageDownloadsInProgress;
 @property(strong, nonatomic) Webservice* webService;
 
 @end
@@ -26,16 +30,42 @@ static NSString *const TopPaidAppsFeed = @"https://dev.mobilestyles.com/users?qu
 - (instancetype)initWithService:(Webservice *)webService {
     if(self = [super init]) {
         self.webService = webService;
+        _imageDownloadsInProgress = [NSMutableDictionary dictionary];
     }
     return self;
 }
 
 
-- (void)getProListFromUrl:(NSURL *)url success:(void(^)(NSArray *))success {
+- (void)getProListFromUrl:(NSString *)url success:(void(^)(NSArray *))success failure:(void(^)(NSError *))failure {
     [self.webService get:url success:^(NSArray *results) {
         success(results);
+    } failire:^(NSError *error) {
+        failure(error);
     }];
 }
 
+- (void)startIconDownload:(ProModel *)model forIndexPath:(NSIndexPath *)indexPath tableView:(UITableView *)tableView {
+    ProAvatarDownloader *downloader = [_imageDownloadsInProgress objectForKey:indexPath];
+    if(downloader == nil) {
+        downloader = [[ProAvatarDownloader alloc] init];
+        downloader.avatarImage = model.avatarImage;
+        __weak __typeof(ProAvatarDownloader *)weakSelf = downloader;
+        [downloader setCompletionHandler:^{
+            model.avatarImage = weakSelf.avatarImage;
+            ProServicesTableViewCell* cell = [tableView cellForRowAtIndexPath:indexPath];
+            cell.imageView.image = model.avatarImage;
+            NSLog(@"index:%ld model:%@", indexPath.row, model.avatarImage);
+            [self.imageDownloadsInProgress removeObjectForKey:indexPath];
+        }];
+        [self.imageDownloadsInProgress setObject:downloader forKey:indexPath];
+        [downloader startDownload:model.avatarURL webService:self.webService];
+    }
+}
+
+- (void)removeAllObjectsFromDownloadsInProgress {
+    NSArray *allDownloads = [self.imageDownloadsInProgress allValues];
+    [allDownloads makeObjectsPerformSelector:@selector(cancelDownload)];
+    [self.imageDownloadsInProgress removeAllObjects];
+}
 
 @end

@@ -9,9 +9,11 @@
 #import "Webservice.h"
 #import "AppDelegate.h"
 #import "ParseOperation.h"
+#import "Constants.h"
 
 @interface Webservice()
 
+@property (nonatomic, strong) NSURLSessionDataTask *sessionTask;
 @property(nonatomic, strong) NSOperationQueue *queue;
 @property (nonatomic, strong) ParseOperation *parser;
 
@@ -26,9 +28,12 @@
     return self;
 }
 
-- (void)get:(NSURL *)url success:(Success)success {
-    NSURLRequest *request = [NSURLRequest requestWithURL:url];
-    NSURLSessionDataTask *sessionTask = [[NSURLSession sharedSession] dataTaskWithRequest:request completionHandler:^(NSData * _Nullable data, NSURLResponse * _Nullable response, NSError * _Nullable error) {
+- (void) get:(NSString *)route success:(Success)success failire:(Failure)failure {
+    NSString *URLString = [NSString stringWithFormat:@"%@%@", K_BASE_URL, [route stringByAddingPercentEncodingWithAllowedCharacters:[NSCharacterSet URLQueryAllowedCharacterSet]
+                                                                           ]];    
+    NSURL *URL = [NSURL URLWithString:URLString];
+    NSURLRequest *request = [NSURLRequest requestWithURL:URL];
+    _sessionTask = [[NSURLSession sharedSession] dataTaskWithRequest:request completionHandler:^(NSData * _Nullable data, NSURLResponse * _Nullable response, NSError * _Nullable error) {
         if(error != nil) {
             [[NSOperationQueue mainQueue] addOperationWithBlock:^{
                 [UIApplication sharedApplication].networkActivityIndicatorVisible = NO;
@@ -38,7 +43,7 @@
                     //
                     abort();
                 } else {
-                    [self handleError:error];
+                    failure(error);
                 }
             }];
         } else {
@@ -48,8 +53,8 @@
             self.parser.errorHandler = ^(NSError* parseError){
                 dispatch_async(dispatch_get_main_queue(), ^{
                     [UIApplication sharedApplication].networkActivityIndicatorVisible = NO;
-                    [weakSelf handleError:error];
                 });
+                failure(parseError);
             };
             
             __weak ParseOperation *weakParser = self.parser;
@@ -64,33 +69,41 @@
         }
     }];
     
-    [sessionTask resume];
+    [_sessionTask resume];
     dispatch_async(dispatch_get_main_queue(), ^{
         [UIApplication sharedApplication].networkActivityIndicatorVisible = YES;
     });
 }
 
-// -------------------------------------------------------------------------------
-//    handleError:error
-//  Reports any error with an alert which was received from connection or loading failures.
-// -------------------------------------------------------------------------------
-- (void)handleError:(NSError *)error
-{
-    NSString *errorMessage = [error localizedDescription];
+- (void) getImage:(NSString *)route success:(SuccessImage)success failure:(Failure)failure; {
+    NSString *imgURL;
+    if ([route rangeOfString:@"http"].location != NSNotFound) {
+        imgURL = route;
+    } else {
+        imgURL = [NSString stringWithFormat:@"https://s3.amazonaws.com/mobilestyles/%@", route];
+    }
+    NSURLRequest *request = [NSURLRequest requestWithURL:[NSURL URLWithString:imgURL]];
+    _sessionTask = [[NSURLSession sharedSession] dataTaskWithRequest:request
+                                                   completionHandler:^(NSData *data, NSURLResponse *response, NSError *error) {
+                                                       if (error != nil)
+                                                       {
+                                                           if ([error code] == NSURLErrorAppTransportSecurityRequiresSecureConnection)
+                                                           {
+                                                               failure(error);
+                                                           }
+                                                       } else {
+//                                                           DLog(@"response:%@", response);
+//                                                           DLog(@"data:%@", data);
+                                                           success(data);
+                                                       }
+                                                   }];
     
-    // alert user that our current record was deleted, and then we leave this view controller
-    //
-    UIAlertController *alert = [UIAlertController alertControllerWithTitle:NSLocalizedString(@"Cannot Show Top Paid Apps", @"")
-                                                                   message:errorMessage
-                                                            preferredStyle:UIAlertControllerStyleActionSheet];
-    UIAlertAction *OKAction = [UIAlertAction actionWithTitle:NSLocalizedString(@"OK", @"")
-                                                       style:UIAlertActionStyleDefault
-                                                     handler:^(UIAlertAction *action) {
-                                                         // dissmissal of alert completed
-                                                     }];
-    
-    [alert addAction:OKAction];
-    
+    [self.sessionTask resume];
+}
+
+- (void)cancelDownload {
+    [self.sessionTask cancel];
+    _sessionTask = nil;
 }
 
 @end
