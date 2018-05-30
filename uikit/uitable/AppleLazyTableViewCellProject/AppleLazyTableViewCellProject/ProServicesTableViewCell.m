@@ -20,10 +20,14 @@
 
 - (instancetype)initWithStyle:(UITableViewCellStyle)style reuseIdentifier:(NSString *)reuseIdentifier {
     if(self = [super initWithStyle:style reuseIdentifier:reuseIdentifier]) {
-        self.imageView.frame = CGRectMake(0, 0, 48, 48);
-        self.textLabel.frame = CGRectMake( 55, 0, self.contentView.frame.size.width - 60, 48);
+        self.textLabel.frame = CGRectMake( 0, 0, 0, 0);
+        self.imageView.frame = CGRectMake(0, 0, 0, 0);
     }
     return self;
+}
+
+- (void)layoutSubviews {
+    [super layoutSubviews];
 }
 
 - (void)awakeFromNib {
@@ -33,7 +37,6 @@
 
 - (void)prepareForReuse {
     [super prepareForReuse];
-    self.imageView.image = nil;
 }
 
 - (void)configure:(ProModel *)model index:(NSInteger)index {

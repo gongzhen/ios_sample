@@ -12,5 +12,7 @@
 //#define K_BASE_URL @"http://192.168.1.197:4969"
 #define K_BASE_URL @"https://api.mobilestyles.com"
 #define kAppIconSize 48
+#define kWBCellPadding 62
+#define kWBLeftPadding 22
 
 #endif /* Constants_h */

@@ -1,18 +1,16 @@
 //
-//  EasyTablePrefixHeader.pch
-//  EasyTableGZ_OBJC
+//  PrefixHeader.pch
+//  GCDFBInterview
 //
-//  Created by gongzhen on 11/20/16.
-//  Copyright © 2016 gongzhen. All rights reserved.
+//  Created by Zhen Gong on 5/28/18.
+//  Copyright © 2018 Zhen Gong. All rights reserved.
 //
 
-#ifndef EasyTablePrefixHeader_pch
-#define EasyTablePrefixHeader_pch
+#ifndef PrefixHeader_pch
+#define PrefixHeader_pch
 
 // Include any system framework and library headers here that should be included in all compilation units.
 // You will also need to set the Prefix Header build setting of one or more of your targets to reference this file.
-
-// #import <Masonry/Masonry.h>
 #define DLog(fmt, ...) NSLog((@"%s [Line %d] " fmt), __PRETTY_FUNCTION__, __LINE__, ##__VA_ARGS__);
 
-#endif /* EasyTablePrefixHeader_pch */
+#endif /* PrefixHeader_pch */

@@ -1,23 +1,25 @@
 //
-//  ViewController.m
+//  FirstViewController.m
 //  AppleLazyTableViewCellProject
 //
 //  Created by Admin  on 4/26/18.
 //  Copyright © 2018 Admin . All rights reserved.
 //
 
-#import "ViewController.h"
+#import "FirstViewController.h"
 #import "Webservice.h"
 #import "ProListViewModel.h"
 #import "ProServicesTableViewCell.h"
 #import "ProAvatarDownloader.h"
 #import "ProModel.h"
+#import "FPSLabel.h"
+#import "Constants.h"
+#import "UIView+Add.h"
 
 /// static NSString *const TopPaidAppsFeed = @"http://phobos.apple.com/WebObjects/MZStoreServices.woa/ws/RSS/toppaidapplications/limit=75/xml";
 /// https://dev.mobilestyles.com/users?query=HAIRCUT&lat=34.119301&lng=-118.256236
 /// users?query=HAIRCUT&lat=34.119302&lng=-118.256236
 static NSString *const TopPaidAppsFeed = @"/users?query=HAIRCUT&lat=34.129302&lng=-118.356236";
-static const CGFloat TABLE_HEADER_HEIGHT = 100;
 static const CGFloat TABLE_CELL_HEIGHT = 64;
 static NSString *const proTableViewIdentifier = @"proServicesTableViewCellIdentifier";
 static NSString *const kAvatarURL = @"avatar";
@@ -29,15 +31,16 @@ static NSString *const kRating = @"rating";
 static NSString *const kPricing = @"pricing";
 static NSString *const kDollars = @"dollars";
 
-@interface ViewController () <UITableViewDataSource, UITableViewDelegate>
+@interface FirstViewController () <UITableViewDataSource, UITableViewDelegate>
 
 @property(strong, nonatomic) Webservice* webService;
 @property(strong, nonatomic) ProListViewModel* proListViewModel;
 @property (strong, nonatomic) UITableView* tableView;
+@property (nonatomic, strong) FPSLabel *fpsLabel;
 
 @end
 
-@implementation ViewController {
+@implementation FirstViewController {
     NSArray<ProModel *> *_proDataSource;
 }
 
@@ -61,7 +64,13 @@ static NSString *const kDollars = @"dollars";
 
 - (void)viewDidLoad {
     [super viewDidLoad];
-    // Do any additional setup after loading the view, typically from a nib.    
+    _fpsLabel = [FPSLabel new];
+    [_fpsLabel sizeToFit];
+    _fpsLabel.bottom = self.view.frame.size.height - kWBCellPadding;
+    _fpsLabel.left = kWBLeftPadding ;
+    _fpsLabel.alpha = 0;
+    [self.view addSubview:_fpsLabel];
+    
     self.webService = [[Webservice alloc] init];
     self.proListViewModel = [[ProListViewModel alloc] initWithService:self.webService];
     __weak __typeof(self)weakSelf = self;
@@ -76,6 +85,18 @@ static NSString *const kDollars = @"dollars";
             
         }];
     });
+}
+
+- (void)viewWillAppear:(BOOL)animated {
+    [super viewWillAppear:animated];
+}
+
+- (void)viewDidAppear:(BOOL)animated {
+    [super viewDidAppear:animated];
+}
+
+- (void)viewWillLayoutSubviews {
+    [super viewWillLayoutSubviews];
 }
 
 - (void)initDataSource:(NSArray *)array {
@@ -145,7 +166,7 @@ static NSString *const kDollars = @"dollars";
     }
     ProModel *model = [_proDataSource objectAtIndex:indexPath.row];
     [cell configure:model index:indexPath.row];
-    DLog(@"index:%@ => image:%@", @(indexPath.row), model.avatarImage);
+    // DLog(@"index:%@ => image:%@", @(indexPath.row), model.avatarImage);
     if(model.avatarImage == nil) {
         if(self.tableView.isDragging == NO && self.tableView.decelerating == NO) {
             [self.proListViewModel startIconDownload:model forIndexPath:indexPath tableView:self.tableView];
@@ -159,8 +180,21 @@ static NSString *const kDollars = @"dollars";
 
 #pragma mark - UIScrollViewDelegate
 
+- (void)scrollViewWillBeginDragging:(UIScrollView *)scrollView {
+    if (_fpsLabel.alpha == 0) {
+        [UIView animateWithDuration:0.3 delay:0 options:UIViewAnimationOptionBeginFromCurrentState animations:^{
+            self->_fpsLabel.alpha = 1;
+        } completion:NULL];
+    }
+}
+
 - (void)scrollViewDidEndDragging:(UIScrollView *)scrollView willDecelerate:(BOOL)decelerate {
     if (!decelerate) {
+        if (_fpsLabel.alpha != 0) {
+            [UIView animateWithDuration:1 delay:2 options:UIViewAnimationOptionBeginFromCurrentState animations:^{
+                self->_fpsLabel.alpha = 0;
+            } completion:NULL];
+        }
         if(_proDataSource.count > 0) {
             NSArray *visiblePaths = [self.tableView indexPathsForVisibleRows];
             for(NSIndexPath *indexPath in visiblePaths) {
@@ -176,6 +210,11 @@ static NSString *const kDollars = @"dollars";
 }
 
 - (void)scrollViewDidEndDecelerating:(UIScrollView *)scrollView {
+    if (_fpsLabel.alpha != 0) {
+        [UIView animateWithDuration:1 delay:2 options:UIViewAnimationOptionBeginFromCurrentState animations:^{
+            self->_fpsLabel.alpha = 0;
+        } completion:NULL];
+    }
     if(_proDataSource.count > 0) {
         NSArray *visiblePaths = [self.tableView indexPathsForVisibleRows];
         for(NSIndexPath *indexPath in visiblePaths) {
@@ -186,6 +225,15 @@ static NSString *const kDollars = @"dollars";
                 cell.imageView.image = model.avatarImage;
             }
         }
+    }
+}
+
+- (void)scrollViewDidScrollToTop:(UIScrollView *)scrollView {
+    if (_fpsLabel.alpha == 0) {
+        [UIView animateWithDuration:0.3 delay:0 options:UIViewAnimationOptionBeginFromCurrentState animations:^{
+            self->_fpsLabel.alpha = 1;
+        } completion:^(BOOL finished) {
+        }];
     }
 }
 

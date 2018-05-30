@@ -7,8 +7,12 @@
 //
 
 #import "AppDelegate.h"
+#import "FirstViewController.h"
+#import "SecondViewController.h"
 
 @interface AppDelegate ()
+
+@property(strong, nonatomic) UITabBarController *tabBarController;
 
 @end
 
@@ -17,6 +21,47 @@
 
 - (BOOL)application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions {
     // Override point for customization after application launch.
+    
+    // Create a tabBar controller
+    self.tabBarController = [[UITabBarController alloc] sf];
+    
+    // Create firstViewController obj
+    FirstViewController *firstViewController = [[FirstViewController alloc] init];
+    // Create navigationController to navigate firstViewController
+    UINavigationController *firstNavigationController = [[UINavigationController alloc] initWithRootViewController: firstViewController];
+    firstNavigationController.tabBarItem.title = @"First";
+    
+    // Create secondViewController obj
+    SecondViewController *secondViewController = [[SecondViewController alloc] init];
+    // Create navigationController to navigate firstViewController
+    UINavigationController *secondNavigationController = [[UINavigationController alloc] initWithRootViewController: secondViewController];
+    secondNavigationController.tabBarItem.title = @"Second";
+    // Assemble navigation controllers to array
+    NSArray *controllers = [NSArray arrayWithObjects:firstNavigationController, secondNavigationController, nil];
+    // Assign controllers array to tabBarController
+    self.tabBarController.viewControllers = controllers;
+    
+    NSShadow *shadow = [[NSShadow alloc] init];
+    shadow.shadowColor = [UIColor grayColor];
+    shadow.shadowOffset = CGSizeMake(0, 1.0);
+    
+    [[UITabBarItem appearance] setTitleTextAttributes:@{
+                                                        NSFontAttributeName:[UIFont fontWithName:@"Helvetica" size:20.f],
+                                                        NSForegroundColorAttributeName:[UIColor redColor],
+                                                        NSShadowAttributeName: shadow}
+                                             forState:UIControlStateSelected];
+    [[UITabBarItem appearance] setTitleTextAttributes:@{
+                                                        NSFontAttributeName:[UIFont fontWithName:@"Helvetica" size:20.f],
+                                                        NSForegroundColorAttributeName:[UIColor blackColor],
+                                                        NSShadowAttributeName: shadow}
+                                             forState:UIControlStateNormal];
+    
+    self.window = [[UIWindow alloc] initWithFrame: [UIScreen mainScreen].bounds];
+    self.window.backgroundColor = [UIColor clearColor];
+    // Set window's rootViewController with tabBarController
+    self.window.rootViewController = self.tabBarController;
+    [self.window makeKeyAndVisible];
+    
     return YES;
 }
 

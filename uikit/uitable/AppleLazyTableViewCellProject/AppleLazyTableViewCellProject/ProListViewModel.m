@@ -46,6 +46,7 @@ static NSString *const TopPaidAppsFeed = @"https://dev.mobilestyles.com/users?qu
 
 - (void)startIconDownload:(ProModel *)model forIndexPath:(NSIndexPath *)indexPath tableView:(UITableView *)tableView {
     ProAvatarDownloader *downloader = [_imageDownloadsInProgress objectForKey:indexPath];
+    DLog(@"index:%@ => downloader:%@ model.avarTarImage:%@", @(indexPath.row), downloader, model.avatarImage);
     if(downloader == nil) {
         downloader = [[ProAvatarDownloader alloc] init];
         downloader.avatarImage = model.avatarImage;
@@ -54,8 +55,9 @@ static NSString *const TopPaidAppsFeed = @"https://dev.mobilestyles.com/users?qu
             model.avatarImage = weakSelf.avatarImage;
             ProServicesTableViewCell* cell = [tableView cellForRowAtIndexPath:indexPath];
             cell.imageView.image = model.avatarImage;
-            NSLog(@"index:%ld model:%@", indexPath.row, model.avatarImage);
+            DLog(@"index:%ld model:%@", indexPath.row, model.avatarImage);
             [self.imageDownloadsInProgress removeObjectForKey:indexPath];
+            DLog(@"index:%@ => downloader:%@", @(indexPath.row), [self.imageDownloadsInProgress objectForKey:indexPath]);
         }];
         [self.imageDownloadsInProgress setObject:downloader forKey:indexPath];
         [downloader startDownload:model.avatarURL webService:self.webService];

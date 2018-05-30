@@ -8,14 +8,11 @@
 
 #import "Webservice.h"
 #import "AppDelegate.h"
-#import "ParseOperation.h"
-#import "Constants.h"
 
 @interface Webservice()
 
 @property (nonatomic, strong) NSURLSessionDataTask *sessionTask;
 @property(nonatomic, strong) NSOperationQueue *queue;
-@property (nonatomic, strong) ParseOperation *parser;
 
 @end
 
@@ -29,9 +26,7 @@
 }
 
 - (void)get:(NSString *)route success:(Success)success failire:(Failure)failure {
-    NSString *URLString = [NSString stringWithFormat:@"%@%@", K_BASE_URL, [route stringByAddingPercentEncodingWithAllowedCharacters:[NSCharacterSet URLQueryAllowedCharacterSet]
-                                                                           ]];    
-    NSURL *URL = [NSURL URLWithString:URLString];
+    NSURL *URL = [NSURL URLWithString:route];
     NSURLRequest *request = [NSURLRequest requestWithURL:URL];
     _sessionTask = [[NSURLSession sharedSession] dataTaskWithRequest:request completionHandler:^(NSData * _Nullable data, NSURLResponse * _Nullable response, NSError * _Nullable error) {
         if(error != nil) {
@@ -41,31 +36,21 @@
                     // if you get error NSURLErrorAppTransportSecurityRequiresSecureConnection (-1022),
                     // then your Info.plist has not been properly configured to match the target server.
                     //
-                    abort();
+                    failure(error);
                 } else {
                     failure(error);
                 }
             }];
         } else {
-            self.parser = [[ParseOperation alloc] initWithData:data];
-            self.queue = [[NSOperationQueue alloc] init];
-            __weak Webservice* weakSelf = self;
-            self.parser.errorHandler = ^(NSError* parseError){
-                dispatch_async(dispatch_get_main_queue(), ^{
-                    [UIApplication sharedApplication].networkActivityIndicatorVisible = NO;
-                });
-                failure(parseError);
-            };
-            
-            __weak ParseOperation *weakParser = self.parser;
-            self.parser.completionBlock = ^(void){
-                dispatch_async(dispatch_get_main_queue(), ^{
-                    [UIApplication sharedApplication].networkActivityIndicatorVisible = NO;
-                });
-                success(weakParser.proList);
-                weakSelf.queue = nil;
-            };
-            [self.queue addOperation:self.parser];
+            NSError* error = nil;
+            id object = [NSJSONSerialization JSONObjectWithData:data options:NSJSONReadingAllowFragments error:&error];;
+            if(error != nil) {
+                DLog(@"%@", error);
+                failure(error);
+            } else if([object isKindOfClass:[NSDictionary class]]) {
+                NSDictionary *results = (NSDictionary *)object;
+                success(results);
+            }
         }
     }];
     

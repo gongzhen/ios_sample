@@ -10,8 +10,11 @@
 		6007CD9620B8909800D1E5FA /* BaseCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 6007CD9520B8909800D1E5FA /* BaseCell.m */; };
 		6007CD9E20B9D42B00D1E5FA /* ProAvatarDownloader.m in Sources */ = {isa = PBXBuildFile; fileRef = 6007CD9D20B9D42B00D1E5FA /* ProAvatarDownloader.m */; };
 		6007CE2020BBDF9300D1E5FA /* ProModel.m in Sources */ = {isa = PBXBuildFile; fileRef = 6007CE1F20BBDF9300D1E5FA /* ProModel.m */; };
+		6007CE2320BC618100D1E5FA /* FPSLabel.m in Sources */ = {isa = PBXBuildFile; fileRef = 6007CE2220BC618100D1E5FA /* FPSLabel.m */; };
+		6007CE2620BC72F000D1E5FA /* UIView+Add.m in Sources */ = {isa = PBXBuildFile; fileRef = 6007CE2520BC72F000D1E5FA /* UIView+Add.m */; };
+		6007CE2920BCAD9700D1E5FA /* SecondViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 6007CE2820BCAD9700D1E5FA /* SecondViewController.m */; };
 		84614C332092703100A4958F /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 84614C322092703100A4958F /* AppDelegate.m */; };
-		84614C362092703100A4958F /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 84614C352092703100A4958F /* ViewController.m */; };
+		84614C362092703100A4958F /* FirstViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 84614C352092703100A4958F /* FirstViewController.m */; };
 		84614C392092703100A4958F /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 84614C372092703100A4958F /* Main.storyboard */; };
 		84614C3B2092703100A4958F /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 84614C3A2092703100A4958F /* Assets.xcassets */; };
 		84614C3E2092703100A4958F /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 84614C3C2092703100A4958F /* LaunchScreen.storyboard */; };
@@ -49,11 +52,17 @@
 		6007CD9D20B9D42B00D1E5FA /* ProAvatarDownloader.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ProAvatarDownloader.m; sourceTree = "<group>"; };
 		6007CE1E20BBDF9300D1E5FA /* ProModel.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ProModel.h; sourceTree = "<group>"; };
 		6007CE1F20BBDF9300D1E5FA /* ProModel.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ProModel.m; sourceTree = "<group>"; };
+		6007CE2120BC618100D1E5FA /* FPSLabel.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = FPSLabel.h; sourceTree = "<group>"; };
+		6007CE2220BC618100D1E5FA /* FPSLabel.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = FPSLabel.m; sourceTree = "<group>"; };
+		6007CE2420BC72F000D1E5FA /* UIView+Add.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "UIView+Add.h"; sourceTree = "<group>"; };
+		6007CE2520BC72F000D1E5FA /* UIView+Add.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = "UIView+Add.m"; sourceTree = "<group>"; };
+		6007CE2720BCAD9700D1E5FA /* SecondViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = SecondViewController.h; sourceTree = "<group>"; };
+		6007CE2820BCAD9700D1E5FA /* SecondViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = SecondViewController.m; sourceTree = "<group>"; };
 		84614C2E2092703100A4958F /* AppleLazyTableViewCellProject.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = AppleLazyTableViewCellProject.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		84614C312092703100A4958F /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
 		84614C322092703100A4958F /* AppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
-		84614C342092703100A4958F /* ViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ViewController.h; sourceTree = "<group>"; };
-		84614C352092703100A4958F /* ViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ViewController.m; sourceTree = "<group>"; };
+		84614C342092703100A4958F /* FirstViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = FirstViewController.h; sourceTree = "<group>"; };
+		84614C352092703100A4958F /* FirstViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = FirstViewController.m; sourceTree = "<group>"; };
 		84614C382092703100A4958F /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		84614C3A2092703100A4958F /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		84614C3D2092703100A4958F /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
@@ -101,6 +110,13 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		6007CE2A20BCB9D900D1E5FA /* AFImageDownloader */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = AFImageDownloader;
+			sourceTree = "<group>";
+		};
 		84614C252092703100A4958F = {
 			isa = PBXGroup;
 			children = (
@@ -126,8 +142,10 @@
 			children = (
 				84614C312092703100A4958F /* AppDelegate.h */,
 				84614C322092703100A4958F /* AppDelegate.m */,
-				84614C342092703100A4958F /* ViewController.h */,
-				84614C352092703100A4958F /* ViewController.m */,
+				84614C342092703100A4958F /* FirstViewController.h */,
+				84614C352092703100A4958F /* FirstViewController.m */,
+				6007CE2720BCAD9700D1E5FA /* SecondViewController.h */,
+				6007CE2820BCAD9700D1E5FA /* SecondViewController.m */,
 				8461CB5420B63B47000B971C /* ProServicesTableViewCell.h */,
 				8461CB5520B63B47000B971C /* ProServicesTableViewCell.m */,
 				84614C63209271A900A4958F /* ProListViewModel.h */,
@@ -140,9 +158,14 @@
 				6007CD9520B8909800D1E5FA /* BaseCell.m */,
 				84614C66209277D500A4958F /* Webservice.h */,
 				84614C67209277D500A4958F /* Webservice.m */,
+				6007CE2120BC618100D1E5FA /* FPSLabel.h */,
+				6007CE2220BC618100D1E5FA /* FPSLabel.m */,
 				84614C69209279E200A4958F /* ParseOperation.h */,
 				84614C6A209279E200A4958F /* ParseOperation.m */,
+				6007CE2420BC72F000D1E5FA /* UIView+Add.h */,
+				6007CE2520BC72F000D1E5FA /* UIView+Add.m */,
 				6007CD9820B8BC5100D1E5FA /* Constants.h */,
+				6007CE2A20BCB9D900D1E5FA /* AFImageDownloader */,
 				84614C372092703100A4958F /* Main.storyboard */,
 				84614C3A2092703100A4958F /* Assets.xcassets */,
 				84614C3C2092703100A4958F /* LaunchScreen.storyboard */,
@@ -305,8 +328,11 @@
 			buildActionMask = 2147483647;
 			files = (
 				8461CB5620B63B47000B971C /* ProServicesTableViewCell.m in Sources */,
+				6007CE2920BCAD9700D1E5FA /* SecondViewController.m in Sources */,
 				6007CD9620B8909800D1E5FA /* BaseCell.m in Sources */,
-				84614C362092703100A4958F /* ViewController.m in Sources */,
+				6007CE2320BC618100D1E5FA /* FPSLabel.m in Sources */,
+				84614C362092703100A4958F /* FirstViewController.m in Sources */,
+				6007CE2620BC72F000D1E5FA /* UIView+Add.m in Sources */,
 				84614C6B209279E200A4958F /* ParseOperation.m in Sources */,
 				6007CD9E20B9D42B00D1E5FA /* ProAvatarDownloader.m in Sources */,
 				6007CE2020BBDF9300D1E5FA /* ProModel.m in Sources */,
