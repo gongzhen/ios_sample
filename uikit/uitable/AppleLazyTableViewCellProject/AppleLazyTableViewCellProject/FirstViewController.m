@@ -99,6 +99,10 @@ static NSString *const kDollars = @"dollars";
     [super viewWillLayoutSubviews];
 }
 
+- (void)dealloc {
+    DLog(@"Dealloc is called");
+}
+
 - (void)initDataSource:(NSArray *)array {
     __block NSMutableArray<ProModel *> *tempList = [NSMutableArray array];
     [array enumerateObjectsUsingBlock:^(id  _Nonnull obj, NSUInteger idx, BOOL * _Nonnull stop) {

@@ -23,7 +23,7 @@
     // Override point for customization after application launch.
     
     // Create a tabBar controller
-    self.tabBarController = [[UITabBarController alloc] sf];
+    self.tabBarController = [[UITabBarController alloc] init];
     
     // Create firstViewController obj
     FirstViewController *firstViewController = [[FirstViewController alloc] init];
