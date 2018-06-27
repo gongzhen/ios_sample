@@ -7,6 +7,7 @@
 //
 
 #import "CustomTableViewCell.h"
+#import "CellModel.h"
 
 @interface CustomTableViewCell()
 
@@ -18,30 +19,6 @@
 @end
 
 @implementation CustomTableViewCell
-
-- (UILabel *)timeStampLabel {
-    if(_timeStampLabel == nil) {
-        _timeStampLabel = [[UILabel alloc] initWithFrame:CGRectZero];
-        _timeStampLabel.textAlignment =  NSTextAlignmentCenter;
-    }
-    return _timeStampLabel;
-}
-
-- (UILabel *)titleLabel {
-    if(_titleLabel == nil) {
-        _titleLabel = [[UILabel alloc] initWithFrame:CGRectZero];
-        _titleLabel.textAlignment =  NSTextAlignmentCenter;
-    }
-    return _titleLabel;
-}
-
-- (UILabel *)subTitleLabel {
-    if(_subTitleLabel == nil) {
-        _subTitleLabel = [[UILabel alloc] initWithFrame:CGRectZero];
-        _subTitleLabel.textAlignment =  NSTextAlignmentCenter;
-    }
-    return _subTitleLabel;
-}
 
 - (void)awakeFromNib {
     [super awakeFromNib];
@@ -86,7 +63,52 @@
 - (void)configure:(NSDictionary *)catDict {
     self.timeStampLabel.text = [catDict objectForKey:@"timestamp"];
     self.titleLabel.text = [catDict objectForKey:@"title"];
-    self.subTitleLabel.text = [catDict objectForKey:@"description"];\
+    self.subTitleLabel.text = [catDict objectForKey:@"description"];
+}
+
+- (void)configure:(CellModel *)model completion:(void(^)(UIImage *image))completion {
+    self.timeStampLabel.text = model.timestamp;
+    self.titleLabel.text = model.title;
+    self.subTitleLabel.text = model.desc;
+    if(model.image != nil) {
+        completion(model.image);
+    } else {
+        dispatch_async(dispatch_get_global_queue(DISPATCH_QUEUE_PRIORITY_DEFAULT, 0), ^{
+            NSURL *URL = [NSURL URLWithString:model.imageURL];
+            NSURLRequest *request = [NSURLRequest requestWithURL:URL];
+            NSURLSessionTask *task = [[NSURLSession sharedSession] dataTaskWithRequest:request completionHandler:^(NSData * _Nullable data, NSURLResponse * _Nullable response, NSError * _Nullable error) {
+                if(!error) {
+                    UIImage *image = [[UIImage alloc] initWithData:data];
+                    completion(image);
+                }
+            }];
+            [task resume];
+        });
+    }
+}
+
+- (UILabel *)timeStampLabel {
+    if(_timeStampLabel == nil) {
+        _timeStampLabel = [[UILabel alloc] initWithFrame:CGRectZero];
+        _timeStampLabel.textAlignment =  NSTextAlignmentCenter;
+    }
+    return _timeStampLabel;
+}
+
+- (UILabel *)titleLabel {
+    if(_titleLabel == nil) {
+        _titleLabel = [[UILabel alloc] initWithFrame:CGRectZero];
+        _titleLabel.textAlignment =  NSTextAlignmentCenter;
+    }
+    return _titleLabel;
+}
+
+- (UILabel *)subTitleLabel {
+    if(_subTitleLabel == nil) {
+        _subTitleLabel = [[UILabel alloc] initWithFrame:CGRectZero];
+        _subTitleLabel.textAlignment =  NSTextAlignmentCenter;
+    }
+    return _subTitleLabel;
 }
 
 @end

@@ -9,13 +9,14 @@
 #import "ViewController.h"
 #import "CustomTableViewCell.h"
 #import "CustomSpinnerTableViewCell.h"
+#import "CellModel.h"
 
 @interface ViewController () <UITableViewDataSource, UITableViewDelegate> {
     NSInteger _currentPage;
     NSString *_urlString;
 }
 
-@property(nonatomic, strong)NSMutableArray *dataSource;
+@property(nonatomic, strong)NSMutableArray<CellModel *> *dataSource;
 
 @end
 
@@ -28,19 +29,37 @@
 
 - (void)viewDidLoad {
     [super viewDidLoad];
-    _currentPage = 0;
-    [self urlStringWithPage:_currentPage];
-    NSError *error;
-    NSData *data = [NSData dataWithContentsOfURL:[NSURL URLWithString:_urlString]];
-    NSMutableArray *jsonObjects = [NSJSONSerialization JSONObjectWithData:data options:kNilOptions error:&error];
-    DLog(@"%@", _urlString);
-    DLog(@"%@", jsonObjects);
-    _dataSource = [NSMutableArray arrayWithArray:jsonObjects];
     [self.tableVIew registerClass:[CustomTableViewCell class] forCellReuseIdentifier:@"kCustomTableViewCellIdentifier"];
     [self.tableVIew registerClass:[CustomSpinnerTableViewCell class] forCellReuseIdentifier:@"kCustomSpinnerTableViewCellIdentifier"];
     self.tableVIew.delegate = self;
     self.tableVIew.dataSource = self;
-    [self.tableVIew reloadData];
+    
+    _currentPage = 0;
+    [self urlStringWithPage:_currentPage];
+    
+    NSURL *URL = [NSURL URLWithString:_urlString];
+    NSURLRequest *request = [NSURLRequest requestWithURL:URL];
+    
+    dispatch_async(dispatch_get_global_queue(DISPATCH_QUEUE_PRIORITY_BACKGROUND, 0), ^{
+        NSURLSessionTask *task = [[NSURLSession sharedSession] dataTaskWithRequest:request completionHandler:^(NSData * _Nullable data, NSURLResponse * _Nullable response, NSError * _Nullable error) {
+            if(error == nil) {
+                NSError *parseError;
+                NSArray *jsonObjects = [NSJSONSerialization JSONObjectWithData:data options:kNilOptions error:&parseError];
+                DLog(@"jsonObjects:%@", jsonObjects);
+                __block NSMutableArray *dataList = [NSMutableArray array];
+                [jsonObjects enumerateObjectsUsingBlock:^(id  _Nonnull obj, NSUInteger idx, BOOL * _Nonnull stop) {
+                    NSDictionary *dict = (NSDictionary *)obj;
+                    CellModel *model = [[CellModel alloc] initWithDesc:[dict objectForKey:@"description"] title:[dict objectForKey:@"title"] ts:[dict objectForKey:@"timestamp"] url:[dict objectForKey:@"image_url"]];
+                    [dataList addObject:model];
+                }];
+                self.dataSource = [dataList copy];
+                dispatch_async(dispatch_get_main_queue(), ^{
+                    [self.tableVIew reloadData];
+                });
+            }
+        }];
+        [task resume];
+    });
 }
 
 - (void)urlStringWithPage:(NSInteger)currentPage {
@@ -70,23 +89,32 @@
         cell = [[CustomTableViewCell alloc] initWithStyle:UITableViewCellStyleDefault reuseIdentifier:@"kCustomTableViewCellIdentifier"];
     }
     cell.tag = indexPath.row;
-    NSDictionary *catObj = [_dataSource objectAtIndex:indexPath.row];
-    
-    dispatch_queue_t queue = dispatch_get_global_queue(DISPATCH_QUEUE_PRIORITY_HIGH, 0ul);
-    dispatch_async(queue, ^{
-        NSData *imageData = [NSData dataWithContentsOfURL:[NSURL URLWithString:[catObj objectForKey:@"image_url"]]];
-        UIImage *image = [[UIImage alloc] initWithData:imageData];
-        if(image) {
-            dispatch_async(dispatch_get_main_queue(), ^{
-                if(cell.tag == indexPath.row) {
-                    cell.imageView.image = image;
-                    [cell configure:catObj];
-                }
-                [cell setNeedsLayout];
-            });
+    CellModel *catObj = [_dataSource objectAtIndex:indexPath.row];
+    [cell configure:catObj completion:^(UIImage *image) {
+        if(catObj.image == nil) {
+            catObj.image = image;
         }
-        
-    });
+        dispatch_async(dispatch_get_main_queue(), ^{
+            CustomTableViewCell *reuseCell = [self.tableVIew cellForRowAtIndexPath:indexPath];
+            reuseCell.imageView.image = image;
+        });
+    }];
+    
+//    dispatch_queue_t queue = dispatch_get_global_queue(DISPATCH_QUEUE_PRIORITY_HIGH, 0ul);
+//    dispatch_async(queue, ^{
+//        NSData *imageData = [NSData dataWithContentsOfURL:[NSURL URLWithString:[catObj objectForKey:@"image_url"]]];
+//        UIImage *image = [[UIImage alloc] initWithData:imageData];
+//        if(image) {
+//            dispatch_async(dispatch_get_main_queue(), ^{
+//                if(cell.tag == indexPath.row) {
+//                    cell.imageView.image = image;
+//                    [cell configure:catObj];
+//                }
+//                [cell setNeedsLayout];
+//            });
+//        }
+//
+//    });
     return cell;
 }
 
@@ -108,8 +136,8 @@
     NSError *error;
     NSData *data = [NSData dataWithContentsOfURL:[NSURL URLWithString:_urlString]];
     NSMutableArray *jsonObjects = [NSJSONSerialization JSONObjectWithData:data options:kNilOptions error:&error];
-    DLog(@"%@", _urlString);
-    DLog(@"%@", jsonObjects);
+//    DLog(@"%@", _urlString);
+//    DLog(@"%@", jsonObjects);
 }
 
 - (CGFloat)tableView:(UITableView *)tableView heightForRowAtIndexPath:(NSIndexPath *)indexPath {

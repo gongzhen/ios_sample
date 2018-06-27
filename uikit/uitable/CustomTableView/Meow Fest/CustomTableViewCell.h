@@ -7,8 +7,10 @@
 //
 
 #import <UIKit/UIKit.h>
+@class CellModel;
 
 @interface CustomTableViewCell : UITableViewCell
 
-- (void)configure:(NSDictionary *)catDict;
+- (void)configure:(CellModel *)model completion:(void(^)(UIImage *image))completion;
+
 @end

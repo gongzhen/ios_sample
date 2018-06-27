@@ -10,6 +10,7 @@
 #import "AppDelegate.h"
 #import "ParseOperation.h"
 #import "Constants.h"
+#import "AFImageDownloader.h"
 
 @interface Webservice()
 
@@ -28,9 +29,23 @@
     return self;
 }
 
+- (void) getImageFromRoute:(NSString *)route success:(AFSuccess)success failire:(AFFailure)failure {
+    NSString *imgURL;
+    if ([route rangeOfString:@"http"].location != NSNotFound) {
+        imgURL = route;
+    } else {
+        imgURL = [NSString stringWithFormat:@"https://s3.amazonaws.com/mobilestyles/%@", route];
+    }
+    [[AFImageDownloader defaultInstance] downloadImageForURLRequest:[NSURLRequest requestWithURL:[NSURL URLWithString: imgURL]] success:^(NSURLRequest * _Nonnull request, NSHTTPURLResponse * _Nullable response, UIImage * _Nonnull image) {
+        success(image);
+    } failure:^(NSURLRequest * _Nonnull request, NSHTTPURLResponse * _Nullable response, NSError * _Nonnull error) {
+        failure(error);
+    }];
+}
+
 - (void)get:(NSString *)route success:(Success)success failire:(Failure)failure {
-    NSString *URLString = [NSString stringWithFormat:@"%@%@", K_BASE_URL, [route stringByAddingPercentEncodingWithAllowedCharacters:[NSCharacterSet URLQueryAllowedCharacterSet]
-                                                                           ]];    
+    NSString *URLString = [NSString stringWithFormat:@"%@%@", K_BASE_URL,
+                           [route stringByAddingPercentEncodingWithAllowedCharacters:[NSCharacterSet URLQueryAllowedCharacterSet]]];
     NSURL *URL = [NSURL URLWithString:URLString];
     NSURLRequest *request = [NSURLRequest requestWithURL:URL];
     _sessionTask = [[NSURLSession sharedSession] dataTaskWithRequest:request completionHandler:^(NSData * _Nullable data, NSURLResponse * _Nullable response, NSError * _Nullable error) {

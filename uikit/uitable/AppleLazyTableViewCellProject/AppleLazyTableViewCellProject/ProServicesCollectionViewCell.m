@@ -26,12 +26,18 @@
 
 - (void)configure:(ProModel *)model webSerivce:(Webservice *)webService completion:(void(^)(UIImage *image))completion {
     dispatch_async(dispatch_get_global_queue(DISPATCH_QUEUE_PRIORITY_DEFAULT, 0), ^{
-        [webService getImage:model.avatarURL success:^(NSData *data) {
-            UIImage *image = [[UIImage alloc] initWithData:data];
+//        [webService getImage:model.avatarURL success:^(NSData *data) {
+//            UIImage *image = [[UIImage alloc] initWithData:data];
+//            model.avatarImage = image;
+//            completion(image);
+//        } failure:^(NSError *error) {
+//
+//        }];
+        [webService getImageFromRoute:model.avatarURL success:^(UIImage *image) {
             model.avatarImage = image;
             completion(image);
-        } failure:^(NSError *error) {
-            
+        } failire:^(NSError *error) {
+
         }];
     });
 }

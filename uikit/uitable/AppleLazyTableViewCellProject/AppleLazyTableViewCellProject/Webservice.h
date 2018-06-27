@@ -9,6 +9,8 @@
 #import <Foundation/Foundation.h>
 #import <UIKit/UIKit.h>
 
+typedef void (^AFSuccess)(UIImage *image);
+typedef void (^AFFailure)(NSError *error);
 typedef void (^Success)(NSArray *results);
 typedef void (^Failure)(NSError *error);
 typedef void (^SuccessImage)(NSData *data);
@@ -17,6 +19,7 @@ typedef void (^SuccessImage)(NSData *data);
 
 - (void) get:(NSString *)route success:(Success)success failire:(Failure)failure;
 - (void) getImage:(NSString *)route success:(SuccessImage)success failure:(Failure)failure;
+- (void) getImageFromRoute:(NSString *)route success:(AFSuccess)success failire:(AFFailure)failure;
 - (void)cancelDownload;
 
 @end
