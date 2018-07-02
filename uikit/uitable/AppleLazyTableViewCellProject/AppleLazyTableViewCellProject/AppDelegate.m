@@ -9,6 +9,7 @@
 #import "AppDelegate.h"
 #import "FirstViewController.h"
 #import "SecondViewController.h"
+#import "ThirdViewController.h"
 
 @interface AppDelegate ()
 
@@ -36,8 +37,14 @@
     // Create navigationController to navigate firstViewController
     UINavigationController *secondNavigationController = [[UINavigationController alloc] initWithRootViewController: secondViewController];
     secondNavigationController.tabBarItem.title = @"Second";
+    
+    ThirdViewController *thirdViewController = [[ThirdViewController alloc] init];
+    // Create navigationController to navigate firstViewController
+    UINavigationController *thirdNavigationController = [[UINavigationController alloc] initWithRootViewController: thirdViewController];
+    thirdNavigationController.tabBarItem.title = @"Third";
+    
     // Assemble navigation controllers to array
-    NSArray *controllers = [NSArray arrayWithObjects:firstNavigationController, secondNavigationController, nil];
+    NSArray *controllers = [NSArray arrayWithObjects:firstNavigationController, secondNavigationController, thirdNavigationController, nil];
     // Assign controllers array to tabBarController
     self.tabBarController.viewControllers = controllers;
     

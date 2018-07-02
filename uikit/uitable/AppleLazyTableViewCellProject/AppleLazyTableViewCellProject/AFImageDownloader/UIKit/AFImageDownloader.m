@@ -218,11 +218,13 @@
         
         // 2) Attempt to load the image from the image cache if the cache policy allows it
         // 根据request的缓存策略，加载缓存
+        DLog(@"request:%@", request.URL.absoluteString);
         switch (request.cachePolicy) {
             case NSURLRequestUseProtocolCachePolicy:
             case NSURLRequestReturnCacheDataElseLoad:
             case NSURLRequestReturnCacheDataDontLoad: {
-                //从cache中根据request拿数据
+                //从cache中根据request拿数据.
+                // If request.URL.absoluteString was downloaded before, just get image from cache.
                 UIImage *cachedImage = [self.imageCache imageforRequest:request withAdditionalIdentifier:nil];
                 if (cachedImage != nil) {
                     if (success) {

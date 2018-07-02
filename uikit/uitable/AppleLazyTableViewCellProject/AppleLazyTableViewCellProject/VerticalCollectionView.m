@@ -45,14 +45,15 @@ static NSString *const proVCollectionViewIdentifier = @"proVCollectionViewIdenti
     if(model.avatarImage != nil) {
         cell.avatarImage.image = model.avatarImage;
     } else {
-        [cell configure:model webSerivce:self.webService completion:^(UIImage *image) {
-            dispatch_async(dispatch_get_main_queue(), ^{
-                ProServicesCollectionViewCell *cell = (ProServicesCollectionViewCell *)[collectionView cellForItemAtIndexPath:indexPath];
-                NSLog(@"index:%ld image:%@", indexPath.row, image);
-                cell.avatarImage.image = image;
-            });
-        }];
-        cell.avatarImage.image = [UIImage imageNamed:@"Placeholder.png"];
+//        [cell configure:model webSerivce:self.webService completion:^(UIImage *image) {
+//            dispatch_async(dispatch_get_main_queue(), ^{
+//                ProServicesCollectionViewCell *cell = (ProServicesCollectionViewCell *)[collectionView cellForItemAtIndexPath:indexPath];
+//                NSLog(@"index:%ld image:%@", indexPath.row, image);
+//                cell.avatarImage.image = image;
+//            });
+//        }];
+//        cell.avatarImage.image = [UIImage imageNamed:@"Placeholder.png"];
+        [cell configure:model];
     }
     
     return cell;

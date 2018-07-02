@@ -9,6 +9,7 @@
 #import "ProServicesCollectionViewCell.h"
 #import "ProModel.h"
 #import "Webservice.h"
+#import "UIImageView+AFNetworking.h"
 
 @interface ProServicesCollectionViewCell()
 
@@ -24,7 +25,18 @@
     return self;
 }
 
+- (void)configure:(ProModel *)model {
+    NSString *imgURL;
+    if ([model.avatarURL rangeOfString:@"http"].location != NSNotFound) {
+        imgURL = model.avatarURL;
+    } else {
+        imgURL = [NSString stringWithFormat:@"https://s3.amazonaws.com/mobilestyles/%@", model.avatarURL];
+    }
+    [self.avatarImage setImageWithURL:[NSURL URLWithString:imgURL] placeholderImage:[UIImage imageNamed:@"Placeholder"]];
+}
+
 - (void)configure:(ProModel *)model webSerivce:(Webservice *)webService completion:(void(^)(UIImage *image))completion {
+
     dispatch_async(dispatch_get_global_queue(DISPATCH_QUEUE_PRIORITY_DEFAULT, 0), ^{
 //        [webService getImage:model.avatarURL success:^(NSData *data) {
 //            UIImage *image = [[UIImage alloc] initWithData:data];

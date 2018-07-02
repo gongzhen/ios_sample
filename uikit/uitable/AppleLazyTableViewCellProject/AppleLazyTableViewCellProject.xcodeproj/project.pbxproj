@@ -49,6 +49,9 @@
 		6085A48F20E028DF00B7B29A /* AFURLRequestSerialization.m in Sources */ = {isa = PBXBuildFile; fileRef = 6085A48E20E028DF00B7B29A /* AFURLRequestSerialization.m */; };
 		6085A49320E0292B00B7B29A /* AFSecurityPolicy.m in Sources */ = {isa = PBXBuildFile; fileRef = 6085A49220E0292B00B7B29A /* AFSecurityPolicy.m */; };
 		6085A49720E0297D00B7B29A /* AFNetworkReachabilityManager.m in Sources */ = {isa = PBXBuildFile; fileRef = 6085A49620E0297D00B7B29A /* AFNetworkReachabilityManager.m */; };
+		6085A49A20E39A5A00B7B29A /* UIImageView+AFNetworking.m in Sources */ = {isa = PBXBuildFile; fileRef = 6085A49920E39A5900B7B29A /* UIImageView+AFNetworking.m */; };
+		6085A49D20E40E7400B7B29A /* ThirdViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 6085A49C20E40E7400B7B29A /* ThirdViewController.m */; };
+		6085A4A020E4167700B7B29A /* AFCollectionViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 6085A49F20E4167700B7B29A /* AFCollectionViewCell.m */; };
 		608D211120C72278003C3C3B /* HorizontalCollectionView.m in Sources */ = {isa = PBXBuildFile; fileRef = 608D211020C72278003C3C3B /* HorizontalCollectionView.m */; };
 		608D211520CC6990003C3C3B /* VerticalCollectionView.m in Sources */ = {isa = PBXBuildFile; fileRef = 608D211420CC6990003C3C3B /* VerticalCollectionView.m */; };
 		84614C332092703100A4958F /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 84614C322092703100A4958F /* AppDelegate.m */; };
@@ -140,6 +143,12 @@
 		6085A49220E0292B00B7B29A /* AFSecurityPolicy.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AFSecurityPolicy.m; sourceTree = "<group>"; };
 		6085A49520E0297D00B7B29A /* AFNetworkReachabilityManager.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AFNetworkReachabilityManager.h; sourceTree = "<group>"; };
 		6085A49620E0297D00B7B29A /* AFNetworkReachabilityManager.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AFNetworkReachabilityManager.m; sourceTree = "<group>"; };
+		6085A49820E39A5900B7B29A /* UIImageView+AFNetworking.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "UIImageView+AFNetworking.h"; sourceTree = "<group>"; };
+		6085A49920E39A5900B7B29A /* UIImageView+AFNetworking.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = "UIImageView+AFNetworking.m"; sourceTree = "<group>"; };
+		6085A49B20E40E7400B7B29A /* ThirdViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ThirdViewController.h; sourceTree = "<group>"; };
+		6085A49C20E40E7400B7B29A /* ThirdViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ThirdViewController.m; sourceTree = "<group>"; };
+		6085A49E20E4167700B7B29A /* AFCollectionViewCell.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AFCollectionViewCell.h; sourceTree = "<group>"; };
+		6085A49F20E4167700B7B29A /* AFCollectionViewCell.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AFCollectionViewCell.m; sourceTree = "<group>"; };
 		608D210F20C72278003C3C3B /* HorizontalCollectionView.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = HorizontalCollectionView.h; sourceTree = "<group>"; };
 		608D211020C72278003C3C3B /* HorizontalCollectionView.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = HorizontalCollectionView.m; sourceTree = "<group>"; };
 		608D211320CC6990003C3C3B /* VerticalCollectionView.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = VerticalCollectionView.h; sourceTree = "<group>"; };
@@ -244,6 +253,8 @@
 		6085A47E20E01F2000B7B29A /* UIKit */ = {
 			isa = PBXGroup;
 			children = (
+				6085A49820E39A5900B7B29A /* UIImageView+AFNetworking.h */,
+				6085A49920E39A5900B7B29A /* UIImageView+AFNetworking.m */,
 				6085A47B20E01ECC00B7B29A /* AFImageDownloader.h */,
 				6085A47C20E01ECC00B7B29A /* AFImageDownloader.m */,
 				6085A47F20E01F6500B7B29A /* AFAutoPurgingImageCache.h */,
@@ -321,10 +332,14 @@
 				84614C352092703100A4958F /* FirstViewController.m */,
 				6007CE2720BCAD9700D1E5FA /* SecondViewController.h */,
 				6007CE2820BCAD9700D1E5FA /* SecondViewController.m */,
+				6085A49B20E40E7400B7B29A /* ThirdViewController.h */,
+				6085A49C20E40E7400B7B29A /* ThirdViewController.m */,
 				8461CB5420B63B47000B971C /* ProServicesTableViewCell.h */,
 				8461CB5520B63B47000B971C /* ProServicesTableViewCell.m */,
 				602B9CF420C577FC001D20B4 /* ProServicesCollectionViewCell.h */,
 				602B9CF520C577FC001D20B4 /* ProServicesCollectionViewCell.m */,
+				6085A49E20E4167700B7B29A /* AFCollectionViewCell.h */,
+				6085A49F20E4167700B7B29A /* AFCollectionViewCell.m */,
 				608D210F20C72278003C3C3B /* HorizontalCollectionView.h */,
 				608D211020C72278003C3C3B /* HorizontalCollectionView.m */,
 				608D211320CC6990003C3C3B /* VerticalCollectionView.h */,
@@ -511,7 +526,9 @@
 			buildActionMask = 2147483647;
 			files = (
 				602B9D3B20C582FC001D20B4 /* MASCompositeConstraint.h in Sources */,
+				6085A49A20E39A5A00B7B29A /* UIImageView+AFNetworking.m in Sources */,
 				602B9D3C20C582FC001D20B4 /* MASConstraint+Private.h in Sources */,
+				6085A4A020E4167700B7B29A /* AFCollectionViewCell.m in Sources */,
 				602B9D3D20C582FC001D20B4 /* MASLayoutConstraint.h in Sources */,
 				602B9D3E20C582FC001D20B4 /* NSArray+MASShorthandAdditions.h in Sources */,
 				602B9D3F20C582FC001D20B4 /* MASConstraintMaker.h in Sources */,
@@ -523,6 +540,7 @@
 				602B9D4520C582FC001D20B4 /* MASConstraint.h in Sources */,
 				602B9D4620C582FC001D20B4 /* NSLayoutConstraint+MASDebugAdditions.h in Sources */,
 				6085A49720E0297D00B7B29A /* AFNetworkReachabilityManager.m in Sources */,
+				6085A49D20E40E7400B7B29A /* ThirdViewController.m in Sources */,
 				6085A48520E0278E00B7B29A /* AFHTTPSessionManager.m in Sources */,
 				608D211520CC6990003C3C3B /* VerticalCollectionView.m in Sources */,
 				602B9D4720C582FC001D20B4 /* View+MASShorthandAdditions.h in Sources */,
