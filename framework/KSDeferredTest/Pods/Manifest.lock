@@ -1,0 +1,22 @@
+PODS:
+  - KSDeferred (0.3.4)
+
+DEPENDENCIES:
+  - KSDeferred (from `https://github.com/RetVal/deferred.git`, tag `0.3.4.2`)
+
+EXTERNAL SOURCES:
+  KSDeferred:
+    :git: https://github.com/RetVal/deferred.git
+    :tag: 0.3.4.2
+
+CHECKOUT OPTIONS:
+  KSDeferred:
+    :git: https://github.com/RetVal/deferred.git
+    :tag: 0.3.4.2
+
+SPEC CHECKSUMS:
+  KSDeferred: 2b9a2707fb3bc19095f901c29badc2d616e2310b
+
+PODFILE CHECKSUM: 531e313b7588907d8ca0b39763834fffd06ca29a
+
+COCOAPODS: 1.5.2

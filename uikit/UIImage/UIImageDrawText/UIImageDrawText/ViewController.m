@@ -31,8 +31,39 @@
         UIImage *image = [UIImage imageNamed:@"button_black"];
         [_submitButton setBackgroundImage:image forState:UIControlStateNormal];
         [_submitButton setTitle:@"HAS NEW QUOTE" forState:UIControlStateNormal];
+        [_submitButton addTarget:self action:@selector(buttonAction:) forControlEvents:UIControlEventTouchUpInside];
+        _submitButton.tag = 0;
     }
     return _submitButton;
+}
+
+- (void)buttonAction:(UIButton *)sender {
+    
+    switch (sender.tag) {
+        case 0:
+        {
+            UIImage *image = [self swatchWithColor:[UIColor blueColor] side:40.f];
+            UIImageView *drawIamgeView = [[UIImageView alloc] initWithImage:image];
+            [drawIamgeView setCenter:self.view.center];
+            [self.view addSubview:drawIamgeView];
+        }
+            break;
+        default:
+            break;
+    }
+}
+
+- (UIImage *)swatchWithColor:(UIColor *)color side:(CGFloat)side {
+    // Create image context(using the main screen scale)
+    UIGraphicsBeginImageContextWithOptions(CGSizeMake(side, side), NO, 0.0);
+    // 开始绘制
+    [color setFill];
+    UIRectFill(CGRectMake(0, 0, side, side));
+    
+    // 获取图片
+    UIImage *image = UIGraphicsGetImageFromCurrentImageContext();
+    UIGraphicsEndImageContext();
+    return image;
 }
 
 - (void)viewDidLoad {
@@ -57,7 +88,6 @@
 
 - (void)viewWillAppear:(BOOL)animated {
     [super viewWillAppear:animated];
-    
     UIImage *bgImage = [UIImage imageNamed:@"background_main"];
     CGPoint point = CGPointMake(bgImage.size.width / 3.f, bgImage.size.height / 2.f);
     NSShadow *shadow = [[NSShadow alloc] init];

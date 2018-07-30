@@ -1,0 +1,688 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 50;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		6085A4C320EB45D400B7B29A /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 6085A4C220EB45D400B7B29A /* AppDelegate.m */; };
+		6085A4C620EB45D400B7B29A /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 6085A4C520EB45D400B7B29A /* ViewController.m */; };
+		6085A4C920EB45D400B7B29A /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 6085A4C720EB45D400B7B29A /* Main.storyboard */; };
+		6085A4CB20EB45D600B7B29A /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 6085A4CA20EB45D600B7B29A /* Assets.xcassets */; };
+		6085A4CE20EB45D600B7B29A /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 6085A4CC20EB45D600B7B29A /* LaunchScreen.storyboard */; };
+		6085A4D120EB45D600B7B29A /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 6085A4D020EB45D600B7B29A /* main.m */; };
+		6085A4DB20EB45D600B7B29A /* KSDeferredTestTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 6085A4DA20EB45D600B7B29A /* KSDeferredTestTests.m */; };
+		6085A4E620EB45D600B7B29A /* KSDeferredTestUITests.m in Sources */ = {isa = PBXBuildFile; fileRef = 6085A4E520EB45D600B7B29A /* KSDeferredTestUITests.m */; };
+		C107B55DCFF973825AF5D55B /* libPods-KSDeferredTestUITests.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 1BF2112032E595484A676A9D /* libPods-KSDeferredTestUITests.a */; };
+		E5E2CC70532C970409E89A99 /* libPods-KSDeferredTestTests.a in Frameworks */ = {isa = PBXBuildFile; fileRef = F33FA99478546EB02C08E5A2 /* libPods-KSDeferredTestTests.a */; };
+		FD7A0ABB53CCED6FEAADA676 /* libPods-KSDeferredTest.a in Frameworks */ = {isa = PBXBuildFile; fileRef = FA980435E3AA541524BE1332 /* libPods-KSDeferredTest.a */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		6085A4D720EB45D600B7B29A /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 6085A4B620EB45D400B7B29A /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 6085A4BD20EB45D400B7B29A;
+			remoteInfo = KSDeferredTest;
+		};
+		6085A4E220EB45D600B7B29A /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 6085A4B620EB45D400B7B29A /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 6085A4BD20EB45D400B7B29A;
+			remoteInfo = KSDeferredTest;
+		};
+/* End PBXContainerItemProxy section */
+
+/* Begin PBXFileReference section */
+		065D3371C18601CA4629299B /* Pods-KSDeferredTest.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-KSDeferredTest.debug.xcconfig"; path = "Pods/Target Support Files/Pods-KSDeferredTest/Pods-KSDeferredTest.debug.xcconfig"; sourceTree = "<group>"; };
+		1BF2112032E595484A676A9D /* libPods-KSDeferredTestUITests.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-KSDeferredTestUITests.a"; sourceTree = BUILT_PRODUCTS_DIR; };
+		1ED8BE87B098A07E78FDF39E /* Pods-KSDeferredTestUITests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-KSDeferredTestUITests.release.xcconfig"; path = "Pods/Target Support Files/Pods-KSDeferredTestUITests/Pods-KSDeferredTestUITests.release.xcconfig"; sourceTree = "<group>"; };
+		5B5B7DFF739FDC868AA24F06 /* Pods-KSDeferredTestTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-KSDeferredTestTests.release.xcconfig"; path = "Pods/Target Support Files/Pods-KSDeferredTestTests/Pods-KSDeferredTestTests.release.xcconfig"; sourceTree = "<group>"; };
+		6085A4BE20EB45D400B7B29A /* KSDeferredTest.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = KSDeferredTest.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		6085A4C120EB45D400B7B29A /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
+		6085A4C220EB45D400B7B29A /* AppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
+		6085A4C420EB45D400B7B29A /* ViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ViewController.h; sourceTree = "<group>"; };
+		6085A4C520EB45D400B7B29A /* ViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ViewController.m; sourceTree = "<group>"; };
+		6085A4C820EB45D400B7B29A /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
+		6085A4CA20EB45D600B7B29A /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		6085A4CD20EB45D600B7B29A /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
+		6085A4CF20EB45D600B7B29A /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		6085A4D020EB45D600B7B29A /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
+		6085A4D620EB45D600B7B29A /* KSDeferredTestTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = KSDeferredTestTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		6085A4DA20EB45D600B7B29A /* KSDeferredTestTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = KSDeferredTestTests.m; sourceTree = "<group>"; };
+		6085A4DC20EB45D600B7B29A /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		6085A4E120EB45D600B7B29A /* KSDeferredTestUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = KSDeferredTestUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		6085A4E520EB45D600B7B29A /* KSDeferredTestUITests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = KSDeferredTestUITests.m; sourceTree = "<group>"; };
+		6085A4E720EB45D600B7B29A /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		6402363223B30C976CB72B36 /* Pods-KSDeferredTestUITests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-KSDeferredTestUITests.debug.xcconfig"; path = "Pods/Target Support Files/Pods-KSDeferredTestUITests/Pods-KSDeferredTestUITests.debug.xcconfig"; sourceTree = "<group>"; };
+		C7F566319942756031D9BA1B /* Pods-KSDeferredTest.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-KSDeferredTest.release.xcconfig"; path = "Pods/Target Support Files/Pods-KSDeferredTest/Pods-KSDeferredTest.release.xcconfig"; sourceTree = "<group>"; };
+		ED166839ECC30D531D064085 /* Pods-KSDeferredTestTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-KSDeferredTestTests.debug.xcconfig"; path = "Pods/Target Support Files/Pods-KSDeferredTestTests/Pods-KSDeferredTestTests.debug.xcconfig"; sourceTree = "<group>"; };
+		F33FA99478546EB02C08E5A2 /* libPods-KSDeferredTestTests.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-KSDeferredTestTests.a"; sourceTree = BUILT_PRODUCTS_DIR; };
+		FA980435E3AA541524BE1332 /* libPods-KSDeferredTest.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-KSDeferredTest.a"; sourceTree = BUILT_PRODUCTS_DIR; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		6085A4BB20EB45D400B7B29A /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				FD7A0ABB53CCED6FEAADA676 /* libPods-KSDeferredTest.a in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		6085A4D320EB45D600B7B29A /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				E5E2CC70532C970409E89A99 /* libPods-KSDeferredTestTests.a in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		6085A4DE20EB45D600B7B29A /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				C107B55DCFF973825AF5D55B /* libPods-KSDeferredTestUITests.a in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		003282BB7175082E7AC75888 /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				065D3371C18601CA4629299B /* Pods-KSDeferredTest.debug.xcconfig */,
+				C7F566319942756031D9BA1B /* Pods-KSDeferredTest.release.xcconfig */,
+				ED166839ECC30D531D064085 /* Pods-KSDeferredTestTests.debug.xcconfig */,
+				5B5B7DFF739FDC868AA24F06 /* Pods-KSDeferredTestTests.release.xcconfig */,
+				6402363223B30C976CB72B36 /* Pods-KSDeferredTestUITests.debug.xcconfig */,
+				1ED8BE87B098A07E78FDF39E /* Pods-KSDeferredTestUITests.release.xcconfig */,
+			);
+			name = Pods;
+			sourceTree = "<group>";
+		};
+		6085A4B520EB45D400B7B29A = {
+			isa = PBXGroup;
+			children = (
+				6085A4C020EB45D400B7B29A /* KSDeferredTest */,
+				6085A4D920EB45D600B7B29A /* KSDeferredTestTests */,
+				6085A4E420EB45D600B7B29A /* KSDeferredTestUITests */,
+				6085A4BF20EB45D400B7B29A /* Products */,
+				003282BB7175082E7AC75888 /* Pods */,
+				CBFEA244CA68EC3DA9ABCCF8 /* Frameworks */,
+			);
+			sourceTree = "<group>";
+		};
+		6085A4BF20EB45D400B7B29A /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				6085A4BE20EB45D400B7B29A /* KSDeferredTest.app */,
+				6085A4D620EB45D600B7B29A /* KSDeferredTestTests.xctest */,
+				6085A4E120EB45D600B7B29A /* KSDeferredTestUITests.xctest */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		6085A4C020EB45D400B7B29A /* KSDeferredTest */ = {
+			isa = PBXGroup;
+			children = (
+				6085A4C120EB45D400B7B29A /* AppDelegate.h */,
+				6085A4C220EB45D400B7B29A /* AppDelegate.m */,
+				6085A4C420EB45D400B7B29A /* ViewController.h */,
+				6085A4C520EB45D400B7B29A /* ViewController.m */,
+				6085A4C720EB45D400B7B29A /* Main.storyboard */,
+				6085A4CA20EB45D600B7B29A /* Assets.xcassets */,
+				6085A4CC20EB45D600B7B29A /* LaunchScreen.storyboard */,
+				6085A4CF20EB45D600B7B29A /* Info.plist */,
+				6085A4D020EB45D600B7B29A /* main.m */,
+			);
+			path = KSDeferredTest;
+			sourceTree = "<group>";
+		};
+		6085A4D920EB45D600B7B29A /* KSDeferredTestTests */ = {
+			isa = PBXGroup;
+			children = (
+				6085A4DA20EB45D600B7B29A /* KSDeferredTestTests.m */,
+				6085A4DC20EB45D600B7B29A /* Info.plist */,
+			);
+			path = KSDeferredTestTests;
+			sourceTree = "<group>";
+		};
+		6085A4E420EB45D600B7B29A /* KSDeferredTestUITests */ = {
+			isa = PBXGroup;
+			children = (
+				6085A4E520EB45D600B7B29A /* KSDeferredTestUITests.m */,
+				6085A4E720EB45D600B7B29A /* Info.plist */,
+			);
+			path = KSDeferredTestUITests;
+			sourceTree = "<group>";
+		};
+		CBFEA244CA68EC3DA9ABCCF8 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				FA980435E3AA541524BE1332 /* libPods-KSDeferredTest.a */,
+				F33FA99478546EB02C08E5A2 /* libPods-KSDeferredTestTests.a */,
+				1BF2112032E595484A676A9D /* libPods-KSDeferredTestUITests.a */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		6085A4BD20EB45D400B7B29A /* KSDeferredTest */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 6085A4EA20EB45D600B7B29A /* Build configuration list for PBXNativeTarget "KSDeferredTest" */;
+			buildPhases = (
+				B5CB752D4D79856BF6EFF4A3 /* [CP] Check Pods Manifest.lock */,
+				6085A4BA20EB45D400B7B29A /* Sources */,
+				6085A4BB20EB45D400B7B29A /* Frameworks */,
+				6085A4BC20EB45D400B7B29A /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = KSDeferredTest;
+			productName = KSDeferredTest;
+			productReference = 6085A4BE20EB45D400B7B29A /* KSDeferredTest.app */;
+			productType = "com.apple.product-type.application";
+		};
+		6085A4D520EB45D600B7B29A /* KSDeferredTestTests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 6085A4ED20EB45D600B7B29A /* Build configuration list for PBXNativeTarget "KSDeferredTestTests" */;
+			buildPhases = (
+				9A8165C75F793B4D6358F9BD /* [CP] Check Pods Manifest.lock */,
+				6085A4D220EB45D600B7B29A /* Sources */,
+				6085A4D320EB45D600B7B29A /* Frameworks */,
+				6085A4D420EB45D600B7B29A /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				6085A4D820EB45D600B7B29A /* PBXTargetDependency */,
+			);
+			name = KSDeferredTestTests;
+			productName = KSDeferredTestTests;
+			productReference = 6085A4D620EB45D600B7B29A /* KSDeferredTestTests.xctest */;
+			productType = "com.apple.product-type.bundle.unit-test";
+		};
+		6085A4E020EB45D600B7B29A /* KSDeferredTestUITests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 6085A4F020EB45D600B7B29A /* Build configuration list for PBXNativeTarget "KSDeferredTestUITests" */;
+			buildPhases = (
+				A2963032C18FFF35E438067B /* [CP] Check Pods Manifest.lock */,
+				6085A4DD20EB45D600B7B29A /* Sources */,
+				6085A4DE20EB45D600B7B29A /* Frameworks */,
+				6085A4DF20EB45D600B7B29A /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				6085A4E320EB45D600B7B29A /* PBXTargetDependency */,
+			);
+			name = KSDeferredTestUITests;
+			productName = KSDeferredTestUITests;
+			productReference = 6085A4E120EB45D600B7B29A /* KSDeferredTestUITests.xctest */;
+			productType = "com.apple.product-type.bundle.ui-testing";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		6085A4B620EB45D400B7B29A /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				LastUpgradeCheck = 0940;
+				ORGANIZATIONNAME = "Zhen Gong";
+				TargetAttributes = {
+					6085A4BD20EB45D400B7B29A = {
+						CreatedOnToolsVersion = 9.4;
+					};
+					6085A4D520EB45D600B7B29A = {
+						CreatedOnToolsVersion = 9.4;
+						TestTargetID = 6085A4BD20EB45D400B7B29A;
+					};
+					6085A4E020EB45D600B7B29A = {
+						CreatedOnToolsVersion = 9.4;
+						TestTargetID = 6085A4BD20EB45D400B7B29A;
+					};
+				};
+			};
+			buildConfigurationList = 6085A4B920EB45D400B7B29A /* Build configuration list for PBXProject "KSDeferredTest" */;
+			compatibilityVersion = "Xcode 9.3";
+			developmentRegion = en;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+				Base,
+			);
+			mainGroup = 6085A4B520EB45D400B7B29A;
+			productRefGroup = 6085A4BF20EB45D400B7B29A /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				6085A4BD20EB45D400B7B29A /* KSDeferredTest */,
+				6085A4D520EB45D600B7B29A /* KSDeferredTestTests */,
+				6085A4E020EB45D600B7B29A /* KSDeferredTestUITests */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		6085A4BC20EB45D400B7B29A /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				6085A4CE20EB45D600B7B29A /* LaunchScreen.storyboard in Resources */,
+				6085A4CB20EB45D600B7B29A /* Assets.xcassets in Resources */,
+				6085A4C920EB45D400B7B29A /* Main.storyboard in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		6085A4D420EB45D600B7B29A /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		6085A4DF20EB45D600B7B29A /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXShellScriptBuildPhase section */
+		9A8165C75F793B4D6358F9BD /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-KSDeferredTestTests-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+		A2963032C18FFF35E438067B /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-KSDeferredTestUITests-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+		B5CB752D4D79856BF6EFF4A3 /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-KSDeferredTest-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		6085A4BA20EB45D400B7B29A /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				6085A4C620EB45D400B7B29A /* ViewController.m in Sources */,
+				6085A4D120EB45D600B7B29A /* main.m in Sources */,
+				6085A4C320EB45D400B7B29A /* AppDelegate.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		6085A4D220EB45D600B7B29A /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				6085A4DB20EB45D600B7B29A /* KSDeferredTestTests.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		6085A4DD20EB45D600B7B29A /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				6085A4E620EB45D600B7B29A /* KSDeferredTestUITests.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		6085A4D820EB45D600B7B29A /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 6085A4BD20EB45D400B7B29A /* KSDeferredTest */;
+			targetProxy = 6085A4D720EB45D600B7B29A /* PBXContainerItemProxy */;
+		};
+		6085A4E320EB45D600B7B29A /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 6085A4BD20EB45D400B7B29A /* KSDeferredTest */;
+			targetProxy = 6085A4E220EB45D600B7B29A /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
+
+/* Begin PBXVariantGroup section */
+		6085A4C720EB45D400B7B29A /* Main.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				6085A4C820EB45D400B7B29A /* Base */,
+			);
+			name = Main.storyboard;
+			sourceTree = "<group>";
+		};
+		6085A4CC20EB45D600B7B29A /* LaunchScreen.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				6085A4CD20EB45D600B7B29A /* Base */,
+			);
+			name = LaunchScreen.storyboard;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
+
+/* Begin XCBuildConfiguration section */
+		6085A4E820EB45D600B7B29A /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 11.4;
+				MTL_ENABLE_DEBUG_INFO = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = iphoneos;
+			};
+			name = Debug;
+		};
+		6085A4E920EB45D600B7B29A /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 11.4;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				SDKROOT = iphoneos;
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		6085A4EB20EB45D600B7B29A /* Debug */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 065D3371C18601CA4629299B /* Pods-KSDeferredTest.debug.xcconfig */;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = X92HRP6SLX;
+				INFOPLIST_FILE = KSDeferredTest/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = com.gongzhen.KSDeferredTest;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Debug;
+		};
+		6085A4EC20EB45D600B7B29A /* Release */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = C7F566319942756031D9BA1B /* Pods-KSDeferredTest.release.xcconfig */;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = X92HRP6SLX;
+				INFOPLIST_FILE = KSDeferredTest/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = com.gongzhen.KSDeferredTest;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Release;
+		};
+		6085A4EE20EB45D600B7B29A /* Debug */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = ED166839ECC30D531D064085 /* Pods-KSDeferredTestTests.debug.xcconfig */;
+			buildSettings = {
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = X92HRP6SLX;
+				INFOPLIST_FILE = KSDeferredTestTests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = com.gongzhen.KSDeferredTestTests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/KSDeferredTest.app/KSDeferredTest";
+			};
+			name = Debug;
+		};
+		6085A4EF20EB45D600B7B29A /* Release */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 5B5B7DFF739FDC868AA24F06 /* Pods-KSDeferredTestTests.release.xcconfig */;
+			buildSettings = {
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = X92HRP6SLX;
+				INFOPLIST_FILE = KSDeferredTestTests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = com.gongzhen.KSDeferredTestTests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/KSDeferredTest.app/KSDeferredTest";
+			};
+			name = Release;
+		};
+		6085A4F120EB45D600B7B29A /* Debug */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 6402363223B30C976CB72B36 /* Pods-KSDeferredTestUITests.debug.xcconfig */;
+			buildSettings = {
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = X92HRP6SLX;
+				INFOPLIST_FILE = KSDeferredTestUITests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = com.gongzhen.KSDeferredTestUITests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_TARGET_NAME = KSDeferredTest;
+			};
+			name = Debug;
+		};
+		6085A4F220EB45D600B7B29A /* Release */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 1ED8BE87B098A07E78FDF39E /* Pods-KSDeferredTestUITests.release.xcconfig */;
+			buildSettings = {
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = X92HRP6SLX;
+				INFOPLIST_FILE = KSDeferredTestUITests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = com.gongzhen.KSDeferredTestUITests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_TARGET_NAME = KSDeferredTest;
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		6085A4B920EB45D400B7B29A /* Build configuration list for PBXProject "KSDeferredTest" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				6085A4E820EB45D600B7B29A /* Debug */,
+				6085A4E920EB45D600B7B29A /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		6085A4EA20EB45D600B7B29A /* Build configuration list for PBXNativeTarget "KSDeferredTest" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				6085A4EB20EB45D600B7B29A /* Debug */,
+				6085A4EC20EB45D600B7B29A /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		6085A4ED20EB45D600B7B29A /* Build configuration list for PBXNativeTarget "KSDeferredTestTests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				6085A4EE20EB45D600B7B29A /* Debug */,
+				6085A4EF20EB45D600B7B29A /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		6085A4F020EB45D600B7B29A /* Build configuration list for PBXNativeTarget "KSDeferredTestUITests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				6085A4F120EB45D600B7B29A /* Debug */,
+				6085A4F220EB45D600B7B29A /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = 6085A4B620EB45D400B7B29A /* Project object */;
+}

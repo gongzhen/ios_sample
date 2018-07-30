@@ -1,0 +1,788 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 46;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		200E70C0E097061A4AAB11C594D8BE72 /* Pods-KSDeferredTestUITests-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = 188D1283F9A9816EAA62ED87BD903461 /* Pods-KSDeferredTestUITests-dummy.m */; };
+		203BB0DB559ED6F49251869688FE445F /* KSDeferred.h in Headers */ = {isa = PBXBuildFile; fileRef = 5A6AE084CF6ED734C4FFAA14EEF51BEB /* KSDeferred.h */; settings = {ATTRIBUTES = (Project, ); }; };
+		2182F1CEB8CF0E51EA472C50A14EF2BF /* Pods-KSDeferredTestTests-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = 6F91DDD868466737D68DE7B70560597E /* Pods-KSDeferredTestTests-dummy.m */; };
+		24AE1594075259A0ECF8041FD84789BD /* KSURLConnectionClient.h in Headers */ = {isa = PBXBuildFile; fileRef = 068B16217764FC3AFDE730ADB838F822 /* KSURLConnectionClient.h */; settings = {ATTRIBUTES = (Project, ); }; };
+		40C49ED826C13FD9056E2423D81E467E /* KSDeferred-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = 0C804A5E941164F45A75D7BFE34A16AF /* KSDeferred-dummy.m */; };
+		445F2BAC649B007FF47A4AB4F0F0C0E7 /* KSCancellable.h in Headers */ = {isa = PBXBuildFile; fileRef = 8D18C096BB543CC55DDFA3786B51EA5D /* KSCancellable.h */; settings = {ATTRIBUTES = (Project, ); }; };
+		46D1735E4E576C5236B0FC8C8D6E0B23 /* KSPromise.m in Sources */ = {isa = PBXBuildFile; fileRef = DCB45AA13AC4906ACCA7D663AF2AD720 /* KSPromise.m */; settings = {COMPILER_FLAGS = "-DOS_OBJECT_USE_OBJC=0"; }; };
+		73D20B8BF3DF4898A7E46D6C07F9796F /* KSNetworkClient.h in Headers */ = {isa = PBXBuildFile; fileRef = B073814FCC9CBB267628EA8C18581A02 /* KSNetworkClient.h */; settings = {ATTRIBUTES = (Project, ); }; };
+		740F2E018F0E03416D5F048F1CD44468 /* Pods-KSDeferredTest-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = 236FBE37F342B05988AA9E48E133E4B0 /* Pods-KSDeferredTest-dummy.m */; };
+		88C65FEEDAF8AFCF7D067A6604D00A35 /* KSURLConnectionClient.m in Sources */ = {isa = PBXBuildFile; fileRef = E1B86EFA46CCF994EBFE8D477A1193C2 /* KSURLConnectionClient.m */; settings = {COMPILER_FLAGS = "-DOS_OBJECT_USE_OBJC=0"; }; };
+		8D00457A54CA622E956EBBDA288CCB57 /* KSGenericsCompat.h in Headers */ = {isa = PBXBuildFile; fileRef = AD235094DBDAEC55AD49144F10B9DD86 /* KSGenericsCompat.h */; settings = {ATTRIBUTES = (Project, ); }; };
+		8FE23A21A24E09A43B5F93665886F82E /* KSNetworkClient.m in Sources */ = {isa = PBXBuildFile; fileRef = 75A742FA45F1754D2E88B1EB86D8E155 /* KSNetworkClient.m */; settings = {COMPILER_FLAGS = "-DOS_OBJECT_USE_OBJC=0"; }; };
+		ADADD6BDD3A55236F011B28186DF1A8C /* KSURLSessionClient.h in Headers */ = {isa = PBXBuildFile; fileRef = 50AA2F76E989E3A4CB409A52ED1E68D2 /* KSURLSessionClient.h */; settings = {ATTRIBUTES = (Project, ); }; };
+		BB10EF123DC92F0B8425217555C7C7ED /* KSPromise.h in Headers */ = {isa = PBXBuildFile; fileRef = 53C91739627AC96D2B5C6F8F047C49B1 /* KSPromise.h */; settings = {ATTRIBUTES = (Project, ); }; };
+		BE3013BA64576856962D8E626BA55BA6 /* KSNullabilityCompat.h in Headers */ = {isa = PBXBuildFile; fileRef = 415832C6ECDC2D73C5A4F25848EF90AF /* KSNullabilityCompat.h */; settings = {ATTRIBUTES = (Project, ); }; };
+		E31FF7C5D7D141B5F2C6E92F7A4C4090 /* KSURLSessionClient.m in Sources */ = {isa = PBXBuildFile; fileRef = CA109A8AE22C1D3323C977F19C8711B6 /* KSURLSessionClient.m */; settings = {COMPILER_FLAGS = "-DOS_OBJECT_USE_OBJC=0"; }; };
+		F9A0E44CE4FC0369197CE18302B2C3AE /* KSDeferred.m in Sources */ = {isa = PBXBuildFile; fileRef = 8BF2EF0E81ADDAC874344DC36107DF72 /* KSDeferred.m */; settings = {COMPILER_FLAGS = "-DOS_OBJECT_USE_OBJC=0"; }; };
+/* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		1DDB0CB1D9C9A67751187A856B5F14E4 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = D41D8CD98F00B204E9800998ECF8427E /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = D6C969315928DB30B908006F27BF2264;
+			remoteInfo = KSDeferred;
+		};
+		467E98AE4073FD6903493FA3D8D1C86C /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = D41D8CD98F00B204E9800998ECF8427E /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 3DB4744990C6FD4374E8DC7BD830082C;
+			remoteInfo = "Pods-KSDeferredTest";
+		};
+		7F56948F33F7EE0202A999C60556D39B /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = D41D8CD98F00B204E9800998ECF8427E /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 3DB4744990C6FD4374E8DC7BD830082C;
+			remoteInfo = "Pods-KSDeferredTest";
+		};
+/* End PBXContainerItemProxy section */
+
+/* Begin PBXFileReference section */
+		030C52A0ABCD038DA2C84F1ECC429508 /* KSDeferred-prefix.pch */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "KSDeferred-prefix.pch"; sourceTree = "<group>"; };
+		068B16217764FC3AFDE730ADB838F822 /* KSURLConnectionClient.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = KSURLConnectionClient.h; path = Deferred/KSURLConnectionClient.h; sourceTree = "<group>"; };
+		08048DBDBC110C880903F3B147FF497B /* Pods-KSDeferredTestUITests-resources.sh */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.script.sh; path = "Pods-KSDeferredTestUITests-resources.sh"; sourceTree = "<group>"; };
+		0C804A5E941164F45A75D7BFE34A16AF /* KSDeferred-dummy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "KSDeferred-dummy.m"; sourceTree = "<group>"; };
+		13E6623F911CD2440A088EF14ABD79A4 /* Pods-KSDeferredTest-frameworks.sh */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.script.sh; path = "Pods-KSDeferredTest-frameworks.sh"; sourceTree = "<group>"; };
+		15E7CF2E33F67004E50E0D318F924F16 /* Pods-KSDeferredTestTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "Pods-KSDeferredTestTests.debug.xcconfig"; sourceTree = "<group>"; };
+		188D1283F9A9816EAA62ED87BD903461 /* Pods-KSDeferredTestUITests-dummy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "Pods-KSDeferredTestUITests-dummy.m"; sourceTree = "<group>"; };
+		236FBE37F342B05988AA9E48E133E4B0 /* Pods-KSDeferredTest-dummy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "Pods-KSDeferredTest-dummy.m"; sourceTree = "<group>"; };
+		26F292426F615ED32539E99B52B08FE8 /* KSDeferred.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = KSDeferred.xcconfig; sourceTree = "<group>"; };
+		408547EA3E0989C5AFE5D291B08BA536 /* Pods-KSDeferredTestTests-acknowledgements.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = "Pods-KSDeferredTestTests-acknowledgements.plist"; sourceTree = "<group>"; };
+		415832C6ECDC2D73C5A4F25848EF90AF /* KSNullabilityCompat.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = KSNullabilityCompat.h; path = Deferred/KSNullabilityCompat.h; sourceTree = "<group>"; };
+		45CF079CE65BE3737F1E95D878BD4F52 /* Pods-KSDeferredTestUITests-acknowledgements.markdown */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text; path = "Pods-KSDeferredTestUITests-acknowledgements.markdown"; sourceTree = "<group>"; };
+		50AA2F76E989E3A4CB409A52ED1E68D2 /* KSURLSessionClient.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = KSURLSessionClient.h; path = Deferred/KSURLSessionClient.h; sourceTree = "<group>"; };
+		53C91739627AC96D2B5C6F8F047C49B1 /* KSPromise.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = KSPromise.h; path = Deferred/KSPromise.h; sourceTree = "<group>"; };
+		5A6AE084CF6ED734C4FFAA14EEF51BEB /* KSDeferred.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = KSDeferred.h; path = Deferred/KSDeferred.h; sourceTree = "<group>"; };
+		5CADD6FF18D4B213F96BAF7B19772FC1 /* libPods-KSDeferredTestTests.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-KSDeferredTestTests.a"; sourceTree = BUILT_PRODUCTS_DIR; };
+		5F9301141A1FAE1CA28CEEDD47F5C294 /* libKSDeferred.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = libKSDeferred.a; sourceTree = BUILT_PRODUCTS_DIR; };
+		6F91DDD868466737D68DE7B70560597E /* Pods-KSDeferredTestTests-dummy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "Pods-KSDeferredTestTests-dummy.m"; sourceTree = "<group>"; };
+		72BC468A217A3EE2D89AAD91E981DAEC /* Pods-KSDeferredTestUITests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "Pods-KSDeferredTestUITests.debug.xcconfig"; sourceTree = "<group>"; };
+		75A742FA45F1754D2E88B1EB86D8E155 /* KSNetworkClient.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = KSNetworkClient.m; path = Deferred/KSNetworkClient.m; sourceTree = "<group>"; };
+		75CAB93F5053E570536BB1903AE3A188 /* Pods-KSDeferredTest-acknowledgements.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = "Pods-KSDeferredTest-acknowledgements.plist"; sourceTree = "<group>"; };
+		831368E7B5A5BC46E881DBCFA0704580 /* Pods-KSDeferredTestTests-acknowledgements.markdown */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text; path = "Pods-KSDeferredTestTests-acknowledgements.markdown"; sourceTree = "<group>"; };
+		8BF2EF0E81ADDAC874344DC36107DF72 /* KSDeferred.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = KSDeferred.m; path = Deferred/KSDeferred.m; sourceTree = "<group>"; };
+		8D18C096BB543CC55DDFA3786B51EA5D /* KSCancellable.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = KSCancellable.h; path = Deferred/KSCancellable.h; sourceTree = "<group>"; };
+		93A4A3777CF96A4AAC1D13BA6DCCEA73 /* Podfile */ = {isa = PBXFileReference; explicitFileType = text.script.ruby; includeInIndex = 1; name = Podfile; path = ../Podfile; sourceTree = SOURCE_ROOT; xcLanguageSpecificationIdentifier = xcode.lang.ruby; };
+		9B1795EB1B23DF9E02643A59EEF5AC9D /* Pods-KSDeferredTest-acknowledgements.markdown */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text; path = "Pods-KSDeferredTest-acknowledgements.markdown"; sourceTree = "<group>"; };
+		9B7C26021B92F84E54C0AF4AA01FA6AB /* Pods-KSDeferredTest.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "Pods-KSDeferredTest.release.xcconfig"; sourceTree = "<group>"; };
+		9EDE0730758AF95364E927B59B96E697 /* Pods-KSDeferredTestUITests-acknowledgements.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = "Pods-KSDeferredTestUITests-acknowledgements.plist"; sourceTree = "<group>"; };
+		A80DC3B56264C1A9232BCE59D460AEB3 /* Pods-KSDeferredTest-resources.sh */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.script.sh; path = "Pods-KSDeferredTest-resources.sh"; sourceTree = "<group>"; };
+		AD235094DBDAEC55AD49144F10B9DD86 /* KSGenericsCompat.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = KSGenericsCompat.h; path = Deferred/KSGenericsCompat.h; sourceTree = "<group>"; };
+		AE25D989008F5A413CF229472BD8266B /* libPods-KSDeferredTest.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-KSDeferredTest.a"; sourceTree = BUILT_PRODUCTS_DIR; };
+		B073814FCC9CBB267628EA8C18581A02 /* KSNetworkClient.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = KSNetworkClient.h; path = Deferred/KSNetworkClient.h; sourceTree = "<group>"; };
+		BE772687119EC1A41149EF0138B99306 /* Pods-KSDeferredTestTests-frameworks.sh */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.script.sh; path = "Pods-KSDeferredTestTests-frameworks.sh"; sourceTree = "<group>"; };
+		C9B03F1EE29F507731E293723FE7A1D0 /* libPods-KSDeferredTestUITests.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-KSDeferredTestUITests.a"; sourceTree = BUILT_PRODUCTS_DIR; };
+		CA109A8AE22C1D3323C977F19C8711B6 /* KSURLSessionClient.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = KSURLSessionClient.m; path = Deferred/KSURLSessionClient.m; sourceTree = "<group>"; };
+		DCB45AA13AC4906ACCA7D663AF2AD720 /* KSPromise.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = KSPromise.m; path = Deferred/KSPromise.m; sourceTree = "<group>"; };
+		E1B86EFA46CCF994EBFE8D477A1193C2 /* KSURLConnectionClient.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = KSURLConnectionClient.m; path = Deferred/KSURLConnectionClient.m; sourceTree = "<group>"; };
+		E6212C8E45BF568220F8F03A247EF3EB /* Pods-KSDeferredTest.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "Pods-KSDeferredTest.debug.xcconfig"; sourceTree = "<group>"; };
+		F0E3AD044F6AAFAE3364B220DD962135 /* Pods-KSDeferredTestTests-resources.sh */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.script.sh; path = "Pods-KSDeferredTestTests-resources.sh"; sourceTree = "<group>"; };
+		F18579D06A1650A4BC96AB6F4714AA94 /* Pods-KSDeferredTestTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "Pods-KSDeferredTestTests.release.xcconfig"; sourceTree = "<group>"; };
+		F9C99816B5FA505C634DA21AEAF3B34A /* Pods-KSDeferredTestUITests-frameworks.sh */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.script.sh; path = "Pods-KSDeferredTestUITests-frameworks.sh"; sourceTree = "<group>"; };
+		FF4046C672680594E4936994F51E4AF4 /* Pods-KSDeferredTestUITests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "Pods-KSDeferredTestUITests.release.xcconfig"; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		12C422F03B619CBFA1F11FA645C42822 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		7224E4789B854F9D04EE5B9C8A58AD1B /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		EBF8D05BB48416A706991255AFD78FCA /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		F48F10D18FDE0485C57C56AC6BBF5F1F /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		0F8D2E47FE03D3B91B51069F7C273AF4 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		14314C8504FEF1FB97E6B23C43295F6F /* KSDeferred */ = {
+			isa = PBXGroup;
+			children = (
+				8D18C096BB543CC55DDFA3786B51EA5D /* KSCancellable.h */,
+				5A6AE084CF6ED734C4FFAA14EEF51BEB /* KSDeferred.h */,
+				8BF2EF0E81ADDAC874344DC36107DF72 /* KSDeferred.m */,
+				AD235094DBDAEC55AD49144F10B9DD86 /* KSGenericsCompat.h */,
+				B073814FCC9CBB267628EA8C18581A02 /* KSNetworkClient.h */,
+				75A742FA45F1754D2E88B1EB86D8E155 /* KSNetworkClient.m */,
+				415832C6ECDC2D73C5A4F25848EF90AF /* KSNullabilityCompat.h */,
+				53C91739627AC96D2B5C6F8F047C49B1 /* KSPromise.h */,
+				DCB45AA13AC4906ACCA7D663AF2AD720 /* KSPromise.m */,
+				068B16217764FC3AFDE730ADB838F822 /* KSURLConnectionClient.h */,
+				E1B86EFA46CCF994EBFE8D477A1193C2 /* KSURLConnectionClient.m */,
+				50AA2F76E989E3A4CB409A52ED1E68D2 /* KSURLSessionClient.h */,
+				CA109A8AE22C1D3323C977F19C8711B6 /* KSURLSessionClient.m */,
+				560CD96D5CD96ED297353AF5E7E2362B /* Support Files */,
+			);
+			path = KSDeferred;
+			sourceTree = "<group>";
+		};
+		560CD96D5CD96ED297353AF5E7E2362B /* Support Files */ = {
+			isa = PBXGroup;
+			children = (
+				26F292426F615ED32539E99B52B08FE8 /* KSDeferred.xcconfig */,
+				0C804A5E941164F45A75D7BFE34A16AF /* KSDeferred-dummy.m */,
+				030C52A0ABCD038DA2C84F1ECC429508 /* KSDeferred-prefix.pch */,
+			);
+			name = "Support Files";
+			path = "../Target Support Files/KSDeferred";
+			sourceTree = "<group>";
+		};
+		719E2F38304EEA9D7542989D9BF8A56C /* Targets Support Files */ = {
+			isa = PBXGroup;
+			children = (
+				D6C1936206A273018BF6B4DCC08EA607 /* Pods-KSDeferredTest */,
+				E6E3FC07F5C8BF72AA9BFB11BF772938 /* Pods-KSDeferredTestTests */,
+				98FF868417A925260FEC8BD9FE312AEB /* Pods-KSDeferredTestUITests */,
+			);
+			name = "Targets Support Files";
+			sourceTree = "<group>";
+		};
+		7DB346D0F39D3F0E887471402A8071AB = {
+			isa = PBXGroup;
+			children = (
+				93A4A3777CF96A4AAC1D13BA6DCCEA73 /* Podfile */,
+				0F8D2E47FE03D3B91B51069F7C273AF4 /* Frameworks */,
+				EB8D0E2454159FE629F248538C942757 /* Pods */,
+				F765D6C16727BA50DC38BB2F515A9336 /* Products */,
+				719E2F38304EEA9D7542989D9BF8A56C /* Targets Support Files */,
+			);
+			sourceTree = "<group>";
+		};
+		98FF868417A925260FEC8BD9FE312AEB /* Pods-KSDeferredTestUITests */ = {
+			isa = PBXGroup;
+			children = (
+				45CF079CE65BE3737F1E95D878BD4F52 /* Pods-KSDeferredTestUITests-acknowledgements.markdown */,
+				9EDE0730758AF95364E927B59B96E697 /* Pods-KSDeferredTestUITests-acknowledgements.plist */,
+				188D1283F9A9816EAA62ED87BD903461 /* Pods-KSDeferredTestUITests-dummy.m */,
+				F9C99816B5FA505C634DA21AEAF3B34A /* Pods-KSDeferredTestUITests-frameworks.sh */,
+				08048DBDBC110C880903F3B147FF497B /* Pods-KSDeferredTestUITests-resources.sh */,
+				72BC468A217A3EE2D89AAD91E981DAEC /* Pods-KSDeferredTestUITests.debug.xcconfig */,
+				FF4046C672680594E4936994F51E4AF4 /* Pods-KSDeferredTestUITests.release.xcconfig */,
+			);
+			name = "Pods-KSDeferredTestUITests";
+			path = "Target Support Files/Pods-KSDeferredTestUITests";
+			sourceTree = "<group>";
+		};
+		D6C1936206A273018BF6B4DCC08EA607 /* Pods-KSDeferredTest */ = {
+			isa = PBXGroup;
+			children = (
+				9B1795EB1B23DF9E02643A59EEF5AC9D /* Pods-KSDeferredTest-acknowledgements.markdown */,
+				75CAB93F5053E570536BB1903AE3A188 /* Pods-KSDeferredTest-acknowledgements.plist */,
+				236FBE37F342B05988AA9E48E133E4B0 /* Pods-KSDeferredTest-dummy.m */,
+				13E6623F911CD2440A088EF14ABD79A4 /* Pods-KSDeferredTest-frameworks.sh */,
+				A80DC3B56264C1A9232BCE59D460AEB3 /* Pods-KSDeferredTest-resources.sh */,
+				E6212C8E45BF568220F8F03A247EF3EB /* Pods-KSDeferredTest.debug.xcconfig */,
+				9B7C26021B92F84E54C0AF4AA01FA6AB /* Pods-KSDeferredTest.release.xcconfig */,
+			);
+			name = "Pods-KSDeferredTest";
+			path = "Target Support Files/Pods-KSDeferredTest";
+			sourceTree = "<group>";
+		};
+		E6E3FC07F5C8BF72AA9BFB11BF772938 /* Pods-KSDeferredTestTests */ = {
+			isa = PBXGroup;
+			children = (
+				831368E7B5A5BC46E881DBCFA0704580 /* Pods-KSDeferredTestTests-acknowledgements.markdown */,
+				408547EA3E0989C5AFE5D291B08BA536 /* Pods-KSDeferredTestTests-acknowledgements.plist */,
+				6F91DDD868466737D68DE7B70560597E /* Pods-KSDeferredTestTests-dummy.m */,
+				BE772687119EC1A41149EF0138B99306 /* Pods-KSDeferredTestTests-frameworks.sh */,
+				F0E3AD044F6AAFAE3364B220DD962135 /* Pods-KSDeferredTestTests-resources.sh */,
+				15E7CF2E33F67004E50E0D318F924F16 /* Pods-KSDeferredTestTests.debug.xcconfig */,
+				F18579D06A1650A4BC96AB6F4714AA94 /* Pods-KSDeferredTestTests.release.xcconfig */,
+			);
+			name = "Pods-KSDeferredTestTests";
+			path = "Target Support Files/Pods-KSDeferredTestTests";
+			sourceTree = "<group>";
+		};
+		EB8D0E2454159FE629F248538C942757 /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				14314C8504FEF1FB97E6B23C43295F6F /* KSDeferred */,
+			);
+			name = Pods;
+			sourceTree = "<group>";
+		};
+		F765D6C16727BA50DC38BB2F515A9336 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				5F9301141A1FAE1CA28CEEDD47F5C294 /* libKSDeferred.a */,
+				AE25D989008F5A413CF229472BD8266B /* libPods-KSDeferredTest.a */,
+				5CADD6FF18D4B213F96BAF7B19772FC1 /* libPods-KSDeferredTestTests.a */,
+				C9B03F1EE29F507731E293723FE7A1D0 /* libPods-KSDeferredTestUITests.a */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXHeadersBuildPhase section */
+		F1FFB591ED2750B60344567CCADB47F0 /* Headers */ = {
+			isa = PBXHeadersBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				445F2BAC649B007FF47A4AB4F0F0C0E7 /* KSCancellable.h in Headers */,
+				203BB0DB559ED6F49251869688FE445F /* KSDeferred.h in Headers */,
+				8D00457A54CA622E956EBBDA288CCB57 /* KSGenericsCompat.h in Headers */,
+				73D20B8BF3DF4898A7E46D6C07F9796F /* KSNetworkClient.h in Headers */,
+				BE3013BA64576856962D8E626BA55BA6 /* KSNullabilityCompat.h in Headers */,
+				BB10EF123DC92F0B8425217555C7C7ED /* KSPromise.h in Headers */,
+				24AE1594075259A0ECF8041FD84789BD /* KSURLConnectionClient.h in Headers */,
+				ADADD6BDD3A55236F011B28186DF1A8C /* KSURLSessionClient.h in Headers */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXHeadersBuildPhase section */
+
+/* Begin PBXNativeTarget section */
+		0B3E825A34EE4B661F5ED6932F01C882 /* Pods-KSDeferredTestTests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 30839DD15529C9263FA79F75B9A9E81A /* Build configuration list for PBXNativeTarget "Pods-KSDeferredTestTests" */;
+			buildPhases = (
+				B876191A3BF2D831FFD7498BB01A873B /* Sources */,
+				EBF8D05BB48416A706991255AFD78FCA /* Frameworks */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				A031CB0F5DF368DFD24173877E1E46DA /* PBXTargetDependency */,
+			);
+			name = "Pods-KSDeferredTestTests";
+			productName = "Pods-KSDeferredTestTests";
+			productReference = 5CADD6FF18D4B213F96BAF7B19772FC1 /* libPods-KSDeferredTestTests.a */;
+			productType = "com.apple.product-type.library.static";
+		};
+		3DB4744990C6FD4374E8DC7BD830082C /* Pods-KSDeferredTest */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 3901975960E7159646C8D3A7D006873D /* Build configuration list for PBXNativeTarget "Pods-KSDeferredTest" */;
+			buildPhases = (
+				1CA22012452451F169D9FA25BBDF8134 /* Sources */,
+				12C422F03B619CBFA1F11FA645C42822 /* Frameworks */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				52B32830377CEB1FCE99A87E070F967B /* PBXTargetDependency */,
+			);
+			name = "Pods-KSDeferredTest";
+			productName = "Pods-KSDeferredTest";
+			productReference = AE25D989008F5A413CF229472BD8266B /* libPods-KSDeferredTest.a */;
+			productType = "com.apple.product-type.library.static";
+		};
+		BC7E6A85D66E3182DF5A878E99EE271B /* Pods-KSDeferredTestUITests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = CCFEEF0704669A5B1CB78CF122860D90 /* Build configuration list for PBXNativeTarget "Pods-KSDeferredTestUITests" */;
+			buildPhases = (
+				D2218D053ECB5CC064F8BFDC92D30799 /* Sources */,
+				F48F10D18FDE0485C57C56AC6BBF5F1F /* Frameworks */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				A335F64C1150B087F41046EA17A5EECB /* PBXTargetDependency */,
+			);
+			name = "Pods-KSDeferredTestUITests";
+			productName = "Pods-KSDeferredTestUITests";
+			productReference = C9B03F1EE29F507731E293723FE7A1D0 /* libPods-KSDeferredTestUITests.a */;
+			productType = "com.apple.product-type.library.static";
+		};
+		D6C969315928DB30B908006F27BF2264 /* KSDeferred */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 712F459E21C6ACE1D30FF71831609F95 /* Build configuration list for PBXNativeTarget "KSDeferred" */;
+			buildPhases = (
+				0ACDD038CF831F8204AB377F01A738D8 /* Sources */,
+				7224E4789B854F9D04EE5B9C8A58AD1B /* Frameworks */,
+				F1FFB591ED2750B60344567CCADB47F0 /* Headers */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = KSDeferred;
+			productName = KSDeferred;
+			productReference = 5F9301141A1FAE1CA28CEEDD47F5C294 /* libKSDeferred.a */;
+			productType = "com.apple.product-type.library.static";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		D41D8CD98F00B204E9800998ECF8427E /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				LastSwiftUpdateCheck = 0930;
+				LastUpgradeCheck = 0940;
+			};
+			buildConfigurationList = 2D8E8EC45A3A1A1D94AE762CB5028504 /* Build configuration list for PBXProject "Pods" */;
+			compatibilityVersion = "Xcode 3.2";
+			developmentRegion = English;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+			);
+			mainGroup = 7DB346D0F39D3F0E887471402A8071AB;
+			productRefGroup = F765D6C16727BA50DC38BB2F515A9336 /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				D6C969315928DB30B908006F27BF2264 /* KSDeferred */,
+				3DB4744990C6FD4374E8DC7BD830082C /* Pods-KSDeferredTest */,
+				0B3E825A34EE4B661F5ED6932F01C882 /* Pods-KSDeferredTestTests */,
+				BC7E6A85D66E3182DF5A878E99EE271B /* Pods-KSDeferredTestUITests */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXSourcesBuildPhase section */
+		0ACDD038CF831F8204AB377F01A738D8 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				40C49ED826C13FD9056E2423D81E467E /* KSDeferred-dummy.m in Sources */,
+				F9A0E44CE4FC0369197CE18302B2C3AE /* KSDeferred.m in Sources */,
+				8FE23A21A24E09A43B5F93665886F82E /* KSNetworkClient.m in Sources */,
+				46D1735E4E576C5236B0FC8C8D6E0B23 /* KSPromise.m in Sources */,
+				88C65FEEDAF8AFCF7D067A6604D00A35 /* KSURLConnectionClient.m in Sources */,
+				E31FF7C5D7D141B5F2C6E92F7A4C4090 /* KSURLSessionClient.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		1CA22012452451F169D9FA25BBDF8134 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				740F2E018F0E03416D5F048F1CD44468 /* Pods-KSDeferredTest-dummy.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		B876191A3BF2D831FFD7498BB01A873B /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				2182F1CEB8CF0E51EA472C50A14EF2BF /* Pods-KSDeferredTestTests-dummy.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		D2218D053ECB5CC064F8BFDC92D30799 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				200E70C0E097061A4AAB11C594D8BE72 /* Pods-KSDeferredTestUITests-dummy.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		52B32830377CEB1FCE99A87E070F967B /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			name = KSDeferred;
+			target = D6C969315928DB30B908006F27BF2264 /* KSDeferred */;
+			targetProxy = 1DDB0CB1D9C9A67751187A856B5F14E4 /* PBXContainerItemProxy */;
+		};
+		A031CB0F5DF368DFD24173877E1E46DA /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			name = "Pods-KSDeferredTest";
+			target = 3DB4744990C6FD4374E8DC7BD830082C /* Pods-KSDeferredTest */;
+			targetProxy = 467E98AE4073FD6903493FA3D8D1C86C /* PBXContainerItemProxy */;
+		};
+		A335F64C1150B087F41046EA17A5EECB /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			name = "Pods-KSDeferredTest";
+			target = 3DB4744990C6FD4374E8DC7BD830082C /* Pods-KSDeferredTest */;
+			targetProxy = 7F56948F33F7EE0202A999C60556D39B /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
+
+/* Begin XCBuildConfiguration section */
+		326E69A9ABC95BCE4DB15CF88C7CD349 /* Release */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = F18579D06A1650A4BC96AB6F4714AA94 /* Pods-KSDeferredTestTests.release.xcconfig */;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = NO;
+				CLANG_ENABLE_OBJC_WEAK = NO;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=watchos*]" = "";
+				IPHONEOS_DEPLOYMENT_TARGET = 11.4;
+				MACH_O_TYPE = staticlib;
+				OTHER_LDFLAGS = "";
+				OTHER_LIBTOOLFLAGS = "";
+				PODS_ROOT = "$(SRCROOT)";
+				PRODUCT_BUNDLE_IDENTIFIER = "org.cocoapods.${PRODUCT_NAME:rfc1034identifier}";
+				SDKROOT = iphoneos;
+				SKIP_INSTALL = YES;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		5DC0083F57E9AB706B46C5B5D73B38D8 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				CODE_SIGNING_ALLOWED = NO;
+				CODE_SIGNING_REQUIRED = NO;
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"POD_CONFIGURATION_DEBUG=1",
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 11.4;
+				MTL_ENABLE_DEBUG_INFO = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				STRIP_INSTALLED_PRODUCT = NO;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = DEBUG;
+				SYMROOT = "${SRCROOT}/../build";
+			};
+			name = Debug;
+		};
+		5F92C50BDB924579101A7D431BA43133 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 72BC468A217A3EE2D89AAD91E981DAEC /* Pods-KSDeferredTestUITests.debug.xcconfig */;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = NO;
+				CLANG_ENABLE_OBJC_WEAK = NO;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=watchos*]" = "";
+				IPHONEOS_DEPLOYMENT_TARGET = 11.4;
+				MACH_O_TYPE = staticlib;
+				OTHER_LDFLAGS = "";
+				OTHER_LIBTOOLFLAGS = "";
+				PODS_ROOT = "$(SRCROOT)";
+				PRODUCT_BUNDLE_IDENTIFIER = "org.cocoapods.${PRODUCT_NAME:rfc1034identifier}";
+				SDKROOT = iphoneos;
+				SKIP_INSTALL = YES;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Debug;
+		};
+		61E97F1A534F61557E4FA9B745BD5D7F /* Debug */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = E6212C8E45BF568220F8F03A247EF3EB /* Pods-KSDeferredTest.debug.xcconfig */;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = NO;
+				CLANG_ENABLE_OBJC_WEAK = NO;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=watchos*]" = "";
+				IPHONEOS_DEPLOYMENT_TARGET = 11.4;
+				MACH_O_TYPE = staticlib;
+				OTHER_LDFLAGS = "";
+				OTHER_LIBTOOLFLAGS = "";
+				PODS_ROOT = "$(SRCROOT)";
+				PRODUCT_BUNDLE_IDENTIFIER = "org.cocoapods.${PRODUCT_NAME:rfc1034identifier}";
+				SDKROOT = iphoneos;
+				SKIP_INSTALL = YES;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Debug;
+		};
+		921013E8B4CCDCC69B547403DDD62AF5 /* Release */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 26F292426F615ED32539E99B52B08FE8 /* KSDeferred.xcconfig */;
+			buildSettings = {
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=watchos*]" = "";
+				GCC_PREFIX_HEADER = "Target Support Files/KSDeferred/KSDeferred-prefix.pch";
+				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
+				OTHER_LDFLAGS = "";
+				OTHER_LIBTOOLFLAGS = "";
+				PRIVATE_HEADERS_FOLDER_PATH = "";
+				PRODUCT_MODULE_NAME = KSDeferred;
+				PRODUCT_NAME = KSDeferred;
+				PUBLIC_HEADERS_FOLDER_PATH = "";
+				SDKROOT = iphoneos;
+				SKIP_INSTALL = YES;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = "$(inherited) ";
+				TARGETED_DEVICE_FAMILY = "1,2";
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		9692DED15EF221589C8C50462F157E74 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 15E7CF2E33F67004E50E0D318F924F16 /* Pods-KSDeferredTestTests.debug.xcconfig */;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = NO;
+				CLANG_ENABLE_OBJC_WEAK = NO;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=watchos*]" = "";
+				IPHONEOS_DEPLOYMENT_TARGET = 11.4;
+				MACH_O_TYPE = staticlib;
+				OTHER_LDFLAGS = "";
+				OTHER_LIBTOOLFLAGS = "";
+				PODS_ROOT = "$(SRCROOT)";
+				PRODUCT_BUNDLE_IDENTIFIER = "org.cocoapods.${PRODUCT_NAME:rfc1034identifier}";
+				SDKROOT = iphoneos;
+				SKIP_INSTALL = YES;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Debug;
+		};
+		AEEA80476F98EB645C4DD53EB2BB6D88 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				CODE_SIGNING_ALLOWED = NO;
+				CODE_SIGNING_REQUIRED = NO;
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"POD_CONFIGURATION_RELEASE=1",
+					"$(inherited)",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 11.4;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				STRIP_INSTALLED_PRODUCT = NO;
+				SYMROOT = "${SRCROOT}/../build";
+			};
+			name = Release;
+		};
+		BD6A6B15FAE2202856A1250A8F2957AB /* Debug */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 26F292426F615ED32539E99B52B08FE8 /* KSDeferred.xcconfig */;
+			buildSettings = {
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=watchos*]" = "";
+				GCC_PREFIX_HEADER = "Target Support Files/KSDeferred/KSDeferred-prefix.pch";
+				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
+				OTHER_LDFLAGS = "";
+				OTHER_LIBTOOLFLAGS = "";
+				PRIVATE_HEADERS_FOLDER_PATH = "";
+				PRODUCT_MODULE_NAME = KSDeferred;
+				PRODUCT_NAME = KSDeferred;
+				PUBLIC_HEADERS_FOLDER_PATH = "";
+				SDKROOT = iphoneos;
+				SKIP_INSTALL = YES;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = "$(inherited) ";
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Debug;
+		};
+		D82CC6B0025A8A35F3EC6FAF7BFFDE7D /* Release */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = FF4046C672680594E4936994F51E4AF4 /* Pods-KSDeferredTestUITests.release.xcconfig */;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = NO;
+				CLANG_ENABLE_OBJC_WEAK = NO;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=watchos*]" = "";
+				IPHONEOS_DEPLOYMENT_TARGET = 11.4;
+				MACH_O_TYPE = staticlib;
+				OTHER_LDFLAGS = "";
+				OTHER_LIBTOOLFLAGS = "";
+				PODS_ROOT = "$(SRCROOT)";
+				PRODUCT_BUNDLE_IDENTIFIER = "org.cocoapods.${PRODUCT_NAME:rfc1034identifier}";
+				SDKROOT = iphoneos;
+				SKIP_INSTALL = YES;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		FD42E0C2D86D8B71DF0F8213EAA92C7B /* Release */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 9B7C26021B92F84E54C0AF4AA01FA6AB /* Pods-KSDeferredTest.release.xcconfig */;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = NO;
+				CLANG_ENABLE_OBJC_WEAK = NO;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=watchos*]" = "";
+				IPHONEOS_DEPLOYMENT_TARGET = 11.4;
+				MACH_O_TYPE = staticlib;
+				OTHER_LDFLAGS = "";
+				OTHER_LIBTOOLFLAGS = "";
+				PODS_ROOT = "$(SRCROOT)";
+				PRODUCT_BUNDLE_IDENTIFIER = "org.cocoapods.${PRODUCT_NAME:rfc1034identifier}";
+				SDKROOT = iphoneos;
+				SKIP_INSTALL = YES;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		2D8E8EC45A3A1A1D94AE762CB5028504 /* Build configuration list for PBXProject "Pods" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				5DC0083F57E9AB706B46C5B5D73B38D8 /* Debug */,
+				AEEA80476F98EB645C4DD53EB2BB6D88 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		30839DD15529C9263FA79F75B9A9E81A /* Build configuration list for PBXNativeTarget "Pods-KSDeferredTestTests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				9692DED15EF221589C8C50462F157E74 /* Debug */,
+				326E69A9ABC95BCE4DB15CF88C7CD349 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		3901975960E7159646C8D3A7D006873D /* Build configuration list for PBXNativeTarget "Pods-KSDeferredTest" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				61E97F1A534F61557E4FA9B745BD5D7F /* Debug */,
+				FD42E0C2D86D8B71DF0F8213EAA92C7B /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		712F459E21C6ACE1D30FF71831609F95 /* Build configuration list for PBXNativeTarget "KSDeferred" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				BD6A6B15FAE2202856A1250A8F2957AB /* Debug */,
+				921013E8B4CCDCC69B547403DDD62AF5 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		CCFEEF0704669A5B1CB78CF122860D90 /* Build configuration list for PBXNativeTarget "Pods-KSDeferredTestUITests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				5F92C50BDB924579101A7D431BA43133 /* Debug */,
+				D82CC6B0025A8A35F3EC6FAF7BFFDE7D /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = D41D8CD98F00B204E9800998ECF8427E /* Project object */;
+}
