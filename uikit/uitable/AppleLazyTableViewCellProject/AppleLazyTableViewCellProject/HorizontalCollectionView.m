@@ -48,7 +48,7 @@ static NSString *const proCollectionViewIdentifier = @"proCollectionViewIdentifi
         [cell configure:model webSerivce:self.webService completion:^(UIImage *image) {
             dispatch_async(dispatch_get_main_queue(), ^{
                 ProServicesCollectionViewCell *cell = (ProServicesCollectionViewCell *)[collectionView cellForItemAtIndexPath:indexPath];
-                NSLog(@"index:%d image:%@", indexPath.row, image);
+                NSLog(@"index:%ld image:%@", indexPath.row, image);
                 cell.avatarImage.image = image;
             });
         }];

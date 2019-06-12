@@ -1055,12 +1055,18 @@ extension Signal {
 	///            once `self` has terminated. **`samplee`'s terminated events
 	///            are ignored**.
 	public func withLatest<U>(from samplee: SignalProducer<U, NoError>) -> Signal<(Value, U), Error> {
-		return Signal<(Value, U), Error> { observer, lifetime in
-			samplee.startWithSignal { signal, disposable in
-				lifetime += disposable
-				lifetime += self.withLatest(from: signal).observe(observer)
-			}
-		}
+        return Signal<(Value, U), Error>.init({ (observer, lifetime) in
+            samplee.startWithSignal { signal, disposable in
+                lifetime += disposable
+                lifetime += self.withLatest(from: signal).observe(observer)
+            }
+        })
+//        return Signal<(Value, U), Error> { observer, lifetime in
+//            samplee.startWithSignal { signal, disposable in
+//                lifetime += disposable
+//                lifetime += self.withLatest(from: signal).observe(observer)
+//            }
+//        }
 	}
 }
 

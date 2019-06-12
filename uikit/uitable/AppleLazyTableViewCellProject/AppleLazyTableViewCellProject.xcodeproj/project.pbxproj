@@ -24,7 +24,6 @@
 		602B9D3720C582EB001D20B4 /* MASConstraint.m in Sources */ = {isa = PBXBuildFile; fileRef = 602B9D2B20C582EB001D20B4 /* MASConstraint.m */; };
 		602B9D3820C582EB001D20B4 /* MASViewConstraint.m in Sources */ = {isa = PBXBuildFile; fileRef = 602B9D2D20C582EB001D20B4 /* MASViewConstraint.m */; };
 		602B9D3920C582EB001D20B4 /* MASViewAttribute.m in Sources */ = {isa = PBXBuildFile; fileRef = 602B9D2E20C582EB001D20B4 /* MASViewAttribute.m */; };
-		602B9D3A20C582EB001D20B4 /* Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 602B9D2F20C582EB001D20B4 /* Info.plist */; };
 		602B9D3B20C582FC001D20B4 /* MASCompositeConstraint.h in Sources */ = {isa = PBXBuildFile; fileRef = 602B9D1620C582EB001D20B4 /* MASCompositeConstraint.h */; };
 		602B9D3C20C582FC001D20B4 /* MASConstraint+Private.h in Sources */ = {isa = PBXBuildFile; fileRef = 602B9D1820C582EB001D20B4 /* MASConstraint+Private.h */; };
 		602B9D3D20C582FC001D20B4 /* MASLayoutConstraint.h in Sources */ = {isa = PBXBuildFile; fileRef = 602B9D1920C582EB001D20B4 /* MASLayoutConstraint.h */; };
@@ -40,7 +39,6 @@
 		602B9D4720C582FC001D20B4 /* View+MASShorthandAdditions.h in Sources */ = {isa = PBXBuildFile; fileRef = 602B9D2920C582EB001D20B4 /* View+MASShorthandAdditions.h */; };
 		602B9D4820C582FC001D20B4 /* Masonry.h in Sources */ = {isa = PBXBuildFile; fileRef = 602B9D2A20C582EB001D20B4 /* Masonry.h */; };
 		602B9D4920C582FC001D20B4 /* ViewController+MASAdditions.h in Sources */ = {isa = PBXBuildFile; fileRef = 602B9D2C20C582EB001D20B4 /* ViewController+MASAdditions.h */; };
-		602B9D4A20C582FC001D20B4 /* Info.plist in Sources */ = {isa = PBXBuildFile; fileRef = 602B9D2F20C582EB001D20B4 /* Info.plist */; };
 		6085A47D20E01ECC00B7B29A /* AFImageDownloader.m in Sources */ = {isa = PBXBuildFile; fileRef = 6085A47C20E01ECC00B7B29A /* AFImageDownloader.m */; };
 		6085A48120E01F6500B7B29A /* AFAutoPurgingImageCache.m in Sources */ = {isa = PBXBuildFile; fileRef = 6085A48020E01F6500B7B29A /* AFAutoPurgingImageCache.m */; };
 		6085A48520E0278E00B7B29A /* AFHTTPSessionManager.m in Sources */ = {isa = PBXBuildFile; fileRef = 6085A48420E0278E00B7B29A /* AFHTTPSessionManager.m */; };
@@ -126,7 +124,6 @@
 		602B9D2C20C582EB001D20B4 /* ViewController+MASAdditions.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "ViewController+MASAdditions.h"; sourceTree = "<group>"; };
 		602B9D2D20C582EB001D20B4 /* MASViewConstraint.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MASViewConstraint.m; sourceTree = "<group>"; };
 		602B9D2E20C582EB001D20B4 /* MASViewAttribute.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MASViewAttribute.m; sourceTree = "<group>"; };
-		602B9D2F20C582EB001D20B4 /* Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		6085A47B20E01ECC00B7B29A /* AFImageDownloader.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AFImageDownloader.h; sourceTree = "<group>"; };
 		6085A47C20E01ECC00B7B29A /* AFImageDownloader.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AFImageDownloader.m; sourceTree = "<group>"; };
 		6085A47F20E01F6500B7B29A /* AFAutoPurgingImageCache.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AFAutoPurgingImageCache.h; sourceTree = "<group>"; };
@@ -245,7 +242,6 @@
 				602B9D2C20C582EB001D20B4 /* ViewController+MASAdditions.h */,
 				602B9D2D20C582EB001D20B4 /* MASViewConstraint.m */,
 				602B9D2E20C582EB001D20B4 /* MASViewAttribute.m */,
-				602B9D2F20C582EB001D20B4 /* Info.plist */,
 			);
 			path = Masonry;
 			sourceTree = "<group>";
@@ -497,7 +493,6 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				602B9D3A20C582EB001D20B4 /* Info.plist in Resources */,
 				84614C3E2092703100A4958F /* LaunchScreen.storyboard in Resources */,
 				84614C3B2092703100A4958F /* Assets.xcassets in Resources */,
 				84614C392092703100A4958F /* Main.storyboard in Resources */,
@@ -546,7 +541,6 @@
 				602B9D4720C582FC001D20B4 /* View+MASShorthandAdditions.h in Sources */,
 				602B9D4820C582FC001D20B4 /* Masonry.h in Sources */,
 				602B9D4920C582FC001D20B4 /* ViewController+MASAdditions.h in Sources */,
-				602B9D4A20C582FC001D20B4 /* Info.plist in Sources */,
 				8461CB5620B63B47000B971C /* ProServicesTableViewCell.m in Sources */,
 				602B9CF620C577FC001D20B4 /* ProServicesCollectionViewCell.m in Sources */,
 				602B9D3120C582EB001D20B4 /* ViewController+MASAdditions.m in Sources */,
@@ -747,7 +741,7 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
-				DEVELOPMENT_TEAM = X92HRP6SLX;
+				DEVELOPMENT_TEAM = G66RX9MATK;
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "$(SRCROOT)/$(PROJECT_NAME)/PrefixHeader.pch";
 				INFOPLIST_FILE = AppleLazyTableViewCellProject/Info.plist;
@@ -765,7 +759,7 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
-				DEVELOPMENT_TEAM = X92HRP6SLX;
+				DEVELOPMENT_TEAM = G66RX9MATK;
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "$(SRCROOT)/$(PROJECT_NAME)/PrefixHeader.pch";
 				INFOPLIST_FILE = AppleLazyTableViewCellProject/Info.plist;

@@ -229,7 +229,7 @@
 				TargetAttributes = {
 					06E9CBD41EB1B5DE00C07664 = {
 						CreatedOnToolsVersion = 8.3.2;
-						DevelopmentTeam = 78R59ZRT89;
+						DevelopmentTeam = G66RX9MATK;
 						ProvisioningStyle = Automatic;
 					};
 					06E9CBED1EB1B5DE00C07664 = {
@@ -453,7 +453,7 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
-				DEVELOPMENT_TEAM = 78R59ZRT89;
+				DEVELOPMENT_TEAM = G66RX9MATK;
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = /Users/gongzhen/Project/mobile/iOS/ios_sample/uikit/collection/UICollectionViewFlowlayout2/UICollectionViewFlowlayout2/PrefixHeader.pch;
 				INFOPLIST_FILE = UICollectionViewFlowlayout2/Info.plist;
@@ -467,7 +467,7 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
-				DEVELOPMENT_TEAM = 78R59ZRT89;
+				DEVELOPMENT_TEAM = G66RX9MATK;
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = /Users/gongzhen/Project/mobile/iOS/ios_sample/uikit/collection/UICollectionViewFlowlayout2/UICollectionViewFlowlayout2/PrefixHeader.pch;
 				INFOPLIST_FILE = UICollectionViewFlowlayout2/Info.plist;

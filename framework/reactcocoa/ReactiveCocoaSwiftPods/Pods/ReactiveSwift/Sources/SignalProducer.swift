@@ -855,6 +855,7 @@ extension SignalProducer {
 	/// - returns: A signal producer that, when started, will send a mapped
 	///            value of `self.`
 	public func map<U>(_ transform: @escaping (Value) -> U) -> SignalProducer<U, Error> {
+        // trackObj("core", obj: core)
 		return core.flatMapEvent(Signal.Event.map(transform))
 	}
 

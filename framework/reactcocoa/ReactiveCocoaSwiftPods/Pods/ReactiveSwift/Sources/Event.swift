@@ -1,6 +1,30 @@
 import Result
 import Foundation
 
+public func trackObj(_ message: String, obj: Any? = nil, file: String = #file, function: String = #function, line: Int = #line) {
+    if let obj = obj {
+        print("\(message)==>\(obj) called from \(function) \((file.components(separatedBy: "/").last)!):\(line)")
+    } else {
+        print("\(message) called from \(function) \((file.components(separatedBy: "/").last)!):\(line)")
+    }
+}
+
+public func trackString(_ message: String, obj: String? = nil, file: String = #file, function: String = #function, line: Int = #line) {
+    if let obj = obj {
+        print("\(message)==>\(obj) called from \(function) \((file.components(separatedBy: "/").last)!):\(line) obj:\(obj)")
+    } else {
+        print("\(message) called from \(function) \((file.components(separatedBy: "/").last)!):\(line)!)")
+    }
+}
+
+public func trackInt(_ message: String, obj: Int? = nil, file: String = #file, function: String = #function, line: Int = #line) {
+    if let obj = obj {
+        print("\(message)==>\(obj) called from \(function) \((file.components(separatedBy: "/").last)!):\(line) obj:\(obj)")
+    } else {
+        print("\(message) called from \(function) \((file.components(separatedBy: "/").last)!):\(line)")
+    }
+}
+
 extension Signal {
 	/// Represents a signal event.
 	///
@@ -250,23 +274,44 @@ extension Signal.Event {
 	}
 
 	internal static func map<U>(_ transform: @escaping (Value) -> U) -> Transformation<U, Error> {
-		return { action, _ in
-			return { event in
-				switch event {
-				case let .value(value):
-					action(.value(transform(value)))
-
-				case .completed:
-					action(.completed)
-
-				case let .failed(error):
-					action(.failed(error))
-
-				case .interrupted:
-					action(.interrupted)
-				}
-			}
-		}
+        // trackObj("transform", obj: transform)
+        
+        return { ( action: @escaping Signal<U, Error>.Observer.Action, lifeTime: Lifetime) -> Signal<Value, Error>.Observer.Action in
+            return { (event: Signal.Event) -> Void in
+                // trackObj("event", obj: event)
+                switch event {
+                case let .value(value):
+                    // trackObj("value:", obj: value)
+                    action(.value(transform(value)))
+                case .completed:
+                    action(.completed)
+                case let .failed(error):
+                    action(.failed(error))
+                case .interrupted:
+                    action(.interrupted)
+                }
+            }
+        }
+        
+//        return { action, _ in
+//            trackObj("action", obj: action)
+//            return { event in
+//                trackObj("event", obj: event)
+//                switch event {
+//                case let .value(value):
+//                    trackObj("value:", obj: value)
+//                    action(.value(transform(value)))
+//                case .completed:
+//                    action(.completed)
+//
+//                case let .failed(error):
+//                    action(.failed(error))
+//
+//                case .interrupted:
+//                    action(.interrupted)
+//                }
+//            }
+//        }
 	}
 
 	internal static func mapError<E>(_ transform: @escaping (Error) -> E) -> Transformation<Value, E> {

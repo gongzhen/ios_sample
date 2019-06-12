@@ -34,6 +34,7 @@ extension Signal {
 		/// - parameters:
 		///   - action: A closure to lift over received event.
 		public init(_ action: @escaping Action) {
+            // trackObj("action", obj: action)
 			self._send = action
 			self.interruptsOnDeinit = false
 		}
@@ -54,7 +55,9 @@ extension Signal {
 			completed: (() -> Void)? = nil,
 			interrupted: (() -> Void)? = nil
 		) {
+            // trackObj("value", obj: value)
 			self.init { event in
+                // trackObj("event", obj: event)
 				switch event {
 				case let .value(v):
 					value?(v)
